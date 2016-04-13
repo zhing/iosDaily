@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "TableViewController.h"
 #import "ScrollViewController.h"
 #import "SimpleTableViewController.h"
 #import "AFNetworkViewController.h"
@@ -24,8 +23,6 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    TableViewController *firstView = [[TableViewController alloc] init];
-    firstView.tabBarItem.title = @"联系人";
 //    ViewController *secondView = [[ViewController alloc] init];
 //    secondView.tabBarItem.title = @"消息";
     ScrollViewController *thirdView = [[ScrollViewController alloc] init];
@@ -36,9 +33,8 @@
     fifthView.tabBarItem.title = @"AF";
     
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[firstView, thirdView, forthView, fifthView];
+    tabBarController.viewControllers = @[thirdView, forthView, fifthView];
     self.window.rootViewController = tabBarController;
-//    tabBarController.delegate = self;
     
     [self.window makeKeyAndVisible];
     return YES;
