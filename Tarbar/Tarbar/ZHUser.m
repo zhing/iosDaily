@@ -17,4 +17,8 @@
              @"city": @"city"
              };
 }
+
+- (NSString *)description{
+    return [NSString stringWithFormat:@"Id: %li, name: %@, city: %@",[_Id integerValue], _name, _city];
+}
 @end
