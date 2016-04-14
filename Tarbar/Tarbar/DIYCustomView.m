@@ -12,6 +12,7 @@
 @interface DIYCustomView()
 
 @property (nonatomic, strong) UIButton *btn;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -22,6 +23,10 @@
         self.btn = [[UIButton alloc] init];
         self.btn.backgroundColor = [UIColor redColor];
         [self addSubview:self.btn];
+        
+        self.button = [[UIButton alloc] init];
+        self.button.backgroundColor = [UIColor greenColor];
+        [self addSubview:self.button];
     }
     return self;
 }
@@ -34,8 +39,12 @@
     [self.btn mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.equalTo(@10);
         make.left.equalTo(@20);
-        make.bottom.equalTo(@-10);
-        make.right.equalTo(@-20);
+//        make.width.equalTo(@50);
+        make.height.equalTo(@50);
+        make.trailingMargin.equalTo(@-20);
+//        make.trailingMargin.equalTo(@10);
+//        make.bottom.equalTo(@-10);
+//        make.right.equalTo(@-20);
 //        make.height.mas_equalTo();
 //        make.center
 //        make.centerX
@@ -43,9 +52,16 @@
 //        make.width
 //        make.edges
 //        make.size
-//        make.leading (right)
-//        make.trailing (left)
+//        make.leading (left)
+//        make.trailing (right)
         
+    }];
+    
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(@10);
+        make.leading.equalTo(self.btn.mas_trailing);
+        make.width.equalTo(self.btn);
+        make.height.equalTo(self.btn);
     }];
     [super updateConstraints];
 }
