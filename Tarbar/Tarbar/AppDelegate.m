@@ -11,6 +11,7 @@
 #import "ScrollViewController.h"
 #import "SimpleTableViewController.h"
 #import "AFNetworkViewController.h"
+#import "AutoLayoutViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,9 +31,11 @@
     forthView.tabBarItem.title = @"tableView";
     AFNetworkViewController *fifthView = [[AFNetworkViewController alloc] init];
     fifthView.tabBarItem.title = @"AF";
+    AutoLayoutViewController *sixthView = [[AutoLayoutViewController alloc] init];
+    sixthView.tabBarItem.title = @"AutoLayout";
     
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[thirdView, forthView, fifthView];
+    tabBarController.viewControllers = @[thirdView, forthView, fifthView, sixthView];
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
