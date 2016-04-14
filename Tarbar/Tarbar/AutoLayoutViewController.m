@@ -7,8 +7,12 @@
 //
 
 #import "AutoLayoutViewController.h"
+#import "DIYCustomView.h"
+#import "Masonry.h"
 
 @interface AutoLayoutViewController ()
+
+@property (nonatomic, strong) DIYCustomView *displayView;
 
 @end
 
@@ -19,8 +23,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     
-    [self generateConstraintsWithItem];
-    [self generateConstraintsWithVisualFormat];
+//    [self generateConstraintsWithItem];
+//    [self generateConstraintsWithVisualFormat];
+    
+    _displayView = [[DIYCustomView alloc] init];
+    _displayView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:_displayView];
+    
+    [_displayView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(20, 20, 100, 20));
+    }];
 }
 
 - (void) generateConstraintsWithItem{
