@@ -32,7 +32,6 @@
     
     [_displayView mas_makeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(20, 20, 100, 20));
-        make.topMargin.equalTo(@10);
     }];
 }
 

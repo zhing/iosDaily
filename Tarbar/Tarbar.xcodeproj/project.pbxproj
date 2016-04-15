@@ -63,6 +63,9 @@
 		F3FF4D101CBDF86300D20526 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D061CBDF86300D20526 /* AFURLResponseSerialization.m */; };
 		F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D081CBDF86300D20526 /* AFURLSessionManager.m */; };
 		F3FF4D151CBF754B00D20526 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D141CBF754B00D20526 /* AutoLayoutViewController.m */; };
+		F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D181CC0A9EC00D20526 /* Account.m */; settings = {ASSET_TAGS = (); }; };
+		F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1B1CC0AA3800D20526 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1E1CC0ACF000D20526 /* KVTest.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +198,12 @@
 		F3FF4D081CBDF86300D20526 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		F3FF4D131CBF754B00D20526 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
 		F3FF4D141CBF754B00D20526 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		F3FF4D171CC0A9EC00D20526 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		F3FF4D181CC0A9EC00D20526 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		F3FF4D1A1CC0AA3800D20526 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F3FF4D1B1CC0AA3800D20526 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F3FF4D1D1CC0ACF000D20526 /* KVTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTest.h; sourceTree = "<group>"; };
+		F3FF4D1E1CC0ACF000D20526 /* KVTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +316,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				F3FF4D161CC0A97500D20526 /* KVC&KVO */,
 				F3FF4D121CBF3BBD00D20526 /* autoLayout */,
 				F3FF4CEE1CBDE89500D20526 /* tableView */,
 				3F1BC4921CBD464B002394F8 /* ThirdParty */,
@@ -452,6 +462,19 @@
 			name = autoLayout;
 			sourceTree = "<group>";
 		};
+		F3FF4D161CC0A97500D20526 /* KVC&KVO */ = {
+			isa = PBXGroup;
+			children = (
+				F3FF4D171CC0A9EC00D20526 /* Account.h */,
+				F3FF4D181CC0A9EC00D20526 /* Account.m */,
+				F3FF4D1A1CC0AA3800D20526 /* Person.h */,
+				F3FF4D1B1CC0AA3800D20526 /* Person.m */,
+				F3FF4D1D1CC0ACF000D20526 /* KVTest.h */,
+				F3FF4D1E1CC0ACF000D20526 /* KVTest.m */,
+			);
+			name = "KVC&KVO";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,6 +603,7 @@
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
 				3F90E7EA1CBFD4D9003A8846 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */,
 				3F4492471CBD5A2C006EA652 /* NSDictionary+MTLMappingAdditions.m in Sources */,
 				3FDC85131CB0D36900BF7E76 /* HMSegmentedControl.m in Sources */,
 				3F44924A1CBD5A2C006EA652 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
@@ -588,7 +612,9 @@
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				3F90E7E41CBFD4D9003A8846 /* MASConstraint.m in Sources */,
+				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */,
+				F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */,
 				F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */,
 				3F44924E1CBD608E006EA652 /* ZHStatusArray.m in Sources */,
 				3F1BC4871CBBE4C1002394F8 /* Student.m in Sources */,

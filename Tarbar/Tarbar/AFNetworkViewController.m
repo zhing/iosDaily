@@ -12,6 +12,7 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "ZHUser.h"
 #import "MTLJSONAdapter.h"
+#import "KVTest.h"
 
 @interface AFNetworkViewController ()
 
@@ -27,7 +28,9 @@
 //    [JsonTest testJsonDic];
 //    [self doDatatask];
 //    [self doGet];
-    [self doPost];
+//    [self doPost];
+//    [KVTest testKVC];
+    [KVTest testKVO];
 }
 
 - (void)didReceiveMemoryWarning {
