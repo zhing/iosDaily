@@ -54,7 +54,6 @@
 //        make.size
 //        make.leading (left)
 //        make.trailing (right)
-        
     }];
     
     [self.button mas_makeConstraints:^(MASConstraintMaker *make){
