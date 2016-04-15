@@ -52,6 +52,7 @@
 		3FDC85101CAC2F0A00BF7E76 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC850F1CAC2F0A00BF7E76 /* SimpleTableViewController.m */; };
 		3FDC85131CB0D36900BF7E76 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */; };
 		3FDC85151CB4057500BF7E76 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FDC85141CB4057500BF7E76 /* test.json */; };
+		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -63,9 +64,9 @@
 		F3FF4D101CBDF86300D20526 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D061CBDF86300D20526 /* AFURLResponseSerialization.m */; };
 		F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D081CBDF86300D20526 /* AFURLSessionManager.m */; };
 		F3FF4D151CBF754B00D20526 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D141CBF754B00D20526 /* AutoLayoutViewController.m */; };
-		F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D181CC0A9EC00D20526 /* Account.m */; settings = {ASSET_TAGS = (); }; };
-		F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1B1CC0AA3800D20526 /* Person.m */; settings = {ASSET_TAGS = (); }; };
-		F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1E1CC0ACF000D20526 /* KVTest.m */; settings = {ASSET_TAGS = (); }; };
+		F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D181CC0A9EC00D20526 /* Account.m */; };
+		F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1B1CC0AA3800D20526 /* Person.m */; };
+		F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4D1E1CC0ACF000D20526 /* KVTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,8 @@
 		3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		3FDC85121CB0D36800BF7E76 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		3FDC85141CB4057500BF7E76 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		F3C0E7F91CC0ED8800829E90 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -316,6 +319,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				F3C0E7F71CC0ED1000829E90 /* CGContextDraw */,
 				F3FF4D161CC0A97500D20526 /* KVC&KVO */,
 				F3FF4D121CBF3BBD00D20526 /* autoLayout */,
 				F3FF4CEE1CBDE89500D20526 /* tableView */,
@@ -395,6 +399,15 @@
 				3F90E7E21CBFD4D9003A8846 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		F3C0E7F71CC0ED1000829E90 /* CGContextDraw */ = {
+			isa = PBXGroup;
+			children = (
+				F3C0E7F81CC0ED8800829E90 /* DrawView.h */,
+				F3C0E7F91CC0ED8800829E90 /* DrawView.m */,
+			);
+			name = CGContextDraw;
 			sourceTree = "<group>";
 		};
 		F3FF4CEE1CBDE89500D20526 /* tableView */ = {
@@ -582,6 +595,7 @@
 				3F44923C1CBD5A2C006EA652 /* EXTScope.m in Sources */,
 				3F4492481CBD5A2C006EA652 /* NSError+MTLModelException.m in Sources */,
 				3F90E7E31CBFD4D9003A8846 /* MASCompositeConstraint.m in Sources */,
+				F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */,
 				3F90E7E51CBFD4D9003A8846 /* MASConstraintMaker.m in Sources */,
 				3F90E7E71CBFD4D9003A8846 /* MASViewAttribute.m in Sources */,
 				3F4492461CBD5A2C006EA652 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
