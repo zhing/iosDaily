@@ -23,8 +23,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    ViewController *secondView = [[ViewController alloc] init];
-//    secondView.tabBarItem.title = @"消息";
+    ViewController *secondView = [[ViewController alloc] init];
+    secondView.tabBarItem.title = @"first";
     ScrollViewController *thirdView = [[ScrollViewController alloc] init];
     thirdView.tabBarItem.title = @"发现";
     SimpleTableViewController *forthView = [[SimpleTableViewController alloc] init];
@@ -35,7 +35,7 @@
     sixthView.tabBarItem.title = @"AutoLayout";
     
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[thirdView, forthView, fifthView, sixthView];
+    tabBarController.viewControllers = @[secondView,thirdView, forthView, fifthView, sixthView];
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];

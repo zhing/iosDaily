@@ -24,4 +24,23 @@
     }
     return self;
 }
+
++ (void) testNSUserDefaults{
+    Student *stu = [[Student alloc] init];
+    stu.name = @"zhing";
+    stu.studentNumber = @"2013111433";
+    stu.sex = @"男";
+    
+    NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:40];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:stu];
+    [dataArray addObject:data];
+    
+    NSArray * array = [NSArray arrayWithArray:dataArray];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:array forKey:@"stus"];
+    
+    dataArray = [NSMutableArray arrayWithArray:[user objectForKey:@"stus"]];
+    NSLog(@"=======%@========", ((Student *)[NSKeyedUnarchiver unarchiveObjectWithData:[dataArray firstObject]]).sex);
+}
 @end
+
