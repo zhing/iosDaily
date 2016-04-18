@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F06D5431CC3D7A80045E9D1 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5421CC3D7A80045E9D1 /* DrawViewController.m */; };
 		3F06D5471CC49C630045E9D1 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5461CC49C630045E9D1 /* AnimationViewController.m */; };
+		3F06D54A1CC52BA50045E9D1 /* TurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5491CC52BA50045E9D1 /* TurnViewController.m */; };
 		3F1BC4871CBBE4C1002394F8 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4861CBBE4C1002394F8 /* Student.m */; };
 		3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4891CBD334A002394F8 /* AFNetworkViewController.m */; };
 		3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC48D1CBD360B002394F8 /* ZHUser.m */; };
@@ -85,6 +86,8 @@
 		3F06D5421CC3D7A80045E9D1 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		3F06D5451CC49C630045E9D1 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		3F06D5461CC49C630045E9D1 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		3F06D5481CC52BA50045E9D1 /* TurnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnViewController.h; sourceTree = "<group>"; };
+		3F06D5491CC52BA50045E9D1 /* TurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnViewController.m; sourceTree = "<group>"; };
 		3F1BC4851CBBE4C1002394F8 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		3F1BC4861CBBE4C1002394F8 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		3F1BC4881CBD334A002394F8 /* AFNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 			children = (
 				3F06D5451CC49C630045E9D1 /* AnimationViewController.h */,
 				3F06D5461CC49C630045E9D1 /* AnimationViewController.m */,
+				3F06D5481CC52BA50045E9D1 /* TurnViewController.h */,
+				3F06D5491CC52BA50045E9D1 /* TurnViewController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				3F90E7EF1CBFDA2B003A8846 /* DIYCustomView.m in Sources */,
 				3F44923B1CBD5A2C006EA652 /* EXTRuntimeExtensions.m in Sources */,
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
+				3F06D54A1CC52BA50045E9D1 /* TurnViewController.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				3F90E7E41CBFD4D9003A8846 /* MASConstraint.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
