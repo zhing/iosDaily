@@ -11,9 +11,12 @@
 #import "DrawView.h"
 #import "Masonry.h"
 #import "DrawViewController.h"
+#import "AnimationViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIButton *button1;
+@property (strong, nonatomic) UIButton *button2;
 @end
 
 @implementation ViewController
@@ -26,6 +29,7 @@
     
 //    [self testDrawView];
     [self testRedrawView];
+    [self testAnimationView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,23 +47,44 @@
 }
 
 - (void)testRedrawView{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btn setTitle:@"picker" forState:UIControlStateNormal];
-    btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [btn setBackgroundColor:[UIColor lightGrayColor]];
-    [self.view addSubview:btn];
+    _button1 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button1 setTitle:@"picker" forState:UIControlStateNormal];
+    _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button1 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button1];
     
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_button1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(@50);
         make.width.greaterThanOrEqualTo(@100);
     }];
     
-    [btn addTarget:self action:@selector(showUpDrawViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [_button1 addTarget:self action:@selector(showUpDrawViewController:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void) showUpDrawViewController: (id)sender{
     DrawViewController *controller = [[DrawViewController alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)testAnimationView{
+    _button2 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button2 setTitle:@"animation" forState:UIControlStateNormal];
+    _button2.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button2 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button2];
+    
+    [_button2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button1.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button2 addTarget:self action:@selector(showUpAnimationViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpAnimationViewController: (id)sender{
+    AnimationViewController *controller = [[AnimationViewController alloc] init];
     [self presentViewController:controller animated:YES completion:nil];
 }
 @end
