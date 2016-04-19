@@ -11,7 +11,9 @@
 @interface Student : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *studentNumber;
+@property (nonatomic, strong) NSNumber *studentNumber;
 @property (nonatomic, strong) NSString *sex;
 
++ (void) testFMDB;
++ (void) testNSUserDefaults;
 @end

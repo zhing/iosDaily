@@ -7,6 +7,7 @@
 //
 
 #import "Student.h"
+#import "Fmdb.h"
 
 @implementation Student
 
@@ -25,10 +26,36 @@
     return self;
 }
 
+- (NSString *)description{
+    return [NSString stringWithFormat:@"name:%@, studentNumber:%li, sex:%@",self.name,[self.studentNumber integerValue],self.sex];
+}
+
++ (void) testFMDB{
+    Fmdb *fmdb = [[Fmdb alloc] init];
+    [fmdb openDb:@"tmp.db"];
+    
+    NSString *sql = @"create table student (name text, studentNumber integer primary key, sex text);";
+    [fmdb executeNonQuery:sql];
+    
+    sql = @"insert into student (name, studentNumber, sex) values ('zhing', 15, '女');";
+    [fmdb executeNonQuery:sql];
+    sql = @"insert into student (name, studentNumber, sex) values ('zhangqing', 37, '男');";
+    [fmdb executeNonQuery:sql];
+    
+    sql = @"select * from student;";
+    NSArray *array=[fmdb executeQuery:sql];
+    
+    for(NSDictionary *dic in array){
+        Student *stu = [[Student alloc] init];
+        [stu setValuesForKeysWithDictionary:dic];
+        NSLog(@"%@", stu);
+    }
+}
+
 + (void) testNSUserDefaults{
     Student *stu = [[Student alloc] init];
     stu.name = @"zhing";
-    stu.studentNumber = @"2013111433";
+    stu.studentNumber = @15;
     stu.sex = @"男";
     
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:40];

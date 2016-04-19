@@ -27,9 +27,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    NSLog(@"%lu", (unsigned long)self.tabBarController.selectedIndex);
     
+    [Student testFMDB];
+    
 //    [self testDrawView];
-    [self testRedrawView];
-    [self testAnimationView];
+//    [self testRedrawView];
+//    [self testAnimationView];
 }
 
 - (void)didReceiveMemoryWarning {
