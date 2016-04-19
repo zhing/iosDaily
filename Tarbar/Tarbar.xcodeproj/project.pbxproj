@@ -54,6 +54,8 @@
 		3FDC85101CAC2F0A00BF7E76 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC850F1CAC2F0A00BF7E76 /* SimpleTableViewController.m */; };
 		3FDC85131CB0D36900BF7E76 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
+		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
+		F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -182,6 +184,10 @@
 		3FDC85121CB0D36800BF7E76 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		F3C0E7F91CC0ED8800829E90 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		F3C0E7FB1CC4C5A500829E90 /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
+		F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleViewController.m; sourceTree = "<group>"; };
+		F3C0E7FE1CC4CC8B00829E90 /* RoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundViewController.h; sourceTree = "<group>"; };
+		F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundViewController.m; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -245,6 +251,10 @@
 			children = (
 				3F06D5451CC49C630045E9D1 /* AnimationViewController.h */,
 				3F06D5461CC49C630045E9D1 /* AnimationViewController.m */,
+				F3C0E7FB1CC4C5A500829E90 /* ScaleViewController.h */,
+				F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */,
+				F3C0E7FE1CC4CC8B00829E90 /* RoundViewController.h */,
+				F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -632,7 +642,9 @@
 				3F44923F1CBD5A2C006EA652 /* MTLModel+NSCoding.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
+				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
 				3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */,
+				F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */,
 				3F1BC4911CBD3678002394F8 /* ZHStatus.m in Sources */,
 				3F4A41741C9AC2CA0008BDA7 /* AppDelegate.m in Sources */,
 				3F4A41711C9AC2CA0008BDA7 /* main.m in Sources */,
