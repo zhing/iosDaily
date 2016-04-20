@@ -9,6 +9,11 @@
 #import "Student.h"
 #import "Fmdb.h"
 
+static NSString* const archivingFilePath=@"archive";
+@interface Student ()
+
+@end
+
 @implementation Student
 
 - (void) encodeWithCoder:(NSCoder *)aCoder{
@@ -53,21 +58,46 @@
 }
 
 + (void) testNSUserDefaults{
+    //存储一些key/value的配置信息比较方便，支持简单数据类型：NSNumber、NSString、NSDate、NSArray、NSDictionary等。
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:@"app.chitu.com" forKey:@"baseURL"];
+    NSString *url = [user objectForKey:@"baseURL"];
+    NSLog(@"%@", url);
+}
+
++ (void) testArchivement{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[Student getArchiveFilePath]]){
+        [Student testArchive];
+    }
+    [Student testUnArchive];
+}
+
++ (void) testArchive{
     Student *stu = [[Student alloc] init];
-    stu.name = @"zhing";
-    stu.studentNumber = @15;
+    stu.name = @"zhangqing";
+    stu.studentNumber = [NSNumber numberWithInt:15];
     stu.sex = @"男";
     
-    NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:40];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:stu];
-    [dataArray addObject:data];
+    NSMutableData *data = [NSMutableData data];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:stu forKey:@"STUDENT"];
+    [archiver finishEncoding];
+    [data writeToFile:[Student getArchiveFilePath] atomically:YES];
+}
+
++ (NSString *)getArchiveFilePath{
+    NSString *directory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    return [directory stringByAppendingPathComponent:archivingFilePath];
+}
+
++ (void) testUnArchive{
+    NSData *data = [[NSMutableData alloc] initWithContentsOfFile:[Student getArchiveFilePath]];
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
     
-    NSArray * array = [NSArray arrayWithArray:dataArray];
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    [user setObject:array forKey:@"stus"];
+    Student *stu = [unarchiver decodeObjectForKey:@"STUDENT"];
+    [unarchiver finishDecoding];
     
-    dataArray = [NSMutableArray arrayWithArray:[user objectForKey:@"stus"]];
-    NSLog(@"=======%@========", ((Student *)[NSKeyedUnarchiver unarchiveObjectWithData:[dataArray firstObject]]).sex);
+    NSLog(@"%@", stu);
 }
 @end
 

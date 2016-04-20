@@ -27,8 +27,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    NSLog(@"%lu", (unsigned long)self.tabBarController.selectedIndex);
     
-    [Student testFMDB];
-    
+//    [Student testFMDB];
+    [Student testNSUserDefaults];
+    [Student testArchivement];
 //    [self testDrawView];
 //    [self testRedrawView];
 //    [self testAnimationView];

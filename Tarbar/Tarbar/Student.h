@@ -16,4 +16,5 @@
 
 + (void) testFMDB;
 + (void) testNSUserDefaults;
++ (void) testArchivement;
 @end
