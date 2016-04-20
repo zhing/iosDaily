@@ -31,6 +31,14 @@ static NSString* const archivingFilePath=@"archive";
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone{
+    Student *copy = [[[self class] allocWithZone:zone] init];
+    copy.name = [self.name copyWithZone:zone];
+    copy.studentNumber = [self.studentNumber copyWithZone:zone];
+    copy.sex = [self.sex copyWithZone:zone];
+    return copy;
+}
+
 - (NSString *)description{
     return [NSString stringWithFormat:@"name:%@, studentNumber:%li, sex:%@",self.name,[self.studentNumber integerValue],self.sex];
 }
