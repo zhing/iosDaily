@@ -16,6 +16,7 @@ static NSString* const archivingFilePath=@"archive";
 
 @implementation Student
 
+#pragma mark NSCoding
 - (void) encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.studentNumber forKey:@"studentNumber"];
@@ -31,6 +32,7 @@ static NSString* const archivingFilePath=@"archive";
     return self;
 }
 
+#pragma mark NSCopying
 - (id)copyWithZone:(NSZone *)zone{
     Student *copy = [[[self class] allocWithZone:zone] init];
     copy.name = [self.name copyWithZone:zone];
