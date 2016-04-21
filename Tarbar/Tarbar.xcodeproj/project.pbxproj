@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F06D5431CC3D7A80045E9D1 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5421CC3D7A80045E9D1 /* DrawViewController.m */; };
 		3F06D5471CC49C630045E9D1 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5461CC49C630045E9D1 /* AnimationViewController.m */; };
+		3F06D54E1CC7BC7C0045E9D1 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D54D1CC7BC7C0045E9D1 /* MyCollectionViewCell.m */; };
+		3F06D5511CC7BEBA0045E9D1 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F06D5501CC7BEBA0045E9D1 /* CollectionViewController.m */; };
 		3F1BC4871CBBE4C1002394F8 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4861CBBE4C1002394F8 /* Student.m */; };
 		3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4891CBD334A002394F8 /* AFNetworkViewController.m */; };
 		3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC48D1CBD360B002394F8 /* ZHUser.m */; };
@@ -95,6 +97,10 @@
 		3F06D5421CC3D7A80045E9D1 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		3F06D5451CC49C630045E9D1 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		3F06D5461CC49C630045E9D1 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		3F06D54C1CC7BC7C0045E9D1 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		3F06D54D1CC7BC7C0045E9D1 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		3F06D54F1CC7BEBA0045E9D1 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		3F06D5501CC7BEBA0045E9D1 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		3F1BC4851CBBE4C1002394F8 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		3F1BC4861CBBE4C1002394F8 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		3F1BC4881CBD334A002394F8 /* AFNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkViewController.h; sourceTree = "<group>"; };
@@ -288,14 +294,25 @@
 			name = Animation;
 			sourceTree = "<group>";
 		};
-		3F1BC48B1CBD34F9002394F8 /* network */ = {
+		3F06D54B1CC7BC110045E9D1 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				3F06D54C1CC7BC7C0045E9D1 /* MyCollectionViewCell.h */,
+				3F06D54D1CC7BC7C0045E9D1 /* MyCollectionViewCell.m */,
+				3F06D54F1CC7BEBA0045E9D1 /* CollectionViewController.h */,
+				3F06D5501CC7BEBA0045E9D1 /* CollectionViewController.m */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		3F1BC48B1CBD34F9002394F8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				F3FF4CEF1CBDEB3E00D20526 /* Json */,
 				3F1BC4881CBD334A002394F8 /* AFNetworkViewController.h */,
 				3F1BC4891CBD334A002394F8 /* AFNetworkViewController.m */,
 			);
-			name = network;
+			name = Network;
 			sourceTree = "<group>";
 		};
 		3F1BC4921CBD464B002394F8 /* ThirdParty */ = {
@@ -382,14 +399,15 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				3F06D54B1CC7BC110045E9D1 /* Collection */,
 				3F06D5441CC49C340045E9D1 /* Animation */,
 				3F06D5401CC12AEF0045E9D1 /* Persistent */,
 				F3C0E7F71CC0ED1000829E90 /* CGContextDraw */,
 				F3FF4D161CC0A97500D20526 /* KVC&KVO */,
-				F3FF4D121CBF3BBD00D20526 /* autoLayout */,
-				F3FF4CEE1CBDE89500D20526 /* tableView */,
+				F3FF4D121CBF3BBD00D20526 /* AutoLayout */,
+				F3FF4CEE1CBDE89500D20526 /* TableView */,
 				3F1BC4921CBD464B002394F8 /* ThirdParty */,
-				3F1BC48B1CBD34F9002394F8 /* network */,
+				3F1BC48B1CBD34F9002394F8 /* Network */,
 				3F4A41751C9AC2CA0008BDA7 /* ViewController.h */,
 				3F4A41761C9AC2CA0008BDA7 /* ViewController.m */,
 				3F4A417B1C9AC2CA0008BDA7 /* Images.xcassets */,
@@ -488,7 +506,7 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
-		F3FF4CEE1CBDE89500D20526 /* tableView */ = {
+		F3FF4CEE1CBDE89500D20526 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 				3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */,
@@ -502,7 +520,7 @@
 				3FDC850E1CAC2F0A00BF7E76 /* SimpleTableViewController.h */,
 				3FDC850F1CAC2F0A00BF7E76 /* SimpleTableViewController.m */,
 			);
-			name = tableView;
+			name = TableView;
 			sourceTree = "<group>";
 		};
 		F3FF4CEF1CBDEB3E00D20526 /* Json */ = {
@@ -546,7 +564,7 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		F3FF4D121CBF3BBD00D20526 /* autoLayout */ = {
+		F3FF4D121CBF3BBD00D20526 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
 				F3FF4D131CBF754B00D20526 /* AutoLayoutViewController.h */,
@@ -554,7 +572,7 @@
 				3F90E7ED1CBFDA2B003A8846 /* DIYCustomView.h */,
 				3F90E7EE1CBFDA2B003A8846 /* DIYCustomView.m */,
 			);
-			name = autoLayout;
+			name = AutoLayout;
 			sourceTree = "<group>";
 		};
 		F3FF4D161CC0A97500D20526 /* KVC&KVO */ = {
@@ -684,7 +702,9 @@
 				3F4492461CBD5A2C006EA652 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
 				3F90E7E81CBFD4D9003A8846 /* MASViewConstraint.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
+				3F06D5511CC7BEBA0045E9D1 /* CollectionViewController.m in Sources */,
 				3FDC850D1CA2E69800BF7E76 /* ScrollViewController.m in Sources */,
+				3F06D54E1CC7BC7C0045E9D1 /* MyCollectionViewCell.m in Sources */,
 				3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */,
 				3F44923E1CBD5A2C006EA652 /* MTLJSONAdapter.m in Sources */,
 				3F4A41771C9AC2CA0008BDA7 /* ViewController.m in Sources */,

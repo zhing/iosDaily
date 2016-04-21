@@ -12,11 +12,13 @@
 #import "Masonry.h"
 #import "DrawViewController.h"
 #import "AnimationViewController.h"
+#import "CollectionViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UIButton *button1;
 @property (strong, nonatomic) UIButton *button2;
+@property (strong, nonatomic) UIButton *button3;
 @end
 
 @implementation ViewController
@@ -28,11 +30,12 @@
 //    NSLog(@"%lu", (unsigned long)self.tabBarController.selectedIndex);
     
 //    [Student testFMDB];
-    [Student testNSUserDefaults];
-    [Student testArchivement];
-//    [self testDrawView];
-//    [self testRedrawView];
-//    [self testAnimationView];
+//    [Student testNSUserDefaults];
+//    [Student testArchivement];
+    [self testDrawView];
+    [self testRedrawView];
+    [self testAnimationView];
+    [self testCollectionView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,6 +91,27 @@
 
 - (void) showUpAnimationViewController: (id)sender{
     AnimationViewController *controller = [[AnimationViewController alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)testCollectionView{
+    _button3 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button3 setTitle:@"collection" forState:UIControlStateNormal];
+    _button3.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button3 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button3];
+    
+    [_button3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button2.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button3 addTarget:self action:@selector(showUpCollectionViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpCollectionViewController: (id)sender{
+    CollectionViewController *controller = [[CollectionViewController alloc] init];
     [self presentViewController:controller animated:YES completion:nil];
 }
 @end
