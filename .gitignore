@@ -2,3 +2,4 @@
 Tarbar/Tarbar.xcodeproj/xcuserdata
 *.DS_Store
 Tarbar/build
+Tarbar/Pods
