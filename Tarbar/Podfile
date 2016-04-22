@@ -1,4 +1,5 @@
 platform :ios, '7.0'
+
 target "Tarbar" do
-pod 'Masonry'
+    pod 'Masonry'
 end

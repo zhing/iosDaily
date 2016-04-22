@@ -1,5 +1,4 @@
-*.xcuserstate
-Tarbar/Tarbar.xcodeproj/xcuserdata
+xcuserdata
 *.DS_Store
 Tarbar/build
 Tarbar/Pods
