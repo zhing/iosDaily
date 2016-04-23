@@ -13,12 +13,15 @@
 #import "DrawViewController.h"
 #import "AnimationViewController.h"
 #import "CollectionViewController.h"
+#import "WebViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UIButton *button1;
 @property (strong, nonatomic) UIButton *button2;
 @property (strong, nonatomic) UIButton *button3;
+@property (strong, nonatomic) UIButton *button4;
+
 @end
 
 @implementation ViewController
@@ -36,6 +39,7 @@
     [self testRedrawView];
     [self testAnimationView];
     [self testCollectionView];
+    [self testWebView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,6 +116,27 @@
 
 - (void) showUpCollectionViewController: (id)sender{
     CollectionViewController *controller = [[CollectionViewController alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)testWebView{
+    _button4 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button4 setTitle:@"web" forState:UIControlStateNormal];
+    _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button4 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button4];
+    
+    [_button4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button3.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button4 addTarget:self action:@selector(showUpWebViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpWebViewController: (id)sender{
+    WebViewController *controller = [[WebViewController alloc] init];
     [self presentViewController:controller animated:YES completion:nil];
 }
 @end
