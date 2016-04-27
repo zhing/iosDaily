@@ -26,6 +26,9 @@
     _bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
     [_bridge registerHandler:@"ObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"js called objcCallback with %@",data);
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
+        NSDictionary *args = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@", [args objectForKey:@"foo"]);
         responseCallback(@"Message return from objc");
     }];
     [self renderButtons:webView];
