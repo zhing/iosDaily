@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNNavigationController.h"
 
-@interface WebViewController : UINavigationController <UIWebViewDelegate>
+@interface WebViewController : UIViewController <UIWebViewDelegate>
 
 @end

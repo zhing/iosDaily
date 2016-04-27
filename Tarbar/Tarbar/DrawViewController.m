@@ -37,7 +37,9 @@
     [self.view addSubview:_contentView];
     
     [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width);
+        make.top.equalTo(self.view).offset(64);
+        make.leading.equalTo(self.view);
+        make.trailing.equalTo(self.view);
         make.height.equalTo(@300);
     }];
 }

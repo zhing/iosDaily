@@ -21,7 +21,6 @@
 @property (strong, nonatomic) UIButton *button2;
 @property (strong, nonatomic) UIButton *button3;
 @property (strong, nonatomic) UIButton *button4;
-
 @end
 
 @implementation ViewController
@@ -29,17 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view, typically from a nib.
-//    NSLog(@"%lu", (unsigned long)self.tabBarController.selectedIndex);
     
     [Student testFMDB];
     [Student testNSUserDefaults];
     [Student testArchivement];
-    [self testDrawView];
+//    [self testDrawView];
     [self testRedrawView];
     [self testAnimationView];
     [self testCollectionView];
     [self testWebView];
+    
+    [self setTitle:@"测试"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,7 +64,7 @@
     
     [_button1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.top.equalTo(@50);
+        make.top.equalTo(self.view).offset(84);
         make.width.greaterThanOrEqualTo(@100);
     }];
     
@@ -74,7 +73,7 @@
 
 - (void) showUpDrawViewController: (id)sender{
     DrawViewController *controller = [[DrawViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)testAnimationView{
@@ -95,7 +94,7 @@
 
 - (void) showUpAnimationViewController: (id)sender{
     AnimationViewController *controller = [[AnimationViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)testCollectionView{
@@ -116,7 +115,7 @@
 
 - (void) showUpCollectionViewController: (id)sender{
     CollectionViewController *controller = [[CollectionViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)testWebView{
@@ -137,6 +136,6 @@
 
 - (void) showUpWebViewController: (id)sender{
     WebViewController *controller = [[WebViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end

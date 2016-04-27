@@ -12,6 +12,7 @@
 #import "SimpleTableViewController.h"
 #import "AFNetworkViewController.h"
 #import "AutoLayoutViewController.h"
+#import "LNNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -23,8 +24,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ViewController *secondView = [[ViewController alloc] init];
-    secondView.tabBarItem.title = @"first";
+    ViewController *firstView = [[ViewController alloc] init];
+    LNNavigationController *firstNav = [[LNNavigationController alloc] initWithRootViewController:firstView];
+    firstNav.tabBarItem.title = @"first";
     ScrollViewController *thirdView = [[ScrollViewController alloc] init];
     thirdView.tabBarItem.title = @"发现";
     SimpleTableViewController *forthView = [[SimpleTableViewController alloc] init];
@@ -35,7 +37,7 @@
     sixthView.tabBarItem.title = @"AutoLayout";
     
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[secondView,thirdView, forthView, fifthView, sixthView];
+    tabBarController.viewControllers = @[firstNav,thirdView, forthView, fifthView, sixthView];
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];

@@ -8,6 +8,7 @@
 
 #import "WebViewController.h"
 #import "WebViewJavascriptBridge.h"
+#import "Masonry.h"
 
 @interface WebViewController ()
 
@@ -19,8 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    UIWebView *webView = [[UIWebView alloc] init];
     [self.view addSubview:webView];
+    
+    [webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
     
     [WebViewJavascriptBridge enableLogging];
     _bridge = [WebViewJavascriptBridge bridgeForWebView:webView];

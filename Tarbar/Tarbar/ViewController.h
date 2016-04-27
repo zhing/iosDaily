@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNNavigationController.h"
 
 @interface ViewController : UIViewController
 
