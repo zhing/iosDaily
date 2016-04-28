@@ -60,6 +60,7 @@
 		F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80F1CC6441800829E90 /* FMResultSet.m */; };
 		F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8161CC644C100829E90 /* Fmdb.m */; };
 		F3C0E8191CC65A7200829E90 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C0E8181CC65A7200829E90 /* libsqlite3.0.tbd */; };
+		F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8351CD1D60900829E90 /* TextViewController.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -198,6 +199,8 @@
 		F3C0E8151CC644C100829E90 /* Fmdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fmdb.h; sourceTree = "<group>"; };
 		F3C0E8161CC644C100829E90 /* Fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fmdb.m; sourceTree = "<group>"; };
 		F3C0E8181CC65A7200829E90 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F3C0E8341CD1D60900829E90 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		F3C0E8351CD1D60900829E90 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -381,6 +384,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				F3C0E8301CD1D55E00829E90 /* Text */,
 				3FF383AE1CD1025400C84BA8 /* Base */,
 				F3C0E81C1CCA286000829E90 /* Webview */,
 				3F06D54B1CC7BC110045E9D1 /* Collection */,
@@ -494,6 +498,15 @@
 				3FF383AA1CCB80E800C84BA8 /* WebViewController.m */,
 			);
 			name = Webview;
+			sourceTree = "<group>";
+		};
+		F3C0E8301CD1D55E00829E90 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F3C0E8341CD1D60900829E90 /* TextViewController.h */,
+				F3C0E8351CD1D60900829E90 /* TextViewController.m */,
+			);
+			name = Text;
 			sourceTree = "<group>";
 		};
 		F3FF4CEE1CBDE89500D20526 /* TableView */ = {
@@ -749,6 +762,7 @@
 				3F4492431CBD5A2C006EA652 /* MTLValueTransformer.m in Sources */,
 				3F44923F1CBD5A2C006EA652 /* MTLModel+NSCoding.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
+				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,

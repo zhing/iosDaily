@@ -14,6 +14,7 @@
 #import "AnimationViewController.h"
 #import "CollectionViewController.h"
 #import "WebViewController.h"
+#import "TextViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -21,6 +22,7 @@
 @property (strong, nonatomic) UIButton *button2;
 @property (strong, nonatomic) UIButton *button3;
 @property (strong, nonatomic) UIButton *button4;
+@property (strong, nonatomic) UIButton *button5;
 @end
 
 @implementation ViewController
@@ -37,6 +39,7 @@
     [self testAnimationView];
     [self testCollectionView];
     [self testWebView];
+    [self testTextView];
     
     [self setTitle:@"测试"];
 }
@@ -136,6 +139,27 @@
 
 - (void) showUpWebViewController: (id)sender{
     WebViewController *controller = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)testTextView{
+    _button5 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button5 setTitle:@"text" forState:UIControlStateNormal];
+    _button5.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button5 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button5];
+    
+    [_button5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button4.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button5 addTarget:self action:@selector(showUpTextViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpTextViewController: (id)sender{
+    TextViewController *controller = [[TextViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end
