@@ -12,6 +12,7 @@
 @interface TextViewController ()
 
 @property (strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UILabel *label5;
 
 @end
 
@@ -100,5 +101,75 @@
     [mutableString appendAttributedString:[NSAttributedString attributedStringWithAttachment:textAttachment]];
     [mutableString appendAttributedString:[[NSAttributedString alloc] initWithString:@" 文本附图"]];
     label4.attributedText = mutableString;
+    
+    _label5 = [[UILabel alloc] init];
+    [_label5 setFont:[UIFont boldSystemFontOfSize:15.0f]];
+    [_label5.layer setBorderWidth:.5f];
+    [self.view addSubview:_label5];
+    [_label5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(label4.mas_bottom).offset(20);
+        make.leading.equalTo(self.view).offset(5);
+        make.trailing.equalTo(self.view).offset(-5);
+    }];
+    
+    NSString *string = @"Be Bold! And a little color wouldn't hurt either.";
+    NSDictionary *attrs = @{NSFontAttributeName: [UIFont systemFontOfSize:36]};
+    NSMutableAttributedString *as = [[NSMutableAttributedString alloc] initWithString:string attributes:attrs];
+    [as addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:36] range:[string rangeOfString:@"Bold!"]];
+    [as addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:[string rangeOfString:@"little color"]];
+    [as addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:[string rangeOfString:@"little"]];
+    [as addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Papyrus" size:36] range:[string rangeOfString:@"color"]];
+    _label5.attributedText = as;
+    
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn1 setBackgroundColor:[UIColor blueColor]];
+    [btn1 setTitle:@"字体描述符" forState:UIControlStateNormal];
+    [self.view addSubview:btn1];
+    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(_label5.mas_bottom).offset(20);
+        make.width.equalTo(@100);
+    }];
+    
+    [btn1 addTarget:self action:@selector(toggleItalic:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *label6 = [[UILabel alloc] init];
+    [label6 setFont:[UIFont boldSystemFontOfSize:15.0f]];
+    [label6.layer setBorderWidth:.5f];
+    [label6 setNumberOfLines:0];//不限制行数，对于多行显示很重要
+    [self.view addSubview:label6];
+    [label6 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(btn1.mas_bottom).offset(20);
+        make.leading.equalTo(self.view).offset(5);
+        make.trailing.equalTo(self.view).offset(-5);
+    }];
+    label6.text = @"快快登陆吧，关注百思最in牛人\n好友动态让你过把瘾儿～\n耶～～～～！";
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:label6.text];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    //style.headIndent = 30; //缩进
+    //style.firstLineHeadIndent = 0;
+    style.lineSpacing=10;//行距
+    style.alignment=NSTextAlignmentCenter;
+    //需要设置的范围
+    NSRange range = NSMakeRange(0,label6.text.length);
+    [text addAttribute: NSParagraphStyleAttributeName value:style range:range];
+    label6.attributedText= text;
 }
+
+//遍历某个属性，当属性发生变化的时候执行block
+- (void) toggleItalic:(id)sender{
+    NSMutableAttributedString *as = [self.label5.attributedText mutableCopy];
+    [as enumerateAttribute:NSFontAttributeName inRange:NSMakeRange(0, as.length) options:0 usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {
+        UIFont *font = value;
+//        UIFontDescriptor *descriptor = font.fontDescriptor;
+//        UIFontDescriptorSymbolicTraits traits = descriptor.symbolicTraits ^ UIFontDescriptorTraitItalic;
+//        UIFontDescriptor *toggledDescriptor = [descriptor fontDescriptorWithSymbolicTraits:traits];
+//        UIFont *italicFont = [UIFont fontWithDescriptor:toggledDescriptor size:0];
+//        [as addAttribute:NSFontAttributeName value:italicFont range:range];
+        NSLog(@"-%@-%f-", [[as attributedSubstringFromRange:range] string],font.pointSize);
+    }];
+    
+    self.label5.attributedText = as;
+}
+
 @end

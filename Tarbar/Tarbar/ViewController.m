@@ -31,9 +31,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [Student testFMDB];
-    [Student testNSUserDefaults];
-    [Student testArchivement];
+//    [Student testFMDB];
+//    [Student testNSUserDefaults];
+//    [Student testArchivement];
 //    [self testDrawView];
     [self testRedrawView];
     [self testAnimationView];
