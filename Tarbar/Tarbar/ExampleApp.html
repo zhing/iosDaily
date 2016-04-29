@@ -37,7 +37,7 @@
 		}
 
 		bridge.registerHandler('jsHandler', function(data, responseCallback) {
-			log('ObjC called jsHandler with', data)
+			log('ObjC called jsHandler with', data.greetingFromObjC)
 			var responseData = { 'Javascript Says':'Right back atcha!' }
 <!--			log('JS responding with', responseData)-->
 			responseCallback(responseData)
