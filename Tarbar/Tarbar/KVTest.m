@@ -15,7 +15,8 @@
 + (void)testKVC{
     
     Person *person1 = [[Person alloc] init];
-    [person1 setValue:@"09211216" forKey:@"myID"];
+    NSString *myID = @"09211216";
+    [person1 setValue:myID forKey:@"myID"];
     [person1 setValue:@"zhing" forKey:@"name"];
     [person1 setValue:@28 forKey:@"age"];
 
@@ -28,8 +29,9 @@
     [person1 setValue:@100000000.0 forKeyPath:@"account.balance"];
     NSLog(@"person1's balance is :%.2f",[[person1 valueForKeyPath:@"account.balance"] floatValue]);
     
-    //观察retain的效果
+    //观察retain的效果, 对于string是常量比较特殊所以无效果
     account1.balance = 300000000.0f;
+    myID = @"x";
     [person1 showMessage];
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
