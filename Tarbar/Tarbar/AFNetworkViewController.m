@@ -29,7 +29,7 @@
 //    [self doDatatask];
 //    [self doGet];
 //    [self doPost];
-//    [KVTest testKVC];
+    [KVTest testKVC];
     [KVTest testKVO];
 }
 

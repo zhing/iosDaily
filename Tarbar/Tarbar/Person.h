@@ -13,8 +13,10 @@
 @private int _age;
 }
 
+@property (nonatomic,assign) NSString *myID;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,retain) Account *account;
 
 - (void) showMessage;
+- (void) setValue:(id)value forUndefinedKey:(NSString *)key;
 @end

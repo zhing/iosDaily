@@ -11,7 +11,7 @@
 @implementation Person
 
 - (void) showMessage{
-    NSLog(@"name=%@,age=%d", _name, _age);
+    NSLog(@"myID=%@,name=%@,age=%d,balance=%f", _myID, _name, _age, _account.balance);
 }
 
 - (void) setAccount:(Account *)account{
@@ -22,6 +22,12 @@
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"balance"]){
         NSLog(@"keyPath=%@,object=%@,newValue=%.2f,context=%@",keyPath,object,[[change objectForKey:@"new"] floatValue],context);
+    }
+}
+
+- (void) setValue:(id)value forUndefinedKey:(NSString *)key{
+    if ([key isEqualToString:@"id"]){
+        self.myID = value;
     }
 }
 

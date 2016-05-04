@@ -15,17 +15,33 @@
 + (void)testKVC{
     
     Person *person1 = [[Person alloc] init];
+    [person1 setValue:@"09211216" forKey:@"myID"];
     [person1 setValue:@"zhing" forKey:@"name"];
     [person1 setValue:@28 forKey:@"age"];
 
     [person1 showMessage];
-    NSLog(@"person1's name is :%@,age is :%@",person1.name,[person1 valueForKey:@"age"]);
+    NSLog(@"person1's name is :%@,age is :%li",person1.name,[[person1 valueForKey:@"age"] integerValue]);
     
     Account *account1 = [[Account alloc] init];
     person1.account = account1;
     
     [person1 setValue:@100000000.0 forKeyPath:@"account.balance"];
     NSLog(@"person1's balance is :%.2f",[[person1 valueForKeyPath:@"account.balance"] floatValue]);
+    
+    //观察retain的效果
+    account1.balance = 300000000.0f;
+    [person1 showMessage];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         @"2013111433", @"id",
+                         @"zhangqing",  @"name",
+                         @"10",    @"age",
+                         @{@"balance": @500000000.0}, @"account", nil];
+    Person *person2 = [[Person alloc] init];
+    [person2 setValuesForKeysWithDictionary:dic];
+    [account1 setValuesForKeysWithDictionary:dic[@"account"]];
+    person2.account = account1;
+    [person2 showMessage];
 }
 
 + (void) testKVO{
