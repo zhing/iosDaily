@@ -15,6 +15,7 @@
 #import "CollectionViewController.h"
 #import "WebViewController.h"
 #import "TextViewController.h"
+#import "RuntimeViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -23,6 +24,7 @@
 @property (strong, nonatomic) UIButton *button3;
 @property (strong, nonatomic) UIButton *button4;
 @property (strong, nonatomic) UIButton *button5;
+@property (strong, nonatomic) UIButton *button6;
 @end
 
 @implementation ViewController
@@ -40,6 +42,7 @@
     [self testCollectionView];
     [self testWebView];
     [self testTextView];
+    [self testRuntimeView];
     
     [self setTitle:@"测试"];
 }
@@ -160,6 +163,27 @@
 
 - (void) showUpTextViewController: (id)sender{
     TextViewController *controller = [[TextViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)testRuntimeView{
+    _button6 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button6 setTitle:@"runtime" forState:UIControlStateNormal];
+    _button6.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button6 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button6];
+    
+    [_button6 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button5.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button6 addTarget:self action:@selector(showUpRuntimeViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpRuntimeViewController: (id)sender{
+    RuntimeViewController *controller = [[RuntimeViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end
