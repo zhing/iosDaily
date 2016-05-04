@@ -17,7 +17,7 @@ static voidIMP sOrigAddObserver = NULL;
 static void MYAddObserver(id self, SEL _cmd, id observer, SEL selector, NSString *name, id object){
     NSLog(@"Adding observer: %@", observer);
     
-    //
+    //调用旧实现
     NSAssert(sOrigAddObserver, @"Original addObserver: method not found.");
     if (sOrigAddObserver){
         sOrigAddObserver(self, _cmd, observer, selector, name, object);

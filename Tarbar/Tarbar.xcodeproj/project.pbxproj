@@ -49,6 +49,8 @@
 		3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */; };
 		3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */; };
 		3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B21CD103C500C84BA8 /* LNNavigationController.m */; };
+		3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */; };
+		3FF383BD1CDA3E7300C84BA8 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
 		F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */; };
@@ -179,6 +181,10 @@
 		3FF383B01CD103AC00C84BA8 /* CRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationBar.h; sourceTree = "<group>"; };
 		3FF383B21CD103C500C84BA8 /* LNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNavigationController.m; sourceTree = "<group>"; };
 		3FF383B31CD103C500C84BA8 /* LNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNavigationController.h; sourceTree = "<group>"; };
+		3FF383B81CDA3DF900C84BA8 /* MYNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNotificationCenter.h; sourceTree = "<group>"; };
+		3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNotificationCenter.m; sourceTree = "<group>"; };
+		3FF383BB1CDA3E7300C84BA8 /* NSObject+SetClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SetClass.h"; sourceTree = "<group>"; };
+		3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
 		557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tarbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tarbar/Pods-Tarbar.debug.xcconfig"; sourceTree = "<group>"; };
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
@@ -533,6 +539,10 @@
 				F3C0E8421CDA084B00829E90 /* NSObject+RNSwizzle.m */,
 				F3C0E8441CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.h */,
 				F3C0E8451CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m */,
+				3FF383B81CDA3DF900C84BA8 /* MYNotificationCenter.h */,
+				3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */,
+				3FF383BB1CDA3E7300C84BA8 /* NSObject+SetClass.h */,
+				3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */,
 			);
 			name = Runtime;
 			sourceTree = "<group>";
@@ -778,6 +788,7 @@
 				3F4492481CBD5A2C006EA652 /* NSError+MTLModelException.m in Sources */,
 				F3C0E8121CC6441800829E90 /* FMDatabasePool.m in Sources */,
 				F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */,
+				3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */,
 				F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */,
 				3F4492461CBD5A2C006EA652 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
@@ -835,6 +846,7 @@
 				3F4492441CBD5A2C006EA652 /* NSArray+MTLManipulationAdditions.m in Sources */,
 				F3FF4D151CBF754B00D20526 /* AutoLayoutViewController.m in Sources */,
 				F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */,
+				3FF383BD1CDA3E7300C84BA8 /* NSObject+SetClass.m in Sources */,
 				3FDC85101CAC2F0A00BF7E76 /* SimpleTableViewController.m in Sources */,
 				3F4492421CBD5A2C006EA652 /* MTLTransformerErrorHandling.m in Sources */,
 				3F4492451CBD5A2C006EA652 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
