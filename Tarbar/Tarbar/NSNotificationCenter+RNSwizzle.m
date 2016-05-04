@@ -7,7 +7,7 @@
 //
 
 #import "NSNotificationCenter+RNSwizzle.h"
-#import <objc/objc-runtime.h>
+#import "NSObject+RNSwizzle.h"
 
 @implementation NSNotificationCenter (RNSwizzle)
 
@@ -27,7 +27,7 @@ static void MYAddObserver(id self, SEL _cmd, id observer, SEL selector, NSString
 + (void)swizzleAddObserver{
     NSAssert(!sOrigAddObserver, @"Only call swizzleAddObserver once.");
     SEL sel = @selector(addObserver:selector:name:object:);
-    sOrigAddObserver = (__bridge void *)[self swizzleSelector:sel withIMP:(IMP)MYAddObserver];
+    sOrigAddObserver = (void *)[self swizzleSelector:sel withIMP:(IMP)MYAddObserver];
 }
 
 @end
