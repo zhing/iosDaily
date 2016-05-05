@@ -8,16 +8,44 @@
 
 #import "RuntimeViewController.h"
 #import <objc/objc-runtime.h>
+#import "Masonry.h"
+#import "NSNotificationCenter+RNSwizzle.h"
+
+#define LOGIN_NOTIFICATION @"login_info"
+
+@interface RuntimeViewController ()
+
+@property (nonatomic, strong) UIButton *loginBtn;
+
+@end
 
 @implementation RuntimeViewController
+
++ (void)load{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [NSNotificationCenter swizzleAddObserver];
+    });
+}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+//    [self printObjectName];
+//    [self printObjectMethods];
+//    [self fastCall];
+//    [self printInvocation];
+//    [self presentSwizzle];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [self printObjectName];
     [self printObjectMethods];
     [self fastCall];
+    [self printInvocation];
+    [self presentSwizzle];
 }
 
 - (void)printObjectName{
@@ -79,6 +107,52 @@
     [invocation setSelector:selector];
     [invocation setArgument:&stuff atIndex:2];
     [invocation invoke];
+    
+    NSLog(@"%@", set);
+}
+
+- (void)presentSwizzle{
+
+    _loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _loginBtn.layer.borderWidth = 0.5;
+    [_loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    [_loginBtn setTitle:@"已登陆" forState:UIControlStateSelected];
+    [self.view addSubview:_loginBtn];
+    [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(64 + 20);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@100);
+    }];
+    
+    [_loginBtn addTarget:self action:@selector(postNotification) forControlEvents:UIControlEventTouchUpInside];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLoginInfo:) name:LOGIN_NOTIFICATION object:nil];
+}
+
+- (void)postNotification{
+    NSDictionary *userInfo = @{@"username":@"zhing"};
+    NSNotification *notification = [NSNotification notificationWithName:LOGIN_NOTIFICATION object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+}
+
+- (void) updateLoginInfo: (NSNotification *)notification{
+    [_loginBtn setSelected:YES];
+    
+    UILabel *infoLabel = [[UILabel alloc] init];
+    infoLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:infoLabel];
+    [infoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.loginBtn.mas_bottom).offset(10);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@200);
+    }];
+    
+    NSDictionary *userInfo = notification.userInfo;
+    infoLabel.text = [NSString stringWithFormat:@"用户%@ 登陆成功", userInfo[@"username"]];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
