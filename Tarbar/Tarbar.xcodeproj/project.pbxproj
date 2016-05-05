@@ -67,6 +67,7 @@
 		F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E83F1CD9EE1D00829E90 /* RuntimeViewController.m */; };
 		F3C0E8431CDA084B00829E90 /* NSObject+RNSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8421CDA084B00829E90 /* NSObject+RNSwizzle.m */; };
 		F3C0E8461CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8451CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m */; };
+		F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8491CDB24D300829E90 /* GCDViewController.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -219,6 +220,8 @@
 		F3C0E8421CDA084B00829E90 /* NSObject+RNSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RNSwizzle.m"; sourceTree = "<group>"; };
 		F3C0E8441CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+RNSwizzle.h"; sourceTree = "<group>"; };
 		F3C0E8451CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+RNSwizzle.m"; sourceTree = "<group>"; };
+		F3C0E8481CDB24D300829E90 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		F3C0E8491CDB24D300829E90 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -404,6 +407,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				F3C0E8471CDB248200829E90 /* GCD */,
 				F3C0E83A1CD886B800829E90 /* Runtime */,
 				F3C0E8301CD1D55E00829E90 /* Text */,
 				3FF383AE1CD1025400C84BA8 /* Base */,
@@ -547,6 +551,15 @@
 			name = Runtime;
 			sourceTree = "<group>";
 		};
+		F3C0E8471CDB248200829E90 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				F3C0E8481CDB24D300829E90 /* GCDViewController.h */,
+				F3C0E8491CDB24D300829E90 /* GCDViewController.m */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
 		F3FF4CEE1CBDE89500D20526 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -676,7 +689,7 @@
 		3F4A41631C9AC2CA0008BDA7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = zhing;
 				TargetAttributes = {
 					3F4A416A1C9AC2CA0008BDA7 = {
@@ -802,6 +815,7 @@
 				3F44923F1CBD5A2C006EA652 /* MTLModel+NSCoding.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
+				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
@@ -904,6 +918,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -985,6 +1000,7 @@
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZBarSDK,
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZXingObjC,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1013,6 +1029,7 @@
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZBarSDK,
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZXingObjC,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1031,6 +1048,7 @@
 				);
 				INFOPLIST_FILE = TarbarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tarbar.app/Tarbar";
 			};
@@ -1046,6 +1064,7 @@
 				);
 				INFOPLIST_FILE = TarbarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tarbar.app/Tarbar";
 			};

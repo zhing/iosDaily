@@ -16,6 +16,7 @@
 #import "WebViewController.h"
 #import "TextViewController.h"
 #import "RuntimeViewController.h"
+#import "GCDViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) UIButton *button4;
 @property (strong, nonatomic) UIButton *button5;
 @property (strong, nonatomic) UIButton *button6;
+@property (strong, nonatomic) UIButton *button7;
 @end
 
 @implementation ViewController
@@ -43,6 +45,7 @@
     [self testWebView];
     [self testTextView];
     [self testRuntimeView];
+    [self testGCDView];
     
     [self setTitle:@"测试"];
 }
@@ -184,6 +187,27 @@
 
 - (void) showUpRuntimeViewController: (id)sender{
     RuntimeViewController *controller = [[RuntimeViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)testGCDView{
+    _button7 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button7 setTitle:@"GCD" forState:UIControlStateNormal];
+    _button7.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button7 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button7];
+    
+    [_button7 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button6.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button7 addTarget:self action:@selector(showUpGCDViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpGCDViewController: (id)sender{
+    GCDViewController *controller = [[GCDViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end

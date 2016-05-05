@@ -21,22 +21,14 @@
 
 @implementation RuntimeViewController
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [NSNotificationCenter swizzleAddObserver];
-    });
-}
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    [self printObjectName];
-//    [self printObjectMethods];
-//    [self fastCall];
-//    [self printInvocation];
-//    [self presentSwizzle];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [NSNotificationCenter swizzleAddObserver];
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -113,10 +105,12 @@
 
 - (void)presentSwizzle{
 
-    _loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_loginBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [_loginBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     _loginBtn.layer.borderWidth = 0.5;
     [_loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    [_loginBtn setTitle:@"已登陆" forState:UIControlStateSelected];
+    [_loginBtn setTitle:@"已登陆" forState:UIControlStateDisabled];
     [self.view addSubview:_loginBtn];
     [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(64 + 20);
@@ -136,7 +130,7 @@
 }
 
 - (void) updateLoginInfo: (NSNotification *)notification{
-    [_loginBtn setSelected:YES];
+    _loginBtn.enabled = NO;
     
     UILabel *infoLabel = [[UILabel alloc] init];
     infoLabel.textAlignment = NSTextAlignmentCenter;
