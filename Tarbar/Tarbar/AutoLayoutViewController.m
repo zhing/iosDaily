@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad invonation");
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     
@@ -71,9 +72,61 @@
     [self.view addConstraints:tempConstraints];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadView{
+    [super loadView];
+    /*
+     为controller生成空白view, 对于view所作的额外初始化工作在viewDidLoad中执行.
+     */
+    NSLog(@"loadView invonation");
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    /*
+     view即将添加到视图层级中
+     */
+    NSLog(@"viewWillAppear invonation");
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    /*
+     view已经被添加到视图层级中
+     */
+    NSLog(@"viewDidAppear invonation");
+}
+
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    
+    /*
+     view即将布局其Subviews
+     */
+    NSLog(@"viewWillLayoutSubviews invonation");
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    /*
+     view已经布局其Subviews
+     */
+    NSLog(@"viewDidLayoutSubviews invonation");
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"viewWillDisappear invonation");
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+    NSLog(@"viewDidDisappear invonation");
 }
 
 @end

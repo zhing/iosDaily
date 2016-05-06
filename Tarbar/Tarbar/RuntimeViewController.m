@@ -38,6 +38,15 @@
     [self fastCall];
     [self printInvocation];
     [self presentSwizzle];
+    
+    /*
+     使用performSelector本质上还是通过发消息来调用方法，但是可以绕开编译期检查，
+     为防止程序在运行时崩溃，通常和respondsToSelector配合使用
+     */
+    [self performSelector:@selector(perform:) withObject:@"I'm zhing"];
+    if ([self respondsToSelector:@selector(noMethod:)]){
+        [self performSelector:@selector(noMethod:) withObject:nil];
+    }
 }
 
 - (void)printObjectName{
@@ -143,6 +152,10 @@
     
     NSDictionary *userInfo = notification.userInfo;
     infoLabel.text = [NSString stringWithFormat:@"用户%@ 登陆成功", userInfo[@"username"]];
+}
+
+- (void)perform: (NSString *)string{
+    NSLog(@"performSelector: %@", string);
 }
 
 - (void)dealloc{
