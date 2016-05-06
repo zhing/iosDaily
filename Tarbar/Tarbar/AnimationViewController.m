@@ -23,20 +23,6 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [cancelButton setTitle:@"cancel" forState:UIControlStateNormal];
-    cancelButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [cancelButton setBackgroundColor:[UIColor lightGrayColor]];
-    [self.view addSubview:cancelButton];
-    
-    [cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-20);
-        make.width.greaterThanOrEqualTo(@100);
-    }];
-    
-    [cancelButton addTarget:self action:@selector(onCancelClick:) forControlEvents:UIControlEventTouchUpInside];
-    
     _button1 = [UIButton buttonWithType:UIButtonTypeSystem];
     [_button1 setTitle:@"scale" forState:UIControlStateNormal];
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -45,7 +31,7 @@
     
     [_button1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.top.equalTo(@50);
+        make.top.equalTo(self.view).offset(64 + 20);
         make.width.greaterThanOrEqualTo(@100);
     }];
     
@@ -69,16 +55,12 @@
 
 - (void) showUpScaleViewController: (id)sender{
     ScaleViewController *controller = [[ScaleViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void) showUpRoundViewController: (id)sender{
     RoundViewController *controller = [[RoundViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
-- (void) onCancelClick:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

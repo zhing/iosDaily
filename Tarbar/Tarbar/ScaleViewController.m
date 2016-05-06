@@ -20,21 +20,6 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self drayMyLayer];
-    
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [cancelButton setTitle:@"cancel" forState:UIControlStateNormal];
-    cancelButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [cancelButton setBackgroundColor:[UIColor lightGrayColor]];
-    [self.view addSubview:cancelButton];
-    
-    [cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-20);
-        make.width.greaterThanOrEqualTo(@100);
-    }];
-    
-    [cancelButton addTarget:self action:@selector(onCancelClick:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 - (void)drayMyLayer{
@@ -65,7 +50,4 @@
     layer.cornerRadius=width/2;
 }
 
-- (void) onCancelClick:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end
