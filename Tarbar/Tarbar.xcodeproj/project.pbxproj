@@ -51,6 +51,7 @@
 		3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B21CD103C500C84BA8 /* LNNavigationController.m */; };
 		3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */; };
 		3FF383BD1CDA3E7300C84BA8 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */; };
+		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
 		F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */; };
@@ -188,6 +189,8 @@
 		3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
 		557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tarbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tarbar/Pods-Tarbar.debug.xcconfig"; sourceTree = "<group>"; };
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
+		F35D08C11CDC96D300D97ECF /* PositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionViewController.m; sourceTree = "<group>"; };
 		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		F3C0E7F91CC0ED8800829E90 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		F3C0E7FB1CC4C5A500829E90 /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */,
 				F3C0E7FE1CC4CC8B00829E90 /* RoundViewController.h */,
 				F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */,
+				F35D08C01CDC96D300D97ECF /* PositionViewController.h */,
+				F35D08C11CDC96D300D97ECF /* PositionViewController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -813,6 +818,7 @@
 				3F4A41771C9AC2CA0008BDA7 /* ViewController.m in Sources */,
 				3F4492431CBD5A2C006EA652 /* MTLValueTransformer.m in Sources */,
 				3F44923F1CBD5A2C006EA652 /* MTLModel+NSCoding.m in Sources */,
+				F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
 				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
