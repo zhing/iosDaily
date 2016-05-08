@@ -51,6 +51,9 @@
 		3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B21CD103C500C84BA8 /* LNNavigationController.m */; };
 		3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */; };
 		3FF383BD1CDA3E7300C84BA8 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */; };
+		3FF383C01CDE331900C84BA8 /* MoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383BF1CDE331900C84BA8 /* MoveViewController.m */; };
+		3FF383C51CDE3DA100C84BA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */; };
+		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
 		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
@@ -187,6 +190,11 @@
 		3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNotificationCenter.m; sourceTree = "<group>"; };
 		3FF383BB1CDA3E7300C84BA8 /* NSObject+SetClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SetClass.h"; sourceTree = "<group>"; };
 		3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
+		3FF383BE1CDE331900C84BA8 /* MoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveViewController.h; sourceTree = "<group>"; };
+		3FF383BF1CDE331900C84BA8 /* MoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveViewController.m; sourceTree = "<group>"; };
+		3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3FF383C61CDE588200C84BA8 /* LayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayersViewController.h; sourceTree = "<group>"; };
+		3FF383C71CDE588200C84BA8 /* LayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayersViewController.m; sourceTree = "<group>"; };
 		557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tarbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tarbar/Pods-Tarbar.debug.xcconfig"; sourceTree = "<group>"; };
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF383C51CDE3DA100C84BA8 /* QuartzCore.framework in Frameworks */,
 				F3C0E8191CC65A7200829E90 /* libsqlite3.0.tbd in Frameworks */,
 				F4C2B112BFCC53724B702180 /* libPods-Tarbar.a in Frameworks */,
 			);
@@ -302,6 +311,10 @@
 				F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */,
 				F35D08C01CDC96D300D97ECF /* PositionViewController.h */,
 				F35D08C11CDC96D300D97ECF /* PositionViewController.m */,
+				3FF383BE1CDE331900C84BA8 /* MoveViewController.h */,
+				3FF383BF1CDE331900C84BA8 /* MoveViewController.m */,
+				3FF383C61CDE588200C84BA8 /* LayersViewController.h */,
+				3FF383C71CDE588200C84BA8 /* LayersViewController.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -477,6 +490,7 @@
 		7EB32986F60DB10302476CBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */,
 				E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */,
 			);
 			name = Frameworks;
@@ -825,6 +839,7 @@
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
+				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
 				F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */,
 				3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */,
 				F3C0E8101CC6441800829E90 /* FMDatabase.m in Sources */,
@@ -858,6 +873,7 @@
 				3F06D5471CC49C630045E9D1 /* AnimationViewController.m in Sources */,
 				F3FF4D101CBDF86300D20526 /* AFURLResponseSerialization.m in Sources */,
 				3F4492491CBD5A2C006EA652 /* NSObject+MTLComparisonAdditions.m in Sources */,
+				3FF383C01CDE331900C84BA8 /* MoveViewController.m in Sources */,
 				3F06D5431CC3D7A80045E9D1 /* DrawViewController.m in Sources */,
 				3F4492411CBD5A2C006EA652 /* MTLReflection.m in Sources */,
 				F3FF4D0B1CBDF86300D20526 /* AFHTTPSessionManager.m in Sources */,
