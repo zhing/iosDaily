@@ -17,6 +17,7 @@
 #import "TextViewController.h"
 #import "RuntimeViewController.h"
 #import "GCDViewController.h"
+#import "CoreViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -27,6 +28,7 @@
 @property (strong, nonatomic) UIButton *button5;
 @property (strong, nonatomic) UIButton *button6;
 @property (strong, nonatomic) UIButton *button7;
+@property (strong, nonatomic) UIButton *button8;
 @end
 
 @implementation ViewController
@@ -46,6 +48,7 @@
     [self testTextView];
     [self testRuntimeView];
     [self testGCDView];
+    [self testCoreView];
     
     [self setTitle:@"测试"];
 }
@@ -210,4 +213,26 @@
     GCDViewController *controller = [[GCDViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (void)testCoreView{
+    _button8 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button8 setTitle:@"Core" forState:UIControlStateNormal];
+    _button8.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button8 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button8];
+    
+    [_button8 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button7.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button8 addTarget:self action:@selector(showUpCoreViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpCoreViewController: (id)sender{
+    CoreViewController *controller = [[CoreViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 @end

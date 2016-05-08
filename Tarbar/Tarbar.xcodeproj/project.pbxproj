@@ -54,6 +54,7 @@
 		3FF383C01CDE331900C84BA8 /* MoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383BF1CDE331900C84BA8 /* MoveViewController.m */; };
 		3FF383C51CDE3DA100C84BA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */; };
 		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
+		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
@@ -195,6 +196,8 @@
 		3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3FF383C61CDE588200C84BA8 /* LayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayersViewController.h; sourceTree = "<group>"; };
 		3FF383C71CDE588200C84BA8 /* LayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayersViewController.m; sourceTree = "<group>"; };
+		3FF383CA1CDF279600C84BA8 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
+		3FF383CB1CDF279600C84BA8 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
 		557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tarbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tarbar/Pods-Tarbar.debug.xcconfig"; sourceTree = "<group>"; };
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
@@ -425,6 +428,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				3FF383C91CDF277A00C84BA8 /* Core */,
 				F3C0E8471CDB248200829E90 /* GCD */,
 				F3C0E83A1CD886B800829E90 /* Runtime */,
 				F3C0E8301CD1D55E00829E90 /* Text */,
@@ -485,6 +489,15 @@
 				3FF383B01CD103AC00C84BA8 /* CRNavigationBar.h */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		3FF383C91CDF277A00C84BA8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3FF383CA1CDF279600C84BA8 /* CoreViewController.h */,
+				3FF383CB1CDF279600C84BA8 /* CoreViewController.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		7EB32986F60DB10302476CBB /* Frameworks */ = {
@@ -839,6 +852,7 @@
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
+				3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */,
 				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
 				F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */,
 				3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */,
