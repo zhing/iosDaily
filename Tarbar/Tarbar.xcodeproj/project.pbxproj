@@ -56,6 +56,8 @@
 		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
+		F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */; };
+		F35D08C91CE0AA6000D97ECF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F35D08CB1CE0AA6000D97ECF /* Localizable.strings */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
 		F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */; };
@@ -202,6 +204,9 @@
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
 		F35D08C11CDC96D300D97ECF /* PositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionViewController.m; sourceTree = "<group>"; };
+		F35D08C41CE09D2B00D97ECF /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
+		F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
+		F35D08CA1CE0AA6000D97ECF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		F3C0E7F91CC0ED8800829E90 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		F3C0E7FB1CC4C5A500829E90 /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
@@ -428,6 +433,7 @@
 		3F4A416D1C9AC2CA0008BDA7 /* Tarbar */ = {
 			isa = PBXGroup;
 			children = (
+				F35D08C31CE09C8200D97ECF /* Device */,
 				3FF383C91CDF277A00C84BA8 /* Core */,
 				F3C0E8471CDB248200829E90 /* GCD */,
 				F3C0E83A1CD886B800829E90 /* Runtime */,
@@ -459,6 +465,7 @@
 				3F4A41731C9AC2CA0008BDA7 /* AppDelegate.m */,
 				3F4A416F1C9AC2CA0008BDA7 /* Info.plist */,
 				3F4A41701C9AC2CA0008BDA7 /* main.m */,
+				F35D08CB1CE0AA6000D97ECF /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -516,6 +523,15 @@
 				007C0E19CCA6225BEC7D24EE /* Pods-Tarbar.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F35D08C31CE09C8200D97ECF /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				F35D08C41CE09D2B00D97ECF /* DeviceViewController.h */,
+				F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */,
+			);
+			name = Device;
 			sourceTree = "<group>";
 		};
 		F3C0E7F71CC0ED1000829E90 /* CGContextDraw */ = {
@@ -759,6 +775,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35D08C91CE0AA6000D97ECF /* Localizable.strings in Resources */,
 				3F44923D1CBD5A2C006EA652 /* Info.plist in Resources */,
 				3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */,
 				3F4A417C1C9AC2CA0008BDA7 /* Images.xcassets in Resources */,
@@ -866,6 +883,7 @@
 				3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */,
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
+				F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */,
 				F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */,
 				F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */,
 				3F4492471CBD5A2C006EA652 /* NSDictionary+MTLMappingAdditions.m in Sources */,
@@ -929,6 +947,14 @@
 				3F4A417E1C9AC2CA0008BDA7 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F35D08CB1CE0AA6000D97ECF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35D08CA1CE0AA6000D97ECF /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

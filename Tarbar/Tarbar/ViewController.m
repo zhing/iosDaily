@@ -18,6 +18,7 @@
 #import "RuntimeViewController.h"
 #import "GCDViewController.h"
 #import "CoreViewController.h"
+#import "DeviceViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) UIButton *button6;
 @property (strong, nonatomic) UIButton *button7;
 @property (strong, nonatomic) UIButton *button8;
+@property (strong, nonatomic) UIButton *button9;
 @end
 
 @implementation ViewController
@@ -49,6 +51,7 @@
     [self testRuntimeView];
     [self testGCDView];
     [self testCoreView];
+    [self testDeviceView];
     
     [self setTitle:@"测试"];
 }
@@ -235,4 +238,24 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void)testDeviceView{
+    _button9 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button9 setTitle:@"Device" forState:UIControlStateNormal];
+    _button9.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button9 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button9];
+    
+    [_button9 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button8.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button9 addTarget:self action:@selector(showUpDeviceViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpDeviceViewController: (id)sender{
+    DeviceViewController *controller = [[DeviceViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

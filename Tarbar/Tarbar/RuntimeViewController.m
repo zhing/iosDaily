@@ -127,7 +127,16 @@
         make.width.equalTo(@100);
     }];
     
-    [_loginBtn addTarget:self action:@selector(postNotification) forControlEvents:UIControlEventTouchUpInside];
+    /*
+      将block作为IMP调用
+     */
+    IMP postNotificationIMP = imp_implementationWithBlock(^(id obj){
+        NSDictionary *userInfo = @{@"username":@"zhing"};
+        NSNotification *notification = [NSNotification notificationWithName:LOGIN_NOTIFICATION object:self userInfo:userInfo];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+    });
+    class_addMethod([self class], @selector(testBlock), postNotificationIMP, "v@:@");
+    [_loginBtn addTarget:self action:@selector(testBlock) forControlEvents:UIControlEventTouchUpInside];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLoginInfo:) name:LOGIN_NOTIFICATION object:nil];
 }
