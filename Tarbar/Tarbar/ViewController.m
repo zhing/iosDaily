@@ -19,6 +19,7 @@
 #import "GCDViewController.h"
 #import "CoreViewController.h"
 #import "DeviceViewController.h"
+#import "AccessorTest.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -53,6 +54,7 @@
     [self testCoreView];
     [self testDeviceView];
     
+    [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
 }
 

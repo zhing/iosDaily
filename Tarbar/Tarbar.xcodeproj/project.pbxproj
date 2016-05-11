@@ -15,6 +15,7 @@
 		3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4891CBD334A002394F8 /* AFNetworkViewController.m */; };
 		3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC48D1CBD360B002394F8 /* ZHUser.m */; };
 		3F1BC4911CBD3678002394F8 /* ZHStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BC4901CBD3678002394F8 /* ZHStatus.m */; };
+		3F3A84C11CE3990C00B7A581 /* AccessorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A84C01CE3990C00B7A581 /* AccessorTest.m */; };
 		3F44923B1CBD5A2C006EA652 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4492191CBD5A2C006EA652 /* EXTRuntimeExtensions.m */; };
 		3F44923C1CBD5A2C006EA652 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F44921B1CBD5A2C006EA652 /* EXTScope.m */; };
 		3F44923D1CBD5A2C006EA652 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F44921D1CBD5A2C006EA652 /* Info.plist */; };
@@ -120,6 +121,8 @@
 		3F1BC48D1CBD360B002394F8 /* ZHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUser.m; sourceTree = "<group>"; };
 		3F1BC48F1CBD3678002394F8 /* ZHStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHStatus.h; sourceTree = "<group>"; };
 		3F1BC4901CBD3678002394F8 /* ZHStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHStatus.m; sourceTree = "<group>"; };
+		3F3A84BF1CE3990C00B7A581 /* AccessorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessorTest.h; sourceTree = "<group>"; };
+		3F3A84C01CE3990C00B7A581 /* AccessorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessorTest.m; sourceTree = "<group>"; };
 		3F4492171CBD5A2C006EA652 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		3F4492181CBD5A2C006EA652 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		3F4492191CBD5A2C006EA652 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				3FF383B31CD103C500C84BA8 /* LNNavigationController.h */,
 				3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */,
 				3FF383B01CD103AC00C84BA8 /* CRNavigationBar.h */,
+				3F3A84BF1CE3990C00B7A581 /* AccessorTest.h */,
+				3F3A84C01CE3990C00B7A581 /* AccessorTest.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 				F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
+				3F3A84C11CE3990C00B7A581 /* AccessorTest.m in Sources */,
 				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
