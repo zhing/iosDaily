@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:Reveal.framework"
+      name = "Reveal.framework">
+      <FileRef
+         location = "group:Headers">
+      </FileRef>
+      <FileRef
+         location = "group:Reveal">
+      </FileRef>
+      <Group
+         location = "group:Versions"
+         name = "Versions">
+         <Group
+            location = "group:A"
+            name = "A">
+            <Group
+               location = "group:Headers"
+               name = "Headers">
+               <FileRef
+                  location = "group:IBANetServiceTypes.h">
+               </FileRef>
+               <FileRef
+                  location = "group:IBARevealLoader.h">
+               </FileRef>
+               <FileRef
+                  location = "group:IBARevealLogger.h">
+               </FileRef>
+               <FileRef
+                  location = "group:Reveal.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Reveal">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Current">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Tarbar.xcodeproj">
    </FileRef>

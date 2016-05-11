@@ -27,6 +27,11 @@
         self.button = [[UIButton alloc] init];
         self.button.backgroundColor = [UIColor greenColor];
         [self addSubview:self.button];
+        
+        UIButton *btnBounds = [[UIButton alloc] init];
+        btnBounds.backgroundColor = [UIColor blueColor];
+        [self addSubview:btnBounds];
+        [btnBounds setBounds:CGRectMake(100, -100, 100, 100)];
     }
     return self;
 }
