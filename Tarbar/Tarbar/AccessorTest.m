@@ -12,7 +12,7 @@
 
 + (void)testArrayAccess{
     /*
-     集合遍历的四种方法
+     Array集合遍历的四种方法
      */
     
     NSMutableArray *test = [NSMutableArray array];
@@ -46,7 +46,7 @@
     
     /* enumerateObjectsWithOptions
         NSEnumerationReverse 表示逆序遍历
-        NSEnumerationConcurrent 表示并行遍历
+        NSEnumerationConcurrent 表示并行遍历(多核优化)
      */
     index = 0;
     date_s = CFAbsoluteTimeGetCurrent();
@@ -58,6 +58,25 @@
     }];
     date_current = CFAbsoluteTimeGetCurrent() - date_s;
     NSLog(@"index : %ld enumerateObjectsWithOptions Time: %f ms",(long)index,date_current * 1000);
+}
+
+- (void)testDictionaryAccess{
+    /*
+     Dictionary集合遍历的两种方法
+     */
+    NSDictionary *dict = @{@"1":@"11", @"2":@"22", @"3":@"33"};
+    
+    [dict enumerateKeysAndObjectsUsingBlock:^(id _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"%@", obj);
+        if ([obj isEqualToString:@"22"]) {
+            *stop = YES;
+        }
+    }];
+    
+    for (NSString *key in [dict allKeys]) {
+        NSString *value = dict[key];
+        NSLog(@"%@", value);
+    }
 }
 
 @end
