@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern const NSInteger Interval = 3;
+
 @interface AccessorTest : NSObject
 
 + (void)testArrayAccess;

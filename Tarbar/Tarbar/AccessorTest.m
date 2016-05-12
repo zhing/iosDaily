@@ -10,6 +10,20 @@
 
 @implementation AccessorTest
 
++ (NSArray *)titles{
+    static NSArray *_titles;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _titles = @[@"Your Move",
+                    @"Their Move",
+                    @"Won Games",
+                    @"Lost Games",
+                    @"Options"];
+    });
+    
+    return _titles;
+}
+
 + (void)testArrayAccess{
     /*
      Array集合遍历的四种方法
