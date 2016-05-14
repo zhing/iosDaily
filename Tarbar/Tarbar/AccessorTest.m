@@ -8,7 +8,17 @@
 
 #import "AccessorTest.h"
 
+@interface AccessorTest ()
+
+@property (nonatomic, strong)NSString *displayName;
+
+@end
+
 @implementation AccessorTest
+
+- (void)test{
+    
+}
 
 + (NSArray *)titles{
     static NSArray *_titles;
@@ -101,6 +111,10 @@
     3. 尽量使用直观的方法来声明cocoa中的容器类，使得代码具有更强的可读性。（比如NSNumber *boolNumber=@YES 要优于[NSNumber numberWithBool:YES]）。
     4. 尽量使用static const来代替＃define，因为其包含类型信息。
     5. 对于状态、操作、类型多考虑使用枚举，增强代码的可读性。
+    6. 理解@property，自动生成getter和setter函数。
+    7. 如果写属性，最好通过setter函数，因为_直接访问有可能会绕过属性修饰。
+    8. 理解isEqual与hash（？）
+    9. 理解关键类，通过这种方式可以为类的扩展增加属性，或者为一个已知的类在运行时增加额外的属性。
     */
 }
 @end
