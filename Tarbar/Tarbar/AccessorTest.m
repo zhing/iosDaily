@@ -92,5 +92,15 @@
         NSLog(@"%@", value);
     }
 }
-
+- (void)effectiveOBJC{
+    /*
+     Rules for witten effective objc codes
+     
+    1. 理解objc的基本法则：消息传递（方法调用），区分基本类型、C结构类型与对象。
+    2. 为了减少编译时间，在headers中使用import时要注意，尽量使用@class来代替。
+    3. 尽量使用直观的方法来声明cocoa中的容器类，使得代码具有更强的可读性。（比如NSNumber *boolNumber=@YES 要优于[NSNumber numberWithBool:YES]）。
+    4. 尽量使用static const来代替＃define，因为其包含类型信息。
+    5. 对于状态、操作、类型多考虑使用枚举，增强代码的可读性。
+    */
+}
 @end
