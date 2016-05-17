@@ -154,6 +154,12 @@
     NSRange range = NSMakeRange(0,label6.text.length);
     [text addAttribute: NSParagraphStyleAttributeName value:style range:range];
     label6.attributedText= text;
+    
+    UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(0, 500, 200, 18)];
+    label7.font = [UIFont systemFontOfSize:16.0f];
+    label7.textAlignment = NSTextAlignmentLeft;
+    label7.text = @"广州网易计算机系统有限公司";
+    [self.view addSubview:label7];
 }
 
 //遍历某个属性，当属性发生变化的时候执行block

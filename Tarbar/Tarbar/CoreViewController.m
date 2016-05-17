@@ -34,6 +34,8 @@
     */
     printf("%ld\n", [(__bridge NSArray *)array count]);
     NSLog(@"%@", [self firstName]);
+    
+    
 }
 
 - (NSString *)firstName{

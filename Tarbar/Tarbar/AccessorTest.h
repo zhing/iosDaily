@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern const NSInteger Interval = 3;
+//extern const NSInteger Interval = 3;
 
 @interface AccessorTest : NSObject
 
