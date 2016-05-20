@@ -9,10 +9,12 @@
 #import "TextViewController.h"
 #import "Masonry.h"
 
-@interface TextViewController ()
+@interface TextViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) UILabel *label;
 @property (strong, nonatomic) UILabel *label5;
+@property (strong, nonatomic) UITextField *textField;
+@property (assign, nonatomic) NSInteger maxNumberOfCharacters;
 
 @end
 
@@ -39,11 +41,30 @@
     [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(11,5)];
     _label.attributedText = mutableAttributedString;
     
+    /*
+      textField测试
+     */
+    _textField = [[UITextField alloc] init];
+    _textField.borderStyle = UITextBorderStyleLine;
+    _textField.font = [UIFont systemFontOfSize:17.0f];
+    _textField.delegate = self;
+    self.maxNumberOfCharacters = 10;
+    [self.view addSubview:_textField];
+    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_label.mas_bottom).offset(20);
+        make.leading.equalTo(self.view);
+        make.trailing.equalTo(self.view);
+    }];
+    [self setupGesture];
+    /*
+       testField测试
+     */
+    
     UILabel *label2 = [[UILabel alloc] init];
     [label2 setFont:[UIFont boldSystemFontOfSize:15.0f]];
     [self.view addSubview:label2];
     [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_label.mas_bottom).offset(20);
+        make.top.equalTo(_textField.mas_bottom).offset(20);
         make.leading.equalTo(self.view).offset(5);
         make.trailing.equalTo(self.view).offset(-5);
     }];
@@ -155,11 +176,12 @@
     [text addAttribute: NSParagraphStyleAttributeName value:style range:range];
     label6.attributedText= text;
     
-    UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(0, 500, 200, 18)];
-    label7.font = [UIFont systemFontOfSize:16.0f];
-    label7.textAlignment = NSTextAlignmentLeft;
-    label7.text = @"广州网易计算机系统有限公司";
-    [self.view addSubview:label7];
+//    UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(0, 500, 200, 18)];
+//    label7.font = [UIFont systemFontOfSize:16.0f];
+//    label7.textAlignment = NSTextAlignmentLeft;
+//    label7.text = @"广州网易计算机系统有限公司";
+//    [self.view addSubview:label7];
+    
 }
 
 //遍历某个属性，当属性发生变化的时候执行block
@@ -176,6 +198,40 @@
     }];
     
     self.label5.attributedText = as;
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+//    NSLog(@"%lu,%lu", (unsigned long)range.location,(unsigned long)range.length);
+    if (self.maxNumberOfCharacters <= 0) {
+        return YES;
+    }
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if (newString.length > self.maxNumberOfCharacters) {
+        return NO;
+    }
+    return YES;
+}
+
+/*
+  关闭键盘
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [_textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - Gesture Actions
+/*
+ 隐藏键盘的另一种方法。
+*/
+- (void)setupGesture {
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:gesture];
+}
+
+- (void)hideKeyboard {
+    [self.view endEditing:NO];
 }
 
 @end
