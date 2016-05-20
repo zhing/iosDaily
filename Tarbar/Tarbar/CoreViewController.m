@@ -35,7 +35,25 @@
     printf("%ld\n", [(__bridge NSArray *)array count]);
     NSLog(@"%@", [self firstName]);
     
+    /*
+     由下文的测试可知：NSArray其实是一个类簇，其和NSMutableArray均是基类，实例类__NSArray0、__NSArrayI均是继承自基类
+     类簇即类似于设计模式中的“抽象工厂”模式。
+     */
+    NSArray *maybeArray = [[NSArray alloc] initWithObjects:@1, nil];
+    NSLog(@"%@", [maybeArray class]);
+//    NSLog(@"%@", [maybeArray ]);
+    NSLog(@"%@", [maybeArray class] == [NSArray class]?@"YES":@"NO");
+    NSLog(@"%@", [maybeArray isMemberOfClass:[NSArray class]]?@"YES":@"NO");
+    NSLog(@"%@", [maybeArray isKindOfClass:[NSArray class]]?@"YES":@"NO");
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+    NSLog(@"%@", [mutableArray isKindOfClass:[NSArray class]]?@"YES":@"NO");
     
+    NSDictionary *maybeDic = [[NSDictionary alloc] init];
+    NSLog(@"%@", [maybeDic class] == [NSDictionary class]?@"YES":@"NO");
+    
+    NSString *str = @"北京领英信息技术有限公司||领英中国";
+    NSRange range = [str rangeOfString:@"||" options:NSCaseInsensitiveSearch];
+    NSLog(@"%@", range);
 }
 
 - (NSString *)firstName{
