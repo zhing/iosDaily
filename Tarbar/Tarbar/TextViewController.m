@@ -9,11 +9,12 @@
 #import "TextViewController.h"
 #import "Masonry.h"
 
-@interface TextViewController () <UITextFieldDelegate>
+@interface TextViewController () <UITextFieldDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) UILabel *label;
 @property (strong, nonatomic) UILabel *label5;
 @property (strong, nonatomic) UITextField *textField;
+@property (strong, nonatomic) UITextView *textView;
 @property (assign, nonatomic) NSInteger maxNumberOfCharacters;
 
 @end
@@ -47,6 +48,8 @@
     _textField = [[UITextField alloc] init];
     _textField.borderStyle = UITextBorderStyleLine;
     _textField.font = [UIFont systemFontOfSize:17.0f];
+    _textField.clearButtonMode = UITextFieldViewModeAlways;
+    _textField.returnKeyType =UIReturnKeyDone;
     _textField.delegate = self;
     self.maxNumberOfCharacters = 10;
     [self.view addSubview:_textField];
@@ -60,11 +63,30 @@
        testField测试
      */
     
+    /*
+     textView测试
+     */
+    _textView = [[UITextView alloc] init];
+//    _textView.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    _textView.layer.borderWidth = 0.5f;
+    _textView.font = [UIFont systemFontOfSize:17.0f];
+    [self.view addSubview:_textView];
+    _textView.delegate = self;
+    [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_textField.mas_bottom).offset(20);
+        make.leading.equalTo(self.view);
+        make.trailing.equalTo(self.view);
+        make.height.equalTo(@50);
+    }];
+    /*
+     textView测试
+     */
+    
     UILabel *label2 = [[UILabel alloc] init];
     [label2 setFont:[UIFont boldSystemFontOfSize:15.0f]];
     [self.view addSubview:label2];
     [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_textField.mas_bottom).offset(20);
+        make.top.equalTo(_textView.mas_bottom).offset(20);
         make.leading.equalTo(self.view).offset(5);
         make.trailing.equalTo(self.view).offset(-5);
     }];
@@ -213,12 +235,29 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    return NO;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"textFieldDidBeginEditing invocation");
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"textFieldDidEndEditing invocation");
+}
+
 /*
   关闭键盘
  */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [_textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"textViewDidChange invocation");
 }
 
 #pragma mark - Gesture Actions
