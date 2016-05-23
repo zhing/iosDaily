@@ -13,6 +13,7 @@
 #import "ZHUser.h"
 #import "MTLJSONAdapter.h"
 #import "KVTest.h"
+#import "Masonry.h"
 
 @interface AFNetworkViewController ()
 
@@ -31,7 +32,23 @@
 //    [self doPost];
     [KVTest testKVC];
     [KVTest testKVO];
+    
+    UISlider *slider = [[UISlider alloc] init];
+    slider.minimumValue = 0;
+    slider.maximumValue = 100;
+    slider.value = (slider.minimumValue + slider.maximumValue) / 2;
+    slider.minimumTrackTintColor = [UIColor greenColor];
+    slider.maximumTrackTintColor = [UIColor grayColor];
+    
+    [self.view addSubview:slider];
+    [slider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(100);
+        make.leading.equalTo(self.view).offset(10);
+        make.trailing.equalTo(self.view).offset(-10);
+        make.height.equalTo(@10);
+    }];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
