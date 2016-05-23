@@ -20,10 +20,12 @@
 #import "CoreViewController.h"
 #import "DeviceViewController.h"
 #import "AccessorTest.h"
+#import "LNCustomizePicker.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UIButton *button1;
+@property (strong, nonatomic) UIButton *button11;
 @property (strong, nonatomic) UIButton *button2;
 @property (strong, nonatomic) UIButton *button3;
 @property (strong, nonatomic) UIButton *button4;
@@ -86,11 +88,31 @@
     }];
     
     [_button1 addTarget:self action:@selector(showUpDrawViewController:) forControlEvents:UIControlEventTouchUpInside];
+    
+    _button11 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button11 setTitle:@"customer" forState:UIControlStateNormal];
+    _button11.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button11 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button11];
+    [_button11 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button1);
+        make.leading.equalTo(_button1.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button11 addTarget:self action:@selector(showUpPickerController:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void) showUpDrawViewController: (id)sender{
     DrawViewController *controller = [[DrawViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void) showUpPickerController: (id)sender{
+    NSArray *myArray = @[@"1-20人", @"21-50人", @"51-100人", @"101-300人", @"301-500人", @"501-1000人", @"1001-5000人", @"5001-10000人", @"10000+人"];
+    LNCustomizePicker *picker = [LNCustomizePicker pickerWithContent:@[myArray] selectItem:@[@"501-1000人"]];
+    [picker showInCompletion:^(NSArray *items) {
+        
+    }];
 }
 
 - (void)testAnimationView{

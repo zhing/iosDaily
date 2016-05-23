@@ -64,7 +64,7 @@
      */
     
     /*
-     textView测试
+        textView测试
      */
     _textView = [[UITextView alloc] init];
 //    _textView.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
@@ -79,7 +79,7 @@
         make.height.equalTo(@50);
     }];
     /*
-     textView测试
+        textView测试
      */
     
     UILabel *label2 = [[UILabel alloc] init];
@@ -256,8 +256,20 @@
 }
 
 #pragma mark - UITextViewDelegate
+//内容发生改变
 - (void)textViewDidChange:(UITextView *)textView{
     NSLog(@"textViewDidChange invocation");
+    
+    /*
+        UITextInput协议何用?
+     */
+    UITextPosition *position= [textView positionFromPosition:textView.markedTextRange.start offset:0];
+    NSLog(@"%@", position);
+    NSLog(@"%@", textView.markedTextRange);
+}
+//焦点发生改变
+- (void)textViewDidChangeSelection:(UITextView *)textView{
+    NSLog(@"textViewDidChangeSelection invocation");
 }
 
 #pragma mark - Gesture Actions
