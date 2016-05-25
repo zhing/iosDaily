@@ -41,6 +41,9 @@
 		3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A417D1C9AC2CA0008BDA7 /* LaunchScreen.xib */; };
 		3F4A418B1C9AC2CA0008BDA7 /* TarbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A418A1C9AC2CA0008BDA7 /* TarbarTests.m */; };
 		3F90E7EF1CBFDA2B003A8846 /* DIYCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F90E7EE1CBFDA2B003A8846 /* DIYCustomView.m */; };
+		3FD399941CF5FD0A00DD052A /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD399931CF5FD0A00DD052A /* Father.m */; };
+		3FD399971CF5FD4100DD052A /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD399961CF5FD4100DD052A /* Son.m */; };
+		3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD399991CF5FE4100DD052A /* Son+Extend.m */; };
 		3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC85031C9C382700BF7E76 /* KCContact.m */; };
 		3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC85061C9C3B3500BF7E76 /* KCContactGroup.m */; };
 		3FDC850D1CA2E69800BF7E76 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC850C1CA2E69800BF7E76 /* ScrollViewController.m */; };
@@ -176,6 +179,12 @@
 		3F4A418A1C9AC2CA0008BDA7 /* TarbarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TarbarTests.m; sourceTree = "<group>"; };
 		3F90E7ED1CBFDA2B003A8846 /* DIYCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYCustomView.h; sourceTree = "<group>"; };
 		3F90E7EE1CBFDA2B003A8846 /* DIYCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYCustomView.m; sourceTree = "<group>"; };
+		3FD399921CF5FD0A00DD052A /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		3FD399931CF5FD0A00DD052A /* Father.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
+		3FD399951CF5FD4100DD052A /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		3FD399961CF5FD4100DD052A /* Son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		3FD399981CF5FE4100DD052A /* Son+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Son+Extend.h"; sourceTree = "<group>"; };
+		3FD399991CF5FE4100DD052A /* Son+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Son+Extend.m"; sourceTree = "<group>"; };
 		3FDC85021C9C382700BF7E76 /* KCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContact.h; sourceTree = "<group>"; };
 		3FDC85031C9C382700BF7E76 /* KCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContact.m; sourceTree = "<group>"; };
 		3FDC85051C9C3B3500BF7E76 /* KCContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactGroup.h; sourceTree = "<group>"; };
@@ -513,6 +522,12 @@
 			children = (
 				3FF383CA1CDF279600C84BA8 /* CoreViewController.h */,
 				3FF383CB1CDF279600C84BA8 /* CoreViewController.m */,
+				3FD399921CF5FD0A00DD052A /* Father.h */,
+				3FD399931CF5FD0A00DD052A /* Father.m */,
+				3FD399951CF5FD4100DD052A /* Son.h */,
+				3FD399961CF5FD4100DD052A /* Son.m */,
+				3FD399981CF5FE4100DD052A /* Son+Extend.h */,
+				3FD399991CF5FE4100DD052A /* Son+Extend.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -875,6 +890,7 @@
 				3F44923F1CBD5A2C006EA652 /* MTLModel+NSCoding.m in Sources */,
 				F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
+				3FD399941CF5FD0A00DD052A /* Father.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
 				3F3A84C11CE3990C00B7A581 /* AccessorTest.m in Sources */,
 				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
@@ -894,8 +910,10 @@
 				3F4A41711C9AC2CA0008BDA7 /* main.m in Sources */,
 				3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */,
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
+				3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
 				F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */,
+				3FD399971CF5FD4100DD052A /* Son.m in Sources */,
 				F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */,
 				F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */,
 				3F4492471CBD5A2C006EA652 /* NSDictionary+MTLMappingAdditions.m in Sources */,

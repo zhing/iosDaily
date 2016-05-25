@@ -7,6 +7,7 @@
 //
 
 #import "CoreViewController.h"
+#import "Son.h"
 
 @implementation CoreViewController
 
@@ -51,9 +52,12 @@
     NSDictionary *maybeDic = [[NSDictionary alloc] init];
     NSLog(@"%@", [maybeDic class] == [NSDictionary class]?@"YES":@"NO");
     
-    NSString *str = @"北京领英信息技术有限公司||领英中国";
-    NSRange range = [str rangeOfString:@"||" options:NSCaseInsensitiveSearch];
-    NSLog(@"%@", range);
+//    NSString *str = @"北京领英信息技术有限公司||领英中国";
+//    NSRange range = [str rangeOfString:@"||" options:NSCaseInsensitiveSearch];
+//    NSLog(@"%@", range);
+    
+    Son *son = [[Son alloc] init];
+    [son write];
 }
 
 - (NSString *)firstName{
