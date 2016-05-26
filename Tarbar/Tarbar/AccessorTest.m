@@ -101,6 +101,8 @@
         NSString *value = dict[key];
         NSLog(@"%@", value);
     }
+    
+//    [self performSelector:<#(SEL)#>];
 }
 - (void)effectiveOBJC{
     /*
