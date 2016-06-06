@@ -47,8 +47,14 @@
         make.trailing.equalTo(self.view).offset(-10);
         make.height.equalTo(@10);
     }];
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+//    self.tabBarItem.badgeValue = @"1";
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

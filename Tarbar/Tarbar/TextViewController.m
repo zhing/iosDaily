@@ -130,8 +130,7 @@
     [btn3 setTitle:@"按钮" forState:UIControlStateNormal];
     btn3.titleLabel.font = [UIFont systemFontOfSize:15];
     [btn3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [btn3 setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
-    [btn3 setContentEdgeInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [btn3 setContentEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     btn3.layer.borderWidth = 0.5f;
     btn3.layer.borderColor = [[UIColor grayColor] CGColor];
     [self.view addSubview:btn3];
