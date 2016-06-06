@@ -58,6 +58,8 @@
     
     Son *son = [[Son alloc] init];
     [son write];
+    
+    
 }
 
 - (NSString *)firstName{

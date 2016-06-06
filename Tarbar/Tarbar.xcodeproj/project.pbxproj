@@ -40,6 +40,7 @@
 		3F4A417C1C9AC2CA0008BDA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A417B1C9AC2CA0008BDA7 /* Images.xcassets */; };
 		3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A417D1C9AC2CA0008BDA7 /* LaunchScreen.xib */; };
 		3F4A418B1C9AC2CA0008BDA7 /* TarbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A418A1C9AC2CA0008BDA7 /* TarbarTests.m */; };
+		3F7428051CF9BF73001C5A1B /* HYBMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7428041CF9BF73001C5A1B /* HYBMsgSend.m */; };
 		3F90E7EF1CBFDA2B003A8846 /* DIYCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F90E7EE1CBFDA2B003A8846 /* DIYCustomView.m */; };
 		3FD399941CF5FD0A00DD052A /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD399931CF5FD0A00DD052A /* Father.m */; };
 		3FD399971CF5FD4100DD052A /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD399961CF5FD4100DD052A /* Son.m */; };
@@ -177,6 +178,8 @@
 		3F4A41841C9AC2CA0008BDA7 /* TarbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TarbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4A41891C9AC2CA0008BDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4A418A1C9AC2CA0008BDA7 /* TarbarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TarbarTests.m; sourceTree = "<group>"; };
+		3F7428031CF9BF73001C5A1B /* HYBMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBMsgSend.h; sourceTree = "<group>"; };
+		3F7428041CF9BF73001C5A1B /* HYBMsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBMsgSend.m; sourceTree = "<group>"; };
 		3F90E7ED1CBFDA2B003A8846 /* DIYCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYCustomView.h; sourceTree = "<group>"; };
 		3F90E7EE1CBFDA2B003A8846 /* DIYCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYCustomView.m; sourceTree = "<group>"; };
 		3FD399921CF5FD0A00DD052A /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
@@ -620,6 +623,8 @@
 				3FF383B91CDA3DF900C84BA8 /* MYNotificationCenter.m */,
 				3FF383BB1CDA3E7300C84BA8 /* NSObject+SetClass.h */,
 				3FF383BC1CDA3E7300C84BA8 /* NSObject+SetClass.m */,
+				3F7428031CF9BF73001C5A1B /* HYBMsgSend.h */,
+				3F7428041CF9BF73001C5A1B /* HYBMsgSend.m */,
 			);
 			name = Runtime;
 			sourceTree = "<group>";
@@ -929,6 +934,7 @@
 				3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */,
 				F3C0E8461CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m in Sources */,
 				F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */,
+				3F7428051CF9BF73001C5A1B /* HYBMsgSend.m in Sources */,
 				F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */,
 				3F44924E1CBD608E006EA652 /* ZHStatusArray.m in Sources */,
 				3F1BC4871CBBE4C1002394F8 /* Student.m in Sources */,
