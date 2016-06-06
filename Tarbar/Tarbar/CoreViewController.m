@@ -9,6 +9,17 @@
 #import "CoreViewController.h"
 #import "Son.h"
 
+@interface CoreViewController ()
+
+/*
+  此时mutableArray不建议使用copy，但是NSArray建议使用copy
+ */
+@property (nonatomic, copy) NSMutableArray *mutableArray;
+@property (nonatomic, strong) NSArray *myArray;
+
+
+@end
+
 @implementation CoreViewController
 
 - (void)viewDidLoad{
@@ -56,10 +67,19 @@
 //    NSRange range = [str rangeOfString:@"||" options:NSCaseInsensitiveSearch];
 //    NSLog(@"%@", range);
     
+//    Father *father = [[Father alloc] init];
     Son *son = [[Son alloc] init];
+//    son = father;
     [son write];
     
+    NSMutableArray *nsArray = [NSMutableArray arrayWithObjects:@1, @2, nil];
+    self.mutableArray = nsArray;
+    if ([self.mutableArray respondsToSelector:@selector(removeObjectAtIndex:)]){
+        [self.mutableArray removeObjectAtIndex:0];
+    }
     
+    self.myArray = nsArray;
+    [(NSMutableArray *)self.myArray removeObjectAtIndex:0];
 }
 
 - (NSString *)firstName{

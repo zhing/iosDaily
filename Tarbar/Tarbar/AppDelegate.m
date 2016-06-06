@@ -7,12 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "ScrollViewController.h"
-#import "SimpleTableViewController.h"
-#import "AFNetworkViewController.h"
-#import "AutoLayoutViewController.h"
-#import "LNNavigationController.h"
+#import "LNTabBarController.h"
+#import "UIViewController+Badge.h"
 
 @interface AppDelegate ()
 
@@ -24,20 +20,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ViewController *firstView = [[ViewController alloc] init];
-    LNNavigationController *firstNav = [[LNNavigationController alloc] initWithRootViewController:firstView];
-    firstNav.tabBarItem.title = @"first";
-    ScrollViewController *thirdView = [[ScrollViewController alloc] init];
-    thirdView.tabBarItem.title = @"发现";
-    SimpleTableViewController *forthView = [[SimpleTableViewController alloc] init];
-    forthView.tabBarItem.title = @"tableView";
-    AFNetworkViewController *fifthView = [[AFNetworkViewController alloc] init];
-    fifthView.tabBarItem.title = @"AF";
-    AutoLayoutViewController *sixthView = [[AutoLayoutViewController alloc] init];
-    sixthView.tabBarItem.title = @"AutoLayout";
-    
-    UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[firstNav,thirdView, forthView, fifthView, sixthView];
+    LNTabBarController * tabBarController = [[LNTabBarController alloc] init];
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
@@ -52,10 +35,19 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSLog(@"application become background");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSLog(@"application become foreground");
+    
+    if ([[UIApplication sharedApplication] keyWindow] == self.window){
+        NSLog(@"UIWindow == keyWindow");
+    }
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UIViewController *chooseVC = [tabBarController.viewControllers objectAtIndex:3];
+    chooseVC.tabBarItemBadgeDotHidden = NO;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

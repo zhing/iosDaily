@@ -100,7 +100,6 @@
     [label3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(label2.mas_bottom).offset(20);
         make.leading.equalTo(self.view).offset(5);
-        make.trailing.equalTo(self.view).offset(-5);
     }];
     
     NSMutableDictionary *attributesDictionary = [NSMutableDictionary dictionary];
@@ -126,6 +125,22 @@
     
     label3.attributedText = attributedString;
     NSLog(@"%@",attributedString);
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn3 setTitle:@"按钮" forState:UIControlStateNormal];
+    btn3.titleLabel.font = [UIFont systemFontOfSize:15];
+    [btn3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn3 setContentEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    btn3.layer.borderWidth = 0.5f;
+    btn3.layer.borderColor = [[UIColor grayColor] CGColor];
+    [self.view addSubview:btn3];
+    [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(label3);
+//        make.leading.equalTo(label3.mas_trailing).offset(20);
+        make.trailing.equalTo(self.view).offset(-5);
+    }];
+    [btn3 setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
+    [label3 setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
     
     UILabel *label4 = [[UILabel alloc] init];
     [label4 setFont:[UIFont boldSystemFontOfSize:15.0f]];

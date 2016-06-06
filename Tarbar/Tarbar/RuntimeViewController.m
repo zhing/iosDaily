@@ -50,6 +50,9 @@
     if ([self respondsToSelector:@selector(noMethod:)]){
         [self performSelector:@selector(noMethod:) withObject:nil];
     }
+    
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    NSLog(@"%@", runLoop);
 }
 
 - (void)printObjectName{
