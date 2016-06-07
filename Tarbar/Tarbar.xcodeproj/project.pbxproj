@@ -93,6 +93,7 @@
 		F3CB02231D059BED0097BE61 /* tab_feeds_highlight.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB021E1D059BED0097BE61 /* tab_feeds_highlight.svg */; };
 		F3CB02241D059BED0097BE61 /* tab_messages_highlight.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB021F1D059BED0097BE61 /* tab_messages_highlight.svg */; };
 		F3CB02251D059BED0097BE61 /* tab_mine_highlight.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB02201D059BED0097BE61 /* tab_mine_highlight.svg */; };
+		F3CB02281D0694EA0097BE61 /* UITabBarItem+CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -417,6 +418,8 @@
 		F3CB021E1D059BED0097BE61 /* tab_feeds_highlight.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tab_feeds_highlight.svg; path = resources/tab_feeds_highlight.svg; sourceTree = "<group>"; };
 		F3CB021F1D059BED0097BE61 /* tab_messages_highlight.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tab_messages_highlight.svg; path = resources/tab_messages_highlight.svg; sourceTree = "<group>"; };
 		F3CB02201D059BED0097BE61 /* tab_mine_highlight.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tab_mine_highlight.svg; path = resources/tab_mine_highlight.svg; sourceTree = "<group>"; };
+		F3CB02261D0694EA0097BE61 /* UITabBarItem+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+CustomBadge.h"; sourceTree = "<group>"; };
+		F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+CustomBadge.m"; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -734,6 +737,8 @@
 		F3B0538B1CFEB7D200734311 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB02261D0694EA0097BE61 /* UITabBarItem+CustomBadge.h */,
+				F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */,
 				F3CB020F1D0589520097BE61 /* LNConstDefine.h */,
 				F3CB020C1D0588B90097BE61 /* UIImage+Helper.h */,
 				F3CB020D1D0588B90097BE61 /* UIImage+Helper.m */,
@@ -1274,6 +1279,7 @@
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
+				F3CB02281D0694EA0097BE61 /* UITabBarItem+CustomBadge.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */,

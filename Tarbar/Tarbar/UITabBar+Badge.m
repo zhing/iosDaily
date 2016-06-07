@@ -43,14 +43,8 @@
         if (self.subviews.count > index) {
             
             NSLog(@"count:%lu",(unsigned long)self.subviews.count);
-            //在一些情况下，self.subviews中不光有UITabBarButton 还有其他的ImageView 需把他们过滤掉。
-            NSMutableArray * tempArr = [NSMutableArray arrayWithCapacity:0];
-            for (UIView * barView in self.subviews) {
-                if (barView.frame.origin.y == 1.0f) {
-                    [tempArr addObject:barView];
-                }
-            }
-            UIView *tabBarButton = tempArr[index];
+            
+            UIView *tabBarButton = self.subviews[index];
             for (UIView *imageView in tabBarButton.subviews) {
                 if ([imageView isKindOfClass:[UIImageView class]]) {
                     badgeDot = [[LNBadgeDot alloc] initWithFrame:CGRectMake(imageView.bounds.size.width-6, -4, 10, 10)];
