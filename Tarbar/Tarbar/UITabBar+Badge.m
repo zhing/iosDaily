@@ -45,7 +45,6 @@
             NSLog(@"count:%lu",(unsigned long)self.subviews.count);
             
             UIView *tabBarButton = self.subviews[index];
-//            UITabBarItem *tabBarItem = self.items[index];
             for (UIView *imageView in tabBarButton.subviews) {
                 if ([imageView isKindOfClass:[UIImageView class]]) {
                     badgeDot = [[LNBadgeDot alloc] initWithFrame:CGRectMake(imageView.bounds.size.width-6, -4, 10, 10)];

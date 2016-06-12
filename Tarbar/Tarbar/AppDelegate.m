@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LNTabBarController.h"
 #import "UIViewController+Badge.h"
+#import "UITabBarItem+CustomBadge.h"
 
 @interface AppDelegate ()
 
@@ -48,6 +49,9 @@
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UIViewController *chooseVC = [tabBarController.viewControllers objectAtIndex:3];
     chooseVC.tabBarItemBadgeDotHidden = NO;
+    
+    UIViewController *anotherChooseVC = [tabBarController.viewControllers objectAtIndex:2];
+    [anotherChooseVC.tabBarItem setCustomBadgeValue:@"5" withFont:[UIFont systemFontOfSize:12] andFontColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor]];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
