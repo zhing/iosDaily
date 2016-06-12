@@ -62,6 +62,11 @@
 		3FDC85101CAC2F0A00BF7E76 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC850F1CAC2F0A00BF7E76 /* SimpleTableViewController.m */; };
 		3FDC85131CB0D36900BF7E76 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */; };
 		3FE26A6F1D070A6F00DC8E0E /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A6E1D070A6F00DC8E0E /* UIImage+Helper.m */; };
+		3FE26A721D0DB05200DC8E0E /* LNNavigationAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A711D0DB05200DC8E0E /* LNNavigationAppearance.m */; };
+		3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A741D0DB08F00DC8E0E /* UIDevice+Helper.m */; };
+		3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A761D0DB08F00DC8E0E /* UIViewController+NavigationItem.m */; };
+		3FE26A7B1D0DB0FE00DC8E0E /* discovery_top_search.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE26A791D0DB0FE00DC8E0E /* discovery_top_search.svg */; };
+		3FE26A7C1D0DB0FE00DC8E0E /* icon_arrow_back_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE26A7A1D0DB0FE00DC8E0E /* icon_arrow_back_white.svg */; };
 		3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AA1CCB80E800C84BA8 /* WebViewController.m */; };
 		3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */; };
 		3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */; };
@@ -358,6 +363,14 @@
 		3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		3FDC85121CB0D36800BF7E76 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		3FE26A6E1D070A6F00DC8E0E /* UIImage+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helper.m"; sourceTree = "<group>"; };
+		3FE26A701D0DB05200DC8E0E /* LNNavigationAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNavigationAppearance.h; sourceTree = "<group>"; };
+		3FE26A711D0DB05200DC8E0E /* LNNavigationAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNavigationAppearance.m; sourceTree = "<group>"; };
+		3FE26A731D0DB08F00DC8E0E /* UIDevice+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Helper.h"; sourceTree = "<group>"; };
+		3FE26A741D0DB08F00DC8E0E /* UIDevice+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Helper.m"; sourceTree = "<group>"; };
+		3FE26A751D0DB08F00DC8E0E /* UIViewController+NavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItem.h"; sourceTree = "<group>"; };
+		3FE26A761D0DB08F00DC8E0E /* UIViewController+NavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItem.m"; sourceTree = "<group>"; };
+		3FE26A791D0DB0FE00DC8E0E /* discovery_top_search.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = discovery_top_search.svg; path = resources/discovery_top_search.svg; sourceTree = "<group>"; };
+		3FE26A7A1D0DB0FE00DC8E0E /* icon_arrow_back_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = icon_arrow_back_white.svg; path = resources/icon_arrow_back_white.svg; sourceTree = "<group>"; };
 		3FF383A91CCB80E800C84BA8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		3FF383AA1CCB80E800C84BA8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
@@ -819,6 +832,8 @@
 		3F6665B61D05B598000F4334 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3FE26A791D0DB0FE00DC8E0E /* discovery_top_search.svg */,
+				3FE26A7A1D0DB0FE00DC8E0E /* icon_arrow_back_white.svg */,
 				3F6665B71D05B5B8000F4334 /* tab_connections_highlight.svg */,
 				3F6665B81D05B5B8000F4334 /* tab_discovery_highlight.svg */,
 				3F6665B91D05B5B8000F4334 /* tab_feeds_highlight.svg */,
@@ -831,6 +846,10 @@
 		3F6665C61D05B67E000F4334 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				3FE26A731D0DB08F00DC8E0E /* UIDevice+Helper.h */,
+				3FE26A741D0DB08F00DC8E0E /* UIDevice+Helper.m */,
+				3FE26A751D0DB08F00DC8E0E /* UIViewController+NavigationItem.h */,
+				3FE26A761D0DB08F00DC8E0E /* UIViewController+NavigationItem.m */,
 				3FE26A6E1D070A6F00DC8E0E /* UIImage+Helper.m */,
 				3F6665D41D07075D000F4334 /* UITabBarItem+CustomBadge.h */,
 				3F6665D51D07075D000F4334 /* UITabBarItem+CustomBadge.m */,
@@ -849,6 +868,8 @@
 		3FF383AE1CD1025400C84BA8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3FE26A701D0DB05200DC8E0E /* LNNavigationAppearance.h */,
+				3FE26A711D0DB05200DC8E0E /* LNNavigationAppearance.m */,
 				3FF383B21CD103C500C84BA8 /* LNNavigationController.m */,
 				3FF383B31CD103C500C84BA8 /* LNNavigationController.h */,
 				3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */,
@@ -1152,6 +1173,7 @@
 			files = (
 				F35D08C91CE0AA6000D97ECF /* Localizable.strings in Resources */,
 				3F6665BF1D05B5B8000F4334 /* tab_messages_highlight.svg in Resources */,
+				3FE26A7C1D0DB0FE00DC8E0E /* icon_arrow_back_white.svg in Resources */,
 				3F6665BE1D05B5B8000F4334 /* tab_feeds_highlight.svg in Resources */,
 				3F44923D1CBD5A2C006EA652 /* Info.plist in Resources */,
 				3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */,
@@ -1159,6 +1181,7 @@
 				3F6665C01D05B5B8000F4334 /* tab_mine_highlight.svg in Resources */,
 				3F4A417C1C9AC2CA0008BDA7 /* Images.xcassets in Resources */,
 				3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */,
+				3FE26A7B1D0DB0FE00DC8E0E /* discovery_top_search.svg in Resources */,
 				3F6665BC1D05B5B8000F4334 /* tab_connections_highlight.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1252,6 +1275,7 @@
 				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
+				3FE26A721D0DB05200DC8E0E /* LNNavigationAppearance.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
 				3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */,
 				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
@@ -1269,6 +1293,7 @@
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
 				3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
+				3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */,
 				F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */,
 				3FD399971CF5FD4100DD052A /* Son.m in Sources */,
 				3F6665D61D07075D000F4334 /* UITabBarItem+CustomBadge.m in Sources */,
@@ -1284,6 +1309,7 @@
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
 				3F6665D21D05B6D2000F4334 /* UITabBar+Badge.m in Sources */,
+				3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */,

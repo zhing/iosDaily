@@ -7,6 +7,8 @@
 //
 
 #import "TextViewController.h"
+#import "UIViewController+NavigationItem.h"
+#import "LNConstDefine.h"
 #import "Masonry.h"
 
 @interface TextViewController () <UITextFieldDelegate, UITextViewDelegate>
@@ -24,6 +26,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"Text";
+    [self setNavBarCustomBackButton:@"返回" target:self action:@selector(cancel)];
+    [self setNavBarRightItem:@"编辑" target:self action:nil];
     
     _label = [[UILabel alloc] init];
 //    _label.layer.borderWidth = 0.5f;
@@ -213,11 +218,15 @@
     [text addAttribute: NSParagraphStyleAttributeName value:style range:range];
     label6.attributedText= text;
     
-//    UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(0, 500, 200, 18)];
-//    label7.font = [UIFont systemFontOfSize:16.0f];
-//    label7.textAlignment = NSTextAlignmentLeft;
-//    label7.text = @"广州网易计算机系统有限公司";
-//    [self.view addSubview:label7];
+    UILabel *label7 = [[UILabel alloc] initWithFrame:CGRectMake(0, 500, 200, 18)];
+    label7.font = [UIFont systemFontOfSize:16.0f];
+    label7.textAlignment = NSTextAlignmentLeft;
+    label7.text = @"广州网易计算机系统有限公司";
+    NSString *substring = [label7.text substringFromIndex:13];
+    if (substring){
+        NSLog(@"==========YES:%@==========", substring);
+    }
+    [self.view addSubview:label7];
     
 }
 
@@ -298,6 +307,10 @@
 
 - (void)hideKeyboard {
     [self.view endEditing:NO];
+}
+
+- (void)cancel{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

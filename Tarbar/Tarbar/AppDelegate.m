@@ -10,6 +10,7 @@
 #import "LNTabBarController.h"
 #import "UIViewController+Badge.h"
 #import "UITabBarItem+CustomBadge.h"
+#import "LNNavigationAppearance.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
+    [LNNavigationAppearance setupNavigationAppearance];
     return YES;
 }
 

@@ -40,6 +40,7 @@
     
     _tableView.dataSource = self;
     _tableView.delegate = self;
+//    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 0)];
     [self.view addSubview:_tableView];
 }
 

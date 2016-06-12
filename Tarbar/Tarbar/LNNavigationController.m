@@ -7,6 +7,7 @@
 //
 
 #import "LNNavigationController.h"
+#import "LNConstDefine.h"
 #import "CRNavigationBar.h"
 
 @interface LNNavigationController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
@@ -40,6 +41,12 @@
         self.interactivePopGestureRecognizer.delegate = welf;
         self.delegate = welf;
     }
+    
+    /*
+       电池条状态栏
+     */
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
