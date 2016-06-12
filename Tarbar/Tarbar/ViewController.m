@@ -21,6 +21,7 @@
 #import "DeviceViewController.h"
 #import "AccessorTest.h"
 #import "LNCustomizePicker.h"
+#import "LNConstDefine.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -183,6 +184,7 @@
     [_button5 setTitle:@"text" forState:UIControlStateNormal];
     _button5.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button5 setBackgroundColor:[UIColor lightGrayColor]];
+//    [_button5 setBackgroundColor:RGB(0x51, 0x4e, 0x4e)];
     [self.view addSubview:_button5];
     
     [_button5 mas_makeConstraints:^(MASConstraintMaker *make) {

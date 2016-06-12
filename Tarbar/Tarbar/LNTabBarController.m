@@ -14,6 +14,7 @@
 #import "AutoLayoutViewController.h"
 #import "LNNavigationController.h"
 #import "UIImage+SVGKit.h"
+#import "LNNavigationAppearance.h"
 
 @interface LNTabBarController ()
 
@@ -45,6 +46,7 @@
     self.tabBar.backgroundColor = [UIColor clearColor];
     
     self.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nav5, nil];
+//    [LNNavigationAppearance setupNavigationAppearance];
 }
 
 - (UITabBarItem *)tabItemByTitle:(NSString *)title image:(NSString *)imgName {
