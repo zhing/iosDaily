@@ -35,6 +35,7 @@
 @property (strong, nonatomic) UIButton *button7;
 @property (strong, nonatomic) UIButton *button8;
 @property (strong, nonatomic) UIButton *button9;
+@property (strong, nonatomic) UIButton *button10;
 @end
 
 @implementation ViewController
@@ -56,6 +57,7 @@
     [self testGCDView];
     [self testCoreView];
     [self testDeviceView];
+    [self textChitu];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -283,5 +285,32 @@
 - (void) showUpDeviceViewController: (id)sender{
     DeviceViewController *controller = [[DeviceViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)textChitu{
+    _button10 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button10 setTitle:@"Chitu" forState:UIControlStateNormal];
+    _button10.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button10 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button10];
+    
+    [_button10 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.button9.mas_bottom).offset(20);
+        make.width.greaterThanOrEqualTo(@100);
+    }];
+    
+    [_button10 addTarget:self action:@selector(showUpChitu:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)showUpChitu: (id)sender{
+    NSString *customURL = @"ct://abc";
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:customURL]]){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"URL error" message:[NSString stringWithFormat:@"No custom URL defined for %@", customURL] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 @end

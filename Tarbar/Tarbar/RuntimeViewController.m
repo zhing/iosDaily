@@ -10,6 +10,7 @@
 #import <objc/objc-runtime.h>
 #import "Masonry.h"
 #import "NSNotificationCenter+RNSwizzle.h"
+#import "HYBMsgSend.h"
 
 #define LOGIN_NOTIFICATION @"login_info"
 
@@ -29,6 +30,8 @@
     dispatch_once(&onceToken, ^{
         [NSNotificationCenter swizzleAddObserver];
     });
+    
+    [self msgSend_test];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -168,6 +171,61 @@
 
 - (void)perform: (NSString *)string{
     NSLog(@"performSelector: %@", string);
+}
+
+- (void)msgSend_test{
+    // 1.创建对象
+    HYBMsgSend *msg = ((HYBMsgSend * (*)(id, SEL))objc_msgSend)((id)[HYBMsgSend class], @selector(alloc));
+    
+    // 2.初始化对象
+    msg = ((HYBMsgSend * (*)(id, SEL))objc_msgSend)((id)msg, @selector(init));
+    
+    ((void (*)(id, SEL))objc_msgSend)((id)msg, @selector(noArgumentsAndNoReturnValue));
+    
+    // 3.调用带一个参数但无返回值的方法
+    ((void (*)(id, SEL, NSString *))objc_msgSend)((id)msg, @selector(hasArguments:), @"带一个参数，但无返回值");
+    
+    // 4.调用带返回值，但是不带参数
+    NSString *retValue = ((NSString * (*)(id, SEL))objc_msgSend)((id)msg, @selector(noArgumentsButReturnValue));
+    NSLog(@"5. 返回值为：%@", retValue);
+    
+    // 6.带参数带返回值
+    int returnValue = ((int (*)(id, SEL, NSString *, int))
+                       objc_msgSend)((id)msg,
+                                     @selector(hasArguments:andReturnValue:),
+                                     @"参数1",
+                                     2016);
+    NSLog(@"6. return value is %d", returnValue);
+    
+    // 7.动态添加方法，然后调用C函数
+    class_addMethod(msg.class, NSSelectorFromString(@"cStyleFunc"), (IMP)cStyleFunc, "i@:r^vr^v");
+    returnValue = ((int (*)(id, SEL, const void *, const void *))
+                   objc_msgSend)((id)msg,
+                                 NSSelectorFromString(@"cStyleFunc"),
+                                 "参数1",
+                                 "参数2");
+    
+    /*****************
+     我们在一般情况下是不用调用objc_msgSend函数的，只是我们需要在runtime时发送消息时需要调用。
+     [obj foo]在objc动态编译时，会被转意为：objc_msgSend(obj, @selector(foo));
+     
+     objc在向一个对象发送消息时，runtime库会根据对象的isa指针找到该对象实际所属的类，然后在该类
+     中的方法列表以及其父类方法列表中寻找方法运行，如果，在最顶层的父类中依然找不到相应的方法时，程
+     序在运行时会挂掉并抛出异常unrecognized selector sent to XXX 。但是在这之前，objc的运行
+     时会给出三次拯救程序崩溃的机会:
+     1. Method resolution
+     2. Fast forwarding
+     3. Normal forwarding
+     ****************/
+}
+
+// C函数
+int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
+    NSLog(@"%s was called, arg1 is %@, and arg2 is %@",
+          __FUNCTION__,
+          [NSString stringWithUTF8String:arg1],
+          [NSString stringWithUTF8String:arg1]);
+    return 1;
 }
 
 - (void)dealloc{
