@@ -4,6 +4,10 @@ import (
 	// "fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+    "time"
+    "math/rand"
+    "strings"
+    "strconv"
 )
 
 func main(){
@@ -43,5 +47,43 @@ func main(){
     		}
     	}
     })
+
+    router.GET("/api/contacts/refresh", func(c *gin.Context){
+        type Msg struct {
+            FirstName string `json:"firstName"`
+            LastName string  `json:"LastName"`
+            PhoneNumber string `json:"phoneNumber"`
+        }
+        pageNumber := 20
+        var msgArray []Msg
+        for i := 0; i < pageNumber; i++ {
+            var msg Msg
+            msg.FirstName = getRandomCharacters(3)
+            msg.LastName = getRandomCharacters(5)
+            msg.PhoneNumber = getRandomNumbers(11)
+            msgArray = append(msgArray, msg)
+        }
+
+        c.JSON(http.StatusOK, msgArray)
+    })
+
 	router.Run(":10001")
+}
+
+func getRandomCharacters(length int) string {
+    rand.Seed(time.Now().UnixNano())
+    rs := make([]string, length)
+    for i:=0; i < length; i++ {
+        rs = append(rs, string(rand.Intn(26)+97))
+    } 
+    return strings.Join(rs, "")
+} 
+
+func getRandomNumbers(length int) string {
+    rand.Seed(time.Now().UnixNano())
+    rs := make([]string, length)
+    for i:=0; i < length; i++ {
+        rs = append(rs, strconv.Itoa(rand.Intn(10)))
+    } 
+    return strings.Join(rs, "")
 }
