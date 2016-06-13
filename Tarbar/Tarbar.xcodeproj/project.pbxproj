@@ -94,6 +94,12 @@
 		F3CB02241D059BED0097BE61 /* tab_messages_highlight.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB021F1D059BED0097BE61 /* tab_messages_highlight.svg */; };
 		F3CB02251D059BED0097BE61 /* tab_mine_highlight.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB02201D059BED0097BE61 /* tab_mine_highlight.svg */; };
 		F3CB02281D0694EA0097BE61 /* UITabBarItem+CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */; };
+		F3CB022B1D06C9FE0097BE61 /* NSNotificationCenter+LN.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB022A1D06C9FE0097BE61 /* NSNotificationCenter+LN.m */; };
+		F3CB022E1D0D12D30097BE61 /* UIDevice+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB022D1D0D12D30097BE61 /* UIDevice+Helper.m */; };
+		F3CB02311D0D13700097BE61 /* LNNavigationAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02301D0D13700097BE61 /* LNNavigationAppearance.m */; };
+		F3CB02331D0D3A940097BE61 /* icon_arrow_back_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB02321D0D3A940097BE61 /* icon_arrow_back_white.svg */; };
+		F3CB02361D0D3D860097BE61 /* UIViewController+NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02351D0D3D860097BE61 /* UIViewController+NavigationItem.m */; };
+		F3CB02381D0D77450097BE61 /* discovery_top_search.svg in Resources */ = {isa = PBXBuildFile; fileRef = F3CB02371D0D77450097BE61 /* discovery_top_search.svg */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -420,6 +426,16 @@
 		F3CB02201D059BED0097BE61 /* tab_mine_highlight.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tab_mine_highlight.svg; path = resources/tab_mine_highlight.svg; sourceTree = "<group>"; };
 		F3CB02261D0694EA0097BE61 /* UITabBarItem+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+CustomBadge.h"; sourceTree = "<group>"; };
 		F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+CustomBadge.m"; sourceTree = "<group>"; };
+		F3CB02291D06C9FE0097BE61 /* NSNotificationCenter+LN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LN.h"; sourceTree = "<group>"; };
+		F3CB022A1D06C9FE0097BE61 /* NSNotificationCenter+LN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+LN.m"; sourceTree = "<group>"; };
+		F3CB022C1D0D12D30097BE61 /* UIDevice+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Helper.h"; sourceTree = "<group>"; };
+		F3CB022D1D0D12D30097BE61 /* UIDevice+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Helper.m"; sourceTree = "<group>"; };
+		F3CB022F1D0D13700097BE61 /* LNNavigationAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNavigationAppearance.h; sourceTree = "<group>"; };
+		F3CB02301D0D13700097BE61 /* LNNavigationAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNavigationAppearance.m; sourceTree = "<group>"; };
+		F3CB02321D0D3A940097BE61 /* icon_arrow_back_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = icon_arrow_back_white.svg; path = resources/icon_arrow_back_white.svg; sourceTree = "<group>"; };
+		F3CB02341D0D3D860097BE61 /* UIViewController+NavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItem.h"; sourceTree = "<group>"; };
+		F3CB02351D0D3D860097BE61 /* UIViewController+NavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItem.m"; sourceTree = "<group>"; };
+		F3CB02371D0D77450097BE61 /* discovery_top_search.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = discovery_top_search.svg; path = resources/discovery_top_search.svg; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -685,6 +701,8 @@
 				F34606271CF1E5E600E9023B /* LNCustomizePicker.m */,
 				F3CB02131D058AD50097BE61 /* LNTabBarController.h */,
 				F3CB02141D058AD50097BE61 /* LNTabBarController.m */,
+				F3CB022F1D0D13700097BE61 /* LNNavigationAppearance.h */,
+				F3CB02301D0D13700097BE61 /* LNNavigationAppearance.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -737,6 +755,10 @@
 		F3B0538B1CFEB7D200734311 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB022C1D0D12D30097BE61 /* UIDevice+Helper.h */,
+				F3CB022D1D0D12D30097BE61 /* UIDevice+Helper.m */,
+				F3CB02291D06C9FE0097BE61 /* NSNotificationCenter+LN.h */,
+				F3CB022A1D06C9FE0097BE61 /* NSNotificationCenter+LN.m */,
 				F3CB02261D0694EA0097BE61 /* UITabBarItem+CustomBadge.h */,
 				F3CB02271D0694EA0097BE61 /* UITabBarItem+CustomBadge.m */,
 				F3CB020F1D0589520097BE61 /* LNConstDefine.h */,
@@ -748,6 +770,8 @@
 				F3B0538D1CFEB81900734311 /* UITabBar+Badge.m */,
 				F3B0538F1CFEB8B100734311 /* UIViewController+Badge.h */,
 				F3B053901CFEB8B100734311 /* UIViewController+Badge.m */,
+				F3CB02341D0D3D860097BE61 /* UIViewController+NavigationItem.h */,
+				F3CB02351D0D3D860097BE61 /* UIViewController+NavigationItem.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -829,6 +853,8 @@
 		F3CB01841D0586590097BE61 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB02371D0D77450097BE61 /* discovery_top_search.svg */,
+				F3CB02321D0D3A940097BE61 /* icon_arrow_back_white.svg */,
 				F3CB021C1D059BED0097BE61 /* tab_connections_highlight.svg */,
 				F3CB021D1D059BED0097BE61 /* tab_discovery_highlight.svg */,
 				F3CB021E1D059BED0097BE61 /* tab_feeds_highlight.svg */,
@@ -1152,11 +1178,13 @@
 				F35D08C91CE0AA6000D97ECF /* Localizable.strings in Resources */,
 				F3CB02241D059BED0097BE61 /* tab_messages_highlight.svg in Resources */,
 				F3CB02231D059BED0097BE61 /* tab_feeds_highlight.svg in Resources */,
+				F3CB02331D0D3A940097BE61 /* icon_arrow_back_white.svg in Resources */,
 				3F44923D1CBD5A2C006EA652 /* Info.plist in Resources */,
 				3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */,
 				F3CB02221D059BED0097BE61 /* tab_discovery_highlight.svg in Resources */,
 				F3CB02251D059BED0097BE61 /* tab_mine_highlight.svg in Resources */,
 				3F4A417C1C9AC2CA0008BDA7 /* Images.xcassets in Resources */,
+				F3CB02381D0D77450097BE61 /* discovery_top_search.svg in Resources */,
 				3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */,
 				F3CB02211D059BED0097BE61 /* tab_connections_highlight.svg in Resources */,
 			);
@@ -1258,6 +1286,7 @@
 				3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */,
 				F3C0E8101CC6441800829E90 /* FMDatabase.m in Sources */,
 				F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */,
+				F3CB022E1D0D12D30097BE61 /* UIDevice+Helper.m in Sources */,
 				F3C0E8131CC6441800829E90 /* FMDatabaseQueue.m in Sources */,
 				F3C0E8431CDA084B00829E90 /* NSObject+RNSwizzle.m in Sources */,
 				3F1BC4911CBD3678002394F8 /* ZHStatus.m in Sources */,
@@ -1276,6 +1305,7 @@
 				3F44924A1CBD5A2C006EA652 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
 				3F90E7EF1CBFDA2B003A8846 /* DIYCustomView.m in Sources */,
 				3F44923B1CBD5A2C006EA652 /* EXTRuntimeExtensions.m in Sources */,
+				F3CB02311D0D13700097BE61 /* LNNavigationAppearance.m in Sources */,
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
@@ -1283,6 +1313,7 @@
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */,
+				F3CB02361D0D3D860097BE61 /* UIViewController+NavigationItem.m in Sources */,
 				3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */,
 				F3C0E8461CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m in Sources */,
 				F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */,
@@ -1300,6 +1331,7 @@
 				3F4492411CBD5A2C006EA652 /* MTLReflection.m in Sources */,
 				F3FF4D0B1CBDF86300D20526 /* AFHTTPSessionManager.m in Sources */,
 				F3C0E8391CD8586C00829E90 /* FMDBViewController.m in Sources */,
+				F3CB022B1D06C9FE0097BE61 /* NSNotificationCenter+LN.m in Sources */,
 				F3FF4D0C1CBDF86300D20526 /* AFNetworkReachabilityManager.m in Sources */,
 				3F4492441CBD5A2C006EA652 /* NSArray+MTLManipulationAdditions.m in Sources */,
 				F3FF4D151CBF754B00D20526 /* AutoLayoutViewController.m in Sources */,
