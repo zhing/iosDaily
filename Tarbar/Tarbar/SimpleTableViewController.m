@@ -10,6 +10,8 @@
 #import "KCContact.h"
 #import "HMSegmentedControl.h"
 #import "LNConstDefine.h"
+#import "MBProgressHUD+MJ.h"
+#import "Masonry.h"
 #define UISCREENFRAME [UIScreen mainScreen].applicationFrame
 
 @interface SimpleTableViewController () <UITableViewDataSource, UITableViewDelegate>{
@@ -18,6 +20,8 @@
     NSIndexPath *_selectedIndexPath;
 }
 @property (nonatomic, strong) UIView *sectionHeaderView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic, strong) UIButton *bottomRefresh;
 @end
 
 @implementation SimpleTableViewController
@@ -33,6 +37,62 @@
     [self.view addSubview:_tableView];
     
     [self createSectionHeaderView];
+    [self addRefreshControl];
+    [self addFooterView];
+}
+
+- (void)addRefreshControl{
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+    refresh.tintColor = [UIColor blueColor];
+    [refresh addTarget:self action:@selector(pullToRefresh) forControlEvents:UIControlEventValueChanged];
+    _refreshControl = refresh;
+    [_tableView addSubview:_refreshControl];
+}
+
+//下拉刷新
+- (void)pullToRefresh{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    _refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"刷新中"];
+    
+    double delayInSeconds = 1.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableView reloadData];
+        //刷新结束时刷新控件的设置
+        [self.refreshControl endRefreshing];
+        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//        _bottomRefresh.frame = CGRectMake(0, 44+_rowCount*RCellHeight, 320, RCellHeight);
+    });
+}
+
+- (void)addFooterView{
+    _bottomRefresh = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_bottomRefresh setTitle:@"查看更多" forState:UIControlStateNormal];
+    [_bottomRefresh setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_bottomRefresh setContentEdgeInsets:UIEdgeInsetsMake(15, 0, 0, 0)];
+    [_bottomRefresh addTarget:self action:@selector(upToRefresh) forControlEvents:UIControlEventTouchUpInside];
+    _bottomRefresh.frame = CGRectMake(0, 0, UISCREENFRAME.size.width, 45);
+    _tableView.tableFooterView = _bottomRefresh;
+}
+
+//上拉加载
+- (void)upToRefresh
+{
+    _bottomRefresh.enabled = NO;
+    [MBProgressHUD showMessage:@"加载中..."];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    double delayInSeconds = 1.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableView reloadData];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//        [MBProgressHUD showMessage:@"加载完成"];
+        [MBProgressHUD hideHUD];
+        _bottomRefresh.enabled = YES;
+    });
 }
 
 - (void) createSectionHeaderView {
@@ -62,12 +122,12 @@
     //
 }
 
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"%s:%d", __func__, __LINE__);
-    NSLog(@"S_contentOffset = %f",_tableView.contentOffset.y);
-    NSLog(@"S_contentSize = %f",_tableView.contentSize.height);
-    NSLog(@"*******************************************");
-}
+//- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
+//    NSLog(@"%s:%d", __func__, __LINE__);
+//    NSLog(@"S_contentOffset = %f",_tableView.contentOffset.y);
+//    NSLog(@"S_contentSize = %f",_tableView.contentSize.height);
+//    NSLog(@"*******************************************");
+//}
 
 - (void) initData{
     _contacts = [[NSMutableArray alloc] init];
@@ -124,7 +184,8 @@
 #pragma mark delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 48;
+//    return 48;
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -132,7 +193,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return CGFLOAT_MIN;
+    return 0;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
