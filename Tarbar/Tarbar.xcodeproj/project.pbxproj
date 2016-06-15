@@ -105,6 +105,21 @@
 		F3CB024E1D1009110097BE61 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB024A1D1009110097BE61 /* MBProgressHUD+MJ.m */; };
 		F3CB024F1D1009110097BE61 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3CB024B1D1009110097BE61 /* MBProgressHUD.bundle */; };
 		F3CB02501D1009110097BE61 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB024D1D1009110097BE61 /* MBProgressHUD.m */; };
+		F3CB02531D10F9520097BE61 /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02521D10F9520097BE61 /* NSObject+MethodSwizzling.m */; };
+		F3CB02561D1106650097BE61 /* UIScrollView+LNRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02551D1106650097BE61 /* UIScrollView+LNRefresh.m */; };
+		F3CB02591D11096F0097BE61 /* LNBaseRefreshCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02581D11096F0097BE61 /* LNBaseRefreshCtrl.m */; };
+		F3CB025C1D111CB00097BE61 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB025B1D111CB00097BE61 /* UIView+Frame.m */; };
+		F3CB025F1D1123840097BE61 /* UIScrollView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB025E1D1123840097BE61 /* UIScrollView+Helper.m */; };
+		F3CB02621D1128E70097BE61 /* LNRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02611D1128E70097BE61 /* LNRefreshHeader.m */; };
+		F3CB02651D112CA10097BE61 /* LNDefaultRefreshCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02641D112CA10097BE61 /* LNDefaultRefreshCtrl.m */; };
+		F3CB02681D114DDD0097BE61 /* LNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02671D114DDD0097BE61 /* LNBaseViewController.m */; };
+		F3CB026B1D1154170097BE61 /* LNEmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB026A1D1154170097BE61 /* LNEmptyDataView.m */; };
+		F3CB02711D1155B00097BE61 /* UIViewController+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02701D1155B00097BE61 /* UIViewController+Loading.m */; };
+		F3CB02791D1157800097BE61 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02741D1157800097BE61 /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3CB027A1D1157800097BE61 /* TKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02761D1157800097BE61 /* TKLoadingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3CB027B1D1157800097BE61 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02781D1157800097BE61 /* UIView+TKCategory.m */; };
+		F3CB027E1D1159110097BE61 /* LNLoadMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */; };
+		F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02801D1175100097BE61 /* KCContactViewModel.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -452,6 +467,36 @@
 		F3CB024B1D1009110097BE61 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		F3CB024C1D1009110097BE61 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		F3CB024D1D1009110097BE61 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F3CB02511D10F9520097BE61 /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
+		F3CB02521D10F9520097BE61 /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
+		F3CB02541D1106650097BE61 /* UIScrollView+LNRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LNRefresh.h"; sourceTree = "<group>"; };
+		F3CB02551D1106650097BE61 /* UIScrollView+LNRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LNRefresh.m"; sourceTree = "<group>"; };
+		F3CB02571D11096F0097BE61 /* LNBaseRefreshCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBaseRefreshCtrl.h; sourceTree = "<group>"; };
+		F3CB02581D11096F0097BE61 /* LNBaseRefreshCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseRefreshCtrl.m; sourceTree = "<group>"; };
+		F3CB025A1D111CB00097BE61 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		F3CB025B1D111CB00097BE61 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		F3CB025D1D1123840097BE61 /* UIScrollView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Helper.h"; sourceTree = "<group>"; };
+		F3CB025E1D1123840097BE61 /* UIScrollView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Helper.m"; sourceTree = "<group>"; };
+		F3CB02601D1128E70097BE61 /* LNRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNRefreshHeader.h; sourceTree = "<group>"; };
+		F3CB02611D1128E70097BE61 /* LNRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNRefreshHeader.m; sourceTree = "<group>"; };
+		F3CB02631D112CA10097BE61 /* LNDefaultRefreshCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNDefaultRefreshCtrl.h; sourceTree = "<group>"; };
+		F3CB02641D112CA10097BE61 /* LNDefaultRefreshCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNDefaultRefreshCtrl.m; sourceTree = "<group>"; };
+		F3CB02661D114DDD0097BE61 /* LNBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBaseViewController.h; sourceTree = "<group>"; };
+		F3CB02671D114DDD0097BE61 /* LNBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseViewController.m; sourceTree = "<group>"; };
+		F3CB02691D1154170097BE61 /* LNEmptyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNEmptyDataView.h; sourceTree = "<group>"; };
+		F3CB026A1D1154170097BE61 /* LNEmptyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNEmptyDataView.m; sourceTree = "<group>"; };
+		F3CB026F1D1155B00097BE61 /* UIViewController+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Loading.h"; sourceTree = "<group>"; };
+		F3CB02701D1155B00097BE61 /* UIViewController+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Loading.m"; sourceTree = "<group>"; };
+		F3CB02731D1157800097BE61 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		F3CB02741D1157800097BE61 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		F3CB02751D1157800097BE61 /* TKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKLoadingView.h; sourceTree = "<group>"; };
+		F3CB02761D1157800097BE61 /* TKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKLoadingView.m; sourceTree = "<group>"; };
+		F3CB02771D1157800097BE61 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		F3CB02781D1157800097BE61 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
+		F3CB027C1D1159110097BE61 /* LNLoadMoreControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNLoadMoreControl.h; sourceTree = "<group>"; };
+		F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNLoadMoreControl.m; sourceTree = "<group>"; };
+		F3CB027F1D1175100097BE61 /* KCContactViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactViewModel.h; sourceTree = "<group>"; };
+		F3CB02801D1175100097BE61 /* KCContactViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactViewModel.m; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -564,6 +609,7 @@
 		3F1BC4921CBD464B002394F8 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB02721D1157800097BE61 /* TKView */,
 				F3CB02481D1009110097BE61 /* MBProgressHUD */,
 				3F6665301D05B57C000F4334 /* SVGKit */,
 				F3C0E8041CC6441800829E90 /* fmdb */,
@@ -866,6 +912,12 @@
 		3F6665C61D05B67E000F4334 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB026F1D1155B00097BE61 /* UIViewController+Loading.h */,
+				F3CB02701D1155B00097BE61 /* UIViewController+Loading.m */,
+				F3CB025D1D1123840097BE61 /* UIScrollView+Helper.h */,
+				F3CB025E1D1123840097BE61 /* UIScrollView+Helper.m */,
+				F3CB025A1D111CB00097BE61 /* UIView+Frame.h */,
+				F3CB025B1D111CB00097BE61 /* UIView+Frame.m */,
 				3FE26A731D0DB08F00DC8E0E /* UIDevice+Helper.h */,
 				3FE26A741D0DB08F00DC8E0E /* UIDevice+Helper.m */,
 				3FE26A751D0DB08F00DC8E0E /* UIViewController+NavigationItem.h */,
@@ -881,6 +933,10 @@
 				3F6665CE1D05B6D2000F4334 /* UIViewController+Badge.h */,
 				3F6665CF1D05B6D2000F4334 /* UIViewController+Badge.m */,
 				3F6665C71D05B6BD000F4334 /* LNConstDefine.h */,
+				F3CB02511D10F9520097BE61 /* NSObject+MethodSwizzling.h */,
+				F3CB02521D10F9520097BE61 /* NSObject+MethodSwizzling.m */,
+				F3CB02541D1106650097BE61 /* UIScrollView+LNRefresh.h */,
+				F3CB02551D1106650097BE61 /* UIScrollView+LNRefresh.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -888,6 +944,16 @@
 		3FF383AE1CD1025400C84BA8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB027C1D1159110097BE61 /* LNLoadMoreControl.h */,
+				F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */,
+				F3CB02691D1154170097BE61 /* LNEmptyDataView.h */,
+				F3CB026A1D1154170097BE61 /* LNEmptyDataView.m */,
+				F3CB02661D114DDD0097BE61 /* LNBaseViewController.h */,
+				F3CB02671D114DDD0097BE61 /* LNBaseViewController.m */,
+				F3CB02631D112CA10097BE61 /* LNDefaultRefreshCtrl.h */,
+				F3CB02641D112CA10097BE61 /* LNDefaultRefreshCtrl.m */,
+				F3CB02601D1128E70097BE61 /* LNRefreshHeader.h */,
+				F3CB02611D1128E70097BE61 /* LNRefreshHeader.m */,
 				3FF383B21CD103C500C84BA8 /* LNNavigationController.m */,
 				3FF383B31CD103C500C84BA8 /* LNNavigationController.h */,
 				3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */,
@@ -900,6 +966,8 @@
 				F3CB02141D058AD50097BE61 /* LNTabBarController.m */,
 				F3CB022F1D0D13700097BE61 /* LNNavigationAppearance.h */,
 				F3CB02301D0D13700097BE61 /* LNNavigationAppearance.m */,
+				F3CB02571D11096F0097BE61 /* LNBaseRefreshCtrl.h */,
+				F3CB02581D11096F0097BE61 /* LNBaseRefreshCtrl.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1050,6 +1118,19 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		F3CB02721D1157800097BE61 /* TKView */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB02731D1157800097BE61 /* TKAlertCenter.h */,
+				F3CB02741D1157800097BE61 /* TKAlertCenter.m */,
+				F3CB02751D1157800097BE61 /* TKLoadingView.h */,
+				F3CB02761D1157800097BE61 /* TKLoadingView.m */,
+				F3CB02771D1157800097BE61 /* UIView+TKCategory.h */,
+				F3CB02781D1157800097BE61 /* UIView+TKCategory.m */,
+			);
+			path = TKView;
+			sourceTree = "<group>";
+		};
 		F3FF4CEE1CBDE89500D20526 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1063,6 +1144,8 @@
 				3FDC85061C9C3B3500BF7E76 /* KCContactGroup.m */,
 				3FDC850E1CAC2F0A00BF7E76 /* SimpleTableViewController.h */,
 				3FDC850F1CAC2F0A00BF7E76 /* SimpleTableViewController.m */,
+				F3CB027F1D1175100097BE61 /* KCContactViewModel.h */,
+				F3CB02801D1175100097BE61 /* KCContactViewModel.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -1301,6 +1384,7 @@
 			files = (
 				3F44924B1CBD5A2C006EA652 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				3F44923C1CBD5A2C006EA652 /* EXTScope.m in Sources */,
+				F3CB02591D11096F0097BE61 /* LNBaseRefreshCtrl.m in Sources */,
 				3F4492481CBD5A2C006EA652 /* NSError+MTLModelException.m in Sources */,
 				F3C0E8121CC6441800829E90 /* FMDatabasePool.m in Sources */,
 				F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */,
@@ -1308,6 +1392,7 @@
 				F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */,
 				3FE26A6F1D070A6F00DC8E0E /* UIImage+Helper.m in Sources */,
 				3F4492461CBD5A2C006EA652 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
+				F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */,
 				F3CB024E1D1009110097BE61 /* MBProgressHUD+MJ.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
 				3F06D5511CC7BEBA0045E9D1 /* CollectionViewController.m in Sources */,
@@ -1322,12 +1407,15 @@
 				F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
 				3FD399941CF5FD0A00DD052A /* Father.m in Sources */,
+				F3CB027B1D1157800097BE61 /* UIView+TKCategory.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
 				3F3A84C11CE3990C00B7A581 /* AccessorTest.m in Sources */,
 				F3C0E84A1CDB24D300829E90 /* GCDViewController.m in Sources */,
 				F3FF4D0F1CBDF86300D20526 /* AFURLRequestSerialization.m in Sources */,
+				F3CB02711D1155B00097BE61 /* UIViewController+Loading.m in Sources */,
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
+				F3CB025C1D111CB00097BE61 /* UIView+Frame.m in Sources */,
 				3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */,
 				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
 				F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */,
@@ -1337,6 +1425,7 @@
 				F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */,
 				F3C0E8431CDA084B00829E90 /* NSObject+RNSwizzle.m in Sources */,
 				3F1BC4911CBD3678002394F8 /* ZHStatus.m in Sources */,
+				F3CB02791D1157800097BE61 /* TKAlertCenter.m in Sources */,
 				3F4A41741C9AC2CA0008BDA7 /* AppDelegate.m in Sources */,
 				3F4A41711C9AC2CA0008BDA7 /* main.m in Sources */,
 				3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */,
@@ -1344,8 +1433,10 @@
 				3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
 				3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */,
+				F3CB026B1D1154170097BE61 /* LNEmptyDataView.m in Sources */,
 				F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */,
 				3FD399971CF5FD4100DD052A /* Son.m in Sources */,
+				F3CB02561D1106650097BE61 /* UIScrollView+LNRefresh.m in Sources */,
 				3F6665D61D07075D000F4334 /* UITabBarItem+CustomBadge.m in Sources */,
 				F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */,
 				F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */,
@@ -1360,6 +1451,7 @@
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
 				3F6665D21D05B6D2000F4334 /* UITabBar+Badge.m in Sources */,
+				F3CB027E1D1159110097BE61 /* LNLoadMoreControl.m in Sources */,
 				3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
@@ -1367,12 +1459,16 @@
 				3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */,
 				F3C0E8461CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m in Sources */,
 				F3CB02501D1009110097BE61 /* MBProgressHUD.m in Sources */,
+				F3CB025F1D1123840097BE61 /* UIScrollView+Helper.m in Sources */,
 				F3FF4D1C1CC0AA3800D20526 /* Person.m in Sources */,
 				3F7428051CF9BF73001C5A1B /* HYBMsgSend.m in Sources */,
 				F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */,
+				F3CB02651D112CA10097BE61 /* LNDefaultRefreshCtrl.m in Sources */,
 				3F44924E1CBD608E006EA652 /* ZHStatusArray.m in Sources */,
+				F3CB027A1D1157800097BE61 /* TKLoadingView.m in Sources */,
 				3F1BC4871CBBE4C1002394F8 /* Student.m in Sources */,
 				3F06D5471CC49C630045E9D1 /* AnimationViewController.m in Sources */,
+				F3CB02681D114DDD0097BE61 /* LNBaseViewController.m in Sources */,
 				F3FF4D101CBDF86300D20526 /* AFURLResponseSerialization.m in Sources */,
 				3F4492491CBD5A2C006EA652 /* NSObject+MTLComparisonAdditions.m in Sources */,
 				3FF383C01CDE331900C84BA8 /* MoveViewController.m in Sources */,
@@ -1389,6 +1485,8 @@
 				3F4492421CBD5A2C006EA652 /* MTLTransformerErrorHandling.m in Sources */,
 				3F4492451CBD5A2C006EA652 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
 				F3C0E8031CC5D3BB00829E90 /* TurnViewController.m in Sources */,
+				F3CB02621D1128E70097BE61 /* LNRefreshHeader.m in Sources */,
+				F3CB02531D10F9520097BE61 /* NSObject+MethodSwizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,7 @@
 @property (strong, nonatomic) UIButton *button1;
 @property (strong, nonatomic) UIButton *button11;
 @property (strong, nonatomic) UIButton *button2;
+@property (strong, nonatomic) UIButton *button22;
 @property (strong, nonatomic) UIButton *button3;
 @property (strong, nonatomic) UIButton *button4;
 @property (strong, nonatomic) UIButton *button5;
@@ -132,11 +133,31 @@
     }];
     
     [_button2 addTarget:self action:@selector(showUpAnimationViewController:) forControlEvents:UIControlEventTouchUpInside];
+    
+    _button22 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button22 setTitle:@"datePicker" forState:UIControlStateNormal];
+    _button22.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button22 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button22];
+    [_button22 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button2);
+        make.leading.equalTo(_button2.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button22 addTarget:self action:@selector(showUpDatePicker:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void) showUpAnimationViewController: (id)sender{
+- (void)showUpAnimationViewController: (id)sender{
     AnimationViewController *controller = [[AnimationViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)showUpDatePicker: (id)sender{
+    UIDatePicker *picker = [[UIDatePicker alloc] init];
+    picker.datePickerMode = UIDatePickerModeDate;
+    
+    picker.center = self.view.center;
+    [self.view addSubview:picker];
 }
 
 - (void)testCollectionView{

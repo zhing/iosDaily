@@ -12,6 +12,7 @@
 #import "LNConstDefine.h"
 #import "MBProgressHUD+MJ.h"
 #import "Masonry.h"
+#import "KCContactViewModel.h"
 #define UISCREENFRAME [UIScreen mainScreen].applicationFrame
 
 @interface SimpleTableViewController () <UITableViewDataSource, UITableViewDelegate>{
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) UIView *sectionHeaderView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) UIButton *bottomRefresh;
+@property (nonatomic, strong) KCContactViewModel *contactViewModel;
+
 @end
 
 @implementation SimpleTableViewController
@@ -37,8 +40,12 @@
     [self.view addSubview:_tableView];
     
     [self createSectionHeaderView];
-    [self addRefreshControl];
-    [self addFooterView];
+//    [self addRefreshControl];
+//    [self addFooterView];
+    
+    _contactViewModel = [[KCContactViewModel alloc] init];
+    [self addPullToRefreshForScrollView:_tableView withSelector:@selector(refresh)];
+    [self refresh];
 }
 
 - (void)addRefreshControl{
@@ -206,4 +213,27 @@
     textField.text = contact.phoneNumber;
     [alert show];
 }
+
+#pragma mark refresh
+- (void)refresh {
+    [self.contactViewModel refreshWithSuccess:^(NSArray *models) {
+        [self endRefresh:_tableView];
+        if (models.count > 0) {
+            [self addLoadMoreForTableView:_tableView withSelector:@selector(loadMore)];
+            [self hideEmptyDataView];
+        } else {
+            [self removeLoadMoreForTableView:_tableView];
+            [self showEmptyDataView];
+        }
+    } failure:^(NSInteger code, NSString *msg) {
+        [self endRefresh:_tableView];
+        [self removeLoadMoreForTableView:_tableView];
+        if ([_tableView numberOfRowsInSection:0] == 0) {
+            [self showEmptyDataView];
+        } else {
+            [self hideEmptyDataView];
+        }
+    }];
+}
+
 @end

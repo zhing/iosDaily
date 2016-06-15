@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNBaseViewController.h"
 
-@interface SimpleTableViewController : UIViewController
+@interface SimpleTableViewController : LNBaseViewController
 
 @end
