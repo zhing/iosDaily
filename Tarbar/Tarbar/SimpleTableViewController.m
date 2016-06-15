@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initData];
+//    [self initData];
     _tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
     _tableView.backgroundColor = RGB(242, 242, 242);
     _tableView.dataSource = self;
@@ -129,13 +129,6 @@
     //
 }
 
-//- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
-//    NSLog(@"%s:%d", __func__, __LINE__);
-//    NSLog(@"S_contentOffset = %f",_tableView.contentOffset.y);
-//    NSLog(@"S_contentSize = %f",_tableView.contentSize.height);
-//    NSLog(@"*******************************************");
-//}
-
 - (void) initData{
     _contacts = [[NSMutableArray alloc] init];
     
@@ -170,12 +163,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _contacts.count;
+    return _contactViewModel.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    KCContact *contact = _contacts[indexPath.row];
+    KCContact *contact = _contactViewModel.contacts[indexPath.row];
     cell.textLabel.text = [contact getName];
     cell.detailTextLabel.text = contact.phoneNumber;
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
@@ -205,7 +198,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     _selectedIndexPath = indexPath;
-    KCContact *contact = _contacts[indexPath.row];
+    KCContact *contact = _contactViewModel.contacts[indexPath.row];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"System Info" message:[contact getName] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -219,12 +212,13 @@
     [self.contactViewModel refreshWithSuccess:^(NSArray *models) {
         [self endRefresh:_tableView];
         if (models.count > 0) {
-            [self addLoadMoreForTableView:_tableView withSelector:@selector(loadMore)];
+//            [self addLoadMoreForTableView:_tableView withSelector:@selector(loadMore)];
             [self hideEmptyDataView];
         } else {
-            [self removeLoadMoreForTableView:_tableView];
+//            [self removeLoadMoreForTableView:_tableView];
             [self showEmptyDataView];
         }
+        [_tableView reloadData];
     } failure:^(NSInteger code, NSString *msg) {
         [self endRefresh:_tableView];
         [self removeLoadMoreForTableView:_tableView];

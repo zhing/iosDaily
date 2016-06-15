@@ -18,6 +18,14 @@
 
 @implementation KCContactViewModel
 
+- (instancetype)init{
+    if (self=[super init]){
+        _contacts = [NSMutableArray array];
+    }
+    
+    return self;
+}
+
 - (void)refreshWithSuccess:(void (^)(NSArray *))success failure:(void (^)(NSInteger, NSString *))failure {
     self.pageIndex = 1;
     [self requestForPage:self.pageIndex withSuccess:success failure:failure];
