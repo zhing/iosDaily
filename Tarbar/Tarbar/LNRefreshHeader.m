@@ -127,11 +127,4 @@ const double kChangeToIdleDuration = 0.6;
     _changeToIdleAnimateDisable = changeToIdleAnimateDisable;
 }
 
-//- (void)endRefreshing
-//{
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(_endRefreshTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [super endRefreshing];
-//    });
-//}
-
 @end

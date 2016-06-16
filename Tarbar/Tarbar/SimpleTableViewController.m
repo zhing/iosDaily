@@ -15,6 +15,8 @@
 #import "KCContactViewModel.h"
 #define UISCREENFRAME [UIScreen mainScreen].applicationFrame
 
+
+
 @interface SimpleTableViewController () <UITableViewDataSource, UITableViewDelegate>{
     UITableView *_tableView;
     NSMutableArray *_contacts;
@@ -42,6 +44,19 @@
     [self createSectionHeaderView];
 //    [self addRefreshControl];
 //    [self addFooterView];
+    
+//    LNTableViewSectionedReloadDataSource *dataSource = [[LNTableViewSectionedReloadDataSource alloc] init];
+//    [self.contactViewModel.source bindTo:[_tableView ln_itemsWithDataSource:dataSource]];
+//    __weak typeof(self) weakSelf = self;
+//    dataSource.cellFactory = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath, id item) {
+//        UITableViewCell *cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+//        KCContact *contact = weakSelf.contactViewModel.contacts[indexPath.row];
+//        cell.textLabel.text = [contact getName];
+//        cell.detailTextLabel.text = contact.phoneNumber;
+//        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+//        cell.frame = CGRectMake(0, 0, 375, 30);
+//        return cell;
+//    };
     
     _contactViewModel = [[KCContactViewModel alloc] init];
     [self addPullToRefreshForScrollView:_tableView withSelector:@selector(refresh)];
@@ -212,10 +227,10 @@
     [self.contactViewModel refreshWithSuccess:^(NSArray *models) {
         [self endRefresh:_tableView];
         if (models.count > 0) {
-//            [self addLoadMoreForTableView:_tableView withSelector:@selector(loadMore)];
+            [self addLoadMoreForTableView:_tableView withSelector:@selector(loadMore)];
             [self hideEmptyDataView];
         } else {
-//            [self removeLoadMoreForTableView:_tableView];
+            [self removeLoadMoreForTableView:_tableView];
             [self showEmptyDataView];
         }
         [_tableView reloadData];
@@ -227,6 +242,20 @@
         } else {
             [self hideEmptyDataView];
         }
+    }];
+}
+
+- (void)loadMore {
+    [self.contactViewModel loadMoreWithSuccess:^(NSArray *models) {
+        if (models.count > 0) {
+            [self endLoadMore:_tableView];
+        } else {
+            [self removeLoadMoreForTableView:_tableView];
+        }
+        [_tableView reloadData];
+        [self endLoadMore:_tableView];
+    } failure:^(NSInteger code, NSString *msg) {
+        [self endLoadMore:_tableView];
     }];
 }
 

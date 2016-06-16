@@ -120,6 +120,9 @@
 		F3CB027B1D1157800097BE61 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02781D1157800097BE61 /* UIView+TKCategory.m */; };
 		F3CB027E1D1159110097BE61 /* LNLoadMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */; };
 		F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02801D1175100097BE61 /* KCContactViewModel.m */; };
+		F3CB02841D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02831D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m */; };
+		F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02861D127AB50097BE61 /* LNCollectionType.m */; };
+		F3CB028A1D127ACE0097BE61 /* LNMutableUniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -497,6 +500,13 @@
 		F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNLoadMoreControl.m; sourceTree = "<group>"; };
 		F3CB027F1D1175100097BE61 /* KCContactViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactViewModel.h; sourceTree = "<group>"; };
 		F3CB02801D1175100097BE61 /* KCContactViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactViewModel.m; sourceTree = "<group>"; };
+		F3CB02821D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNTableViewSectionedReloadDataSource.h; sourceTree = "<group>"; };
+		F3CB02831D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNTableViewSectionedReloadDataSource.m; sourceTree = "<group>"; };
+		F3CB02851D127AB50097BE61 /* LNCollectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCollectionType.h; sourceTree = "<group>"; };
+		F3CB02861D127AB50097BE61 /* LNCollectionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCollectionType.m; sourceTree = "<group>"; };
+		F3CB02881D127ACE0097BE61 /* LNMutableUniqueArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNMutableUniqueArray.h; sourceTree = "<group>"; };
+		F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNMutableUniqueArray.m; sourceTree = "<group>"; };
+		F3CB028B1D127AD90097BE61 /* LNUniqueInArrayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNUniqueInArrayProtocol.h; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -944,6 +954,13 @@
 		3FF383AE1CD1025400C84BA8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB028B1D127AD90097BE61 /* LNUniqueInArrayProtocol.h */,
+				F3CB02881D127ACE0097BE61 /* LNMutableUniqueArray.h */,
+				F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */,
+				F3CB02851D127AB50097BE61 /* LNCollectionType.h */,
+				F3CB02861D127AB50097BE61 /* LNCollectionType.m */,
+				F3CB02821D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.h */,
+				F3CB02831D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m */,
 				F3CB027C1D1159110097BE61 /* LNLoadMoreControl.h */,
 				F3CB027D1D1159110097BE61 /* LNLoadMoreControl.m */,
 				F3CB02691D1154170097BE61 /* LNEmptyDataView.h */,
@@ -1400,6 +1417,7 @@
 				3F06D54E1CC7BC7C0045E9D1 /* MyCollectionViewCell.m in Sources */,
 				3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */,
 				F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */,
+				F3CB02841D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m in Sources */,
 				3F44923E1CBD5A2C006EA652 /* MTLJSONAdapter.m in Sources */,
 				3F4A41771C9AC2CA0008BDA7 /* ViewController.m in Sources */,
 				3F4492431CBD5A2C006EA652 /* MTLValueTransformer.m in Sources */,
@@ -1416,6 +1434,7 @@
 				3FDC85041C9C382700BF7E76 /* KCContact.m in Sources */,
 				F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */,
 				F3CB025C1D111CB00097BE61 /* UIView+Frame.m in Sources */,
+				F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */,
 				3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */,
 				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
 				F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */,
@@ -1435,6 +1454,7 @@
 				3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */,
 				F3CB026B1D1154170097BE61 /* LNEmptyDataView.m in Sources */,
 				F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */,
+				F3CB028A1D127ACE0097BE61 /* LNMutableUniqueArray.m in Sources */,
 				3FD399971CF5FD4100DD052A /* Son.m in Sources */,
 				F3CB02561D1106650097BE61 /* UIScrollView+LNRefresh.m in Sources */,
 				3F6665D61D07075D000F4334 /* UITabBarItem+CustomBadge.m in Sources */,
