@@ -166,6 +166,12 @@
                                      contact9, contact10, contact11, contact12, contact13, contact14, contact15]];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"ContentOffset: %f", scrollView.contentOffset.y);
+    NSLog(@"ContentInset: %@", NSStringFromUIEdgeInsets(scrollView.contentInset));
+    NSLog(@"ContentSize: %@", NSStringFromCGSize(scrollView.contentSize));
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

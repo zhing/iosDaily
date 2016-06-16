@@ -25,9 +25,11 @@
     
     UIImage *image = [UIImage imageNamed:@"stanford"];
     _imageView = [[UIImageView alloc] initWithImage:image];
-//    _imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
-//    _imageView.image = image;
     [_scrollView addSubview:_imageView];
+    
+    UIImage *image2 = [UIImage imageNamed:@"photo"];
+    UIImageView *image2View = [[UIImageView alloc] initWithImage:image2];
+    [_scrollView addSubview:image2View];
     
     _scrollView.contentSize = _imageView.frame.size;
     _scrollView.minimumZoomScale=0.6;
