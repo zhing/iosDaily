@@ -609,6 +609,7 @@
 		3F1BC48B1CBD34F9002394F8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F3CB028C1D13F3BB0097BE61 /* YYModel */,
 				F3FF4CEF1CBDEB3E00D20526 /* Json */,
 				3F1BC4881CBD334A002394F8 /* AFNetworkViewController.h */,
 				3F1BC4891CBD334A002394F8 /* AFNetworkViewController.m */,
@@ -1148,15 +1149,22 @@
 			path = TKView;
 			sourceTree = "<group>";
 		};
+		F3CB028C1D13F3BB0097BE61 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = YYModel;
+			sourceTree = "<group>";
+		};
 		F3FF4CEE1CBDE89500D20526 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				3FDC85021C9C382700BF7E76 /* KCContact.h */,
+				3FDC85031C9C382700BF7E76 /* KCContact.m */,
 				3FDC85111CB0D36800BF7E76 /* HMSegmentedControl.m */,
 				3FDC85121CB0D36800BF7E76 /* HMSegmentedControl.h */,
 				3FDC850B1CA2E69800BF7E76 /* ScrollViewController.h */,
 				3FDC850C1CA2E69800BF7E76 /* ScrollViewController.m */,
-				3FDC85021C9C382700BF7E76 /* KCContact.h */,
-				3FDC85031C9C382700BF7E76 /* KCContact.m */,
 				3FDC85051C9C3B3500BF7E76 /* KCContactGroup.h */,
 				3FDC85061C9C3B3500BF7E76 /* KCContactGroup.m */,
 				3FDC850E1CAC2F0A00BF7E76 /* SimpleTableViewController.h */,

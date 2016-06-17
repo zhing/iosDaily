@@ -170,6 +170,7 @@
     NSLog(@"ContentOffset: %f", scrollView.contentOffset.y);
     NSLog(@"ContentInset: %@", NSStringFromUIEdgeInsets(scrollView.contentInset));
     NSLog(@"ContentSize: %@", NSStringFromCGSize(scrollView.contentSize));
+    NSLog(@"Frome: %@", NSStringFromCGRect(scrollView.frame));
 }
 
 - (void)didReceiveMemoryWarning {
