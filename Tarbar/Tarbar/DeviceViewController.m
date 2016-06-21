@@ -55,6 +55,12 @@
     
     CGRect newFrame = [viewB convertRect:viewC.frame toView:viewA];
     NSLog(@"%@", NSStringFromCGRect(newFrame));
+    
+    //求viewC相对于VC的frame
+    CGRect newFrame2 = [self.view convertRect:viewC.bounds fromView:viewC];
+    CGRect newFrame3 = [viewC convertRect:viewC.bounds toView:self.view];
+    NSLog(@"%@", NSStringFromCGRect(newFrame2));
+    NSLog(@"%@", NSStringFromCGRect(newFrame3));
 }
 
 @end
