@@ -40,6 +40,21 @@
     [titleView addSubview:button];
     
     self.navigationItem.titleView = titleView;
+    
+    UIView *viewA = [[UIView alloc] initWithFrame:CGRectMake(20, 100, 200, 200)];
+    viewA.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:viewA];
+    
+    UIView *viewB = [[UIView alloc] initWithFrame:CGRectMake(20, 30, 100, 100)];
+    viewB.backgroundColor = [UIColor blueColor];
+    [viewA addSubview:viewB];
+    
+    UIView *viewC = [[UIView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
+    viewC.backgroundColor = [UIColor yellowColor];
+    [viewB addSubview:viewC];
+    
+    CGRect newFrame = [viewB convertRect:viewC.frame toView:viewA];
+    NSLog(@"%@", NSStringFromCGRect(newFrame));
 }
 
 @end
