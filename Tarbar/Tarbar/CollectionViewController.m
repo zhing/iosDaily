@@ -99,6 +99,18 @@
     NSLog(@"%@",msg);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+}
+
+- (void)dealloc {
+    NSLog(@"CollectionViewController: dealloc");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -8,6 +8,7 @@
 
 #import "CoreViewController.h"
 #import "Son.h"
+#import "LNTriangleView.h"
 
 @interface CoreViewController ()
 
@@ -16,7 +17,8 @@
  */
 @property (nonatomic, copy) NSMutableArray *mutableArray;
 @property (nonatomic, strong) NSArray *myArray;
-
+@property (nonatomic, strong) LNTriangleView *triangleView;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -25,7 +27,12 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-                                
+    
+    _triangleView = [[LNTriangleView alloc] init];
+    _triangleView.backgroundColor = [UIColor grayColor];
+    _triangleView.frame = CGRectMake(20, 100, 100, 100);
+    [self.view addSubview:_triangleView];
+    
     CFStringRef string = CFSTR("Hello");
     CFShow(string);
     CFShowStr(string);
@@ -82,9 +89,42 @@
     [(NSMutableArray *)self.myArray removeObjectAtIndex:0];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    /*
+      * 第一种方式会生成一个NSTimer 并自动加入当前runloop的defaultMode中
+      */
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    
+    /*
+      * 第二种方式会生成一个NSTimer 并不会自动加入任何runloop中
+      */
+//    _timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+    
+    /*
+      *第三种方式与第二种方式类似，稍有不同的就是可以控制触发时间（并且在FireDate会立即调用selector）
+      */
+    _timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
 - (NSString *)firstName{
     CFStringRef cfstring = CFSTR("zhang");
     return (__bridge NSString *)cfstring;
+}
+
+- (void)timerAction {
+    static NSInteger count = 0;
+    NSLog(@"NSTimer: %ld", count);
+    count++;
 }
 
 @end

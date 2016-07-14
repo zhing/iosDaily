@@ -22,6 +22,7 @@
 #import "AccessorTest.h"
 #import "LNCustomizePicker.h"
 #import "LNConstDefine.h"
+#import "UIViewController+NavigationItem.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -149,13 +150,18 @@
 
 - (void)showUpAnimationViewController: (id)sender{
     AnimationViewController *controller = [[AnimationViewController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+//    [self.navigationController pushViewController:controller animated:YES];
+    
+    /**************************************************************
+      模态场景转换会覆盖整个窗口、导致TabBarController和NavigationController
+     的viewWillDisappear
+     **************************************************************/
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)showUpDatePicker: (id)sender{
     UIDatePicker *picker = [[UIDatePicker alloc] init];
     picker.datePickerMode = UIDatePickerModeDate;
-    
     picker.center = self.view.center;
     [self.view addSubview:picker];
 }
@@ -178,6 +184,7 @@
 
 - (void) showUpCollectionViewController: (id)sender{
     CollectionViewController *controller = [[CollectionViewController alloc] init];
+//    [self setNavBarBackBarButtonItemTitle:@"返回"];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
