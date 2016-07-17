@@ -16,7 +16,7 @@
  */
 @property (nonatomic, copy) NSMutableArray *mutableArray;
 @property (nonatomic, strong) NSArray *myArray;
-
+@property (nonatomic, strong, readonly) NSString *roString;
 
 @end
 
@@ -80,6 +80,9 @@
     
     self.myArray = nsArray;
     [(NSMutableArray *)self.myArray removeObjectAtIndex:0];
+    
+    _roString = @"北京欢迎你";
+    NSLog(@"%@", self.roString);
 }
 
 - (NSString *)firstName{

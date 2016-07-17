@@ -32,6 +32,7 @@
     });
     
     [self msgSend_test];
+    [self textMetaClass];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -226,6 +227,14 @@ int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
           [NSString stringWithUTF8String:arg1],
           [NSString stringWithUTF8String:arg1]);
     return 1;
+}
+
+- (void)textMetaClass{
+    NSString *string = [[NSString alloc] init];
+    NSLog(@"======%@=======", class_isMetaClass([string class])?@"YES":@"NO");
+    NSLog(@"======%@=======", class_isMetaClass([NSObject class])?@"YES":@"NO");
+    NSLog(@"======%@=======", class_isMetaClass(objc_getClass(class_getName([NSString class])))?@"YES":@"NO");
+    NSLog(@"======%@=======", class_isMetaClass(objc_getMetaClass(class_getName([NSString class])))?@"YES":@"NO");
 }
 
 - (void)dealloc{

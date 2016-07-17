@@ -22,6 +22,7 @@
 @property (nonatomic, strong) NSMutableArray *imageViews;
 @property (nonatomic, strong) NSMutableArray *imageNames;
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, strong) dispatch_queue_t queue;
 
 @end
 
@@ -34,6 +35,26 @@
     [self sync];
     [self async];
     [self layoutUI];
+    
+    /******************************
+      主队列，是一个特殊的串行队列，在主线程中运行，用于刷新UI。一般比较耗时的任务都会放在其他线程中运行。
+     *****************************/
+    _queue = dispatch_get_main_queue();
+    
+    /******************************
+     自定义队列，既可以创建串行队列也可以创建并行队列, 前两个为串行，后一个为并行。
+     *****************************/
+    _queue = dispatch_queue_create("com.leon.testQueue", NULL);
+    _queue = dispatch_queue_create("tcom.leon.testQueue", DISPATCH_QUEUE_SERIAL);
+    _queue = dispatch_queue_create("com.leon.testQueue", DISPATCH_QUEUE_CONCURRENT);
+    
+    /******************************
+     全局并行队列, 系统提供的并行队列。
+     *****************************/
+    _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
 }
 
 - (void)dispatch{
@@ -133,6 +154,15 @@
     });
     
     NSLog(@"Second sync Log");
+    
+    /********************************************
+     不要在当前线程队列中同步调用当前线程队列，这样会导致死锁
+     *********************************************/
+//    NSLog(@"sync 1"); //任务1
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        NSLog(@"sync 2"); //任务2
+//    });
+//    NSLog(@"sync 3"); //任务3
 }
 
 -(void)async{
@@ -141,6 +171,17 @@
     });
     
     NSLog(@"Second async Log");
+    
+    dispatch_queue_t queue = dispatch_queue_create("myQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1"); //任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2"); //任务2
+        dispatch_sync(queue, ^{
+            NSLog(@"3"); //任务3
+        });
+        NSLog(@"4"); //任务4
+    });
+    NSLog(@"5"); //任务5
 }
 
 - (void)layoutUI{
