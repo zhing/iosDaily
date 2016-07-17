@@ -3,4 +3,5 @@ platform :ios, '7.0'
 target "Tarbar" do
     pod 'Masonry'
     pod 'WebViewJavascriptBridge', '~> 5.0'
+    pod 'YYModel'
 end

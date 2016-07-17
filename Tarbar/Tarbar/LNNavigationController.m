@@ -52,7 +52,8 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
     item.title = @"返回";
-    viewController.navigationItem.backBarButtonItem = item;
+//    viewController.navigationItem.backBarButtonItem = item;
+    self.navigationBar.topItem.backBarButtonItem = item;
     
     if ( [self respondsToSelector:@selector(interactivePopGestureRecognizer)] && animated == YES) {
         self.interactivePopGestureRecognizer.enabled = NO;
@@ -87,6 +88,10 @@
     }
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSLog(@"NavigationContoller: willShowViewController");
+}
+
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     
     if (gestureRecognizer == self.interactivePopGestureRecognizer) {
@@ -101,6 +106,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"NavigationController: viewWillAppear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"NavigationController: viewWillDisappear");
 }
 
 @end

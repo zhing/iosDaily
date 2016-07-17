@@ -10,6 +10,7 @@
 
 @interface UIViewController (NavigationItem)
 
+- (void)setNavBarBackBarButtonItemTitle:(NSString *)title;
 - (void)setNavBarCustomBackButton:(NSString *)title target:(id)target action:(SEL)action;
 - (void)setNavBarRightItem:(NSString *)title target:(id)target action:(SEL)action;
 

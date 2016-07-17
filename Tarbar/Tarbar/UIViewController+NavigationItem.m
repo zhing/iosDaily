@@ -12,6 +12,11 @@
 
 @implementation UIViewController (NavigationItem)
 
+- (void)setNavBarBackBarButtonItemTitle:(NSString *)title {
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.topItem.backBarButtonItem = buttonItem;
+}
+
 - (void)setNavBarCustomBackButton:(NSString *)title target:(id)target action:(SEL)action {
     UIImage *image = [UIImage imageSVGNamed:@"icon_arrow_back_white" size:CGSizeMake(20, 20) cache:YES];
     
