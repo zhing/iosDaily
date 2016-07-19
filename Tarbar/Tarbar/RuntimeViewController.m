@@ -13,6 +13,8 @@
 #import "HYBMsgSend.h"
 
 #define LOGIN_NOTIFICATION @"login_info"
+extern uintptr_t _objc_rootRetainCount(id obj);
+extern void _objc_autoreleasePoolPrint();
 
 @interface RuntimeViewController ()
 
@@ -33,6 +35,8 @@
     
     [self msgSend_test];
     [self textMetaClass];
+    [self testRetainCount];
+    [self testBlock];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -235,6 +239,60 @@ int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
     NSLog(@"======%@=======", class_isMetaClass([NSObject class])?@"YES":@"NO");
     NSLog(@"======%@=======", class_isMetaClass(objc_getClass(class_getName([NSString class])))?@"YES":@"NO");
     NSLog(@"======%@=======", class_isMetaClass(objc_getMetaClass(class_getName([NSString class])))?@"YES":@"NO");
+}
+
+- (void)testRetainCount {
+    /*
+      *并不能得到理想的结果. 尽量不要使用。
+      */
+    
+    id obj = [[NSObject alloc] init];
+    id objx = obj;
+    id __weak obj1 = objx;
+    NSLog(@"retainCount = %lu/%ld", _objc_rootRetainCount(obj), CFGetRetainCount((__bridge CFTypeRef)obj));
+    NSLog(@"retainCount = %lu/%ld", _objc_rootRetainCount(objx), CFGetRetainCount((__bridge CFTypeRef)objx));
+    NSLog(@"retainCount = %lu/%ld", _objc_rootRetainCount(obj1), CFGetRetainCount((__bridge CFTypeRef)obj1));
+    
+    @autoreleasepool {
+        id __strong obj = [[NSObject alloc] init];
+        _objc_autoreleasePoolPrint();
+        id __weak o = obj;
+        NSLog(@"before using __weak: retain count = %lu", _objc_rootRetainCount(obj));
+        NSLog(@"class = %@", [o class]);
+        NSLog(@"after using __weak: retain count = %lu", _objc_rootRetainCount(obj));
+        _objc_autoreleasePoolPrint();  
+    }
+}
+
+- (void)testBlock {
+    id obj = [self getBlockArray];
+    
+    typedef void (^blk_t)(void);
+    blk_t blk = (blk_t)[obj objectAtIndex:0];
+    blk();
+    
+    
+    typedef void (^block_t)(id obj);
+    block_t block;
+    {
+        id array = [[NSMutableArray alloc] init];
+        block = ^(id obj) {
+            [array addObject:obj];
+            NSLog(@"array count = %ld", [array count]);
+        };
+    }
+    
+    block([[NSObject alloc] init]);
+    block([[NSObject alloc] init]);
+    block([[NSObject alloc] init]);
+}
+
+- (id) getBlockArray {
+    int val = 10;
+    
+    return [[NSArray alloc] initWithObjects:
+            [^{NSLog(@"blk0:%d", val);} copy],
+            [^{NSLog(@"blk1:%d", val);} copy],nil];
 }
 
 - (void)dealloc{
