@@ -10,6 +10,9 @@
 #import "Son.h"
 #import "LNTriangleView.h"
 
+extern void _objc_autoreleasePoolPrint();
+extern uintptr_t _objc_rootRetainCount(id obj);
+
 @interface CoreViewController ()
 
 /*
@@ -90,6 +93,9 @@
     
     _roString = @"北京欢迎你";
     NSLog(@"%@", self.roString);
+    
+    _objc_autoreleasePoolPrint();
+    NSLog(@"=============%ld",_objc_rootRetainCount(self.myArray));
 }
 
 - (void)viewWillAppear:(BOOL)animated {
