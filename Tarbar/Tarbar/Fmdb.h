@@ -1,5 +1,5 @@
 //
-//  FMDB.h
+//  Fmdb.h
 //  Tarbar
 //
 //  Created by Qing Zhang on 4/19/16.
