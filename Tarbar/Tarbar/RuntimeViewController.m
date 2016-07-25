@@ -11,6 +11,8 @@
 #import "Masonry.h"
 #import "NSNotificationCenter+RNSwizzle.h"
 #import "HYBMsgSend.h"
+#import "UIViewController+NavigationItemBlock.h"
+#import "UIButton+ActionBlock.h"
 
 #define LOGIN_NOTIFICATION @"login_info"
 extern uintptr_t _objc_rootRetainCount(id obj);
@@ -19,6 +21,8 @@ extern void _objc_autoreleasePoolPrint();
 @interface RuntimeViewController ()
 
 @property (nonatomic, strong) UIButton *loginBtn;
+@property (nonatomic, strong) UIButton *backBtn;
+@property (nonatomic, weak) id weakObj;
 
 @end
 
@@ -37,6 +41,14 @@ extern void _objc_autoreleasePoolPrint();
     [self textMetaClass];
     [self testRetainCount];
     [self testBlock];
+    
+    NSLog(@"%@", _weakObj);
+    __weak typeof(self) weakSelf = self;
+    [self setNavBarRightItem:@"取消" actionBlock:^{
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [self testBlockBtn];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -262,6 +274,8 @@ int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
         NSLog(@"after using __weak: retain count = %lu", _objc_rootRetainCount(obj));
         _objc_autoreleasePoolPrint();  
     }
+    
+    _weakObj = obj;
 }
 
 - (void)testBlock {
@@ -293,6 +307,25 @@ int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
     return [[NSArray alloc] initWithObjects:
             [^{NSLog(@"blk0:%d", val);} copy],
             [^{NSLog(@"blk1:%d", val);} copy],nil];
+}
+
+- (void)testBlockBtn {
+    _backBtn = [[UIButton alloc] init];
+    [_backBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    _backBtn.layer.borderWidth = 0.5;
+    [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    _backBtn.tag = 1001;
+    __weak typeof(self) weakSelf = self;
+    [_backBtn setClickResponseActionBlock:^(id sender) {
+        NSLog(@"sender: %lu", ((UIButton *)sender).tag);
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    [self.view addSubview:_backBtn];
+    [_backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@120);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@100);
+    }];
 }
 
 - (void)dealloc{
