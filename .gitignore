@@ -3,3 +3,4 @@ xcuserdata
 *.DS_Store
 Tarbar/build
 Tarbar/Pods
+Tarbar/Podfile.lock
