@@ -299,6 +299,14 @@ int cStyleFunc(id receiver, SEL sel, const void *arg1, const void *arg2) {
     block([[NSObject alloc] init]);
     block([[NSObject alloc] init]);
     block([[NSObject alloc] init]);
+    
+    __block int val = 0;
+    blk = [^{++val; NSLog(@"val=%d", val);} copy];
+    ++val;
+    blk();
+    ++val;
+    blk();
+    NSLog(@"val=%d", val);
 }
 
 - (id) getBlockArray {
