@@ -105,6 +105,7 @@
 		F3B1C01C1D3DDBC300E7556D /* UIViewController+NavigationItemBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B1C01B1D3DDBC300E7556D /* UIViewController+NavigationItemBlock.m */; };
 		F3B1C01F1D3DF0FB00E7556D /* UIButton+ActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B1C01E1D3DF0FB00E7556D /* UIButton+ActionBlock.m */; };
 		F3B1C0261D3E270200E7556D /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B1C0251D3E270200E7556D /* NSTimer+Block.m */; };
+		F3B1C02A1D45E50700E7556D /* FMDBMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B1C0291D45E50700E7556D /* FMDBMigrationManager.m */; };
 		F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7F91CC0ED8800829E90 /* DrawView.m */; };
 		F3C0E7FD1CC4C5A500829E90 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FC1CC4C5A500829E90 /* ScaleViewController.m */; };
 		F3C0E8001CC4CC8B00829E90 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E7FF1CC4CC8B00829E90 /* RoundViewController.m */; };
@@ -113,7 +114,7 @@
 		F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8081CC6441800829E90 /* FMDatabaseAdditions.m */; };
 		F3C0E8121CC6441800829E90 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80A1CC6441800829E90 /* FMDatabasePool.m */; };
 		F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80F1CC6441800829E90 /* FMResultSet.m */; };
-		F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8161CC644C100829E90 /* Fmdb.m */; };
+		F3C0E8171CC644C100829E90 /* Fmdbx.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8161CC644C100829E90 /* Fmdbx.m */; };
 		F3C0E8191CC65A7200829E90 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C0E8181CC65A7200829E90 /* libsqlite3.0.tbd */; };
 		F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8351CD1D60900829E90 /* TextViewController.m */; };
 		F3C0E8391CD8586C00829E90 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E8381CD8586C00829E90 /* FMDBViewController.m */; };
@@ -506,6 +507,8 @@
 		F3B1C01E1D3DF0FB00E7556D /* UIButton+ActionBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ActionBlock.m"; sourceTree = "<group>"; };
 		F3B1C0241D3E270200E7556D /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
 		F3B1C0251D3E270200E7556D /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		F3B1C0281D45E50700E7556D /* FMDBMigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBMigrationManager.h; sourceTree = "<group>"; };
+		F3B1C0291D45E50700E7556D /* FMDBMigrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBMigrationManager.m; sourceTree = "<group>"; };
 		F3C0E7F81CC0ED8800829E90 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		F3C0E7F91CC0ED8800829E90 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		F3C0E7FB1CC4C5A500829E90 /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
@@ -525,8 +528,8 @@
 		F3C0E80D1CC6441800829E90 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		F3C0E80E1CC6441800829E90 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		F3C0E80F1CC6441800829E90 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		F3C0E8151CC644C100829E90 /* Fmdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fmdb.h; sourceTree = "<group>"; };
-		F3C0E8161CC644C100829E90 /* Fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fmdb.m; sourceTree = "<group>"; };
+		F3C0E8151CC644C100829E90 /* Fmdbx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fmdbx.h; sourceTree = "<group>"; };
+		F3C0E8161CC644C100829E90 /* Fmdbx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fmdbx.m; sourceTree = "<group>"; };
 		F3C0E8181CC65A7200829E90 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F3C0E8341CD1D60900829E90 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		F3C0E8351CD1D60900829E90 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
@@ -653,8 +656,8 @@
 			children = (
 				3F1BC4851CBBE4C1002394F8 /* Student.h */,
 				3F1BC4861CBBE4C1002394F8 /* Student.m */,
-				F3C0E8151CC644C100829E90 /* Fmdb.h */,
-				F3C0E8161CC644C100829E90 /* Fmdb.m */,
+				F3C0E8151CC644C100829E90 /* Fmdbx.h */,
+				F3C0E8161CC644C100829E90 /* Fmdbx.m */,
 				F3C0E8371CD8586C00829E90 /* FMDBViewController.h */,
 				F3C0E8381CD8586C00829E90 /* FMDBViewController.m */,
 			);
@@ -707,6 +710,7 @@
 		3F1BC4921CBD464B002394F8 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				F3B1C0271D45E50700E7556D /* FMDBMigrationManager */,
 				3F60BEB91D438D620094CA8A /* MQTTKit */,
 				F3CB02721D1157800097BE61 /* TKView */,
 				F3CB02481D1009110097BE61 /* MBProgressHUD */,
@@ -1233,6 +1237,15 @@
 			name = Device;
 			sourceTree = "<group>";
 		};
+		F3B1C0271D45E50700E7556D /* FMDBMigrationManager */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1C0281D45E50700E7556D /* FMDBMigrationManager.h */,
+				F3B1C0291D45E50700E7556D /* FMDBMigrationManager.m */,
+			);
+			path = FMDBMigrationManager;
+			sourceTree = "<group>";
+		};
 		F3C0E7F71CC0ED1000829E90 /* CGContextDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -1615,6 +1628,7 @@
 				3F4492481CBD5A2C006EA652 /* NSError+MTLModelException.m in Sources */,
 				F3C0E8121CC6441800829E90 /* FMDatabasePool.m in Sources */,
 				F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */,
+				F3B1C02A1D45E50700E7556D /* FMDBMigrationManager.m in Sources */,
 				3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */,
 				F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */,
 				3FE26A6F1D070A6F00DC8E0E /* UIImage+Helper.m in Sources */,
@@ -1677,7 +1691,7 @@
 				F3CB02561D1106650097BE61 /* UIScrollView+LNRefresh.m in Sources */,
 				3F6665D61D07075D000F4334 /* UITabBarItem+CustomBadge.m in Sources */,
 				F3FF4D191CC0A9EC00D20526 /* Account.m in Sources */,
-				F3C0E8171CC644C100829E90 /* Fmdb.m in Sources */,
+				F3C0E8171CC644C100829E90 /* Fmdbx.m in Sources */,
 				3F4492471CBD5A2C006EA652 /* NSDictionary+MTLMappingAdditions.m in Sources */,
 				3FDC85131CB0D36900BF7E76 /* HMSegmentedControl.m in Sources */,
 				3F44924A1CBD5A2C006EA652 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
@@ -1866,7 +1880,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1874,8 +1888,8 @@
 					/Users/zhing/Documents/git/chitu_ios/Frameworks,
 					"$(PROJECT_DIR)/Tarbar",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tarbar/MQTTKit/MQTTKit/MQTTKit-Prefix.pch";
 				INFOPLIST_FILE = Tarbar/Info.plist;
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/libz.dylib";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1892,7 +1906,7 @@
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZBarSDK,
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZXingObjC,
 					"$(PROJECT_DIR)/Tarbar/SVGKit",
-					"$(PROJECT_DIR)/Tarbar/MQTTKit",
+					"$(PROJECT_DIR)/Tarbar/MQTTKit/libmosquitto",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1916,7 +1930,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 007C0E19CCA6225BEC7D24EE /* Pods-Tarbar.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1924,8 +1938,8 @@
 					/Users/zhing/Documents/git/chitu_ios/Frameworks,
 					"$(PROJECT_DIR)/Tarbar",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tarbar/MQTTKit/MQTTKit/MQTTKit-Prefix.pch";
 				INFOPLIST_FILE = Tarbar/Info.plist;
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/libz.dylib";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1942,7 +1956,7 @@
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZBarSDK,
 					/Users/zhing/Documents/git/chitu_ios/ThirdParty/ZXingObjC,
 					"$(PROJECT_DIR)/Tarbar/SVGKit",
-					"$(PROJECT_DIR)/Tarbar/MQTTKit",
+					"$(PROJECT_DIR)/Tarbar/MQTTKit/libmosquitto",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

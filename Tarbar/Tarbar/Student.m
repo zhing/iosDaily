@@ -7,7 +7,7 @@
 //
 
 #import "Student.h"
-#import "Fmdb.h"
+#import "Fmdbx.h"
 
 static NSString* const archivingFilePath=@"archive";
 @interface Student ()
@@ -46,7 +46,7 @@ static NSString* const archivingFilePath=@"archive";
 }
 
 + (void) testFMDB{
-    Fmdb *fmdb = [[Fmdb alloc] init];
+    Fmdbx *fmdb = [[Fmdbx alloc] init];
     [fmdb openDb:@"tmp.db"];
     
     NSString *sql = @"create table student (name text, studentNumber integer primary key, sex text);";

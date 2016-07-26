@@ -7,6 +7,7 @@
 //
 
 #import "ZHBaseModel.h"
+#import "ZHLocalCacheManager.h"
 
 @implementation ZHBaseModel
 
@@ -17,7 +18,7 @@
     for (ZHBaseModel *model in models) {
         [args addObject:@[[model primaryKeyValue]]];
     }
-    [[LNLocalCacheManager sharedInstance] updateBatchAsync:^(NSError *error) {
+    [[ZHLocalCacheManager sharedInstance] updateBatchAsync:^(NSError *error) {
         [self modelCallbackOnMainThread:callback withError:error];
     }
                                                     update:sql

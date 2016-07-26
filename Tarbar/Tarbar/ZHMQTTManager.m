@@ -22,8 +22,6 @@
 
 @end
 
-static const NSTimeInterval kLNMqttConnectTimeOut = 5;
-
 @implementation ZHMQTTManager
 
 - (NSOperationQueue *)msgQueue

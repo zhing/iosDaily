@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString * const kLNMessagePathForIM = @"kLNMessagePathForIM";
+static NSString * const kZHMessagePathForIM = @"kZHMessagePathForIM";
 
 typedef void (^MessageHandler)(NSArray *messages);
 

@@ -7,9 +7,10 @@
 //
 
 #import "ZHLocalCacheManager.h"
-#import "FMDatabaseQueue.h"
-#import "FMDatabase.h"
+#import "FMDB.h"
+#import "FMDBMigrationManager.h"
 
+const long long kZHDBNOSuchID = LONG_LONG_MIN;
 #define DATABASE_QUEUE "com.zhing.database"
 
 @interface ZHLocalCacheManager ()
@@ -54,14 +55,12 @@
 
 - (void)open
 {
-    
     if (_dbQueue) {
         [_dbQueue close];
         _dbQueue = nil;
     }
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     path = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", @(0)]];
-    NSLog(@"open db for user:%@, path:%@", @(current.userId), path);
     NSFileManager *manager = [[NSFileManager alloc] init];
     if (self.fileManager) {
         self.fileManager.delegate = nil;
@@ -70,7 +69,6 @@
     self.fileManager.delegate = nil;
     BOOL isDir = NO;
     if (![manager fileExistsAtPath:path isDirectory:&isDir] || !isDir) {
-        NSLog(@"create db for user:%@, path:%@", @(current.userId), path);
         NSError *err = nil;
         BOOL success = [manager createDirectoryAtPath:path
                           withIntermediateDirectories:YES
@@ -210,17 +208,6 @@
         }];
     });
 }
-
-#pragma mark - transaction method -
-
-/*
- - (void)executeInTransaction:(ZHDBTransactionBlock)block
- {
- dispatch_async(_ZHDBQueue, ^{
- [_dbQueue inTransaction:block];
- });
- }
- */
 
 #pragma mark - synced methods -
 

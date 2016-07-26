@@ -12,4 +12,9 @@
 static NSString * const kLNNotificationReachabilityChanged       = @"kLNNotificationReachabilityChanged";
 static NSString * const kLNNotificationReachabilityStatus        = @"kLNNotificationReachabilityStatus";
 
+typedef NS_ENUM(SInt32, ZHMessageType) {
+    ZHMessageTypeText = 0,
+    ZHMessageTypeImage = 1,
+};
+
 #endif /* ChatConstDefine_h */

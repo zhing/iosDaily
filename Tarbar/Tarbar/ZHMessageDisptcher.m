@@ -9,6 +9,7 @@
 #import "ZHMessageDisptcher.h"
 #import "Message.h"
 #import "NSString+Helper.h"
+#import "ZHMessage.h"
 
 @interface ZHMessageRoute : NSObject
 
@@ -47,7 +48,7 @@
     if (self = [super init]) {
         _routesByPath = [NSMutableDictionary dictionary];
         _classMapping = @{
-                          NSStringFromClass([Message class]): kLNMessagePathForIM,
+                          NSStringFromClass([Message class]): kZHMessagePathForIM,
                         };
     }
     return self;
@@ -90,7 +91,7 @@
                 [array addObject:uuids[i * CountPerPage + j]];
             }
             if (array.count > 0) {
-                NSArray *d = [LNMessage queryByUUIDs:array];
+                NSArray *d = [ZHMessage queryByUUIDs:array];
                 if (d && d.count > 0) {
                     [duplicatedUUIDs addObjectsFromArray:d];
                 }
@@ -126,7 +127,7 @@
                 dict[path] = array;
             }
             [array addObject:finalMsg];
-            if ([finalMsg isKindOfClass:[LNMessage class]]) {
+            if ([finalMsg isKindOfClass:[ZHMessage class]]) {
                 [newMsgs addObject:finalMsg];
             }
         }
@@ -155,7 +156,7 @@
         id finalMessage = nil;
         if ([message isKindOfClass:[Message class]]) {
             Message *chat = (Message *)message;
-            LNMessage *msg = [[LNMessage alloc] init];
+            ZHMessage *msg = [[ZHMessage alloc] init];
             msg.from = chat.from;
             msg.to = chat.to;
             msg.type = chat.type;
@@ -169,7 +170,7 @@
             finalMessage = msg;
         }
         
-        if ([finalMessage isKindOfClass:[LNMessage class]]) {
+        if ([finalMessage isKindOfClass:[ZHMessage class]]) {
             [self postProcessMessage:finalMessage];
         }
         return finalMessage;
@@ -178,14 +179,14 @@
     return nil;
 }
 
-- (void)postProcessMessage:(LNMessage *)message
+- (void)postProcessMessage:(ZHMessage *)message
 {
     switch (message.type) {
-        case LNMessageTypeImage:
+        case ZHMessageTypeImage:
         {
             if (message.thumbnail) {
-                NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:message.content.messageImageThumbnail];
-                [[SDImageCache sharedImageCache] storeImage:message.thumbnail forKey:key];
+//                NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:message.content.messageImageThumbnail];
+//                [[SDImageCache sharedImageCache] storeImage:message.thumbnail forKey:key];
             }
             break;
         }
@@ -208,7 +209,7 @@
     
     BOOL found = NO;
     //cannot have duplicate target
-    for (LNMessageRoute *route in routes) {
+    for (ZHMessageRoute *route in routes) {
         if (target == route.target) {
             found = YES;
             break;
@@ -216,7 +217,7 @@
     }
     
     if (!found) {
-        LNMessageRoute *route = [[LNMessageRoute alloc] init];
+        ZHMessageRoute *route = [[ZHMessageRoute alloc] init];
         route.handler = handler;
         route.target = target;
         route.runOnMainThread = runOnMainThread;
@@ -241,7 +242,7 @@
         NSMutableArray *routes = _routesByPath[key];
         NSUInteger __block index = NSNotFound;
         [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            LNMessageRoute *route = (LNMessageRoute *)obj;
+            ZHMessageRoute *route = (ZHMessageRoute *)obj;
             if ([route.target isEqual:target]) {
                 index = idx;
                 *stop = YES;
@@ -260,7 +261,7 @@
         if (routes) {
             NSUInteger __block index = NSNotFound;
             [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                LNMessageRoute *route = (LNMessageRoute *)obj;
+                ZHMessageRoute *route = (ZHMessageRoute *)obj;
                 if ([route.target isEqual:target]) {
                     index = idx;
                     *stop = YES;

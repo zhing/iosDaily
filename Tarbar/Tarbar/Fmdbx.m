@@ -6,16 +6,16 @@
 //  Copyright © 2016 zhing. All rights reserved.
 //
 
-#import "Fmdb.h"
-#import "FMDatabase.h"
+#import "Fmdbx.h"
+#import "FMDB.h"
 
-@interface Fmdb ()
+@interface Fmdbx ()
 
 @property (nonatomic, strong) FMDatabase *database;
 
 @end
 
-@implementation Fmdb
+@implementation Fmdbx
 
 - (void)openDb:(NSString *)dbname{
     NSString *directory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];

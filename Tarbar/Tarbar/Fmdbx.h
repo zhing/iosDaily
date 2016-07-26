@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Fmdb : NSObject
+@interface Fmdbx : NSObject
 
 - (void)openDb:(NSString *)dbname;
 - (void)executeNonQuery:(NSString *)sql;
