@@ -13,6 +13,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "Masonry.h"
 #import "KCContactViewModel.h"
+#import "Masonry.h"
 #define UISCREENFRAME [UIScreen mainScreen].applicationFrame
 
 
@@ -61,6 +62,18 @@
     _contactViewModel = [[KCContactViewModel alloc] init];
     [self addPullToRefreshForScrollView:_tableView withSelector:@selector(refresh)];
     [self refresh];
+    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+    view.layer.cornerRadius = 5;
+    [self.view addSubview:view];
+    [view makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(100);
+        make.height.equalTo(50);
+        make.trailing.equalTo(-50);
+        make.bottom.equalTo(-50);
+    }];
+    
 }
 
 - (void)addRefreshControl{
