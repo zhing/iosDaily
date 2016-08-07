@@ -152,6 +152,7 @@
 		F3CB02841D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02831D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m */; };
 		F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02861D127AB50097BE61 /* LNCollectionType.m */; };
 		F3CB028A1D127ACE0097BE61 /* LNMutableUniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */; };
+		F3D15C301D5319CF0055C842 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80C1CC6441800829E90 /* FMDatabaseQueue.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -1621,6 +1622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D15C301D5319CF0055C842 /* FMDatabaseQueue.m in Sources */,
 				3F44924B1CBD5A2C006EA652 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				3F44923C1CBD5A2C006EA652 /* EXTScope.m in Sources */,
 				F3B1C0261D3E270200E7556D /* NSTimer+Block.m in Sources */,
