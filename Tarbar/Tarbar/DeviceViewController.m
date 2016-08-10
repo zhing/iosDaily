@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "UIImage+SVGKit.h"
 #import "LNConstDefine.h"
+#import "UIViewController+NavigationItem.h"
 
 @implementation DeviceViewController
 
@@ -63,4 +64,18 @@
     NSLog(@"%@", NSStringFromCGRect(newFrame3));
 }
 
+- (void)setupNavigationBar {
+    [self setNavBarLeftItem:@"取消" target:self action:@selector(cancelButtonClicked:)];
+    [self setNavBarRightItem:@"保存" target:self action:@selector(saveButtonClicked:)];
+}
+
+- (void)cancelButtonClicked: (id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (void)saveButtonClicked: (id)sender {
+    NSLog(@"save");
+}
 @end

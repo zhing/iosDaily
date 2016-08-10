@@ -35,6 +35,19 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonItem];
 }
 
+- (void)setNavBarLeftItem:(NSString *)title target:(id)target action:(SEL)action {
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:target
+                                                                  action:action];
+    NSDictionary *normalAttr = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont systemFontOfSize:16.0], NSFontAttributeName,
+                                RGB(45, 45, 45), NSForegroundColorAttributeName,
+                                nil];
+    [buttonItem setTitleTextAttributes:normalAttr forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = buttonItem;
+}
+
 - (void)setNavBarRightItem:(NSString *)title target:(id)target action:(SEL)action {
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:title
                                                                    style:UIBarButtonItemStylePlain

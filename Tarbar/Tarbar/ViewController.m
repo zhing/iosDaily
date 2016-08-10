@@ -312,7 +312,10 @@
 
 - (void) showUpDeviceViewController: (id)sender{
     DeviceViewController *controller = [[DeviceViewController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+//    [self.navigationController pushViewController:controller animated:YES];
+    [self presentViewController:[[UINavigationController alloc]
+                                 initWithRootViewController:controller] animated:YES completion:^{
+    }];
 }
 
 - (void)textChitu{
