@@ -24,6 +24,7 @@
     UIColor *color =  self.navigationController.navigationBar.barTintColor;
     [titleView setBackgroundColor:color];
     
+    [self setupNavigationBar];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 8, titleView.frame.size.width, 29)];
     [button setBackgroundColor:[UIColor whiteColor]];

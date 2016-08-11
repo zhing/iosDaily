@@ -1882,7 +1882,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1932,7 +1932,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 007C0E19CCA6225BEC7D24EE /* Pods-Tarbar.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
