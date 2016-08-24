@@ -9,6 +9,7 @@
 #import "CoreViewController.h"
 #import "Son.h"
 #import "LNTriangleView.h"
+#import "UIImage+Helper.h"
 
 extern void _objc_autoreleasePoolPrint();
 extern uintptr_t _objc_rootRetainCount(id obj);
@@ -96,6 +97,9 @@ extern uintptr_t _objc_rootRetainCount(id obj);
     
     _objc_autoreleasePoolPrint();
     NSLog(@"=============%ld",_objc_rootRetainCount(self.myArray));
+    
+    [self dateFormat];
+    [self imageTest];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -134,6 +138,31 @@ extern uintptr_t _objc_rootRetainCount(id obj);
     static NSInteger count = 0;
     NSLog(@"NSTimer: %ld", count);
     count++;
+}
+
+- (void)dateFormat {
+    NSDate *currentDate = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    dateFormatter.locale = [NSLocale currentLocale];
+    
+    dateFormatter.dateStyle = kCFDateFormatterFullStyle;
+    
+    NSString *convertedDate = [dateFormatter stringFromDate:currentDate];
+    
+    NSLog(@"%@", convertedDate);
+}
+
+- (void)imageTest {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(150, 100, 100, 100)];
+    imageView.image = [[UIImage imageWithFillColor:[UIColor whiteColor] strokeColor:[UIColor lightGrayColor] size:CGSizeMake(100, 100) lineWidth:1 cornerRadius:4] imageWithTintColor:[UIColor blueColor]];
+    [self.view addSubview:imageView];
+    
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(260, 100, 100, 100)];
+    UIImage *image = [UIImage imageNamed:@"photo"];
+    imageView2.image = [image blurImageWithBlur:0.5];
+    [self.view addSubview:imageView2];
 }
 
 @end

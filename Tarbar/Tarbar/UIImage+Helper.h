@@ -32,7 +32,7 @@ typedef NS_ENUM(BOOL, LNImageTransformMode) {
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)roundedImageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)radius;
 + (UIImage *)imageWithFillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor size:(CGSize)size lineWidth:(CGFloat)lineWidth cornerRadius:(CGFloat)radius;
-+ (UIImage *)resizableImageWithFillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor size:(CGSize)size lineWidth:(CGFloat)lineWidth cornerRadius:(CGFloat)radius;
++ (UIImage *)resizableImageWithFillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor size:(CGSize)size lineWidth:(CGFloat)lineWidth cornerRadius:(CGFloat)radius;//拉伸圆角矩形，绝招！！！http://blog.csdn.net/chaoyuan899/article/details/19811889
 
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
 - (UIImage*)blurImageWithBlur:(CGFloat)blur;
