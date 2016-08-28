@@ -23,8 +23,10 @@
 #import "LNCustomizePicker.h"
 #import "LNConstDefine.h"
 #import "UIViewController+NavigationItem.h"
+#import "ImageViewController.h"
 
 @interface ViewController ()
+
 @property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UIButton *button1;
 @property (strong, nonatomic) UIButton *button11;
@@ -38,6 +40,8 @@
 @property (strong, nonatomic) UIButton *button8;
 @property (strong, nonatomic) UIButton *button9;
 @property (strong, nonatomic) UIButton *button10;
+@property (strong, nonatomic) UIButton *button33;
+
 @end
 
 @implementation ViewController
@@ -60,6 +64,7 @@
     [self testCoreView];
     [self testDeviceView];
     [self textChitu];
+    [self testImage];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -346,4 +351,24 @@
         [alert show];
     }
 }
+
+- (void)testImage {
+    _button33 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button33 setTitle:@"image" forState:UIControlStateNormal];
+    _button33.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button33 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button33];
+    [_button33 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button3);
+        make.leading.equalTo(_button3.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button33 addTarget:self action:@selector(showUpImageViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpImageViewController: (id)sender{
+    ImageViewController *controller = [[ImageViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 @end

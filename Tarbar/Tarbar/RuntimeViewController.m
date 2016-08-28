@@ -7,7 +7,8 @@
 //
 
 #import "RuntimeViewController.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
 #import "Masonry.h"
 #import "NSNotificationCenter+RNSwizzle.h"
 #import "HYBMsgSend.h"

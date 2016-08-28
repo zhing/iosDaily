@@ -63,6 +63,51 @@
     CGRect newFrame3 = [viewC convertRect:viewC.bounds toView:self.view];
     NSLog(@"%@", NSStringFromCGRect(newFrame2));
     NSLog(@"%@", NSStringFromCGRect(newFrame3));
+    
+    [self fileSystem];
+}
+
+- (void)fileSystem {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //
+    NSLog(@"homePath: %@", NSHomeDirectory());
+    
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    for (NSString *path in pathArray) {
+        NSLog(@"path: %@", path);
+    }
+    
+    // 获取Documents目录
+    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"docPath: %@", docPath);
+    
+    // 获取tmp目录
+    NSString *tmpPath = NSTemporaryDirectory();
+    NSLog(@"tmpPath:%@", tmpPath);
+    
+    // 获取Library目录
+    NSString *libPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"libPath:%@", libPath);
+    
+    // 获取Library/Caches目录
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"cachePath:%@", cachePath);
+
+    // 获取Library/Preferences目录
+    NSString *prePath = [NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES) lastObject];
+    //通常情况下，Preferences由系统维护，我们很少去操作TA
+    NSLog(@"prePath:%@", prePath);
+    
+    // 获取应用程序包的路径
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSString *resourcePath = [NSBundle mainBundle].resourcePath;
+    NSString *imagesPath = [resourcePath stringByAppendingPathComponent:@"discovery_top_search.svg"];
+    if ([fileManager fileExistsAtPath:imagesPath]) {
+        NSLog(@"YES");
+    }
+    NSLog(@"path:%@", path);
+    NSLog(@"resourcePath:%@", resourcePath);
+    
 }
 
 - (void)setupNavigationBar {
