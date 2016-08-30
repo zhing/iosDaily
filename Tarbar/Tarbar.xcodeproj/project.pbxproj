@@ -103,6 +103,7 @@
 		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
+		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F3595F241D3758F20044BBED /* LNTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3595F231D3758F20044BBED /* LNTriangleView.m */; };
 		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
 		F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */; };
@@ -496,6 +497,8 @@
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
+		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
+		F347F8C61D7528DB0098F04B /* ZHAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAvatarView.m; sourceTree = "<group>"; };
 		F3595F221D3758F20044BBED /* LNTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNTriangleView.h; sourceTree = "<group>"; };
 		F3595F231D3758F20044BBED /* LNTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNTriangleView.m; sourceTree = "<group>"; };
 		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
@@ -1100,6 +1103,8 @@
 			children = (
 				3FE6466E1D7333E8007E4A11 /* ImageViewController.h */,
 				3FE6466F1D7333E8007E4A11 /* ImageViewController.m */,
+				F347F8C51D7528DB0098F04B /* ZHAvatarView.h */,
+				F347F8C61D7528DB0098F04B /* ZHAvatarView.m */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -1648,6 +1653,7 @@
 				3F60BEE31D438D620094CA8A /* messages_mosq.c in Sources */,
 				F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */,
 				F3C0E8141CC6441800829E90 /* FMResultSet.m in Sources */,
+				F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */,
 				3FD399941CF5FD0A00DD052A /* Father.m in Sources */,
 				3F60BF171D43FE2F0094CA8A /* ZHLocalCacheManager.m in Sources */,
 				F3CB027B1D1157800097BE61 /* UIView+TKCategory.m in Sources */,

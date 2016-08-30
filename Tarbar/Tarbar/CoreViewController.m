@@ -98,6 +98,9 @@ extern uintptr_t _objc_rootRetainCount(id obj);
     _objc_autoreleasePoolPrint();
     NSLog(@"=============%ld",_objc_rootRetainCount(self.myArray));
     
+    NSLog(@"%@",[@"staging.chitu.cn" rangeOfString:@"staging"].length?@"/////////////YES":@"////////////////NO");
+    NSLog(@"%@",[@"app.chitu.cn" rangeOfString:@"staging"].length?@"/////////////YES":@"////////////////NO");
+    
     [self dateFormat];
     [self imageTest];
 }
