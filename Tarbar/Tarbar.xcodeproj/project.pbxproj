@@ -92,6 +92,8 @@
 		3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A741D0DB08F00DC8E0E /* UIDevice+Helper.m */; };
 		3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE26A761D0DB08F00DC8E0E /* UIViewController+NavigationItem.m */; };
 		3FE646701D7333E8007E4A11 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6466F1D7333E8007E4A11 /* ImageViewController.m */; };
+		3FE646761D7DA7E7007E4A11 /* BlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE646751D7DA7E7007E4A11 /* BlueView.m */; };
+		3FE646791D7DB6BE007E4A11 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE646781D7DB6BE007E4A11 /* ProgressView.m */; };
 		3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AA1CCB80E800C84BA8 /* WebViewController.m */; };
 		3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */; };
 		3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */; };
@@ -475,6 +477,10 @@
 		3FE26A761D0DB08F00DC8E0E /* UIViewController+NavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItem.m"; sourceTree = "<group>"; };
 		3FE6466E1D7333E8007E4A11 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		3FE6466F1D7333E8007E4A11 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		3FE646741D7DA7E7007E4A11 /* BlueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueView.h; sourceTree = "<group>"; };
+		3FE646751D7DA7E7007E4A11 /* BlueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueView.m; sourceTree = "<group>"; };
+		3FE646771D7DB6BE007E4A11 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		3FE646781D7DB6BE007E4A11 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		3FF383A91CCB80E800C84BA8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		3FF383AA1CCB80E800C84BA8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
@@ -1105,6 +1111,10 @@
 				3FE6466F1D7333E8007E4A11 /* ImageViewController.m */,
 				F347F8C51D7528DB0098F04B /* ZHAvatarView.h */,
 				F347F8C61D7528DB0098F04B /* ZHAvatarView.m */,
+				3FE646741D7DA7E7007E4A11 /* BlueView.h */,
+				3FE646751D7DA7E7007E4A11 /* BlueView.m */,
+				3FE646771D7DB6BE007E4A11 /* ProgressView.h */,
+				3FE646781D7DB6BE007E4A11 /* ProgressView.m */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -1635,6 +1645,7 @@
 				3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */,
 				F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */,
 				3FE26A6F1D070A6F00DC8E0E /* UIImage+Helper.m in Sources */,
+				3FE646761D7DA7E7007E4A11 /* BlueView.m in Sources */,
 				3F4492461CBD5A2C006EA652 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
 				F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */,
 				F3CB024E1D1009110097BE61 /* MBProgressHUD+MJ.m in Sources */,
@@ -1705,6 +1716,7 @@
 				F3CB02311D0D13700097BE61 /* LNNavigationAppearance.m in Sources */,
 				3F6665D11D05B6D2000F4334 /* UIImage+SVGKit.m in Sources */,
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
+				3FE646791D7DB6BE007E4A11 /* ProgressView.m in Sources */,
 				F3B1C01C1D3DDBC300E7556D /* UIViewController+NavigationItemBlock.m in Sources */,
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,

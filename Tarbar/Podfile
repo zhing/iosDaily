@@ -4,5 +4,6 @@ target "Tarbar" do
     pod 'Masonry'
     pod 'WebViewJavascriptBridge', '~> 5.0'
     pod 'YYModel'
+    pod 'pop', '~> 1.0'
 #    pod 'MQTTKit', :git => 'https://github.com/jmesnil/MQTTKit.git'
 end

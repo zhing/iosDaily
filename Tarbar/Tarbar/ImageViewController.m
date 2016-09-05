@@ -10,6 +10,9 @@
 #import "UIImage+Helper.h"
 #import "Masonry.h"
 #import "ZHAvatarView.h"
+#import "BlueView.h"
+#import "ProgressView.h"
+#import <pop/POP.h>
 
 @interface ImageViewController ()
 
@@ -25,6 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupViews];
+    [self setupLoopProcessBar];
 }
 
 - (void)setupViews {
@@ -51,6 +55,13 @@
 
 - (void)showBigAvatar:(UITapGestureRecognizer *)sender {
     [ZHAvatarView showWithAvatarImageView:(UIImageView *)sender.view image:_avatarImage];
+}
+
+- (void)setupLoopProcessBar {
+    ProgressView *progessView = [[ProgressView alloc] initWithFrame:CGRectMake(100, 400, 200, 200)];
+    progessView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:progessView];
+    [progessView setProgress:0.5];
 }
 
 @end
