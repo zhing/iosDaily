@@ -28,6 +28,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupViews];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self setupLoopProcessBar];
 }
 
@@ -59,7 +63,8 @@
 
 - (void)setupLoopProcessBar {
     ProgressView *progessView = [[ProgressView alloc] initWithFrame:CGRectMake(100, 400, 200, 200)];
-    progessView.backgroundColor = [UIColor greenColor];
+    progessView.backgroundColor = [UIColor whiteColor];
+    [progessView setupViews];
     [self.view addSubview:progessView];
     [progessView setProgress:0.5];
 }

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface ProgressLayer : CALayer
+
+@end
+
 @interface ProgressView : UIView
 
 @property (nonatomic, assign) CGFloat progress;
+
+- (void)setupViews;
 
 @end
