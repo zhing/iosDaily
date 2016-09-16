@@ -24,6 +24,7 @@
 #import "LNConstDefine.h"
 #import "UIViewController+NavigationItem.h"
 #import "ImageViewController.h"
+#import "CoreAnimationController.h"
 
 @interface ViewController ()
 
@@ -41,6 +42,7 @@
 @property (strong, nonatomic) UIButton *button9;
 @property (strong, nonatomic) UIButton *button10;
 @property (strong, nonatomic) UIButton *button33;
+@property (strong, nonatomic) UIButton *button44;
 
 @end
 
@@ -65,6 +67,7 @@
     [self testDeviceView];
     [self textChitu];
     [self testImage];
+    [self testCoreAnimation];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -370,5 +373,25 @@
     ImageViewController *controller = [[ImageViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (void)testCoreAnimation {
+    _button44 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button44 setTitle:@"coreAnimation" forState:UIControlStateNormal];
+    _button44.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button44 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button44];
+    [_button44 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button4);
+        make.leading.equalTo(_button4.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button44 addTarget:self action:@selector(showUpCoreAnimationViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpCoreAnimationViewController: (id)sender{
+    CoreAnimationController *controller = [[CoreAnimationController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 
 @end

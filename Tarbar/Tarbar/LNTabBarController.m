@@ -47,6 +47,7 @@
     
     self.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nav5, nil];
 //    [LNNavigationAppearance setupNavigationAppearance];
+    self.tabBarController.delegate = self;
 }
 
 - (UITabBarItem *)tabItemByTitle:(NSString *)title image:(NSString *)imgName {
@@ -60,6 +61,14 @@
     item.titlePositionAdjustment = UIOffsetMake(0, -3);
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName: RGB(70, 183, 133)} forState:UIControlStateSelected];
     return item;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    //set up crossfade transition
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    //apply transition to tab bar controller's view
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
 - (void)didReceiveMemoryWarning {
