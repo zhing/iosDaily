@@ -25,6 +25,7 @@
 #import "UIViewController+NavigationItem.h"
 #import "ImageViewController.h"
 #import "CoreAnimationController.h"
+#import "GraphicViewController.h"
 
 @interface ViewController ()
 
@@ -43,6 +44,7 @@
 @property (strong, nonatomic) UIButton *button10;
 @property (strong, nonatomic) UIButton *button33;
 @property (strong, nonatomic) UIButton *button44;
+@property (strong, nonatomic) UIButton *button55;
 
 @end
 
@@ -68,6 +70,7 @@
     [self textChitu];
     [self testImage];
     [self testCoreAnimation];
+    [self testGraphic];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -393,5 +396,23 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void)testGraphic {
+    _button55 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button55 setTitle:@"Graphic" forState:UIControlStateNormal];
+    _button55.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button55 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button55];
+    [_button55 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button5);
+        make.leading.equalTo(_button5.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button55 addTarget:self action:@selector(showUpGraphicViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpGraphicViewController: (id)sender{
+    GraphicViewController *controller = [[GraphicViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

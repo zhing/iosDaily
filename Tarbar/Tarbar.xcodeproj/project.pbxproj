@@ -96,6 +96,8 @@
 		3FE646791D7DB6BE007E4A11 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE646781D7DB6BE007E4A11 /* ProgressView.m */; };
 		3FE6467C1D856CB1007E4A11 /* LoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6467B1D856CB1007E4A11 /* LoopProgressView.m */; };
 		3FE646801D8578D7007E4A11 /* CoreAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6467F1D8578D7007E4A11 /* CoreAnimationController.m */; };
+		3FE646831D8D8E9D007E4A11 /* GraphicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE646821D8D8E9D007E4A11 /* GraphicViewController.m */; };
+		3FE646861D8D8EB8007E4A11 /* GraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE646851D8D8EB8007E4A11 /* GraphicView.m */; };
 		3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AA1CCB80E800C84BA8 /* WebViewController.m */; };
 		3FF383AD1CCB8D0100C84BA8 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */; };
 		3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383AF1CD103AC00C84BA8 /* CRNavigationBar.m */; };
@@ -487,6 +489,10 @@
 		3FE6467B1D856CB1007E4A11 /* LoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopProgressView.m; sourceTree = "<group>"; };
 		3FE6467E1D8578D7007E4A11 /* CoreAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationController.h; sourceTree = "<group>"; };
 		3FE6467F1D8578D7007E4A11 /* CoreAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationController.m; sourceTree = "<group>"; };
+		3FE646811D8D8E9D007E4A11 /* GraphicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicViewController.h; sourceTree = "<group>"; };
+		3FE646821D8D8E9D007E4A11 /* GraphicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicViewController.m; sourceTree = "<group>"; };
+		3FE646841D8D8EB8007E4A11 /* GraphicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicView.h; sourceTree = "<group>"; };
+		3FE646851D8D8EB8007E4A11 /* GraphicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicView.m; sourceTree = "<group>"; };
 		3FF383A91CCB80E800C84BA8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		3FF383AA1CCB80E800C84BA8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
@@ -1301,6 +1307,10 @@
 				F3C0E7F91CC0ED8800829E90 /* DrawView.m */,
 				3F06D5411CC3D7A80045E9D1 /* DrawViewController.h */,
 				3F06D5421CC3D7A80045E9D1 /* DrawViewController.m */,
+				3FE646811D8D8E9D007E4A11 /* GraphicViewController.h */,
+				3FE646821D8D8E9D007E4A11 /* GraphicViewController.m */,
+				3FE646841D8D8EB8007E4A11 /* GraphicView.h */,
+				3FE646851D8D8EB8007E4A11 /* GraphicView.m */,
 			);
 			name = CGContextDraw;
 			sourceTree = "<group>";
@@ -1687,6 +1697,7 @@
 				3FD399941CF5FD0A00DD052A /* Father.m in Sources */,
 				3F60BF171D43FE2F0094CA8A /* ZHLocalCacheManager.m in Sources */,
 				F3CB027B1D1157800097BE61 /* UIView+TKCategory.m in Sources */,
+				3FE646861D8D8EB8007E4A11 /* GraphicView.m in Sources */,
 				F3C0E8361CD1D60900829E90 /* TextViewController.m in Sources */,
 				3F60BF0B1D43EBAB0094CA8A /* ZHMessageDisptcher.m in Sources */,
 				3F3A84C11CE3990C00B7A581 /* AccessorTest.m in Sources */,
@@ -1698,6 +1709,7 @@
 				F3CB025C1D111CB00097BE61 /* UIView+Frame.m in Sources */,
 				F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */,
 				3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */,
+				3FE646831D8D8E9D007E4A11 /* GraphicViewController.m in Sources */,
 				3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */,
 				F3C0E8401CD9EE1D00829E90 /* RuntimeViewController.m in Sources */,
 				3F1BC48E1CBD360B002394F8 /* ZHUser.m in Sources */,
