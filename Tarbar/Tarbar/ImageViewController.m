@@ -13,6 +13,8 @@
 #import "BlueView.h"
 #import "ProgressView.h"
 #import <pop/POP.h>
+#import "UIButton+ActionBlock.h"
+#import "UIButton+ZH.h"
 
 @interface ImageViewController ()
 
@@ -28,6 +30,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupViews];
+    [self setupButtonNormal];
+    [self setupButtonHighPerformance];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -67,6 +71,61 @@
     [progessView setupViews];
     [self.view addSubview:progessView];
     [progessView setProgress:0.5];
+}
+
+- (void)setupButtonNormal {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(50, 250, 100, 50);
+    UIColor *selectedColor = RGB(57, 191, 158);
+    
+    [button setTitle:@"按钮N" forState:UIControlStateNormal];
+    [button setTitle:@"按钮H" forState:UIControlStateHighlighted];
+    [button setTitle:@"按钮S" forState:UIControlStateSelected];
+    [button setTitle:@"按钮HS" forState:UIControlStateHighlighted | UIControlStateSelected];
+    [button setTitleColor:selectedColor forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    [button setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(1, 1)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithColor:selectedColor size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];
+    [button setBackgroundImage:[UIImage imageWithColor:selectedColor size:CGSizeMake(1, 1)] forState:UIControlStateSelected];
+    button.layer.cornerRadius = 25;
+    button.clipsToBounds = YES;
+    button.layer.borderWidth = 1;
+    button.layer.borderColor = [selectedColor colorWithAlphaComponent:0.5].CGColor;
+    
+    [button setClickResponseActionBlock:^(id sender) {
+        UIButton *tmpButton = (UIButton *)sender;
+        tmpButton.selected = !tmpButton.selected;
+    }];
+    
+    [self.view addSubview:button];
+}
+
+- (void)setupButtonHighPerformance {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.frame = CGRectMake(200, 250, 100, 50);
+    UIColor *selectedColor = RGB(57, 191, 158);
+
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    [button setTitleColor:selectedColor forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    
+    [button zh_setBorderColor:[selectedColor colorWithAlphaComponent:0.5] width:1 cornerRadius:10 forState:UIControlStateNormal];
+    [button zh_setBackgroundColor:selectedColor cornerRadius:10 forState:UIControlStateHighlighted];
+    [button zh_setBackgroundColor:selectedColor cornerRadius:10 forState:UIControlStateSelected];
+    
+    [button setClickResponseActionBlock:^(id sender) {
+        UIButton *tmpButton = (UIButton *)sender;
+        tmpButton.selected = !tmpButton.selected;
+    }];
+    
+    [self.view addSubview:button];
+    [button makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(CGSizeMake(100, 50));
+        make.top.equalTo(250);
+        make.leading.equalTo(200);
+    }];
 }
 
 @end

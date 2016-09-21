@@ -65,8 +65,8 @@
 + (UIImage *)resizableImageWithFillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor size:(CGSize)size lineWidth:(CGFloat)lineWidth cornerRadius:(CGFloat)radius
 {
     CGFloat acturalRadius = radius + lineWidth/2;
-    CGSize acturalSize = CGSizeMake(MAX(size.width, acturalRadius*2 + 8), MAX(size.height, acturalRadius*2 + 8));
-    return [[self imageWithFillColor:fillColor strokeColor:strokeColor size:acturalSize lineWidth:lineWidth cornerRadius:radius] resizableImageWithCapInsets:UIEdgeInsetsMake(acturalRadius+1, acturalRadius+1, acturalRadius+1, acturalRadius+1)];
+    CGSize acturalSize = CGSizeMake(MAX(size.width, acturalRadius*2), MAX(size.height, acturalRadius*2));
+    return [[self imageWithFillColor:fillColor strokeColor:strokeColor size:acturalSize lineWidth:lineWidth cornerRadius:radius] resizableImageWithCapInsets:UIEdgeInsetsMake(acturalRadius, acturalRadius, acturalRadius, acturalRadius)];
 }
 
 - (UIImage *)imageByScalingAndCroppingForSize:(CGSize)targetSize {

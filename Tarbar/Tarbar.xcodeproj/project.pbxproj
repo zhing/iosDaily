@@ -110,6 +110,7 @@
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
+		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
 		F3595F241D3758F20044BBED /* LNTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3595F231D3758F20044BBED /* LNTriangleView.m */; };
 		F35D08C21CDC96D300D97ECF /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C11CDC96D300D97ECF /* PositionViewController.m */; };
 		F35D08C61CE09D2B00D97ECF /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */; };
@@ -517,6 +518,8 @@
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
 		F347F8C61D7528DB0098F04B /* ZHAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAvatarView.m; sourceTree = "<group>"; };
+		F35327251D91468D00936923 /* UIButton+ZH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZH.h"; sourceTree = "<group>"; };
+		F35327261D91468D00936923 /* UIButton+ZH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZH.m"; sourceTree = "<group>"; };
 		F3595F221D3758F20044BBED /* LNTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNTriangleView.h; sourceTree = "<group>"; };
 		F3595F231D3758F20044BBED /* LNTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNTriangleView.m; sourceTree = "<group>"; };
 		F35D08C01CDC96D300D97ECF /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
@@ -1170,6 +1173,8 @@
 				F3B1C0251D3E270200E7556D /* NSTimer+Block.m */,
 				3F60BF0C1D43EE550094CA8A /* NSString+Helper.h */,
 				3F60BF0D1D43EE550094CA8A /* NSString+Helper.m */,
+				F35327251D91468D00936923 /* UIButton+ZH.h */,
+				F35327261D91468D00936923 /* UIButton+ZH.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -1664,6 +1669,7 @@
 				F3D15C301D5319CF0055C842 /* FMDatabaseQueue.m in Sources */,
 				3F44924B1CBD5A2C006EA652 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				3F44923C1CBD5A2C006EA652 /* EXTScope.m in Sources */,
+				F35327271D91468D00936923 /* UIButton+ZH.m in Sources */,
 				F3B1C0261D3E270200E7556D /* NSTimer+Block.m in Sources */,
 				F3CB02591D11096F0097BE61 /* LNBaseRefreshCtrl.m in Sources */,
 				3F4492481CBD5A2C006EA652 /* NSError+MTLModelException.m in Sources */,
