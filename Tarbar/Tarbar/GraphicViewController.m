@@ -19,6 +19,11 @@
     GraphicView *graphicView = [[GraphicView alloc] initWithFrame:CGRectMake(0, 64, 200, 200)];
     graphicView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:graphicView];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 @end

@@ -108,6 +108,7 @@
 		3FF383C51CDE3DA100C84BA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF383C41CDE3DA100C84BA8 /* QuartzCore.framework */; };
 		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
+		F310CFD41D9CF73000B761FE /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F310CFD31D9CF73000B761FE /* DrawingView.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
@@ -159,6 +160,9 @@
 		F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02861D127AB50097BE61 /* LNCollectionType.m */; };
 		F3CB028A1D127ACE0097BE61 /* LNMutableUniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */; };
 		F3D15C301D5319CF0055C842 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80C1CC6441800829E90 /* FMDatabaseQueue.m */; };
+		F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */; };
+		F3DBED601DACDAE5007DB573 /* ZHBarNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */; };
+		F3DBED631DACDF69007DB573 /* UIViewController+AlphaNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -514,6 +518,8 @@
 		3FF383CB1CDF279600C84BA8 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
 		557C55BD8A0B5AA0AC289ABC /* Pods-Tarbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tarbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tarbar/Pods-Tarbar.debug.xcconfig"; sourceTree = "<group>"; };
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F310CFD21D9CF73000B761FE /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		F310CFD31D9CF73000B761FE /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
@@ -615,6 +621,12 @@
 		F3CB02881D127ACE0097BE61 /* LNMutableUniqueArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNMutableUniqueArray.h; sourceTree = "<group>"; };
 		F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNMutableUniqueArray.m; sourceTree = "<group>"; };
 		F3CB028B1D127AD90097BE61 /* LNUniqueInArrayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNUniqueInArrayProtocol.h; sourceTree = "<group>"; };
+		F3DBED5B1DACD85B007DB573 /* ZHBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarViewController.h; sourceTree = "<group>"; };
+		F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarViewController.m; sourceTree = "<group>"; };
+		F3DBED5E1DACDAE5007DB573 /* ZHBarNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarNextViewController.h; sourceTree = "<group>"; };
+		F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarNextViewController.m; sourceTree = "<group>"; };
+		F3DBED611DACDF69007DB573 /* UIViewController+AlphaNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AlphaNavi.h"; sourceTree = "<group>"; };
+		F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlphaNavi.m"; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1133,6 +1145,8 @@
 				3FE646781D7DB6BE007E4A11 /* ProgressView.m */,
 				3FE6467A1D856CB1007E4A11 /* LoopProgressView.h */,
 				3FE6467B1D856CB1007E4A11 /* LoopProgressView.m */,
+				F310CFD21D9CF73000B761FE /* DrawingView.h */,
+				F310CFD31D9CF73000B761FE /* DrawingView.m */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -1175,6 +1189,8 @@
 				3F60BF0D1D43EE550094CA8A /* NSString+Helper.m */,
 				F35327251D91468D00936923 /* UIButton+ZH.h */,
 				F35327261D91468D00936923 /* UIButton+ZH.m */,
+				F3DBED611DACDF69007DB573 /* UIViewController+AlphaNavi.h */,
+				F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -1290,6 +1306,10 @@
 			children = (
 				F35D08C41CE09D2B00D97ECF /* DeviceViewController.h */,
 				F35D08C51CE09D2B00D97ECF /* DeviceViewController.m */,
+				F3DBED5B1DACD85B007DB573 /* ZHBarViewController.h */,
+				F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */,
+				F3DBED5E1DACDAE5007DB573 /* ZHBarNextViewController.h */,
+				F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */,
 			);
 			name = Device;
 			sourceTree = "<group>";
@@ -1677,6 +1697,7 @@
 				F3C0E7FA1CC0ED8800829E90 /* DrawView.m in Sources */,
 				F3B1C02A1D45E50700E7556D /* FMDBMigrationManager.m in Sources */,
 				3FF383BA1CDA3DF900C84BA8 /* MYNotificationCenter.m in Sources */,
+				F3DBED631DACDF69007DB573 /* UIViewController+AlphaNavi.m in Sources */,
 				F3C0E8111CC6441800829E90 /* FMDatabaseAdditions.m in Sources */,
 				3FE26A6F1D070A6F00DC8E0E /* UIImage+Helper.m in Sources */,
 				3FE646761D7DA7E7007E4A11 /* BlueView.m in Sources */,
@@ -1684,6 +1705,7 @@
 				F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */,
 				3FE6467C1D856CB1007E4A11 /* LoopProgressView.m in Sources */,
 				F3CB024E1D1009110097BE61 /* MBProgressHUD+MJ.m in Sources */,
+				F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
 				3F60BEF81D438E1C0094CA8A /* ZHMQTTManager.m in Sources */,
 				3F06D5511CC7BEBA0045E9D1 /* CollectionViewController.m in Sources */,
@@ -1732,6 +1754,7 @@
 				3F4A41711C9AC2CA0008BDA7 /* main.m in Sources */,
 				3F60BEE71D438D620094CA8A /* read_handle_client.c in Sources */,
 				3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */,
+				F3DBED601DACDAE5007DB573 /* ZHBarNextViewController.m in Sources */,
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
 				3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
@@ -1812,6 +1835,7 @@
 				F3CB02621D1128E70097BE61 /* LNRefreshHeader.m in Sources */,
 				F3CB02531D10F9520097BE61 /* NSObject+MethodSwizzling.m in Sources */,
 				3F60BF0E1D43EE550094CA8A /* NSString+Helper.m in Sources */,
+				F310CFD41D9CF73000B761FE /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

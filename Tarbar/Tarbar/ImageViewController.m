@@ -15,6 +15,7 @@
 #import <pop/POP.h>
 #import "UIButton+ActionBlock.h"
 #import "UIButton+ZH.h"
+#import "DrawingView.h"
 
 @interface ImageViewController ()
 
@@ -29,14 +30,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self setupViews];
-    [self setupButtonNormal];
-    [self setupButtonHighPerformance];
+//    [self setupViews];
+//    [self setupButtonNormal];
+//    [self setupButtonHighPerformance];
+    
+    [self setupDrawingView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self setupLoopProcessBar];
+//    [self setupLoopProcessBar];
 }
 
 - (void)setupViews {
@@ -126,6 +129,12 @@
         make.top.equalTo(250);
         make.leading.equalTo(200);
     }];
+}
+
+- (void)setupDrawingView {
+    DrawingView *drawingView = [[DrawingView alloc] init];
+    drawingView.frame = self.view.bounds;
+    [self.view addSubview:drawingView];
 }
 
 @end

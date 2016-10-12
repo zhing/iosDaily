@@ -55,7 +55,7 @@
                                                                   action:action];
     NSDictionary *normalAttr = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont systemFontOfSize:16.0], NSFontAttributeName,
-                                RGB(0x45, 0xb8, 0x87), NSForegroundColorAttributeName,
+                                RGB(45, 45, 45), NSForegroundColorAttributeName,
                                 nil];
     NSDictionary *disabledAttr = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIFont systemFontOfSize:16.0], NSFontAttributeName,
