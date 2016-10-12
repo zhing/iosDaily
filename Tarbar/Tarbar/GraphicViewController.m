@@ -21,4 +21,10 @@
     [self.view addSubview:graphicView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor grayColor]];
+}
+
 @end

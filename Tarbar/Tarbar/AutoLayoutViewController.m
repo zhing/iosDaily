@@ -34,6 +34,8 @@
     [_displayView mas_makeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(20, 20, 100, 20));
     }];
+    
+    NSLog(@"viewDidLoad:%@",NSStringFromCGRect(_displayView.frame));
 }
 
 - (void) generateConstraintsWithItem{
@@ -105,6 +107,7 @@
      view即将布局其Subviews
      */
     NSLog(@"viewWillLayoutSubviews invonation");
+    NSLog(@"viewWillLayoutSubviews:%@", NSStringFromCGRect( _displayView.frame));
 }
 
 - (void)viewDidLayoutSubviews{
@@ -114,6 +117,7 @@
      view已经布局其Subviews
      */
     NSLog(@"viewDidLayoutSubviews invonation");
+    NSLog(@"viewDidLayoutSubviews:%@", NSStringFromCGRect( _displayView.frame));
 }
 
 

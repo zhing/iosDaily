@@ -128,4 +128,8 @@
     }];
 }
 
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+}
+
 @end
