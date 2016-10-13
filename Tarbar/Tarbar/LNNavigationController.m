@@ -9,6 +9,7 @@
 #import "LNNavigationController.h"
 #import "LNConstDefine.h"
 #import "CRNavigationBar.h"
+#import "ZHBarAnimateController.h"
 
 @interface LNNavigationController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @end
@@ -90,6 +91,13 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     NSLog(@"NavigationContoller: willShowViewController");
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC {
+    return [ZHBarAnimateController AnimationControllerWithOperation:operation NavigationController:self];
 }
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {

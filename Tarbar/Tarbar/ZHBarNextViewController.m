@@ -7,6 +7,7 @@
 //
 
 #import "ZHBarNextViewController.h"
+#import "LNConstDefine.h"
 
 @interface ZHBarNextViewController ()
 
@@ -16,8 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[[UIColor grayColor] colorWithAlphaComponent:0.7]];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBarTintColor:RGB(0, 191, 143)];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+//    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {

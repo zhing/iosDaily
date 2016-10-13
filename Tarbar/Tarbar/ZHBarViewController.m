@@ -10,6 +10,7 @@
 #import "UIViewController+NavigationItem.h"
 #import "ZHBarNextViewController.h"
 #import "UIViewController+AlphaNavi.h"
+#import "LNConstDefine.h"
 
 @interface ZHBarViewController ()
 
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.4];
     
     self.title = @"Bar";
     [self setNavBarRightItem:@"next" target:self action:@selector(nextStep)];
@@ -28,21 +29,22 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self setNavigationBarBackgroundAlpha:0.5];
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
+//    [self setNavigationBarBackgroundAlpha:0.5];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [self setNavigationBarBackgroundOpaque];
-//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController.navigationBar setBarTintColor:RGB(0, 191, 143)];
 }
 
 - (void)nextStep {
     ZHBarNextViewController *nextController = [[ZHBarNextViewController alloc] init];
     [self.navigationController pushViewController:nextController animated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
