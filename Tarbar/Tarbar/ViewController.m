@@ -27,6 +27,7 @@
 #import "CoreAnimationController.h"
 #import "GraphicViewController.h"
 #import "LNNavigationController.h"
+#import "ZHBarViewController.h"
 
 @interface ViewController ()
 
@@ -46,6 +47,7 @@
 @property (strong, nonatomic) UIButton *button33;
 @property (strong, nonatomic) UIButton *button44;
 @property (strong, nonatomic) UIButton *button55;
+@property (strong, nonatomic) UIButton *button66;
 
 @end
 
@@ -72,6 +74,7 @@
     [self testImage];
     [self testCoreAnimation];
     [self testGraphic];
+    [self textBar];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -413,6 +416,26 @@
 
 - (void) showUpGraphicViewController: (id)sender{
     GraphicViewController *controller = [[GraphicViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)textBar {
+    _button66 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button66 setTitle:@"Bar" forState:UIControlStateNormal];
+    _button66.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button66 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button66];
+    [_button66 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button6);
+        make.leading.equalTo(_button6.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button66 addTarget:self action:@selector(showUpBarViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) showUpBarViewController: (id)sender{
+    ZHBarViewController *controller = [[ZHBarViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

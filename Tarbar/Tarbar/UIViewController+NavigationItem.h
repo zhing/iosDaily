@@ -10,6 +10,8 @@
 
 @interface UIViewController (NavigationItem)
 
+- (void)setTitle:(NSString *)title titleColor:(UIColor *)color;
+
 - (void)setNavBarBackBarButtonItemTitle:(NSString *)title;
 - (void)setNavBarCustomBackButton:(NSString *)title target:(id)target action:(SEL)action;
 - (void)setNavBarLeftItem:(NSString *)title target:(id)target action:(SEL)action;

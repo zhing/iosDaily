@@ -55,7 +55,7 @@
                                                                   action:action];
     NSDictionary *normalAttr = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont systemFontOfSize:16.0], NSFontAttributeName,
-                                RGB(0x45, 0xb8, 0x87), NSForegroundColorAttributeName,
+                                RGB(45, 45, 45), NSForegroundColorAttributeName,
                                 nil];
     NSDictionary *disabledAttr = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIFont systemFontOfSize:16.0], NSFontAttributeName,
@@ -64,6 +64,15 @@
     [buttonItem setTitleTextAttributes:normalAttr forState:UIControlStateNormal];
     [buttonItem setTitleTextAttributes:disabledAttr forState:UIControlStateDisabled];
     self.navigationItem.rightBarButtonItem = buttonItem;
+}
+
+- (void)setTitle:(NSString *)title titleColor:(UIColor *)color{
+    UILabel *titleLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    titleLabel.text             = title;
+    titleLabel.font             = [UIFont boldSystemFontOfSize:20.f];
+    titleLabel.textAlignment    = NSTextAlignmentCenter;
+    titleLabel.textColor        = color;
+    self.navigationItem.titleView = titleLabel;
 }
 
 @end
