@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.4];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.title = @"Bar";
     [self setNavBarRightItem:@"next" target:self action:@selector(nextStep)];

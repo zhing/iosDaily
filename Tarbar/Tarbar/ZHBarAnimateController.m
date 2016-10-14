@@ -42,7 +42,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 2.4f;
+    return 1.4f;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -68,20 +68,11 @@
     if (self.navigationOperation == UINavigationControllerOperationPush) {
         
         [self.screenShotArray addObject:screenImg];
-        //toViewStartFrame.origin.x += ScreenWidth;
         [containerView addSubview:toView];
         
         toView.frame = toViewStartFrame;
         
-        UIView * nextVC = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        //[nextVC addSubview:[toView snapshotViewAfterScreenUpdates:YES]];
-        
         [self.navigationController.tabBarController.view insertSubview:screentImgView atIndex:0];
-        
-        //[self.navigationController.tabBarController.view addSubview:nextVC];
-        nextVC.layer.shadowColor = [UIColor blackColor].CGColor;
-        nextVC.layer.shadowOffset = CGSizeMake(-0.8, 0);
-        nextVC.layer.shadowOpacity = 0.6;
         
         self.navigationController.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH, 0);
         
@@ -91,10 +82,7 @@
             screentImgView.center = CGPointMake(-SCREEN_WIDTH/2, SCREEN_HEIGHT / 2);
             //nextVC.center = CGPointMake(ScreenWidth/2, ScreenHeight / 2);
             
-            
         } completion:^(BOOL finished) {
-            
-            [nextVC removeFromSuperview];
             [screentImgView removeFromSuperview];
             [transitionContext completeTransition:YES];
         }];
