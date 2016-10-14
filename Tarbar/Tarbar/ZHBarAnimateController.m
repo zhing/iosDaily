@@ -68,7 +68,6 @@
     if (self.navigationOperation == UINavigationControllerOperationPush) {
         
         [self.screenShotArray addObject:screenImg];
-        //toViewStartFrame.origin.x += ScreenWidth;
         [containerView addSubview:toView];
         
         toView.frame = toViewStartFrame;
