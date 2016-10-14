@@ -109,6 +109,7 @@
 		3FF383C81CDE588200C84BA8 /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383C71CDE588200C84BA8 /* LayersViewController.m */; };
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F310CFD41D9CF73000B761FE /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F310CFD31D9CF73000B761FE /* DrawingView.m */; };
+		F3315E561DAFA6F800D2440B /* ZHBarAnimateController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
@@ -520,6 +521,8 @@
 		E3955AD565AABE01C2C12118 /* libPods-Tarbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tarbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F310CFD21D9CF73000B761FE /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
 		F310CFD31D9CF73000B761FE /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		F3315E541DAFA6F800D2440B /* ZHBarAnimateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarAnimateController.h; sourceTree = "<group>"; };
+		F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarAnimateController.m; sourceTree = "<group>"; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
@@ -1310,6 +1313,8 @@
 				F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */,
 				F3DBED5E1DACDAE5007DB573 /* ZHBarNextViewController.h */,
 				F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */,
+				F3315E541DAFA6F800D2440B /* ZHBarAnimateController.h */,
+				F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */,
 			);
 			name = Device;
 			sourceTree = "<group>";
@@ -1775,6 +1780,7 @@
 				3F44923B1CBD5A2C006EA652 /* EXTRuntimeExtensions.m in Sources */,
 				F3CB02311D0D13700097BE61 /* LNNavigationAppearance.m in Sources */,
 				3F6665D11D05B6D2000F4334 /* UIImage+SVGKit.m in Sources */,
+				F3315E561DAFA6F800D2440B /* ZHBarAnimateController.m in Sources */,
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
 				3FE646791D7DB6BE007E4A11 /* ProgressView.m in Sources */,
 				F3B1C01C1D3DDBC300E7556D /* UIViewController+NavigationItemBlock.m in Sources */,

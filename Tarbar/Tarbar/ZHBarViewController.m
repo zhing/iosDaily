@@ -11,6 +11,7 @@
 #import "ZHBarNextViewController.h"
 #import "UIViewController+AlphaNavi.h"
 #import "Masonry.h"
+#import "LNConstDefine.h"
 
 @interface ZHBarViewController ()
 
@@ -25,28 +26,21 @@
     [self setTitle:@"Bar" titleColor:[UIColor greenColor]];
     [self setNavBarRightItem:@"next" target:self action:@selector(nextStep)];
 //    [self setNavBarLeftItem:@"返回" target:self action:nil];
-    [self textBar];
+//    [self textBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor lightGrayColor]];
 //    [self setNavigationBarBackgroundAlpha:0.5];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-//    self.navigationController.navigationBar.titleTextAttributes
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    ((UILabel *)self.navigationItem.titleView).textColor = [UIColor blackColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-//    [self setNavigationBarBackgroundOpaque];
-//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self setNavigationBarBackgroundOpaque];
+    [self.navigationController.navigationBar setBarTintColor:RGB(0, 191, 143)];
 }
 
 - (void)nextStep {
