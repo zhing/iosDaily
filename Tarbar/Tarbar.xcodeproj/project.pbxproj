@@ -110,6 +110,8 @@
 		3FF383CC1CDF279600C84BA8 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF383CB1CDF279600C84BA8 /* CoreViewController.m */; };
 		F310CFD41D9CF73000B761FE /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F310CFD31D9CF73000B761FE /* DrawingView.m */; };
 		F3315E561DAFA6F800D2440B /* ZHBarAnimateController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */; };
+		F3315E591DB5C8B600D2440B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E581DB5C8B600D2440B /* ChatViewController.m */; };
+		F3315E5D1DB5CDBA00D2440B /* MessageInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
@@ -523,6 +525,10 @@
 		F310CFD31D9CF73000B761FE /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		F3315E541DAFA6F800D2440B /* ZHBarAnimateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarAnimateController.h; sourceTree = "<group>"; };
 		F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarAnimateController.m; sourceTree = "<group>"; };
+		F3315E571DB5C8B600D2440B /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		F3315E581DB5C8B600D2440B /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		F3315E5B1DB5CDBA00D2440B /* MessageInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInputField.h; sourceTree = "<group>"; };
+		F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageInputField.m; sourceTree = "<group>"; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
@@ -949,6 +955,7 @@
 		3F60BEF31D438D9A0094CA8A /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				F3315E5A1DB5CD8900D2440B /* control */,
 				3F60BEF91D43B0330094CA8A /* json */,
 				3F60BEF51D438DAE0094CA8A /* viewController */,
 				3F60BEF41D438DA20094CA8A /* model */,
@@ -977,6 +984,8 @@
 		3F60BEF51D438DAE0094CA8A /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				F3315E571DB5C8B600D2440B /* ChatViewController.h */,
+				F3315E581DB5C8B600D2440B /* ChatViewController.m */,
 			);
 			name = viewController;
 			sourceTree = "<group>";
@@ -1302,6 +1311,15 @@
 				007C0E19CCA6225BEC7D24EE /* Pods-Tarbar.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3315E5A1DB5CD8900D2440B /* control */ = {
+			isa = PBXGroup;
+			children = (
+				F3315E5B1DB5CDBA00D2440B /* MessageInputField.h */,
+				F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */,
+			);
+			name = control;
 			sourceTree = "<group>";
 		};
 		F35D08C31CE09C8200D97ECF /* Device */ = {
@@ -1713,6 +1731,7 @@
 				F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
 				3F60BEF81D438E1C0094CA8A /* ZHMQTTManager.m in Sources */,
+				F3315E5D1DB5CDBA00D2440B /* MessageInputField.m in Sources */,
 				3F06D5511CC7BEBA0045E9D1 /* CollectionViewController.m in Sources */,
 				3FDC850D1CA2E69800BF7E76 /* ScrollViewController.m in Sources */,
 				3F06D54E1CC7BC7C0045E9D1 /* MyCollectionViewCell.m in Sources */,
@@ -1761,6 +1780,7 @@
 				3FF383AB1CCB80E800C84BA8 /* WebViewController.m in Sources */,
 				F3DBED601DACDAE5007DB573 /* ZHBarNextViewController.m in Sources */,
 				3F4492401CBD5A2C006EA652 /* MTLModel.m in Sources */,
+				F3315E591DB5C8B600D2440B /* ChatViewController.m in Sources */,
 				3FD3999A1CF5FE4100DD052A /* Son+Extend.m in Sources */,
 				3FDC85071C9C3B3500BF7E76 /* KCContactGroup.m in Sources */,
 				3FE26A771D0DB08F00DC8E0E /* UIDevice+Helper.m in Sources */,

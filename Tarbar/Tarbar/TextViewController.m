@@ -71,18 +71,18 @@
     /*
         textView测试
      */
-    _textView = [[UITextView alloc] init];
+    _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 100, 375, 50)];
 //    _textView.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
     _textView.layer.borderWidth = 0.5f;
     _textView.font = [UIFont systemFontOfSize:17.0f];
     [self.view addSubview:_textView];
     _textView.delegate = self;
-    [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_textField.mas_bottom).offset(20);
-        make.leading.equalTo(self.view);
-        make.trailing.equalTo(self.view);
-        make.height.equalTo(@50);
-    }];
+//    [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(_textField.mas_bottom).offset(20);
+//        make.leading.equalTo(self.view);
+//        make.trailing.equalTo(self.view);
+//        make.height.equalTo(@50);
+//    }];
     /*
         textView测试
      */
@@ -311,6 +311,11 @@
 
 - (void)cancel{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
 }
 
 @end
