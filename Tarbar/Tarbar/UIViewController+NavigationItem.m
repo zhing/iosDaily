@@ -66,4 +66,13 @@
     self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
+- (void)setTitle:(NSString *)title titleColor:(UIColor *)color{
+    UILabel *titleLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    titleLabel.text             = title;
+    titleLabel.font             = [UIFont boldSystemFontOfSize:20.f];
+    titleLabel.textAlignment    = NSTextAlignmentCenter;
+    titleLabel.textColor        = color;
+    self.navigationItem.titleView = titleLabel;
+}
+
 @end

@@ -42,7 +42,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 1.4f;
+    return 1.0f;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -77,10 +77,8 @@
         self.navigationController.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH, 0);
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-            //toView.frame = toViewEndFrame;
             self.navigationController.view.transform = CGAffineTransformMakeTranslation(0, 0);
             screentImgView.center = CGPointMake(-SCREEN_WIDTH/2, SCREEN_HEIGHT / 2);
-            //nextVC.center = CGPointMake(ScreenWidth/2, ScreenHeight / 2);
             
         } completion:^(BOOL finished) {
             [screentImgView removeFromSuperview];
@@ -93,22 +91,20 @@
         [containerView addSubview:toView];
         
         UIImageView * lastVcImgView = [[UIImageView alloc]initWithFrame:CGRectMake(-SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        lastVcImgView.image = [self.screenShotArray lastObject];
+        UIImage *img = [self.screenShotArray lastObject];
+        lastVcImgView.image = img;//[self.screenShotArray lastObject];
         screentImgView.layer.shadowColor = [UIColor blackColor].CGColor;
         screentImgView.layer.shadowOffset = CGSizeMake(-0.8, 0);
         screentImgView.layer.shadowOpacity = 0.6;
         [self.navigationController.tabBarController.view addSubview:lastVcImgView];
         [self.navigationController.tabBarController.view addSubview:screentImgView];
         
-        // fromView.frame = fromViewStartFrame;
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             
             screentImgView.center = CGPointMake(SCREEN_WIDTH * 3 / 2 , SCREEN_HEIGHT / 2);
             lastVcImgView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
-            //fromView.frame = fromViewEndFrame;
             
         } completion:^(BOOL finished) {
-            //[self.navigationController setNavigationBarHidden:NO];
             [lastVcImgView removeFromSuperview];
             [screentImgView removeFromSuperview];
             [self.screenShotArray removeLastObject];

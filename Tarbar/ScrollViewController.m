@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:_scrollView];
     
@@ -31,7 +31,9 @@
     UIImageView *image2View = [[UIImageView alloc] initWithImage:image2];
     [_scrollView addSubview:image2View];
     
-    _scrollView.contentSize = _imageView.frame.size;
+    _scrollView.contentSize = image2View.bounds.size;
+    _scrollView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    _scrollView.contentOffset = CGPointMake(100, 100);
     _scrollView.minimumZoomScale=0.6;
     _scrollView.maximumZoomScale=3.0;
     _scrollView.delegate = self;
@@ -46,6 +48,14 @@
 #pragma mark 实现缩放视图代理方法，不实现此方法无法缩放
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return _imageView;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%f", scrollView.contentOffset.y);
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scroll to Top");
 }
 
 -(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{

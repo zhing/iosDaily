@@ -68,6 +68,13 @@
         make.height.equalTo(self.btn);
     }];
     [super updateConstraints];
+    
+    NSLog(@"updateConstraints:%@", NSStringFromCGRect(self.frame));
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    NSLog(@"layoutSubviews:%@", NSStringFromCGRect(self.frame));
+}
 @end

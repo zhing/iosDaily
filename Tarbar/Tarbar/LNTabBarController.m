@@ -79,6 +79,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"TabBarController: viewWillAppear");
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

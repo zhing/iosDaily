@@ -10,6 +10,7 @@
 #import "UIViewController+NavigationItem.h"
 #import "ZHBarNextViewController.h"
 #import "UIViewController+AlphaNavi.h"
+#import "Masonry.h"
 #import "LNConstDefine.h"
 
 @interface ZHBarViewController ()
@@ -22,8 +23,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = @"Bar";
+    [self setTitle:@"Bar" titleColor:[UIColor greenColor]];
     [self setNavBarRightItem:@"next" target:self action:@selector(nextStep)];
+//    [self setNavBarLeftItem:@"返回" target:self action:nil];
+//    [self textBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,6 +48,17 @@
     [self.navigationController pushViewController:nextController animated:YES];
 }
 
+- (void)textBar {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"Bar" forState:UIControlStateNormal];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+    [button addTarget:self action:@selector(nextStep) forControlEvents:UIControlEventTouchUpInside];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -26,6 +26,7 @@
 #import "ImageViewController.h"
 #import "CoreAnimationController.h"
 #import "GraphicViewController.h"
+#import "LNNavigationController.h"
 #import "ZHBarViewController.h"
 #import "ChatViewController.h"
 

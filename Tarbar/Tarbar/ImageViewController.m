@@ -131,6 +131,10 @@
     }];
 }
 
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+}
+
 - (void)setupDrawingView {
     DrawingView *drawingView = [[DrawingView alloc] init];
     drawingView.frame = self.view.bounds;
