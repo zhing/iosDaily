@@ -66,6 +66,10 @@
 }
 
 #pragma mark - MessageInputFieldDelegate
+- (void)sendMessage:(NSString *)message {
+    [_inputField clear];
+}
+
 - (void)sizeChanged:(BOOL)animated
 {
     //TODO ugly solution

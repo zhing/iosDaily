@@ -12,7 +12,7 @@
 
 @required
 
-//- (void)sendMessage:(LNInputMessage *)message;
+- (void)sendMessage:(NSString *)message;
 
 @optional
 
@@ -25,5 +25,6 @@
 @property (nonatomic, weak) UIViewController<MessageInputFieldDelegate> *messageDelegate;
 
 - (CGFloat)viewHight;
+- (void)clear;
 
 @end

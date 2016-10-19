@@ -237,4 +237,35 @@
     self.messageField.scrollEnabled = (self.textLinesNum > 3);
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)string {
+    if ([string isEqualToString:@"\n"]) {
+        if (textView.text.length > 0 && _messageDelegate && [_messageDelegate respondsToSelector:@selector(sendMessage:)]) {
+            NSString *msg = textView.text;
+            [_messageDelegate sendMessage:msg];
+        }
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)clear {
+    _messageField.text = @"";
+    _messageField.typingAttributes = @{NSForegroundColorAttributeName: RGB(45,45,45), NSFontAttributeName: [UIFont systemFontOfSize:15]};
+    if (_messageField.frameHeight - 32 > DBL_EPSILON) {
+        _inputContainerMASConstraintHeight.equalTo(46);
+        [self layoutIfNeeded];
+        _lastInputContentHeight = 46;
+        if (_messageDelegate && [_messageDelegate respondsToSelector:@selector(sizeChanged:)]) {
+            [_messageDelegate sizeChanged:YES];
+        }
+    }
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    
+}
+
 @end
