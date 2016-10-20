@@ -112,6 +112,8 @@
 		F3315E561DAFA6F800D2440B /* ZHBarAnimateController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E551DAFA6F800D2440B /* ZHBarAnimateController.m */; };
 		F3315E591DB5C8B600D2440B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E581DB5C8B600D2440B /* ChatViewController.m */; };
 		F3315E5D1DB5CDBA00D2440B /* MessageInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */; };
+		F3315E651DB890E100D2440B /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E641DB890E100D2440B /* MessageCell.m */; };
+		F3315E681DB897B600D2440B /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E671DB897B600D2440B /* TextMessageCell.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
@@ -529,6 +531,10 @@
 		F3315E581DB5C8B600D2440B /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		F3315E5B1DB5CDBA00D2440B /* MessageInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInputField.h; sourceTree = "<group>"; };
 		F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageInputField.m; sourceTree = "<group>"; };
+		F3315E631DB890E100D2440B /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		F3315E641DB890E100D2440B /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		F3315E661DB897B600D2440B /* TextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessageCell.h; sourceTree = "<group>"; };
+		F3315E671DB897B600D2440B /* TextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
@@ -955,6 +961,7 @@
 		3F60BEF31D438D9A0094CA8A /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				F3315E621DB890C300D2440B /* cell */,
 				F3315E5A1DB5CD8900D2440B /* control */,
 				3F60BEF91D43B0330094CA8A /* json */,
 				3F60BEF51D438DAE0094CA8A /* viewController */,
@@ -1320,6 +1327,17 @@
 				F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */,
 			);
 			name = control;
+			sourceTree = "<group>";
+		};
+		F3315E621DB890C300D2440B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F3315E631DB890E100D2440B /* MessageCell.h */,
+				F3315E641DB890E100D2440B /* MessageCell.m */,
+				F3315E661DB897B600D2440B /* TextMessageCell.h */,
+				F3315E671DB897B600D2440B /* TextMessageCell.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		F35D08C31CE09C8200D97ECF /* Device */ = {
@@ -1728,6 +1746,7 @@
 				F3CB02811D1175100097BE61 /* KCContactViewModel.m in Sources */,
 				3FE6467C1D856CB1007E4A11 /* LoopProgressView.m in Sources */,
 				F3CB024E1D1009110097BE61 /* MBProgressHUD+MJ.m in Sources */,
+				F3315E651DB890E100D2440B /* MessageCell.m in Sources */,
 				F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */,
 				F3FF4D0E1CBDF86300D20526 /* AFURLConnectionOperation.m in Sources */,
 				3F60BEF81D438E1C0094CA8A /* ZHMQTTManager.m in Sources */,
@@ -1736,6 +1755,7 @@
 				3FDC850D1CA2E69800BF7E76 /* ScrollViewController.m in Sources */,
 				3F06D54E1CC7BC7C0045E9D1 /* MyCollectionViewCell.m in Sources */,
 				3F1BC48A1CBD334A002394F8 /* AFNetworkViewController.m in Sources */,
+				F3315E681DB897B600D2440B /* TextMessageCell.m in Sources */,
 				F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */,
 				F3CB02841D12798E0097BE61 /* LNTableViewSectionedReloadDataSource.m in Sources */,
 				3F44923E1CBD5A2C006EA652 /* MTLJSONAdapter.m in Sources */,
