@@ -9,6 +9,7 @@
 #import "MessageCell.h"
 #import "UIImage+SVGKit.h"
 #import "UIView+Frame.h"
+#import "BubbleImageFactory.h"
 
 @interface MessageCell ()
 
@@ -31,7 +32,7 @@
         [_containerView addSubview:userContainer];
         _userContainerView = userContainer;
         
-        UIImageView *avatar = [[UIImageView alloc] init];
+        UIImageView *avatar = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 45, 45)];
         avatar.contentMode = UIViewContentModeScaleAspectFill;
         avatar.clipsToBounds = YES;
         avatar.image = [UIImage imageSVGNamed:@"default_profile" transformMode:LNImageTransformModeScaleAspectFill size:CGSizeMake(45, 45) cornerRadius:45/2 cache:YES];
@@ -47,6 +48,8 @@
         wrapper.userInteractionEnabled = YES;
         [_contentContainerView addSubview:wrapper];
         _contentWrapperView = wrapper;
+        
+        self.backgroundColor = RGB(242, 242, 242);
     }
     
     return self;
@@ -64,6 +67,16 @@
         _userContainerView.frame = CGRectMake(0, 0, 44, _containerView.frameHeight);
         _contentContainerView.frame = CGRectMake(_userContainerView.frameRightX + 8, 0, _containerView.frameWidth - _userContainerView.frameWidth * 2 - 8 * 2, _containerView.frameHeight);
         _contentWrapperView.frame = _contentContainerView.bounds;
+    }
+}
+
+- (void)setIsOwnerMessage:(BOOL)isOwnerMessage {
+    _isOwnerMessage = isOwnerMessage;
+    
+    if (isOwnerMessage) {
+        self.contentWrapperView.image = [BubbleImageFactory outgoingGreenHoverBubbleImage];
+    } else {
+        self.contentWrapperView.image = [BubbleImageFactory incomingBubbleImage];
     }
 }
 @end

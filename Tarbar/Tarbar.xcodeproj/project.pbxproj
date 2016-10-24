@@ -114,6 +114,8 @@
 		F3315E5D1DB5CDBA00D2440B /* MessageInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */; };
 		F3315E651DB890E100D2440B /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E641DB890E100D2440B /* MessageCell.m */; };
 		F3315E681DB897B600D2440B /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315E671DB897B600D2440B /* TextMessageCell.m */; };
+		F3315EA11DBDEE1800D2440B /* MessageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315EA01DBDEE1800D2440B /* MessageUtility.m */; };
+		F3315EA41DBE1CF600D2440B /* BubbleImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F3315EA31DBE1CF600D2440B /* BubbleImageFactory.m */; };
 		F34606281CF1E5E600E9023B /* LNCustomizePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F34606271CF1E5E600E9023B /* LNCustomizePicker.m */; };
 		F347F8C71D7528DB0098F04B /* ZHAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F347F8C61D7528DB0098F04B /* ZHAvatarView.m */; };
 		F35327271D91468D00936923 /* UIButton+ZH.m in Sources */ = {isa = PBXBuildFile; fileRef = F35327261D91468D00936923 /* UIButton+ZH.m */; };
@@ -535,6 +537,10 @@
 		F3315E641DB890E100D2440B /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		F3315E661DB897B600D2440B /* TextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessageCell.h; sourceTree = "<group>"; };
 		F3315E671DB897B600D2440B /* TextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
+		F3315E9F1DBDEE1800D2440B /* MessageUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageUtility.h; sourceTree = "<group>"; };
+		F3315EA01DBDEE1800D2440B /* MessageUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageUtility.m; sourceTree = "<group>"; };
+		F3315EA21DBE1CF600D2440B /* BubbleImageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleImageFactory.h; sourceTree = "<group>"; };
+		F3315EA31DBE1CF600D2440B /* BubbleImageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleImageFactory.m; sourceTree = "<group>"; };
 		F34606261CF1E5E600E9023B /* LNCustomizePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNCustomizePicker.h; sourceTree = "<group>"; };
 		F34606271CF1E5E600E9023B /* LNCustomizePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNCustomizePicker.m; sourceTree = "<group>"; };
 		F347F8C51D7528DB0098F04B /* ZHAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAvatarView.h; sourceTree = "<group>"; };
@@ -1323,6 +1329,10 @@
 		F3315E5A1DB5CD8900D2440B /* control */ = {
 			isa = PBXGroup;
 			children = (
+				F3315EA21DBE1CF600D2440B /* BubbleImageFactory.h */,
+				F3315EA31DBE1CF600D2440B /* BubbleImageFactory.m */,
+				F3315E9F1DBDEE1800D2440B /* MessageUtility.h */,
+				F3315EA01DBDEE1800D2440B /* MessageUtility.m */,
 				F3315E5B1DB5CDBA00D2440B /* MessageInputField.h */,
 				F3315E5C1DB5CDBA00D2440B /* MessageInputField.m */,
 			);
@@ -1332,9 +1342,9 @@
 		F3315E621DB890C300D2440B /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				F3315E661DB897B600D2440B /* TextMessageCell.h */,
 				F3315E631DB890E100D2440B /* MessageCell.h */,
 				F3315E641DB890E100D2440B /* MessageCell.m */,
-				F3315E661DB897B600D2440B /* TextMessageCell.h */,
 				F3315E671DB897B600D2440B /* TextMessageCell.m */,
 			);
 			name = cell;
@@ -1823,12 +1833,14 @@
 				F3315E561DAFA6F800D2440B /* ZHBarAnimateController.m in Sources */,
 				F3FF4D0D1CBDF86300D20526 /* AFSecurityPolicy.m in Sources */,
 				3FE646791D7DB6BE007E4A11 /* ProgressView.m in Sources */,
+				F3315EA11DBDEE1800D2440B /* MessageUtility.m in Sources */,
 				F3B1C01C1D3DDBC300E7556D /* UIViewController+NavigationItemBlock.m in Sources */,
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
 				3F6665D21D05B6D2000F4334 /* UITabBar+Badge.m in Sources */,
 				F3CB027E1D1159110097BE61 /* LNLoadMoreControl.m in Sources */,
 				3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */,
+				F3315EA41DBE1CF600D2440B /* BubbleImageFactory.m in Sources */,
 				F3FF4D111CBDF86300D20526 /* AFURLSessionManager.m in Sources */,
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				3F60BEEE1D438D620094CA8A /* util_mosq.c in Sources */,

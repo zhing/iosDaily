@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "JSONMessage.h"
 
 @interface Message : NSObject <JSONMessage>
@@ -18,5 +19,7 @@
 @property (nonatomic, copy) NSString *unique_id;
 @property (nonatomic, assign) SInt32 type;
 @property (nonatomic, strong) NSData *thumbnail;
+
++ (CGFloat)textMessageCellHeightForString:(NSString *)string;
 
 @end

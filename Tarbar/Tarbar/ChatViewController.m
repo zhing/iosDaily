@@ -11,16 +11,31 @@
 #import "LNConstDefine.h"
 #import "Masonry.h"
 #import "UIView+Frame.h"
+#import "TextMessageCell.h"
+#import "Message.h"
+#import "MessageUtility.h"
 
-@interface ChatViewController () <MessageInputFieldDelegate>
+static NSString *const kTextChatCellID = @"kTextChatCellID";
+
+@interface ChatViewController () <MessageInputFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) MessageInputField *inputField;
 @property (nonatomic, strong) MASConstraint *inputFieldMASConstraintBottom;
+@property (nonatomic, assign) SInt64 messageCount;
 
 @end
 
 @implementation ChatViewController
+
+- (instancetype)init {
+    if (self = [super init]) {
+        _messageCount = 0;
+        _messages = [NSMutableArray array];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,13 +56,17 @@
 }
 
 - (void)setupViews {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.backgroundColor = RGB(242, 242, 242);
-    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
     footerView.backgroundColor = RGB(242, 242, 242);
     _tableView.tableFooterView = footerView;
     [self.view addSubview:_tableView];
+    [_tableView registerClass:[TextMessageCell class] forCellReuseIdentifier:kTextChatCellID];
     
     _inputField = [[MessageInputField alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-46, self.view.bounds.size.width, 46)];
     [self.view addSubview:_inputField];
@@ -67,7 +86,12 @@
 
 #pragma mark - MessageInputFieldDelegate
 - (void)sendMessage:(NSString *)message {
+    Message *msg = [[Message alloc] init];
+    msg.from = _messageCount++;
+    msg.content = message;
+    [_messages addObject:msg];
     [_inputField clear];
+    [_tableView reloadData];
 }
 
 - (void)sizeChanged:(BOOL)animated
@@ -145,10 +169,34 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Message *message = _messages[indexPath.row];
+    CGFloat height = [Message textMessageCellHeightForString:message.content];
+    return height;
+}
+
+#pragma mark - table view datasource -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _messages.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Message *msg = [_messages objectAtIndex:indexPath.row];
     
+    TextMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:kTextChatCellID forIndexPath:indexPath];
+    if (msg.from%2 == 1) {
+        cell.isOwnerMessage = YES;
+        cell.msgLabel.attributedText = [MessageUtility formatMessage:msg.content withFont:[UIFont systemFontOfSize:15] textColor:[UIColor whiteColor] urlColor:[UIColor whiteColor] underlineForURL:YES];
+    } else {
+        cell.isOwnerMessage = NO;
+        cell.msgLabel.attributedText = [MessageUtility formatMessage:msg.content withFont:[UIFont systemFontOfSize:15] textColor:RGB(45, 45, 45) urlColor:RGB(71, 125, 178) underlineForURL:NO];
+    }
+    [cell.msgLabel sizeToFit];
     
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

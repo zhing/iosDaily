@@ -10,6 +10,6 @@
 
 @interface TextMessageCell : MessageCell
 
-//@property (nonatomic, weak) LNTextView *msgLabel;
+@property (nonatomic, weak) UITextView *msgLabel;
 
 @end

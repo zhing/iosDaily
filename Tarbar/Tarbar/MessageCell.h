@@ -16,5 +16,6 @@
 @property (nonatomic, weak) UIImageView *contentWrapperView;
 
 @property (nonatomic, assign) BOOL isOwnerMessage;
+@property (nonatomic, strong) NSString *message;
 
 @end
