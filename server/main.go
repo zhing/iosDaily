@@ -1,7 +1,7 @@
 package main
 
 import (
-	// "fmt"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"math/rand"
 	"net/http"
@@ -65,6 +65,8 @@ func main() {
 		}
 
 		c.JSON(http.StatusOK, msgArray)
+
+		fmt.Println(c.Request.Header)
 	})
 
 	router.Run(":10001")

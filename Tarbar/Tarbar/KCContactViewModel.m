@@ -37,7 +37,7 @@
 - (void)requestForPage:(NSInteger)pageIndex withSuccess:(void(^)(NSArray *))success failure:(void(^)(NSInteger, NSString *))failure {
 //    [self.contacts removeAllObjects];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://localhost:10001/api/contacts/refresh"
+    [manager GET:@"http://192.168.93.128:10001/api/contacts/refresh"
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject){
 //             NSLog(@"JSON: %@", responseObject);

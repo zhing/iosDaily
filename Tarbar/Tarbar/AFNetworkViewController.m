@@ -47,13 +47,27 @@
         make.trailing.equalTo(self.view).offset(-10);
         make.height.equalTo(@10);
     }];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
 //    self.tabBarItem.badgeValue = @"1";
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    for (UIView *view in self.tabBarController.view.subviews) {
+        if ([NSStringFromClass([view class]) isEqualToString:@"UITabBar"]) {
+            NSLog(@"%@",NSStringFromCGRect(view.frame));
+        }
+    }
+    
+    NSLog(@"%@", [self.tabBarController.viewControllers containsObject:self]?@"YES":@"NO");
+    for (UIViewController *viewController in [self.tabBarController viewControllers]) {
+        NSLog(@"%@", NSStringFromClass([viewController class]));
+    }
 }
 
 - (void)didReceiveMemoryWarning {
