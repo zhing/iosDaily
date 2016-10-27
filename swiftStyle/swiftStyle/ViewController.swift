@@ -26,5 +26,12 @@ class ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func showGesture(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let vc = sb.instantiateViewController(withIdentifier: "gestureSB") as UIViewController
+        //VC为该界面storyboardID，Main.storyboard中选中该界面View，Identifier inspector中修改
+        present(vc, animated: true, completion: nil)
+    }
 }
 
