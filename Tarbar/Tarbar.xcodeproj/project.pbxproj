@@ -167,6 +167,7 @@
 		F3CB02871D127AB50097BE61 /* LNCollectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02861D127AB50097BE61 /* LNCollectionType.m */; };
 		F3CB028A1D127ACE0097BE61 /* LNMutableUniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */; };
 		F3D15C301D5319CF0055C842 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C0E80C1CC6441800829E90 /* FMDatabaseQueue.m */; };
+		F3D8452D1DC1CC34009F6C91 /* UIImage+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D8452C1DC1CC34009F6C91 /* UIImage+URL.m */; };
 		F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */; };
 		F3DBED601DACDAE5007DB573 /* ZHBarNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */; };
 		F3DBED631DACDF69007DB573 /* UIViewController+AlphaNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */; };
@@ -642,6 +643,8 @@
 		F3CB02881D127ACE0097BE61 /* LNMutableUniqueArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNMutableUniqueArray.h; sourceTree = "<group>"; };
 		F3CB02891D127ACE0097BE61 /* LNMutableUniqueArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNMutableUniqueArray.m; sourceTree = "<group>"; };
 		F3CB028B1D127AD90097BE61 /* LNUniqueInArrayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNUniqueInArrayProtocol.h; sourceTree = "<group>"; };
+		F3D8452B1DC1CC34009F6C91 /* UIImage+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+URL.h"; sourceTree = "<group>"; };
+		F3D8452C1DC1CC34009F6C91 /* UIImage+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+URL.m"; sourceTree = "<group>"; };
 		F3DBED5B1DACD85B007DB573 /* ZHBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarViewController.h; sourceTree = "<group>"; };
 		F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarViewController.m; sourceTree = "<group>"; };
 		F3DBED5E1DACDAE5007DB573 /* ZHBarNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBarNextViewController.h; sourceTree = "<group>"; };
@@ -1216,6 +1219,8 @@
 				F35327261D91468D00936923 /* UIButton+ZH.m */,
 				F3DBED611DACDF69007DB573 /* UIViewController+AlphaNavi.h */,
 				F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */,
+				F3D8452B1DC1CC34009F6C91 /* UIImage+URL.h */,
+				F3D8452C1DC1CC34009F6C91 /* UIImage+URL.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -1838,6 +1843,7 @@
 				F3CB02151D058AD50097BE61 /* LNTabBarController.m in Sources */,
 				3FF383B11CD103AC00C84BA8 /* CRNavigationBar.m in Sources */,
 				3F6665D21D05B6D2000F4334 /* UITabBar+Badge.m in Sources */,
+				F3D8452D1DC1CC34009F6C91 /* UIImage+URL.m in Sources */,
 				F3CB027E1D1159110097BE61 /* LNLoadMoreControl.m in Sources */,
 				3FE26A781D0DB08F00DC8E0E /* UIViewController+NavigationItem.m in Sources */,
 				F3315EA41DBE1CF600D2440B /* BubbleImageFactory.m in Sources */,

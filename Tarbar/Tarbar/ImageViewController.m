@@ -16,6 +16,7 @@
 #import "UIButton+ActionBlock.h"
 #import "UIButton+ZH.h"
 #import "DrawingView.h"
+#import "UIImage+URL.h"
 
 @interface ImageViewController ()
 
@@ -40,6 +41,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 //    [self setupLoopProcessBar];
+    
+    [UIImage imageWithURL:@"http://zhing.qiniudn.com/photo.jpg" completed:^(UIImage *image) {
+        NSLog(@"%@，scale:%f", NSStringFromCGSize(image.size), image.scale);
+    }];
 }
 
 - (void)setupViews {

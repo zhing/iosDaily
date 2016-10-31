@@ -17,9 +17,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     GraphicView *graphicView = [[GraphicView alloc] initWithFrame:CGRectMake(0, 64, 200, 200)];
+    graphicView.layer.borderWidth = 0.5f;
+    graphicView.layer.borderColor = [[UIColor blackColor] CGColor];
     graphicView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:graphicView];
     
+    /*
+      * frame.origin.x = position.x - anchorPoint.x * bounds.size.width；
+      * frame.origin.y = position.y - anchorPoint.y * bounds.size.height；
+      */
+    graphicView.layer.anchorPoint = CGPointMake(0, 0);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

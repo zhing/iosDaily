@@ -6,5 +6,6 @@ target "Tarbar" do
     pod 'YYModel'
     pod 'pop', '~> 1.0'
     pod 'UICountingLabel'
+    pod 'SDWebImage', '~>3.8'
 #    pod 'MQTTKit', :git => 'https://github.com/jmesnil/MQTTKit.git'
 end
