@@ -17,6 +17,8 @@
 #import "UIButton+ZH.h"
 #import "DrawingView.h"
 #import "UIImage+URL.h"
+#import "UIViewController+NavigationItem.h"
+#import "TZImagePickerController.h"
 
 @interface ImageViewController ()
 
@@ -36,6 +38,7 @@
 //    [self setupButtonHighPerformance];
     
     [self setupDrawingView];
+    [self setNavBarRightItem:@"picker" target:self action:@selector(showELCImagePicker)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -144,6 +147,17 @@
     DrawingView *drawingView = [[DrawingView alloc] init];
     drawingView.frame = self.view.bounds;
     [self.view addSubview:drawingView];
+}
+
+- (void)showELCImagePicker {
+//    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+//    
+//    // You can get the photos by block, the same as by delegate.
+//    // 你可以通过block或者代理，来得到用户选择的照片.
+//    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets) {
+//        
+//    }];
+//    [self presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
 @end

@@ -8,4 +8,5 @@ target "Tarbar" do
     pod 'UICountingLabel'
     pod 'SDWebImage', '~>3.8'
 #    pod 'MQTTKit', :git => 'https://github.com/jmesnil/MQTTKit.git'
+    pod 'TZImagePickerController'
 end
