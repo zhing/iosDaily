@@ -16,3 +16,11 @@ func RGB(_ r:CGFloat, _ g:CGFloat,_ b:CGFloat) -> UIColor {
 func RGBA(_ r:CGFloat,_ g:CGFloat,_ b:CGFloat,_ a:CGFloat) -> UIColor {
     return UIColor (red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
 }
+
+func ScreenWidth() ->CGFloat {
+    return UIScreen.main.bounds.width
+}
+
+func ScreenHeight() -> CGFloat {
+    return UIScreen.main.bounds.height
+}

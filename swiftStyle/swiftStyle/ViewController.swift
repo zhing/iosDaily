@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var button02 : UIButton!
     var button03 : UIButton!
     var button04 : UIButton!
+    var button05 : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,17 @@ class ViewController: UIViewController {
             make.leading.equalTo(button03)
             make.top.equalTo(button03.snp.bottom).offset(20)
         }
+        
+        button05 = UIButton.init(type: UIButtonType.custom)
+        button05.setTitle("Menu", for: UIControlState.normal)
+        button05.backgroundColor = UIColor.lightGray
+        button05.addTarget(self, action: #selector(ViewController.showMenuController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button05)
+        button05.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button04)
+            make.leading.equalTo(button04)
+            make.top.equalTo(button04.snp.bottom).offset(20)
+        }
     }
     
     func showGPUImageController() {
@@ -89,6 +101,12 @@ class ViewController: UIViewController {
     
     func showGPUImageBlurController() {
         let controller = GPUImageBlurController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showMenuController() {
+        let controller = MenuController.init()
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

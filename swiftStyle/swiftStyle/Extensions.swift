@@ -16,7 +16,27 @@ extension UIColor {
     var appRed : UIColor {return RGB(0xee, 0x6a, 0x6a)}
 }
 
+extension UIView {
+    func addHorzLine(start: CGPoint, end: CGPoint, color:UIColor, borderWith: CGFloat) ->CALayer {
+        let lineLayer = CALayer()
+        lineLayer.frame = CGRect.init(origin: start, size: CGSize.init(width: end.x-start.x, height: borderWith))
+        lineLayer.backgroundColor = color.cgColor
+        self.layer.addSublayer(lineLayer)
+        return lineLayer
+    }
+}
+
 extension UIImage {
+    
+//    static func imageWithFill(color: UIColor, size: CGSize) ->UIImage{
+//        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
+//        color.setFill()
+//        self.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height));
+//        let fillImage:UIImage? = UIGraphicsGetImageFromCurrentImageContext();
+//        UIGraphicsEndImageContext();
+//        return fillImage!;
+//    }
+    
     /**
      *  重设图片大小
      */
