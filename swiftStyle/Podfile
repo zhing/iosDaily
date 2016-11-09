@@ -3,8 +3,10 @@ platform :ios, '8.0'
 target 'swiftStyle' do
     use_frameworks!
 
-	pod 'AFNetworking', '~> 3.0'
+#pod 'AFNetworking', '~> 3.0'
 #    pod 'SVGKit', :git => 'https://github.com/linkedin-inc/SVGKit.git', :branch => '2.x'
 #    pod 'CocoaLumberjack', :git => 'https://github.com/CocoaLumberjack/CocoaLumberjack.git', :tag => '2.4.0' #Required by SVGKit
 
+    pod 'SnapKit', '~> 3.0.2'
+    pod 'GPUImage'
 end

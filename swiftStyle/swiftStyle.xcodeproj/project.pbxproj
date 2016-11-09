@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		071AC69BA55A0C9C98B71C70 /* Pods_swiftStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */; };
+		F3D018281DD2CC7400CB7606 /* ImageBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */; };
+		F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3D018291DD2CEF000CB7606 /* timg.jpeg */; };
+		F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */; };
+		F3D0182E1DD314ED00CB7606 /* GPUImageBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0182D1DD314ED00CB7606 /* GPUImageBlurController.swift */; };
 		F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D845151DC07FF2009F6C91 /* AppDelegate.swift */; };
 		F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D845171DC07FF2009F6C91 /* ViewController.swift */; };
 		F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D8451C1DC07FF2009F6C91 /* Assets.xcassets */; };
@@ -20,13 +24,18 @@
 		F3FCC2691DD1BFF200C884A9 /* tab2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FCC2651DD1BFF200C884A9 /* tab2.png */; };
 		F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FCC2661DD1BFF200C884A9 /* tab3.png */; };
 		F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FCC2671DD1BFF200C884A9 /* tab4.png */; };
+		F3FCC2731DD1D60000C884A9 /* GPUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCC2721DD1D60000C884A9 /* GPUViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlurController.swift; sourceTree = "<group>"; };
+		F3D018291DD2CEF000CB7606 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyController.swift; sourceTree = "<group>"; };
+		F3D0182D1DD314ED00CB7606 /* GPUImageBlurController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPUImageBlurController.swift; sourceTree = "<group>"; };
 		F3D845121DC07FF2009F6C91 /* swiftStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D845151DC07FF2009F6C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3D845171DC07FF2009F6C91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3D845171DC07FF2009F6C91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		F3D8451C1DC07FF2009F6C91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3D8451F1DC07FF2009F6C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3D845211DC07FF2009F6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +48,7 @@
 		F3FCC2651DD1BFF200C884A9 /* tab2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab2.png; sourceTree = "<group>"; };
 		F3FCC2661DD1BFF200C884A9 /* tab3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab3.png; sourceTree = "<group>"; };
 		F3FCC2671DD1BFF200C884A9 /* tab4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab4.png; sourceTree = "<group>"; };
+		F3FCC2721DD1D60000C884A9 /* GPUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPUViewController.swift; sourceTree = "<group>"; };
 		F9FC3623CD033454E8EC05D4 /* Pods-swiftStyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftStyle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftStyle/Pods-swiftStyle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +94,13 @@
 		F3D845141DC07FF2009F6C91 /* swiftStyle */ = {
 			isa = PBXGroup;
 			children = (
+				F3FCC26D1DD1C40A00C884A9 /* Network */,
+				F3FCC26E1DD1C40A00C884A9 /* Other */,
+				F3FCC26F1DD1C40A00C884A9 /* Storage */,
+				F3FCC26C1DD1C3FD00C884A9 /* UI */,
 				F3FCC2371DD0D2DD00C884A9 /* images */,
 				F3FCC22C1DD0BAFF00C884A9 /* base */,
 				F3D845151DC07FF2009F6C91 /* AppDelegate.swift */,
-				F3D845171DC07FF2009F6C91 /* ViewController.swift */,
 				F3D8451C1DC07FF2009F6C91 /* Assets.xcassets */,
 				F3D8451E1DC07FF2009F6C91 /* LaunchScreen.storyboard */,
 				F3D845211DC07FF2009F6C91 /* Info.plist */,
@@ -109,12 +122,46 @@
 		F3FCC2371DD0D2DD00C884A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3D018291DD2CEF000CB7606 /* timg.jpeg */,
 				F3FCC2641DD1BFF200C884A9 /* tab1.png */,
 				F3FCC2651DD1BFF200C884A9 /* tab2.png */,
 				F3FCC2661DD1BFF200C884A9 /* tab3.png */,
 				F3FCC2671DD1BFF200C884A9 /* tab4.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		F3FCC26C1DD1C3FD00C884A9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F3D845171DC07FF2009F6C91 /* ViewController.swift */,
+				F3FCC2721DD1D60000C884A9 /* GPUViewController.swift */,
+				F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */,
+				F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */,
+				F3D0182D1DD314ED00CB7606 /* GPUImageBlurController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F3FCC26D1DD1C40A00C884A9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F3FCC26E1DD1C40A00C884A9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F3FCC26F1DD1C40A00C884A9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		F94BB79FCE8040ACBCC8FD83 /* Frameworks */ = {
@@ -189,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3FCC2691DD1BFF200C884A9 /* tab2.png in Resources */,
+				F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */,
 				F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */,
 				F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
@@ -252,12 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D018281DD2CC7400CB7606 /* ImageBlurController.swift in Sources */,
 				F3FCC2321DD0CA6F00C884A9 /* Extensions.swift in Sources */,
+				F3FCC2731DD1D60000C884A9 /* GPUViewController.swift in Sources */,
 				F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */,
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
 				F3FCC2301DD0C0BE00C884A9 /* ZHNavigationController.swift in Sources */,
 				F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
+				F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */,
+				F3D0182E1DD314ED00CB7606 /* GPUImageBlurController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

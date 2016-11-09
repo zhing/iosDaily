@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GPUImage
 
 extension UIColor {
     var appBkground :UIColor {return RGB(0xf2, 0xf2, 0xf2)}
@@ -37,7 +38,7 @@ extension UIImage {
     }
     
     func imageWithGradientTintColor(tintColor: UIColor) ->UIImage {
-        return imageWithTintColor(tintColor: tintColor, blendMode: CGBlendMode.overlay)
+        return imageWithTintColor(tintColor: tintColor, blendMode: CGBlendMode.overlay) //保持灰度
     }
     
     func imageWithTintColor(tintColor: UIColor, blendMode: CGBlendMode) ->UIImage {
@@ -46,9 +47,20 @@ extension UIImage {
         let bounds = CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height)
         UIRectFill(bounds)
         self.draw(in: bounds, blendMode: blendMode, alpha: 1.0)
+        
+        if blendMode != CGBlendMode.destinationIn { //保持透明度
+            self.draw(in: bounds, blendMode: CGBlendMode.destinationIn, alpha: 1.0)
+        }
         let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext();
         return tintedImage!
     }
     
+    /*
+     *blur
+     */
+    func imageWithBlur() -> UIImage {
+        let stillImageFilter:GPUImageiOSBlurFilter = GPUImageiOSBlurFilter()
+        return stillImageFilter.image(byFilteringImage: self)
+    }
 }
