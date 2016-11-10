@@ -74,6 +74,9 @@ class MenuController: UIViewController, containerClickDelegate{
             make.bottom.equalTo(0)
             make.centerX.equalTo(window)
         }
+        
+        containerView.isExtended = true
+        containerView.forceLayout()
     }
     
     func hideBlurWindow(sender: AnyObject?) {
@@ -85,5 +88,8 @@ class MenuController: UIViewController, containerClickDelegate{
             make.size.equalTo(CGSize.init(width: 49, height: 49))
             make.center.equalTo(bottomView)
         }
+        
+        containerView.isExtended = false
+        containerView.forceLayout()
     }
 }

@@ -13,6 +13,10 @@ protocol containerClickDelegate: class {
 }
 
 class MenuContainerView: UIView {
+    let imgWidth :CGFloat = 20
+    let imgHeight :CGFloat = 20
+    let roundRadius :CGFloat = 17
+    var isExtended :Bool = false
     
     var imageAddView :UIImageView!
     var imageMusicView :UIImageView!
@@ -34,44 +38,44 @@ class MenuContainerView: UIView {
     
     func setupSubviews() {
         imageMusicView = UIImageView()
-        imageMusicView.image = UIImage(named: "music.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: UIColor.orange)
+        imageMusicView.layer.cornerRadius = roundRadius
+        imageMusicView.layer.masksToBounds = true
+        imageMusicView.backgroundColor = UIColor.white
+        imageMusicView.contentMode = UIViewContentMode.center
+        imageMusicView.image = UIImage(named: "music.png")?.reSizeImage(size: CGSize.init(width: imgWidth, height: imgHeight)).imageWithTintColor(tintColor: UIColor.orange)
         self.insertSubview(imageMusicView, at: 0)
-        imageMusicView.snp.makeConstraints { (make)->Void in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize.init(width: 30, height: 30))
-        }
         
         imageLocationView = UIImageView()
-        imageLocationView.image = UIImage(named: "address.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: UIColor.blue)
+        imageLocationView.layer.cornerRadius = roundRadius
+        imageLocationView.layer.masksToBounds = true
+        imageLocationView.backgroundColor = UIColor.white
+        imageLocationView.contentMode = UIViewContentMode.center
+        imageLocationView.image = UIImage(named: "address.png")?.reSizeImage(size: CGSize.init(width: imgWidth, height: imgHeight)).imageWithTintColor(tintColor: UIColor.blue)
         self.insertSubview(imageLocationView, at: 1)
-        imageLocationView.snp.makeConstraints { (make)->Void in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize.init(width: 30, height: 30))
-        }
         
         imageCameraView = UIImageView()
-        imageCameraView.image = UIImage(named: "camera.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: UIColor.black)
+        imageCameraView.layer.cornerRadius = roundRadius
+        imageCameraView.layer.masksToBounds = true
+        imageCameraView.backgroundColor = UIColor.white
+        imageCameraView.contentMode = UIViewContentMode.center
+        imageCameraView.image = UIImage(named: "camera.png")?.reSizeImage(size: CGSize.init(width: imgWidth, height: imgHeight)).imageWithTintColor(tintColor: UIColor.black)
         self.insertSubview(imageCameraView, at: 2)
-        imageCameraView.snp.makeConstraints { (make)->Void in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize.init(width: 30, height: 30))
-        }
         
         imageTextView = UIImageView()
-        imageTextView.image = UIImage(named: "text.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: UIColor.green)
+        imageTextView.layer.cornerRadius = roundRadius
+        imageTextView.layer.masksToBounds = true
+        imageTextView.backgroundColor = UIColor.white
+        imageTextView.contentMode = UIViewContentMode.center
+        imageTextView.image = UIImage(named: "text.png")?.reSizeImage(size: CGSize.init(width: imgWidth, height: imgHeight)).imageWithTintColor(tintColor: UIColor.green)
         self.insertSubview(imageTextView, at: 3)
-        imageTextView.snp.makeConstraints { (make)->Void in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize.init(width: 30, height: 30))
-        }
         
         imageMoonView = UIImageView()
-        imageMoonView.image = UIImage(named: "text.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: UIColor.purple)
+        imageMoonView.layer.cornerRadius = roundRadius
+        imageMoonView.layer.masksToBounds = true
+        imageMoonView.backgroundColor = UIColor.white
+        imageMoonView.contentMode = UIViewContentMode.center
+        imageMoonView.image = UIImage(named: "moon.png")?.reSizeImage(size: CGSize.init(width: imgWidth, height: imgHeight)).imageWithTintColor(tintColor: UIColor.purple)
         self.insertSubview(imageMoonView, at: 4)
-        imageMoonView.snp.makeConstraints { (make)->Void in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize.init(width: 30, height: 30))
-        }
         
         imageAddView = UIImageView()
         imageAddView.backgroundColor = UIColor.white
@@ -91,15 +95,90 @@ class MenuContainerView: UIView {
         clickButton.snp.makeConstraints { (make)->Void in
             make.edges.equalTo(0)
         }
+        
+        updateSubviewConstraints()
     }
     
     func clickAction() {
         clickDelegate?.onclick()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        
+    func updateSubviewConstraints() {
+        if isExtended {
+            imageMusicView.snp.remakeConstraints{ make in
+                make.centerX.equalTo(self).offset(-100 * cos(M_PI/6))
+                make.centerY.equalTo(self).offset(-100 * sin(M_PI/6))
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageLocationView.snp.remakeConstraints { (make)->Void in
+                make.centerX.equalTo(self).offset(-100 * cos(M_PI/3))
+                make.centerY.equalTo(self).offset(-100 * sin(M_PI/3))
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageCameraView.snp.remakeConstraints { (make)->Void in
+                make.centerX.equalTo(self).offset(-100 * cos(M_PI/2))
+                make.centerY.equalTo(self).offset(-100 * sin(M_PI/2))
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageTextView.snp.remakeConstraints { (make)->Void in
+                make.centerX.equalTo(self).offset(-100 * cos(M_PI*2/3))
+                make.centerY.equalTo(self).offset(-100 * sin(M_PI*2/3))
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageMoonView.snp.remakeConstraints { (make)->Void in
+                make.centerX.equalTo(self).offset(-100 * cos(M_PI*5/6))
+                make.centerY.equalTo(self).offset(-100 * sin(M_PI*5/6))
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+        } else {
+            imageMusicView.snp.remakeConstraints { (make)->Void in
+                make.center.equalTo(self)
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageLocationView.snp.remakeConstraints { (make)->Void in
+                make.center.equalTo(self)
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageCameraView.snp.remakeConstraints { (make)->Void in
+                make.center.equalTo(self)
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageTextView.snp.remakeConstraints { (make)->Void in
+                make.center.equalTo(self)
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+            imageMoonView.snp.remakeConstraints { (make)->Void in
+                make.center.equalTo(self)
+                make.size.equalTo(CGSize.init(width: roundRadius*2, height: roundRadius*2))
+            }
+        }
+    }
+    
+    func updateTransform() {
+        if isExtended {
+//            imageMusicView.transform = imageMusicView.transform.rotated(by: -CGFloat(M_PI)*3)
+//            imageLocationView.transform=imageLocationView.transform.rotated(by: -CGFloat(M_PI)*3)
+//            imageCameraView.transform=imageCameraView.transform.rotated(by: -CGFloat(M_PI)*3)
+//            imageTextView.transform=imageTextView.transform.rotated(by: -CGFloat(M_PI)*3)
+//            imageMoonView.transform=imageMoonView.transform.rotated(by: -CGFloat(M_PI)*3)
+            
+            imageAddView.transform = imageAddView.transform.rotated(by: -CGFloat(M_PI)*3/4)
+        } else {
+//            imageMusicView.transform=imageMusicView.transform.rotated(by: CGFloat(M_PI)*3)
+//            imageLocationView.transform=imageLocationView.transform.rotated(by: CGFloat(M_PI)*3)
+//            imageCameraView.transform=imageCameraView.transform.rotated(by: CGFloat(M_PI)*3)
+//            imageTextView.transform=imageTextView.transform.rotated(by: CGFloat(M_PI)*3)
+//            imageMoonView.transform=imageMoonView.transform.rotated(by: CGFloat(M_PI)*3)
+            
+            imageAddView.transform = imageAddView.transform.rotated(by: CGFloat(M_PI)*3/4)
+        }
+    }
+    
+    func forceLayout() {
+        updateSubviewConstraints()
+        UIView.animate(withDuration: 0.25, animations: {
+            self.updateTransform()
+            self.layoutIfNeeded()
+        })
     }
 }
