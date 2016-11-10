@@ -9,4 +9,6 @@ target 'swiftStyle' do
 
     pod 'SnapKit', '~> 3.0.2'
     pod 'GPUImage'
+    pod 'AMap2DMap', '4.3.0'
+    pod 'AMapSearch', '4.2.0'
 end

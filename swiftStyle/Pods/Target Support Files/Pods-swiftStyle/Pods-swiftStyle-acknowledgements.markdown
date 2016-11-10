@@ -1,6 +1,21 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## AMap2DMap
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
+## AMapFoundation
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
+## AMapSearch
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
 ## GPUImage
 
 Copyright (c) 2012, Brad Larson, Ben Cochran, Hugues Lismonde, Keitaroh Kobayashi, Alaric Cole, Matthew Clark, Jacob Gundersen, Chris Williams.

@@ -21,6 +21,20 @@
 		F3D0183C1DD35BEB00CB7606 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D0183A1DD35BEB00CB7606 /* music.png */; };
 		F3D0183E1DD35BF700CB7606 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D0183D1DD35BF700CB7606 /* text.png */; };
 		F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0183F1DD368DA00CB7606 /* MenuContainerView.swift */; };
+		F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018411DD4665D00CB7606 /* OtherViewController.swift */; };
+		F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018431DD467F100CB7606 /* AMapViewController.swift */; };
+		F3D0184E1DD4AB0C00CB7606 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018471DD4AB0C00CB7606 /* DisplayViewController.swift */; };
+		F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018481DD4AB0C00CB7606 /* MainViewController.swift */; };
+		F3D018501DD4AB0C00CB7606 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018491DD4AB0C00CB7606 /* RecordViewController.swift */; };
+		F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0184A1DD4AB0C00CB7606 /* Route.swift */; };
+		F3D018521DD4AB0C00CB7606 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0184B1DD4AB0C00CB7606 /* SearchViewController.swift */; };
+		F3D018531DD4AB0C00CB7606 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0184C1DD4AB0C00CB7606 /* StatusView.swift */; };
+		F3D018541DD4AB0C00CB7606 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0184D1DD4AB0C00CB7606 /* TipView.swift */; };
+		F3D018561DD4AB5E00CB7606 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018551DD4AB5E00CB7606 /* FileHelper.swift */; };
+		F3D018591DD4B0AA00CB7606 /* icon_play.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D018571DD4B0AA00CB7606 /* icon_play.png */; };
+		F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D018581DD4B0AA00CB7606 /* icon_stop.png */; };
+		F3D0185D1DD4B8DF00CB7606 /* location_no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D0185B1DD4B8DF00CB7606 /* location_no@2x.png */; };
+		F3D0185E1DD4B8DF00CB7606 /* location_yes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D0185C1DD4B8DF00CB7606 /* location_yes@2x.png */; };
 		F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D845151DC07FF2009F6C91 /* AppDelegate.swift */; };
 		F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D845171DC07FF2009F6C91 /* ViewController.swift */; };
 		F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D8451C1DC07FF2009F6C91 /* Assets.xcassets */; };
@@ -51,6 +65,21 @@
 		F3D0183A1DD35BEB00CB7606 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		F3D0183D1DD35BF700CB7606 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 		F3D0183F1DD368DA00CB7606 /* MenuContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuContainerView.swift; sourceTree = "<group>"; };
+		F3D018411DD4665D00CB7606 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		F3D018431DD467F100CB7606 /* AMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMapViewController.swift; path = swiftStyle/Other/AMapViewController.swift; sourceTree = SOURCE_ROOT; };
+		F3D018451DD469C500CB7606 /* OCBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBridgeHeader.h; sourceTree = "<group>"; };
+		F3D018471DD4AB0C00CB7606 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		F3D018481DD4AB0C00CB7606 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F3D018491DD4AB0C00CB7606 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		F3D0184A1DD4AB0C00CB7606 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		F3D0184B1DD4AB0C00CB7606 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F3D0184C1DD4AB0C00CB7606 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		F3D0184D1DD4AB0C00CB7606 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		F3D018551DD4AB5E00CB7606 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		F3D018571DD4B0AA00CB7606 /* icon_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_play.png; sourceTree = "<group>"; };
+		F3D018581DD4B0AA00CB7606 /* icon_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_stop.png; sourceTree = "<group>"; };
+		F3D0185B1DD4B8DF00CB7606 /* location_no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_no@2x.png"; sourceTree = "<group>"; };
+		F3D0185C1DD4B8DF00CB7606 /* location_yes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_yes@2x.png"; sourceTree = "<group>"; };
 		F3D845121DC07FF2009F6C91 /* swiftStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D845151DC07FF2009F6C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3D845171DC07FF2009F6C91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +120,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F3D018461DD4AB0C00CB7606 /* AMap */ = {
+			isa = PBXGroup;
+			children = (
+				F3D018551DD4AB5E00CB7606 /* FileHelper.swift */,
+				F3D018431DD467F100CB7606 /* AMapViewController.swift */,
+				F3D018471DD4AB0C00CB7606 /* DisplayViewController.swift */,
+				F3D018481DD4AB0C00CB7606 /* MainViewController.swift */,
+				F3D018491DD4AB0C00CB7606 /* RecordViewController.swift */,
+				F3D0184A1DD4AB0C00CB7606 /* Route.swift */,
+				F3D0184B1DD4AB0C00CB7606 /* SearchViewController.swift */,
+				F3D0184C1DD4AB0C00CB7606 /* StatusView.swift */,
+				F3D0184D1DD4AB0C00CB7606 /* TipView.swift */,
+			);
+			path = AMap;
+			sourceTree = "<group>";
+		};
 		F3D845091DC07FF2009F6C91 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +167,7 @@
 				F3D8451C1DC07FF2009F6C91 /* Assets.xcassets */,
 				F3D8451E1DC07FF2009F6C91 /* LaunchScreen.storyboard */,
 				F3D845211DC07FF2009F6C91 /* Info.plist */,
+				F3D018451DD469C500CB7606 /* OCBridgeHeader.h */,
 			);
 			path = swiftStyle;
 			sourceTree = "<group>";
@@ -140,6 +186,10 @@
 		F3FCC2371DD0D2DD00C884A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3D0185B1DD4B8DF00CB7606 /* location_no@2x.png */,
+				F3D0185C1DD4B8DF00CB7606 /* location_yes@2x.png */,
+				F3D018571DD4B0AA00CB7606 /* icon_play.png */,
+				F3D018581DD4B0AA00CB7606 /* icon_stop.png */,
 				F3D0183D1DD35BF700CB7606 /* text.png */,
 				F3D018391DD35BEB00CB7606 /* moon.png */,
 				F3D0183A1DD35BEB00CB7606 /* music.png */,
@@ -180,6 +230,8 @@
 		F3FCC26E1DD1C40A00C884A9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F3D018461DD4AB0C00CB7606 /* AMap */,
+				F3D018411DD4665D00CB7606 /* OtherViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -270,12 +322,16 @@
 				F3FCC2691DD1BFF200C884A9 /* tab2.png in Resources */,
 				F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */,
 				F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */,
+				F3D018591DD4B0AA00CB7606 /* icon_play.png in Resources */,
 				F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */,
+				F3D0185D1DD4B8DF00CB7606 /* location_no@2x.png in Resources */,
 				F3D0183B1DD35BEB00CB7606 /* moon.png in Resources */,
+				F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
 				F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */,
 				F3FCC2681DD1BFF200C884A9 /* tab1.png in Resources */,
 				F3D0183C1DD35BEB00CB7606 /* music.png in Resources */,
+				F3D0185E1DD4B8DF00CB7606 /* location_yes@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,10 +394,20 @@
 				F3FCC2321DD0CA6F00C884A9 /* Extensions.swift in Sources */,
 				F3FCC2731DD1D60000C884A9 /* GPUViewController.swift in Sources */,
 				F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */,
+				F3D018521DD4AB0C00CB7606 /* SearchViewController.swift in Sources */,
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
 				F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */,
+				F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */,
+				F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */,
+				F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */,
+				F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */,
+				F3D018501DD4AB0C00CB7606 /* RecordViewController.swift in Sources */,
 				F3D018301DD33ACA00CB7606 /* MenuController.swift in Sources */,
 				F3FCC2301DD0C0BE00C884A9 /* ZHNavigationController.swift in Sources */,
+				F3D018541DD4AB0C00CB7606 /* TipView.swift in Sources */,
+				F3D018561DD4AB5E00CB7606 /* FileHelper.swift in Sources */,
+				F3D018531DD4AB0C00CB7606 /* StatusView.swift in Sources */,
+				F3D0184E1DD4AB0C00CB7606 /* DisplayViewController.swift in Sources */,
 				F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
 				F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */,
@@ -470,7 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhing.swiftStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = swiftStyle/OCBridgeHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -489,7 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhing.swiftStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = swiftStyle/OCBridgeHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -158,7 +158,7 @@ class MenuContainerView: UIView {
         if isExtended {
 //            imageMusicView.transform = imageMusicView.transform.rotated(by: -CGFloat(M_PI)*3)
 //            imageLocationView.transform=imageLocationView.transform.rotated(by: -CGFloat(M_PI)*3)
-//            imageCameraView.transform=imageCameraView.transform.rotated(by: -CGFloat(M_PI)*3)
+//            imageCameraView.transform=imageCameraView.transform.rotated(by: -CGFloat(M_PI))
 //            imageTextView.transform=imageTextView.transform.rotated(by: -CGFloat(M_PI)*3)
 //            imageMoonView.transform=imageMoonView.transform.rotated(by: -CGFloat(M_PI)*3)
             
@@ -166,7 +166,7 @@ class MenuContainerView: UIView {
         } else {
 //            imageMusicView.transform=imageMusicView.transform.rotated(by: CGFloat(M_PI)*3)
 //            imageLocationView.transform=imageLocationView.transform.rotated(by: CGFloat(M_PI)*3)
-//            imageCameraView.transform=imageCameraView.transform.rotated(by: CGFloat(M_PI)*3)
+//            imageCameraView.transform=imageCameraView.transform.rotated(by: CGFloat(M_PI))
 //            imageTextView.transform=imageTextView.transform.rotated(by: CGFloat(M_PI)*3)
 //            imageMoonView.transform=imageMoonView.transform.rotated(by: CGFloat(M_PI)*3)
             

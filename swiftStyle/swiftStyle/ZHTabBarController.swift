@@ -22,7 +22,7 @@ class ZHTabBarController: UITabBarController, UITabBarControllerDelegate {
         let vc1 : ViewController? = ViewController()
         let vc2 : ViewController? = ViewController()
         let vc3 : ViewController? = ViewController()
-        let vc4 : ViewController? = ViewController()
+        let vc4 : OtherViewController? = OtherViewController()
         
         let nav1 : ZHNavigationController = ZHNavigationController.init(rootViewController: vc1!)
         let nav2 : ZHNavigationController = ZHNavigationController.init(rootViewController: vc2!)

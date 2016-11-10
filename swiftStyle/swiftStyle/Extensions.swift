@@ -24,6 +24,10 @@ extension UIView {
         self.layer.addSublayer(lineLayer)
         return lineLayer
     }
+    
+    func setFrameSize(size:CGSize) {
+        self.frame = CGRect.init(origin: self.frame.origin, size: size)
+    }
 }
 
 extension UIImage {
