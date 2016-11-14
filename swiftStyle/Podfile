@@ -11,4 +11,5 @@ target 'swiftStyle' do
     pod 'GPUImage'
     pod 'AMap2DMap', '4.3.0'
     pod 'AMapSearch', '4.2.0'
+    pod 'Jukebox'
 end

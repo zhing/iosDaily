@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>若不允许，您将无法使用直播功能</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>若不允许，您将无法选择照片</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>

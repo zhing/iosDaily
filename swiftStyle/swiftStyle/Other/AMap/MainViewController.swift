@@ -13,7 +13,7 @@ let APIKey = "239c18e5ca7eeefe7956278ed922a326"
 class MainViewController: UIViewController, MAMapViewDelegate {
     
     var mapView: MAMapView!
-    var isRecording: Bool = false
+    var _isRecording :Bool = false
     var locationButton: UIButton!
     var searchButton: UIButton!
     var imageLocated: UIImage!
@@ -75,8 +75,8 @@ class MainViewController: UIViewController, MAMapViewDelegate {
         topButton.addTarget(self, action: #selector(actionRecordAndStop), for: UIControlEvents.touchUpInside)
         self.navigationItem.titleView = topButton
         
-        imageLocated = UIImage(named: "location_yes.png")?.imageWithTintColor(tintColor: UIColor.blue)
-        imageNotLocate = UIImage(named: "location_no.png")?.imageWithTintColor(tintColor: UIColor.blue)
+        imageLocated = UIImage(named: "location_yes.png")?.imageWithTintColor(tintColor: RGB(21, 126, 251))
+        imageNotLocate = UIImage(named: "location_no.png")?.imageWithTintColor(tintColor: RGB(21, 126, 251))
         
         locationButton = UIButton(frame: CGRect(x: 20, y: view.bounds.height - 80, width: 40, height: 40))
         
@@ -90,16 +90,17 @@ class MainViewController: UIViewController, MAMapViewDelegate {
         locationButton!.addTarget(self, action: #selector(MainViewController.actionLocation(sender:)), for: UIControlEvents.touchUpInside)
         
         locationButton!.setImage(imageNotLocate, for: UIControlState.normal)
+        locationButton!.setImage(imageLocated, for: UIControlState.selected)
         
         view.addSubview(locationButton!)
         
         //
-        searchButton = UIButton(frame: CGRect(x: view.bounds.width - 100, y: view.bounds.height - 80, width: 80, height: 40))
+        searchButton = UIButton(frame: CGRect(x: view.bounds.width - 60, y: view.bounds.height - 80, width: 40, height: 40))
         searchButton!.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleTopMargin]
         searchButton!.backgroundColor = UIColor.white
         searchButton!.layer.cornerRadius = 5
-        searchButton!.setTitleColor(UIColor.black, for: UIControlState.normal)
-        searchButton!.setTitle("Search", for: UIControlState.normal)
+        searchButton!.setImage(UIImage(named:"search.png")?.reSizeImage(size: CGSize.init(width: 30, height: 30)).imageWithTintColor(tintColor: RGB(21, 126, 251)), for: UIControlState.normal)
+        searchButton!.imageView?.contentMode = UIViewContentMode.center
         
         searchButton!.addTarget(self, action: #selector(MainViewController.actionSearch(sender:)), for: UIControlEvents.touchUpInside)
         view.addSubview(searchButton!)
@@ -113,7 +114,20 @@ class MainViewController: UIViewController, MAMapViewDelegate {
         statusView!.showStatusInfo(info: nil)
         
         view.addSubview(statusView!)
-        
+        tipView.isHidden = true
+    }
+    
+    var isRecording: Bool {
+        get { return _isRecording}
+        set {
+            if newValue {
+                tipView?.isHidden = true
+            } else {
+                tipView?.isHidden = false
+            }
+            
+            _isRecording = newValue
+        }
     }
     
     //MARK:- Actions
@@ -216,7 +230,7 @@ class MainViewController: UIViewController, MAMapViewDelegate {
     
     //MARK:- MAMapViewDelegate
     
-    func mapView(_ mapView: MAMapView , didUpdate userLocation: MAUserLocation ) {
+    func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         
         if isRecording {
             // filter the result
@@ -251,10 +265,9 @@ class MainViewController: UIViewController, MAMapViewDelegate {
     */
     func mapView(_ mapView: MAMapView, didChange mode: MAUserTrackingMode, animated: Bool) {
         if mode == MAUserTrackingMode.none {
-            locationButton?.setImage(imageNotLocate, for: UIControlState.normal)
-        }
-        else {
-            locationButton?.setImage(imageLocated, for: UIControlState.normal)
+            locationButton.isSelected = false
+        } else {
+            locationButton.isSelected = true
         }
     }
 

@@ -5,12 +5,14 @@ PODS:
   - AMapSearch (4.2.0):
     - AMapFoundation (~> 1.0)
   - GPUImage (0.1.7)
+  - Jukebox (0.2.1)
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - AMap2DMap (= 4.3.0)
   - AMapSearch (= 4.2.0)
   - GPUImage
+  - Jukebox
   - SnapKit (~> 3.0.2)
 
 SPEC CHECKSUMS:
@@ -18,8 +20,9 @@ SPEC CHECKSUMS:
   AMapFoundation: 636834a27cd003084f56b4232f3031e6a44c7e7e
   AMapSearch: 788020fca7ed18819e8bc2bfca716a6775a05ada
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: ab189a93cba4f2019f6bb9b833c6be6529c66a4f
+PODFILE CHECKSUM: cef1b650f742aea4a597de42ff4510333da9c34b
 
 COCOAPODS: 1.1.0.rc.2

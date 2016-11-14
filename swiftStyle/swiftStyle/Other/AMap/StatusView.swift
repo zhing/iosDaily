@@ -50,7 +50,7 @@ class StatusView: UIView {
         control.frame = CGRect(x: 0, y: 0, width: frame.width, height: controlHeight)
         control.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         control.titleLabel!.font = UIFont.systemFont(ofSize: 16)
-        control.setTitle("Opened", for: UIControlState.normal)
+        control.setTitle("close", for: UIControlState.normal)
         control.addTarget(self, action: #selector(StatusView.actionSwitch), for: UIControlEvents.touchUpInside)
         
         addSubview(control)
@@ -60,7 +60,7 @@ class StatusView: UIView {
         isOpen = !isOpen
         
         if isOpen {
-            control.setTitle("Opened", for: UIControlState.normal)
+            control.setTitle("close", for: UIControlState.normal)
             
             UIView.animate(withDuration: 0.25, animations: {
                 self.frame = self.originalFrame
@@ -69,7 +69,7 @@ class StatusView: UIView {
                 })
         }
         else {
-            control.setTitle("Closed", for: UIControlState.normal)
+            control.setTitle("open", for: UIControlState.normal)
             
             UIView.animate(withDuration: 0.25, animations: {
                 self.frame = CGRect(x: self.originalFrame.origin.x, y: self.originalFrame.origin.y, width: self.originalFrame.width, height: self.controlHeight)
