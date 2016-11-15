@@ -11,16 +11,11 @@ import AVKit
 import MediaPlayer
 import MobileCoreServices
 import AVFoundation
-import Jukebox
-
-let audioURL = "http://zhing.qiniudn.com/%E5%B1%B1%E8%80%B3%E6%B9%BE.mp3"
-let audioURL2 = "https://dn-zhing.qbox.me/%E5%B1%B1%E8%80%B3%E6%B9%BE.mp3"
+import BMPlayer
 
 class PlayVideoViewController: UIViewController {
     var button01 :UIButton!
-    var button02 :UIButton!
-    var player :AVPlayer!
-    var audioPlayer :AVAudioPlayer!
+    var player :BMPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,74 +23,45 @@ class PlayVideoViewController: UIViewController {
         self.title = "palyVideo"
         self.view.backgroundColor = UIColor.white
         setupSubViews()
-    }
-    
-    func setupSubViews() {
-        button01 = UIButton.init(type: UIButtonType.custom)
-        button01.setTitle("local", for: UIControlState.normal)
-        button01.titleLabel?.textAlignment = NSTextAlignment.center
-        button01.backgroundColor = UIColor.lightGray
-        button01.addTarget(self, action: #selector(loadLocalAudio), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(button01)
-        button01.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(100)
-            make.leading.equalTo(20)
-            make.top.equalTo(100)
-        }
         
-        button02 = UIButton.init(type: UIButtonType.custom)
-        button02.setTitle("remote", for: UIControlState.normal)
-        button02.titleLabel?.textAlignment = NSTextAlignment.center
-        button02.backgroundColor = UIColor.lightGray
-        button02.addTarget(self, action: #selector(loadRemoteAudio), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(button02)
-        button02.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(100)
-            make.leading.equalTo(20)
-            make.top.equalTo(button01.snp.bottom).offset(20)
-        }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "pick", style: UIBarButtonItemStyle.plain, target: self, action: #selector(pickLocalVedio))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        _ = startMediaBrowserFromViewController(viewController: self, usingDelegate: self)
-//        _ = startCameraFromViewController(viewController: self, withDelegate: self)
+        initResource()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func loadLocalAudio() {
-        do {
-            let soundFile = URL.init(fileURLWithPath: Bundle.main.path(forResource: "山耳湾", ofType: "mp3")!)
-            audioPlayer = try AVAudioPlayer(contentsOf: soundFile)
-            guard audioPlayer != nil else {
-                return
-            }
-            
-            audioPlayer!.prepareToPlay()
-            audioPlayer!.play()
-        } catch let error {
-            print(error.localizedDescription)
+    func setupSubViews() {
+        player = BMPlayer()
+        view.addSubview(player!)
+        player.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(64)
+            make.left.right.equalTo(self.view)
+            // Note here, the aspect ratio 16:9 priority is lower than 1000 on the line, because the 4S iPhone aspect ratio is not 16:9
+            make.height.equalTo(player.snp.width).multipliedBy(9.0/16.0).priority(750)
         }
+        
+        player.backBlock = {[unowned self] in
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+        BMPlayerConf.shouldAutoPlay = false
     }
     
-    func loadRemoteAudio() {
-        player = AVPlayer(url: URL(string: audioURL2)!)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
-        self.view.layer.addSublayer(playerLayer)
+    func initResource() {
+        let resource0 = BMPlayerItemDefinitionItem(url: URL(string: "http://baobab.wdjcdn.com/14570071502774.mp4")!, definitionName: "HD")
+        let resource1 = BMPlayerItemDefinitionItem(url: URL(string: "http://baobab.wdjcdn.com/1457007294968_5824_854x480.mp4")!, definitionName: "SD")
         
-        player!.play()
-        
-//        let jukebox = Jukebox(delegate: nil, items: [
-//            JukeboxItem(URL: URL(string: audioURL)!),
-//            JukeboxItem(URL: URL(string: "http://www.noiseaddicts.com/samples_1w72b820/2958.mp3")!)
-//            ])
-//        jukebox?.play()
+        let item = BMPlayerItem(title: "周末号外丨川普版权力的游戏",
+                                resource: [resource0, resource1],
+                                cover: "http://img.wdjimg.com/image/video/acdba01e52efe8082d7c33556cf61549_0_0.jpeg")
+        player.playWithPlayerItem(item)
+    }
+    
+    func pickLocalVedio() {
+        _ = startMediaBrowserFromViewController(viewController: self, usingDelegate: self)
+        //        _ = startCameraFromViewController(viewController: self, withDelegate: self)
     }
     
     func startMediaBrowserFromViewController(viewController: UIViewController, usingDelegate delegate: UINavigationControllerDelegate & UIImagePickerControllerDelegate) ->Bool {
@@ -146,7 +112,7 @@ extension PlayVideoViewController: UIImagePickerControllerDelegate {
         
         dismiss(animated: true, completion: {
             if mediaType == kUTTypeMovie as String {
-                self.takeVideo(info: info)
+                self.playVideo2(info: info)
             }
         })
     }
@@ -167,6 +133,15 @@ extension PlayVideoViewController: UIImagePickerControllerDelegate {
         playerLayer.frame = self.view.bounds
         self.view.layer.addSublayer(playerLayer)
         player.play()
+    }
+    
+    func playVideoByBMPlayer(info: [String : Any]) {
+//        let resource = BMPlayerItemDefinitionItem(url: info[UIImagePickerControllerMediaURL] as! URL, definitionName: "SD")
+//        let playItem = BMPlayerItem.init(title: "video", resource: [resource])
+        player.removeFromSuperview()
+        player = nil
+        setupSubViews()
+        player.playWithURL(info[UIImagePickerControllerMediaURL] as! URL)
     }
     
     func takeVideo(info: [String : Any]) {

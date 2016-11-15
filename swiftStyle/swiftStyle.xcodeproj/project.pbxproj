@@ -10,6 +10,12 @@
 		071AC69BA55A0C9C98B71C70 /* Pods_swiftStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
+		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
+		F39311D11DD9EE9D00D88F48 /* musicBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F39311D01DD9EE9D00D88F48 /* musicBackground.jpg */; };
+		F39311D71DDAFBFE00D88F48 /* last.png in Resources */ = {isa = PBXBuildFile; fileRef = F39311D61DDAFBFE00D88F48 /* last.png */; };
+		F39311D91DDAFC0700D88F48 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = F39311D81DDAFC0700D88F48 /* next.png */; };
+		F39311DC1DDAFD5700D88F48 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = F39311DA1DDAFD5700D88F48 /* pause.png */; };
+		F39311DD1DDAFD5700D88F48 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F39311DB1DDAFD5700D88F48 /* play.png */; };
 		F3D018281DD2CC7400CB7606 /* ImageBlurController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */; };
 		F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3D018291DD2CEF000CB7606 /* timg.jpeg */; };
 		F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */; };
@@ -57,6 +63,12 @@
 		B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
+		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
+		F39311D01DD9EE9D00D88F48 /* musicBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = musicBackground.jpg; sourceTree = "<group>"; };
+		F39311D61DDAFBFE00D88F48 /* last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = last.png; sourceTree = "<group>"; };
+		F39311D81DDAFC0700D88F48 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		F39311DA1DDAFD5700D88F48 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		F39311DB1DDAFD5700D88F48 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlurController.swift; sourceTree = "<group>"; };
 		F3D018291DD2CEF000CB7606 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyController.swift; sourceTree = "<group>"; };
@@ -130,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */,
+				F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */,
 			);
 			path = video;
 			sourceTree = "<group>";
@@ -200,6 +213,11 @@
 		F3FCC2371DD0D2DD00C884A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F39311DA1DDAFD5700D88F48 /* pause.png */,
+				F39311DB1DDAFD5700D88F48 /* play.png */,
+				F39311D81DDAFC0700D88F48 /* next.png */,
+				F39311D61DDAFBFE00D88F48 /* last.png */,
+				F39311D01DD9EE9D00D88F48 /* musicBackground.jpg */,
 				F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */,
 				F3D0185F1DD5735E00CB7606 /* search.png */,
 				F3D0185B1DD4B8DF00CB7606 /* location_no@2x.png */,
@@ -333,24 +351,29 @@
 			files = (
 				F3D018381DD35BD700CB7606 /* camera.png in Resources */,
 				F3D018341DD3580900CB7606 /* add.png in Resources */,
+				F39311DC1DDAFD5700D88F48 /* pause.png in Resources */,
 				F3D018321DD355A800CB7606 /* heart.png in Resources */,
 				F3D018371DD35BD700CB7606 /* address.png in Resources */,
 				F3D0183E1DD35BF700CB7606 /* text.png in Resources */,
 				F3FCC2691DD1BFF200C884A9 /* tab2.png in Resources */,
 				F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */,
 				F3D018601DD5735E00CB7606 /* search.png in Resources */,
+				F39311D11DD9EE9D00D88F48 /* musicBackground.jpg in Resources */,
 				F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */,
 				F3D018591DD4B0AA00CB7606 /* icon_play.png in Resources */,
 				F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */,
 				F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */,
 				F3D0185D1DD4B8DF00CB7606 /* location_no@2x.png in Resources */,
+				F39311D91DDAFC0700D88F48 /* next.png in Resources */,
 				F3D0183B1DD35BEB00CB7606 /* moon.png in Resources */,
 				F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
 				F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */,
 				F3FCC2681DD1BFF200C884A9 /* tab1.png in Resources */,
+				F39311DD1DDAFD5700D88F48 /* play.png in Resources */,
 				F3D0183C1DD35BEB00CB7606 /* music.png in Resources */,
 				F3D0185E1DD4B8DF00CB7606 /* location_yes@2x.png in Resources */,
+				F39311D71DDAFBFE00D88F48 /* last.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +440,7 @@
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
 				F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */,
 				F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */,
+				F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */,
 				F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */,
 				F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */,
 				F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */,

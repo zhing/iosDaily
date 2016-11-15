@@ -11,5 +11,15 @@ target 'swiftStyle' do
     pod 'GPUImage'
     pod 'AMap2DMap', '4.3.0'
     pod 'AMapSearch', '4.2.0'
-    pod 'Jukebox'
+#    pod 'ZFPlayer'
+    pod 'BMPlayer', :git => 'https://github.com/BrikerMan/BMPlayer.git'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |configuration|
+            configuration.build_settings['SWIFT_VERSION'] = "3.0"
+            configuration.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+        end
+    end
 end

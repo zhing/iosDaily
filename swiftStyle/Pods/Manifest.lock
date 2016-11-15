@@ -4,25 +4,38 @@ PODS:
   - AMapFoundation (1.3.1)
   - AMapSearch (4.2.0):
     - AMapFoundation (~> 1.0)
+  - BMPlayer (0.5.0):
+    - NVActivityIndicatorView
+    - SnapKit (~> 3.0)
   - GPUImage (0.1.7)
-  - Jukebox (0.2.1)
+  - NVActivityIndicatorView (3.0)
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - AMap2DMap (= 4.3.0)
   - AMapSearch (= 4.2.0)
+  - BMPlayer (from `https://github.com/BrikerMan/BMPlayer.git`)
   - GPUImage
-  - Jukebox
   - SnapKit (~> 3.0.2)
+
+EXTERNAL SOURCES:
+  BMPlayer:
+    :git: https://github.com/BrikerMan/BMPlayer.git
+
+CHECKOUT OPTIONS:
+  BMPlayer:
+    :commit: 847f5699a78f5ec32e1995622394350140f4184d
+    :git: https://github.com/BrikerMan/BMPlayer.git
 
 SPEC CHECKSUMS:
   AMap2DMap: f3f0fc5cdbf0242ff22da0c8605f24f8d7187b35
   AMapFoundation: 636834a27cd003084f56b4232f3031e6a44c7e7e
   AMapSearch: 788020fca7ed18819e8bc2bfca716a6775a05ada
+  BMPlayer: b239591f7567a6467cff7026e7e957cd192c1718
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
+  NVActivityIndicatorView: 81953b5e65093ba79edf4fe7268e002039ca5268
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: cef1b650f742aea4a597de42ff4510333da9c34b
+PODFILE CHECKSUM: 97da1b9df23fd8a6626a799d0c7db917104c11a0
 
 COCOAPODS: 1.1.0.rc.2

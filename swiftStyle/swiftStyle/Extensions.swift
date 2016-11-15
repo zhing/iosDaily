@@ -32,6 +32,28 @@ extension UIView {
 
 extension UIImage {
     
+    static func imageWithColor(fillColor: UIColor, size: CGSize) ->UIImage {
+        return UIImage.imageWithFill(fillColor: fillColor, strokeColor: nil, size: size, lineWidth: 0, cornerRadius: 0)
+    }
+    
+    static func roundedImageWithColor(fillColor: UIColor, size: CGSize, cornerRadius: CGFloat)->UIImage {
+        return UIImage.imageWithFill(fillColor: fillColor, strokeColor: nil, size: size, lineWidth: 0, cornerRadius: cornerRadius)
+    }
+    
+    static func imageWithFill(fillColor: UIColor, strokeColor: UIColor?, size: CGSize, lineWidth: CGFloat, cornerRadius: CGFloat) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        fillColor.setFill()
+        strokeColor?.setStroke()
+        let roundedRect = CGRect.init(x: lineWidth/2, y: lineWidth/2, width: size.width-lineWidth, height: size.height-lineWidth)
+        let path = UIBezierPath.init(roundedRect: roundedRect, cornerRadius: cornerRadius)
+        path.lineWidth = lineWidth
+        path.fill()
+        path.stroke()
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    
 //    static func imageWithFill(color: UIColor, size: CGSize) ->UIImage{
 //        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
 //        color.setFill()
