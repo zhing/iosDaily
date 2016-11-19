@@ -27,22 +27,22 @@ class ZHNavigationController: UINavigationController, UINavigationControllerDele
         
         self.view.backgroundColor = UIColor.clear
         self.delegate = self
+        self.interactivePopGestureRecognizer?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension ZHNavigationController :UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer == interactivePopGestureRecognizer {
+            if viewControllers.count<2 || visibleViewController == viewControllers[0] {
+                return false
+            }
+        }
+        return true
     }
-    */
-
 }

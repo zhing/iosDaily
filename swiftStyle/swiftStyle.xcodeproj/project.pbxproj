@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		071AC69BA55A0C9C98B71C70 /* Pods_swiftStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */; };
+		F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E94721DDF3BB000E556BA /* WkWebViewController.swift */; };
+		F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F34E94771DE09C6C00E556BA /* ExampleApp.html */; };
+		F34E947A1DE0C0FD00E556BA /* injection.js in Resources */ = {isa = PBXBuildFile; fileRef = F34E94791DE0C0FD00E556BA /* injection.js */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
 		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
@@ -61,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34E94721DDF3BB000E556BA /* WkWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
+		F34E94771DE09C6C00E556BA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		F34E94791DE0C0FD00E556BA /* injection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injection.js; sourceTree = "<group>"; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
 		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F34E94711DDF3B6400E556BA /* WKWebview */ = {
+			isa = PBXGroup;
+			children = (
+				F34E94721DDF3BB000E556BA /* WkWebViewController.swift */,
+			);
+			path = WKWebview;
+			sourceTree = "<group>";
+		};
+		F34E94741DE09B3D00E556BA /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F34E94791DE0C0FD00E556BA /* injection.js */,
+				F34E94771DE09C6C00E556BA /* ExampleApp.html */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		F39311C91DD96DE700D88F48 /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +207,7 @@
 		F3D845141DC07FF2009F6C91 /* swiftStyle */ = {
 			isa = PBXGroup;
 			children = (
+				F34E94741DE09B3D00E556BA /* resources */,
 				F3FCC26D1DD1C40A00C884A9 /* Network */,
 				F3FCC26E1DD1C40A00C884A9 /* Other */,
 				F3FCC26F1DD1C40A00C884A9 /* Storage */,
@@ -264,6 +288,7 @@
 		F3FCC26E1DD1C40A00C884A9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F34E94711DDF3B6400E556BA /* WKWebview */,
 				F39311C91DD96DE700D88F48 /* video */,
 				F3D018461DD4AB0C00CB7606 /* AMap */,
 				F3D018411DD4665D00CB7606 /* OtherViewController.swift */,
@@ -368,8 +393,10 @@
 				F3D0183B1DD35BEB00CB7606 /* moon.png in Resources */,
 				F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
+				F34E947A1DE0C0FD00E556BA /* injection.js in Resources */,
 				F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */,
 				F3FCC2681DD1BFF200C884A9 /* tab1.png in Resources */,
+				F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */,
 				F39311DD1DDAFD5700D88F48 /* play.png in Resources */,
 				F3D0183C1DD35BEB00CB7606 /* music.png in Resources */,
 				F3D0185E1DD4B8DF00CB7606 /* location_yes@2x.png in Resources */,
@@ -441,6 +468,7 @@
 				F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */,
 				F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */,
 				F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */,
+				F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */,
 				F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */,
 				F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */,
 				F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */,

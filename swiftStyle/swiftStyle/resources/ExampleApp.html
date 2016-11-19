@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<style type='text/css'>
+		html { font-family:Helvetica; color:#222; }
+		h1 { color:steelblue; font-size:24px; margin-top:24px; }
+		button { margin:0 3px 10px; font-size:12px; }
+		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+	</style>
+</head><body>
+	<h1>Demo For WKWebView</h1>
+	<div id='buttons'>
+        <button id="clickMeButton1" type="button" value="Submit">postMsg</button>
+        <button id="clickMeButton2" type="button" value="Submit">invokeSwift</button>
+        <div>
+            <textarea id="textarea" rows="3" cols="20">
+                
+            </textarea>
+        </div>
+    </div>
+    <script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    showConfirm();
+    
+    var button1 = document.getElementById("clickMeButton1");
+    button1.addEventListener("click", function() {
+                            var messageToPost = {'ButtonId':'clickMeButton','type':'plainText'};
+                            window.webkit.messageHandlers.buttonClicked.postMessage(messageToPost);
+                            alert("Message1 has been posted");
+                            },
+                            false);
+                            
+    var button2 = document.getElementById("clickMeButton2");
+    button2.addEventListener("click", function() {
+                            var messageToPost = {'className':'WkWebViewController','functionName':'invokeByJs','type':'invoke'};
+                            window.webkit.messageHandlers.buttonClicked.postMessage(messageToPost);
+                            alert("Message2 has been posted");
+                            }, false);
+    function showSwiftMessage(msg) {
+        var textarea = document.getElementById("textarea");
+        textarea.value = msg;
+    }
+    </script>
+    <div id='log'></div>
+</body></html>

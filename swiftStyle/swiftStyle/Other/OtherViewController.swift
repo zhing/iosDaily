@@ -14,6 +14,7 @@ class OtherViewController: UIViewController {
     var button01 :UIButton!
     var button02 :UIButton!
     var button03 :UIButton!
+    var button04 :UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,18 @@ class OtherViewController: UIViewController {
             make.leading.equalTo(20)
             make.top.equalTo(button02.snp.bottom).offset(20)
         }
+        
+        button04 = UIButton.init(type: UIButtonType.custom)
+        button04.setTitle("webView", for: UIControlState.normal)
+        button04.titleLabel?.textAlignment = NSTextAlignment.center
+        button04.backgroundColor = UIColor.lightGray
+        button04.addTarget(self, action: #selector(showWkWebViewController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button04)
+        button04.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(100)
+            make.leading.equalTo(20)
+            make.top.equalTo(button03.snp.bottom).offset(20)
+        }
     }
     
     func showAMapViewController(sender : AnyObject?) {
@@ -73,6 +86,12 @@ class OtherViewController: UIViewController {
     
     func showAudioViewController(sender : AnyObject?) {
         let controller = AudioPlayerViewController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showWkWebViewController(sender : AnyObject?) {
+        let controller = WkWebViewController.init()
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

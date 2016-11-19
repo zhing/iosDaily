@@ -13,6 +13,7 @@ target 'swiftStyle' do
     pod 'AMapSearch', '4.2.0'
 #    pod 'ZFPlayer'
     pod 'BMPlayer', :git => 'https://github.com/BrikerMan/BMPlayer.git'
+    pod 'TTTAttributedLabel'
 end
 
 post_install do |installer|
