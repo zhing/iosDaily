@@ -54,12 +54,13 @@ class WkWebViewController: UIViewController {
         let confirmScript = WKUserScript(source: "function showConfirm() {if(confirm('确定弹出Alert窗口吗？')){alert('在载入webview时通过Swift注入的JS方法')}}", injectionTime: WKUserScriptInjectionTime.atDocumentStart,
                                          forMainFrameOnly: true) // 只添加到mainFrame中
         let js = fetchJScript()
-        let jsScript = WKUserScript(source: js, injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: false)
+        let jsScript = WKUserScript(source: js, injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: false)
         configuretion.userContentController.addUserScript(confirmScript)
         configuretion.userContentController.addUserScript(jsScript)
         
         // 添加一个名称，就可以在JS通过这个名称发送消息：
         configuretion.userContentController.add(self, name: "buttonClicked")
+        configuretion.userContentController.add(self, name: "imgClicked")
         
         webView = WKWebView(frame: self.view.bounds, configuration: configuretion)
         webView.uiDelegate = self
@@ -171,6 +172,18 @@ class WkWebViewController: UIViewController {
         }
     }
     
+    func fetchImageUrls() {
+        print(#function)
+        guard webView.isLoading else {
+            webView.evaluateJavaScript("getImageUrls()", completionHandler: { (result, error) in
+                if error == nil {
+                    print(result as! NSArray)
+                }
+            })
+            return;
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -276,6 +289,7 @@ extension WkWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print(#function)
         self.navigationItem.title = self.webView.title
+        fetchImageUrls()
     }
     
     //加载失败了，会回调下面的代理方法
@@ -334,6 +348,7 @@ extension WkWebViewController :WKScriptMessageHandler {
                     }
                 }
             }
+        } else if message.name == "imgClicked" {
         }
     }
 }

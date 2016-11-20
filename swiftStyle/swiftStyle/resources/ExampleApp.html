@@ -17,13 +17,13 @@
                 
             </textarea>
         </div>
+        <div>
+            <img src="http://tc2.baidu-1img.cn/timg?pa&amp;quality=100&amp;size=w4096&amp;sec=1479606702&amp;di=71807730ab4301b7cf1b3038f7587ed6&amp;ref=http%3A%2F%2Fm%2Esohu%2Ecom%2Fn%2F473532807%2F%3F%5Ftrans%5F%3D000115%5F3w&amp;src=http%3A%2F%2Fs9%2Err%2Eitc%2Ecn%2Fr%2FwapChange%2F201611%5F18%5F13%2Fa8z0ce81675895598596%2Ejpg" style="height:auto;font-size:16px;font-weight:normal;margin-left:4px;margin-right:4px;float:none;color:rgb(0, 0, 0);text-align:-webkit-auto;text-indent:0px;white-space:normal;text-overflow:clip;max-width:100%;clear:none;display:inline;opacity:1;"/>
+        </div>
     </div>
     <script>
-        window.onerror = function(err) {
-            log('window.onerror: ' + err)
-        }
     showConfirm();
-    
+
     var button1 = document.getElementById("clickMeButton1");
     button1.addEventListener("click", function() {
                             var messageToPost = {'ButtonId':'clickMeButton','type':'plainText'};
@@ -38,10 +38,6 @@
                             window.webkit.messageHandlers.buttonClicked.postMessage(messageToPost);
                             alert("Message2 has been posted");
                             }, false);
-    function showSwiftMessage(msg) {
-        var textarea = document.getElementById("textarea");
-        textarea.value = msg;
-    }
     </script>
     <div id='log'></div>
 </body></html>
