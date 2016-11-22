@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var button03 : UIButton!
     var button04 : UIButton!
     var button05 : UIButton!
+    var button06 : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,17 @@ class ViewController: UIViewController {
             make.leading.equalTo(button04)
             make.top.equalTo(button04.snp.bottom).offset(20)
         }
+        
+        button06 = UIButton.init(type: UIButtonType.custom)
+        button06.setTitle("Refresh", for: UIControlState.normal)
+        button06.backgroundColor = UIColor.lightGray
+        button06.addTarget(self, action: #selector(showRefreshController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button06)
+        button06.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button05)
+            make.leading.equalTo(button05)
+            make.top.equalTo(button05.snp.bottom).offset(20)
+        }
     }
     
     func showGPUImageController() {
@@ -107,6 +119,12 @@ class ViewController: UIViewController {
     
     func showMenuController() {
         let controller = MenuController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showRefreshController() {
+        let controller = TableRefreshViewController.init()
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

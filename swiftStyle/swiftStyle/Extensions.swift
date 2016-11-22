@@ -28,6 +28,20 @@ extension UIView {
     func setFrameSize(size:CGSize) {
         self.frame = CGRect.init(origin: self.frame.origin, size: size)
     }
+    
+    var frameWidth :CGFloat {
+        get {return self.frame.size.width}
+        set {
+            self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: newValue, height: self.frame.size.height))
+        }
+    }
+    
+    var frameHeight :CGFloat {
+        get { return self.frame.size.height }
+        set {
+            self.frame = CGRect(origin: self.frame.origin, size: CGSize(width: self.frame.size.width, height: newValue))
+        }
+    }
 }
 
 extension UIImage {
@@ -108,5 +122,14 @@ extension UIImage {
     func imageWithBlur() -> UIImage {
         let stillImageFilter:GPUImageiOSBlurFilter = GPUImageiOSBlurFilter()
         return stillImageFilter.image(byFilteringImage: self)
+    }
+}
+
+
+extension UIScrollView {
+    func setInsetTop(_ insetTop: CGFloat) {
+        var inset = self.contentInset
+        inset.top = insetTop
+        self.contentInset = inset
     }
 }

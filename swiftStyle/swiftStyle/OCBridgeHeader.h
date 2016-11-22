@@ -12,5 +12,5 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
-
+#import <AFNetworking/AFNetworking.h>
 #endif /* OCBridgeHeader_h */
