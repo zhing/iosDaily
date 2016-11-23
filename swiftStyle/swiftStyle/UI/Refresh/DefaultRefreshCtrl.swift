@@ -12,12 +12,11 @@ import SnapKit
 class DefaultRefreshCtrl: RefreshHeader {
     var loadingView :UIActivityIndicatorView!
     var tipText :UILabel!
-    var headerHeight :CGFloat?
     var tipLabelHidden :Bool
     
     override class func refreshHeaderForCloures(callback: @escaping RefreshCallback) -> BaseRefreshCtrl?{
         let header:DefaultRefreshCtrl? = DefaultRefreshCtrl(frame: CGRect.zero)
-        header!.refreshCallback = callback
+        header?.refreshCallback = callback
         return header
     }
     

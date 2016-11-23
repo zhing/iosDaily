@@ -16,6 +16,7 @@
 		F366B14F1DE424770079C169 /* BaseRefreshCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B14E1DE424770079C169 /* BaseRefreshCtrl.swift */; };
 		F366B1511DE431BB0079C169 /* DefaultRefreshCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1501DE431BB0079C169 /* DefaultRefreshCtrl.swift */; };
 		F366B1531DE43A310079C169 /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1521DE43A310079C169 /* RefreshHeader.swift */; };
+		F366B1551DE572B70079C169 /* LoadMoreCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
 		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
@@ -77,6 +78,7 @@
 		F366B14E1DE424770079C169 /* BaseRefreshCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRefreshCtrl.swift; sourceTree = "<group>"; };
 		F366B1501DE431BB0079C169 /* DefaultRefreshCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRefreshCtrl.swift; sourceTree = "<group>"; };
 		F366B1521DE43A310079C169 /* RefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshHeader.swift; sourceTree = "<group>"; };
+		F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCtrl.swift; sourceTree = "<group>"; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
 		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				F366B14E1DE424770079C169 /* BaseRefreshCtrl.swift */,
 				F366B1521DE43A310079C169 /* RefreshHeader.swift */,
 				F366B1501DE431BB0079C169 /* DefaultRefreshCtrl.swift */,
+				F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */,
 			);
 			path = Refresh;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */,
 				F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */,
 				F366B14F1DE424770079C169 /* BaseRefreshCtrl.swift in Sources */,
+				F366B1551DE572B70079C169 /* LoadMoreCtrl.swift in Sources */,
 				F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */,
 				F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */,
 				F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */,

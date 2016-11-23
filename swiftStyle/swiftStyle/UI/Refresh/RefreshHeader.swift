@@ -31,21 +31,20 @@ class RefreshHeader: BaseRefreshCtrl {
     
     override func scrollViewContentOffsetDidChange(change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentOffsetDidChange(change: change)
-        
-        if refreshState == RefreshState.refreshing {
+        guard refreshState != RefreshState.refreshing else {
             return
         }
         
         scrollViewOriginalInset = scrollView!.contentInset
         let offsetY = scrollView!.contentOffset.y
         let happenOffsetY = -scrollViewOriginalInset.top
-        if offsetY > happenOffsetY {
+        guard offsetY < happenOffsetY else {
             return
         }
         
         let normal2pullingOffsetY = max(happenOffsetY - self.frameHeight, -refreshPullTheshold)
         let pullingPercent = (happenOffsetY - offsetY) /  self.frameHeight
-        if scrollView!.isDragging {
+        if scrollView.isDragging {
             pullingPercentDidChanged(percent: pullingPercent)
             if refreshState == RefreshState.idle && offsetY < normal2pullingOffsetY {
                 refreshState = RefreshState.pulling
@@ -68,22 +67,22 @@ class RefreshHeader: BaseRefreshCtrl {
             }
             super.refreshState = newValue
             if refreshState == RefreshState.idle {
-                if oldState != RefreshState.refreshing {
+                guard oldState == RefreshState.refreshing else {
                     return
                 }
                 
                 UIView.animate(withDuration: 0.6, animations: {
-                    self.scrollView!.setInsetTop(self.scrollViewOriginalInset.top)
+                    self.scrollView.setInsetTop(self.scrollViewOriginalInset.top)
                 }, completion: { (Bool) in
                     self.pullingPercentDidChanged(percent: 0.0)
                 })
                 
             } else if refreshState == RefreshState.refreshing {
                 if pullDownContent {
-                    let top = scrollViewOriginalInset!.top + self.bounds.size.height
-                    let offset = scrollView!.contentOffset
-                    scrollView!.setInsetTop(top)
-                    scrollView!.contentOffset = offset
+                    let top = scrollViewOriginalInset.top + self.bounds.size.height
+                    let offset = scrollView.contentOffset
+                    scrollView.setInsetTop(top)
+                    scrollView.contentOffset = offset
                 }
             }
         }

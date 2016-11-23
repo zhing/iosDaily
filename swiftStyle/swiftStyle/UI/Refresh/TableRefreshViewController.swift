@@ -53,27 +53,14 @@ class TableRefreshViewController: BaseViewController {
         refresh()
     }
     
-    func networkRequest() {
-        manager = AFHTTPSessionManager()
-        manager.get(httpUrl, parameters: nil,
-                    progress: nil,
-                    success: {(operation :URLSessionDataTask, responseObject :Any?) -> Void in
-                        print("JSON: " + responseObject.debugDescription)
-                        self.parseJSON(responseObject as! NSArray)
-                        self.tableView.reloadData()
-                    },
-                    failure: {(operation :URLSessionDataTask?, err: Error) -> Void in
-                        print("Error: " + err.localizedDescription)
-                    })
-    }
-    
-    func parseJSON(_ arrayFromNetworking: NSArray) {
+    func parseJSON(_ arrayFromNetworking: NSArray) -> [Any]{
         var tmpArray :[CellItem] = []
         for var obj in arrayFromNetworking as! [[String: String]] {
             let item = CellItem(obj["firstName"]!, obj["lastName"]!, obj["phoneNumber"]!)
             tmpArray.append(item)
         }
-        resultArray = tmpArray
+        
+        return tmpArray
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,16 +74,42 @@ extension TableRefreshViewController {
         manager.get(httpUrl, parameters: nil,
             progress: nil,
             success: {(operation :URLSessionDataTask, responseObject :Any?) -> Void in
-            print("JSON: " + responseObject.debugDescription)
-            self.parseJSON(responseObject as! NSArray)
-            self.tableView.reloadData()
+                print("JSON: " + responseObject.debugDescription)
+                let tmpArr = self.parseJSON(responseObject as! NSArray)
+                self.resultArray = tmpArr as! [CellItem]
+                self.tableView.reloadData()
                 
-            self.endRefreshing(self.tableView)
+                self.endRefreshing(self.tableView)
+                if tmpArr.count >= 20 {
+                    self.addLoadMoreForTableView(self.tableView, loadMoreSel: #selector(self.loadMore))
+                } else {
+                    self.removeLoadMoreForTableView(self.tableView)
+                }
             },
             failure: {(operation :URLSessionDataTask?, err: Error) -> Void in
             self.endRefreshing(self.tableView)
             print("Error: " + err.localizedDescription)
             })
+    }
+        
+    func loadMore() {
+        manager.get(httpUrl, parameters: nil,
+                    progress: nil,
+                    success: {(operation :URLSessionDataTask, responseObject :Any?) -> Void in
+                        print("JSON: " + responseObject.debugDescription)
+                        let tmpArr = self.parseJSON(responseObject as! NSArray)
+                        self.resultArray.append(contentsOf: tmpArr as! [CellItem])
+                        self.tableView.reloadData()
+                        
+                        self.endLoadMore(self.tableView)
+                        if tmpArr.count < 20 {
+                            self.removeLoadMoreForTableView(self.tableView)
+                        }
+        },
+                    failure: {(operation :URLSessionDataTask?, err: Error) -> Void in
+                        self.endLoadMore(self.tableView)
+                        print("Error: " + err.localizedDescription)
+        })
     }
 }
 

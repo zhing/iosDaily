@@ -25,8 +25,11 @@ extension UIView {
         return lineLayer
     }
     
-    func setFrameSize(size:CGSize) {
-        self.frame = CGRect.init(origin: self.frame.origin, size: size)
+    var frameSize :CGSize {
+        get { return self.bounds.size }
+        set {
+            self.frame = CGRect.init(origin: self.frame.origin, size: newValue)
+        }
     }
     
     var frameX :CGFloat {

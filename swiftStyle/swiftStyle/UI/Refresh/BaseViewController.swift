@@ -31,6 +31,35 @@ class BaseViewController: UIViewController {
     }
     
     func endRefreshing(_ scrollView :UIScrollView) {
-        refreshHeader!.endRefreshing()
+        refreshHeader?.endRefreshing()
+    }
+    
+    func addLoadMoreForTableView(_ tableView :UITableView, loadMoreSel loadMoreSelector: Selector) {
+        var loadMoreCtrl  = tableView.tableFooterView as? LoadMoreCtrl
+        if let loadMoreCtrl = loadMoreCtrl, loadMoreCtrl.isKind(of:LoadMoreCtrl.classForCoder()) {
+            return
+        }
+        
+        loadMoreCtrl = LoadMoreCtrl(scrollView: tableView)
+        loadMoreCtrl?.backgroundColor = UIColor.clear
+        loadMoreCtrl?.addTarget(self, action: loadMoreSelector, for: UIControlEvents.valueChanged)
+        tableView.tableFooterView = loadMoreCtrl
+        if tableView.tableFooterView!.frameY < tableView.contentOffset.y + tableView.frameHeight{
+            loadMoreCtrl?.sendActions(for: UIControlEvents.valueChanged)
+        }
+    }
+    
+    func removeLoadMoreForTableView(_ tableView :UITableView) {
+        let loadMoreCtrl  = tableView.tableFooterView as? LoadMoreCtrl
+        if let loadMoreCtrl = loadMoreCtrl , loadMoreCtrl.isKind(of: LoadMoreCtrl.classForCoder()) {
+            tableView.tableFooterView = UIView(frame: CGRect.zero)
+        }
+    }
+    
+    func endLoadMore(_ tableView: UITableView) {
+        let loadMoreCtrl  = tableView.tableFooterView as? LoadMoreCtrl
+        if let loadMoreCtrl = loadMoreCtrl , loadMoreCtrl.isKind(of: LoadMoreCtrl.classForCoder()) {
+            loadMoreCtrl.endLoadMore()
+        }
     }
 }

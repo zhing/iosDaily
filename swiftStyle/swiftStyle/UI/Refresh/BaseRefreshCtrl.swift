@@ -21,7 +21,7 @@ class BaseRefreshCtrl: UIView {
     var refreshCallback : RefreshCallback?
     var refreshState :RefreshState!
     var scrollViewOriginalInset :UIEdgeInsets!
-    var scrollView :UIScrollView?
+    var scrollView :UIScrollView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,8 +36,8 @@ class BaseRefreshCtrl: UIView {
     }
     
     func addObservers() {
-        scrollView!.addObserver(self, forKeyPath: "contentOffset", options: ([NSKeyValueObservingOptions.new, NSKeyValueObservingOptions.old]), context: nil)
-        scrollView!.addObserver(self, forKeyPath: "contentSize", options: ([NSKeyValueObservingOptions.new, NSKeyValueObservingOptions.old]), context: nil)
+        scrollView.addObserver(self, forKeyPath: "contentOffset", options: ([NSKeyValueObservingOptions.new, NSKeyValueObservingOptions.old]), context: nil)
+        scrollView.addObserver(self, forKeyPath: "contentSize", options: ([NSKeyValueObservingOptions.new, NSKeyValueObservingOptions.old]), context: nil)
     }
     
     func removeObservers() {
@@ -46,15 +46,12 @@ class BaseRefreshCtrl: UIView {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath! == "contentSize" {
-            scrollViewContentSizeDidChange(change: change)
-        }
-        if isHidden {
-            return
-        }
-        
-        if keyPath! == "contentOffset" {
-            scrollViewContentOffsetDidChange(change: change)
+        if let key = keyPath {
+           if key == "contentSize" {
+                scrollViewContentSizeDidChange(change: change)
+           } else if key == "contentOffset" {
+                scrollViewContentOffsetDidChange(change: change)
+           }
         }
     }
     
@@ -62,10 +59,10 @@ class BaseRefreshCtrl: UIView {
         super.willMove(toSuperview: newSuperview)
         removeObservers()
         
-        if newSuperview != nil && newSuperview!.isKind(of: UIScrollView.classForCoder()) {
-            self.frameWidth = newSuperview!.frameWidth
-            scrollView = newSuperview as! UIScrollView?
-            scrollViewOriginalInset = scrollView!.contentInset
+        if let newSuper = newSuperview, newSuper.isKind(of: UIScrollView.classForCoder()) {
+            self.frameWidth = newSuper.frameWidth
+            scrollView = newSuper as! UIScrollView
+            scrollViewOriginalInset = scrollView.contentInset
             addObservers()
         }
     }
@@ -92,7 +89,7 @@ class BaseRefreshCtrl: UIView {
     }
     
     func isRefreshing() ->Bool {
-        return RefreshState.refreshing == refreshState!
+        return RefreshState.refreshing == refreshState
     }
     
     func pullingPercentDidChanged(percent:CGFloat) {
