@@ -38,25 +38,31 @@ class DefaultRefreshCtrl: RefreshHeader {
         loadingView.isHidden = true
         
         tipText = UILabel()
-        tipText.backgroundColor = UIColor.red
+        tipText.backgroundColor = UIColor.clear
         tipText.font = UIFont.systemFont(ofSize: 14)
         tipText.textColor = RGB(0x92, 0x95, 0x9e)
         tipText.text = "下拉刷新"
         self.addSubview(tipText)
         
         loadingView.snp.makeConstraints { (make) in
-            make.height.equalTo(self.bounds.size.height)
+            make.height.equalTo(self.frameHeight)
             make.width.equalTo(60)
             make.top.equalTo(0)
-            make.centerX.equalTo(-50)
+            make.centerX.equalTo(self).offset(-50)
         }
         
         tipText.snp.makeConstraints { (make) in
             make.centerY.equalTo(loadingView)
             make.height.equalTo(20)
-            make.centerX.equalTo(30)
+            make.centerX.equalTo(self).offset(30)
             make.width.equalTo(100)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.frameY = -self.frameHeight
     }
     
     override func pullingPercentDidChanged(percent: CGFloat) {

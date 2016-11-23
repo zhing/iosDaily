@@ -32,7 +32,7 @@ class TableRefreshViewController: BaseViewController {
     var tableView :UITableView!
     var resultArray :[CellItem] = []
     var manager :AFHTTPSessionManager!
-    var httpUrl :String = "http://192.168.88.18:10001/api/contacts/refresh"
+    var httpUrl :String = "http://192.168.93.167:10001/api/contacts/refresh"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +68,12 @@ class TableRefreshViewController: BaseViewController {
     }
     
     func parseJSON(_ arrayFromNetworking: NSArray) {
+        var tmpArray :[CellItem] = []
         for var obj in arrayFromNetworking as! [[String: String]] {
             let item = CellItem(obj["firstName"]!, obj["lastName"]!, obj["phoneNumber"]!)
-            resultArray.append(item)
+            tmpArray.append(item)
         }
+        resultArray = tmpArray
     }
     
     override func didReceiveMemoryWarning() {

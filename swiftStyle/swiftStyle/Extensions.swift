@@ -29,6 +29,20 @@ extension UIView {
         self.frame = CGRect.init(origin: self.frame.origin, size: size)
     }
     
+    var frameX :CGFloat {
+        get { return self.frame.origin.x }
+        set {
+            self.frame = CGRect(origin: CGPoint(x: newValue, y: self.frame.origin.y), size: self.bounds.size)
+        }
+    }
+    
+    var frameY :CGFloat {
+        get { return self.frame.origin.y }
+        set {
+            self.frame = CGRect(origin: CGPoint(x: self.frame.origin.x, y: newValue), size: self.bounds.size)
+        }
+    }
+    
     var frameWidth :CGFloat {
         get {return self.frame.size.width}
         set {

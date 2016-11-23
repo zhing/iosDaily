@@ -12,7 +12,6 @@ class RefreshHeader: BaseRefreshCtrl {
     var refreshPullTheshold  :CGFloat
     var endRefreshTime :Int64
     var pullDownContent :Bool
-    var changeToIdleAnimateDisable :Bool
     
     class func refreshHeaderForCloures(callback: @escaping RefreshCallback) -> BaseRefreshCtrl?{
         return nil
@@ -22,7 +21,6 @@ class RefreshHeader: BaseRefreshCtrl {
         refreshPullTheshold = ScreenHeight()
         endRefreshTime = 1
         pullDownContent = true
-        changeToIdleAnimateDisable = false
         
         super.init(frame: frame)
     }
@@ -64,7 +62,7 @@ class RefreshHeader: BaseRefreshCtrl {
     override var refreshState :RefreshState! {
         get {return super.refreshState}
         set {
-            let oldState = self.refreshState
+            let oldState = super.refreshState
             if newValue == oldState && newValue != RefreshState.idle {
                 return;
             }
@@ -74,23 +72,18 @@ class RefreshHeader: BaseRefreshCtrl {
                     return
                 }
                 
-                if changeToIdleAnimateDisable {
-                    scrollView!.setInsetTop(scrollViewOriginalInset.top)
-                    pullingPercentDidChanged(percent: 0.0)
-                } else {
-                    UIView.animate(withDuration: 0.6, animations: {
-                        self.scrollView!.setInsetTop(self.scrollViewOriginalInset.top)
-                    }, completion: { (Bool) in
-                        self.pullingPercentDidChanged(percent: 0.0)
-                    })
-                }
+                UIView.animate(withDuration: 0.6, animations: {
+                    self.scrollView!.setInsetTop(self.scrollViewOriginalInset.top)
+                }, completion: { (Bool) in
+                    self.pullingPercentDidChanged(percent: 0.0)
+                })
                 
             } else if refreshState == RefreshState.refreshing {
                 if pullDownContent {
                     let top = scrollViewOriginalInset!.top + self.bounds.size.height
-//                    let offset = scrollView!.contentOffset
+                    let offset = scrollView!.contentOffset
                     scrollView!.setInsetTop(top)
-//                    scrollView!.contentOffset = offset
+                    scrollView!.contentOffset = offset
                 }
             }
         }

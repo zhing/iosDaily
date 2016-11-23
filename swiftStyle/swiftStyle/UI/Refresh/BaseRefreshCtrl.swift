@@ -24,9 +24,11 @@ class BaseRefreshCtrl: UIView {
     var scrollView :UIScrollView?
     
     override init(frame: CGRect) {
-        refreshState = RefreshState.idle
         super.init(frame: frame)
+        
+        refreshState = RefreshState.idle
         self.frameHeight = 54
+        self.frameWidth = ScreenWidth()
     }
     
     required init?(coder aDecoder: NSCoder) {
