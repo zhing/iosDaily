@@ -20,8 +20,8 @@ class ZHTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func setupSubControllers() {
         let vc1 : ViewController? = ViewController()
-        let vc2 : ViewController? = ViewController()
-        let vc3 : ViewController? = ViewController()
+        let vc2 : NetStoreViewController? = NetStoreViewController()
+        let vc3 : CoreViewController? = CoreViewController()
         let vc4 : OtherViewController? = OtherViewController()
         
         let nav1 : ZHNavigationController = ZHNavigationController.init(rootViewController: vc1!)
@@ -30,13 +30,13 @@ class ZHTabBarController: UITabBarController, UITabBarControllerDelegate {
         let nav4 : ZHNavigationController = ZHNavigationController.init(rootViewController: vc4!)
         
         nav1.tabBarItem = tabItemBy(title: "UI", imageName: "tab1.png")
-        nav2.tabBarItem = tabItemBy(title: "Network", imageName: "tab2.png")
-        nav3.tabBarItem = tabItemBy(title: "Storage", imageName: "tab3.png")
+        nav2.tabBarItem = tabItemBy(title: "N&S", imageName: "tab2.png")
+        nav3.tabBarItem = tabItemBy(title: "Core", imageName: "tab3.png")
         nav4.tabBarItem = tabItemBy(title: "Other", imageName: "tab4.png")
 
         vc1?.title = "UI"
-        vc2?.title = "Network"
-        vc3?.title = "Storage"
+        vc2?.title = "N&S"
+        vc3?.title = "Core"
         vc4?.title = "Other"
         
         self.viewControllers = [nav1, nav2, nav3, nav4]

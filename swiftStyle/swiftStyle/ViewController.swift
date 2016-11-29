@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var button04 : UIButton!
     var button05 : UIButton!
     var button06 : UIButton!
+    var button07 : UIButton!
+    var button08 : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +93,28 @@ class ViewController: UIViewController {
             make.leading.equalTo(button05)
             make.top.equalTo(button05.snp.bottom).offset(20)
         }
+        
+        button07 = UIButton.init(type: UIButtonType.custom)
+        button07.setTitle("AutoLayout", for: UIControlState.normal)
+        button07.backgroundColor = UIColor.lightGray
+        button07.addTarget(self, action: #selector(showAutoLayoutController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button07)
+        button07.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button06)
+            make.leading.equalTo(button06)
+            make.top.equalTo(button06.snp.bottom).offset(20)
+        }
+        
+        button08 = UIButton.init(type: UIButtonType.custom)
+        button08.setTitle("Feed", for: UIControlState.normal)
+        button08.backgroundColor = UIColor.lightGray
+        button08.addTarget(self, action: #selector(showFeedController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button08)
+        button08.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button07)
+            make.leading.equalTo(button07)
+            make.top.equalTo(button07.snp.bottom).offset(20)
+        }
     }
     
     func showGPUImageController() {
@@ -125,6 +149,18 @@ class ViewController: UIViewController {
     
     func showRefreshController() {
         let controller = TableRefreshViewController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showAutoLayoutController() {
+        let controller = LayoutViewController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showFeedController() {
+        let controller = FeedViewController.init()
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		071AC69BA55A0C9C98B71C70 /* Pods_swiftStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */; };
+		F338C7551DE9914800F73FE3 /* NetStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7531DE9914800F73FE3 /* NetStoreViewController.swift */; };
+		F338C7581DE9915E00F73FE3 /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7571DE9915E00F73FE3 /* CoreViewController.swift */; };
+		F338C75A1DE991AF00F73FE3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7591DE991AF00F73FE3 /* HttpClient.swift */; };
+		F338C75C1DE99EF400F73FE3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C75B1DE99EF400F73FE3 /* APIService.swift */; };
 		F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E94721DDF3BB000E556BA /* WkWebViewController.swift */; };
 		F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F34E94771DE09C6C00E556BA /* ExampleApp.html */; };
 		F34E947A1DE0C0FD00E556BA /* injection.js in Resources */ = {isa = PBXBuildFile; fileRef = F34E94791DE0C0FD00E556BA /* injection.js */; };
@@ -17,6 +21,18 @@
 		F366B1511DE431BB0079C169 /* DefaultRefreshCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1501DE431BB0079C169 /* DefaultRefreshCtrl.swift */; };
 		F366B1531DE43A310079C169 /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1521DE43A310079C169 /* RefreshHeader.swift */; };
 		F366B1551DE572B70079C169 /* LoadMoreCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */; };
+		F366B15B1DE738ED0079C169 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B15A1DE738ED0079C169 /* FeedViewController.swift */; };
+		F366B15D1DE7392F0079C169 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B15C1DE7392F0079C169 /* LayoutViewController.swift */; };
+		F366B15F1DE73A720079C169 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B15E1DE73A720079C169 /* FeedCell.swift */; };
+		F366B1611DE73B180079C169 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366B1601DE73B180079C169 /* FeedEntity.swift */; };
+		F366B1631DE740730079C169 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F366B1621DE740730079C169 /* data.json */; };
+		F366B16C1DE77D560079C169 /* doge.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1651DE77D560079C169 /* doge.png */; };
+		F366B16E1DE77D560079C169 /* forkingdog.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1671DE77D560079C169 /* forkingdog.png */; };
+		F366B16F1DE77D560079C169 /* phil.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1681DE77D560079C169 /* phil.png */; };
+		F366B1761DE77F060079C169 /* breaddoge.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1731DE77F060079C169 /* breaddoge.png */; };
+		F366B1771DE77F060079C169 /* sinojerk.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1741DE77F060079C169 /* sinojerk.png */; };
+		F366B1781DE77F060079C169 /* sunnyxx.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1751DE77F060079C169 /* sunnyxx.png */; };
+		F366B17C1DE838530079C169 /* sark.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B17B1DE838530079C169 /* sark.png */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
 		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
@@ -70,6 +86,10 @@
 
 /* Begin PBXFileReference section */
 		B5961BF28FD31396B31B2DA2 /* Pods_swiftStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F338C7531DE9914800F73FE3 /* NetStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetStoreViewController.swift; sourceTree = "<group>"; };
+		F338C7571DE9915E00F73FE3 /* CoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreViewController.swift; sourceTree = "<group>"; };
+		F338C7591DE991AF00F73FE3 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		F338C75B1DE99EF400F73FE3 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F34E94721DDF3BB000E556BA /* WkWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
 		F34E94771DE09C6C00E556BA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		F34E94791DE0C0FD00E556BA /* injection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injection.js; sourceTree = "<group>"; };
@@ -79,6 +99,18 @@
 		F366B1501DE431BB0079C169 /* DefaultRefreshCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRefreshCtrl.swift; sourceTree = "<group>"; };
 		F366B1521DE43A310079C169 /* RefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshHeader.swift; sourceTree = "<group>"; };
 		F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCtrl.swift; sourceTree = "<group>"; };
+		F366B15A1DE738ED0079C169 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F366B15C1DE7392F0079C169 /* LayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
+		F366B15E1DE73A720079C169 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		F366B1601DE73B180079C169 /* FeedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		F366B1621DE740730079C169 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F366B1651DE77D560079C169 /* doge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doge.png; sourceTree = "<group>"; };
+		F366B1671DE77D560079C169 /* forkingdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkingdog.png; sourceTree = "<group>"; };
+		F366B1681DE77D560079C169 /* phil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phil.png; sourceTree = "<group>"; };
+		F366B1731DE77F060079C169 /* breaddoge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaddoge.png; sourceTree = "<group>"; };
+		F366B1741DE77F060079C169 /* sinojerk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinojerk.png; sourceTree = "<group>"; };
+		F366B1751DE77F060079C169 /* sunnyxx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunnyxx.png; sourceTree = "<group>"; };
+		F366B17B1DE838530079C169 /* sark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sark.png; sourceTree = "<group>"; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
 		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +188,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F338C7521DE9914800F73FE3 /* N&S */ = {
+			isa = PBXGroup;
+			children = (
+				F338C7531DE9914800F73FE3 /* NetStoreViewController.swift */,
+				F338C7541DE9914800F73FE3 /* Network */,
+			);
+			path = "N&S";
+			sourceTree = "<group>";
+		};
+		F338C7541DE9914800F73FE3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F338C7591DE991AF00F73FE3 /* HttpClient.swift */,
+				F338C75B1DE99EF400F73FE3 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F338C7561DE9915E00F73FE3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F338C7571DE9915E00F73FE3 /* CoreViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		F34E94711DDF3B6400E556BA /* WKWebview */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +242,32 @@
 				F366B1541DE572B70079C169 /* LoadMoreCtrl.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		F366B1591DE738DC0079C169 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F366B1641DE77CD20079C169 /* images */,
+				F366B1621DE740730079C169 /* data.json */,
+				F366B15A1DE738ED0079C169 /* FeedViewController.swift */,
+				F366B15E1DE73A720079C169 /* FeedCell.swift */,
+				F366B1601DE73B180079C169 /* FeedEntity.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F366B1641DE77CD20079C169 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F366B17B1DE838530079C169 /* sark.png */,
+				F366B1731DE77F060079C169 /* breaddoge.png */,
+				F366B1741DE77F060079C169 /* sinojerk.png */,
+				F366B1751DE77F060079C169 /* sunnyxx.png */,
+				F366B1651DE77D560079C169 /* doge.png */,
+				F366B1671DE77D560079C169 /* forkingdog.png */,
+				F366B1681DE77D560079C169 /* phil.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		F39311C91DD96DE700D88F48 /* video */ = {
@@ -232,10 +316,10 @@
 		F3D845141DC07FF2009F6C91 /* swiftStyle */ = {
 			isa = PBXGroup;
 			children = (
+				F338C7521DE9914800F73FE3 /* N&S */,
+				F338C7561DE9915E00F73FE3 /* Core */,
 				F34E94741DE09B3D00E556BA /* resources */,
-				F3FCC26D1DD1C40A00C884A9 /* Network */,
 				F3FCC26E1DD1C40A00C884A9 /* Other */,
-				F3FCC26F1DD1C40A00C884A9 /* Storage */,
 				F3FCC26C1DD1C3FD00C884A9 /* UI */,
 				F3FCC2371DD0D2DD00C884A9 /* images */,
 				F3FCC22C1DD0BAFF00C884A9 /* base */,
@@ -292,23 +376,18 @@
 		F3FCC26C1DD1C3FD00C884A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F366B1591DE738DC0079C169 /* Feed */,
 				F34E947D1DE1E7A500E556BA /* Refresh */,
 				F3D845171DC07FF2009F6C91 /* ViewController.swift */,
 				F3FCC2721DD1D60000C884A9 /* GPUViewController.swift */,
 				F3D018271DD2CC7400CB7606 /* ImageBlurController.swift */,
 				F3D0182B1DD2FF0F00CB7606 /* BeautyController.swift */,
 				F3D0182D1DD314ED00CB7606 /* GPUImageBlurController.swift */,
+				F366B15C1DE7392F0079C169 /* LayoutViewController.swift */,
 				F3D0182F1DD33ACA00CB7606 /* MenuController.swift */,
 				F3D0183F1DD368DA00CB7606 /* MenuContainerView.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		F3FCC26D1DD1C40A00C884A9 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		F3FCC26E1DD1C40A00C884A9 /* Other */ = {
@@ -320,13 +399,6 @@
 				F3D018411DD4665D00CB7606 /* OtherViewController.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		F3FCC26F1DD1C40A00C884A9 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
 			sourceTree = "<group>";
 		};
 		F94BB79FCE8040ACBCC8FD83 /* Frameworks */ = {
@@ -405,20 +477,28 @@
 				F39311DC1DDAFD5700D88F48 /* pause.png in Resources */,
 				F3D018321DD355A800CB7606 /* heart.png in Resources */,
 				F3D018371DD35BD700CB7606 /* address.png in Resources */,
+				F366B1771DE77F060079C169 /* sinojerk.png in Resources */,
 				F3D0183E1DD35BF700CB7606 /* text.png in Resources */,
 				F3FCC2691DD1BFF200C884A9 /* tab2.png in Resources */,
+				F366B16F1DE77D560079C169 /* phil.png in Resources */,
+				F366B16E1DE77D560079C169 /* forkingdog.png in Resources */,
 				F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */,
 				F3D018601DD5735E00CB7606 /* search.png in Resources */,
 				F39311D11DD9EE9D00D88F48 /* musicBackground.jpg in Resources */,
 				F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */,
+				F366B1781DE77F060079C169 /* sunnyxx.png in Resources */,
 				F3D018591DD4B0AA00CB7606 /* icon_play.png in Resources */,
 				F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */,
 				F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */,
 				F3D0185D1DD4B8DF00CB7606 /* location_no@2x.png in Resources */,
+				F366B1631DE740730079C169 /* data.json in Resources */,
 				F39311D91DDAFC0700D88F48 /* next.png in Resources */,
 				F3D0183B1DD35BEB00CB7606 /* moon.png in Resources */,
+				F366B1761DE77F060079C169 /* breaddoge.png in Resources */,
+				F366B16C1DE77D560079C169 /* doge.png in Resources */,
 				F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
+				F366B17C1DE838530079C169 /* sark.png in Resources */,
 				F34E947A1DE0C0FD00E556BA /* injection.js in Resources */,
 				F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */,
 				F3FCC2681DD1BFF200C884A9 /* tab1.png in Resources */,
@@ -487,13 +567,17 @@
 			files = (
 				F3D018281DD2CC7400CB7606 /* ImageBlurController.swift in Sources */,
 				F3FCC2321DD0CA6F00C884A9 /* Extensions.swift in Sources */,
+				F338C7581DE9915E00F73FE3 /* CoreViewController.swift in Sources */,
 				F3FCC2731DD1D60000C884A9 /* GPUViewController.swift in Sources */,
 				F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */,
 				F3D018521DD4AB0C00CB7606 /* SearchViewController.swift in Sources */,
 				F366B14D1DE421DF0079C169 /* BaseViewController.swift in Sources */,
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
+				F338C75A1DE991AF00F73FE3 /* HttpClient.swift in Sources */,
+				F366B15B1DE738ED0079C169 /* FeedViewController.swift in Sources */,
 				F366B1511DE431BB0079C169 /* DefaultRefreshCtrl.swift in Sources */,
 				F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */,
+				F366B15D1DE7392F0079C169 /* LayoutViewController.swift in Sources */,
 				F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */,
 				F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */,
 				F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */,
@@ -502,6 +586,8 @@
 				F3D0184F1DD4AB0C00CB7606 /* MainViewController.swift in Sources */,
 				F3D018441DD467F100CB7606 /* AMapViewController.swift in Sources */,
 				F3D018511DD4AB0C00CB7606 /* Route.swift in Sources */,
+				F366B15F1DE73A720079C169 /* FeedCell.swift in Sources */,
+				F338C75C1DE99EF400F73FE3 /* APIService.swift in Sources */,
 				F3D018501DD4AB0C00CB7606 /* RecordViewController.swift in Sources */,
 				F3D018301DD33ACA00CB7606 /* MenuController.swift in Sources */,
 				F366B1531DE43A310079C169 /* RefreshHeader.swift in Sources */,
@@ -512,7 +598,9 @@
 				F3D018561DD4AB5E00CB7606 /* FileHelper.swift in Sources */,
 				F3D018531DD4AB0C00CB7606 /* StatusView.swift in Sources */,
 				F3D0184E1DD4AB0C00CB7606 /* DisplayViewController.swift in Sources */,
+				F338C7551DE9914800F73FE3 /* NetStoreViewController.swift in Sources */,
 				F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */,
+				F366B1611DE73B180079C169 /* FeedEntity.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
 				F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */,
 				F3D0182E1DD314ED00CB7606 /* GPUImageBlurController.swift in Sources */,

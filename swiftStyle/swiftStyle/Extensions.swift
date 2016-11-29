@@ -85,15 +85,6 @@ extension UIImage {
         return image!
     }
     
-//    static func imageWithFill(color: UIColor, size: CGSize) ->UIImage{
-//        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
-//        color.setFill()
-//        self.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height));
-//        let fillImage:UIImage? = UIGraphicsGetImageFromCurrentImageContext();
-//        UIGraphicsEndImageContext();
-//        return fillImage!;
-//    }
-    
     /**
      *  重设图片大小
      */
@@ -105,6 +96,12 @@ extension UIImage {
         let reSizeImage:UIImage? = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         return reSizeImage!;
+    }
+    
+    func resizeImageByScale() ->UIImage {
+        let targetWidth = self.size.width * self.scale / UIScreen.main.scale
+        let targetHeight = self.size.height * self.scale / UIScreen.main.scale
+        return reSizeImage(size: CGSize(width: targetWidth, height: targetHeight))
     }
     
     /*
@@ -148,5 +145,18 @@ extension UIScrollView {
         var inset = self.contentInset
         inset.top = insetTop
         self.contentInset = inset
+    }
+}
+
+extension DispatchQueue {
+    
+    class func mainSync(_ clourse: ()->Void) {
+        if Thread.isMainThread {
+            clourse()
+        } else {
+            DispatchQueue.main.sync {
+                clourse()
+            }
+        }
     }
 }

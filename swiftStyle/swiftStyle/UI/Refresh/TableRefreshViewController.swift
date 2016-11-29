@@ -7,37 +7,31 @@
 //
 
 import UIKit
-import AFNetworking
 import SwiftyJSON
 
 class CellItem : NSObject {
-    let firstName, lastName, phoneNum :String
+    let firstName, lastName, phoneNum :String?
     
-    init(_ first: String, _ last: String, _ phone: String) {
-        firstName = first
-        lastName = last
-        phoneNum = phone
+    init(_ dic :[String:String]?) {
+        firstName = dic?["firstName"]
+        lastName = dic?["lastName"]
+        phoneNum = dic?["phoneNumber"]
         
         super.init()
     }
     
     var name : String {
-        get {
-            return firstName + " " + lastName
-        }
+            return firstName ?? "" + " " + (lastName ?? "")
     }
 }
 
 class TableRefreshViewController: BaseViewController {
     var tableView :UITableView!
     var resultArray :[CellItem] = []
-    var manager :AFHTTPSessionManager!
-    var httpUrl :String = "http://192.168.93.167:10001/api/contacts/refresh"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        manager = AFHTTPSessionManager()
         setupViews()
     }
 
@@ -46,21 +40,19 @@ class TableRefreshViewController: BaseViewController {
         tableView.backgroundColor = RGB(242, 242, 242)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
         
         addPullToRefreshForScrollView(tableView, refreshSel: #selector(refresh))
         refresh()
     }
     
-    func parseJSON(_ arrayFromNetworking: NSArray) -> [Any]{
-        var tmpArray :[CellItem] = []
-        for var obj in arrayFromNetworking as! [[String: String]] {
-            let item = CellItem(obj["firstName"]!, obj["lastName"]!, obj["phoneNumber"]!)
-            tmpArray.append(item)
+    func parseJSON(_ responseObj: JSON) -> [CellItem]{
+        let arrayFromNetworking = responseObj.arrayValue
+        return arrayFromNetworking.map {
+            let obj = $0.dictionaryObject as? [String:String]
+            return CellItem(obj)
         }
-        
-        return tmpArray
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,12 +63,10 @@ class TableRefreshViewController: BaseViewController {
 
 extension TableRefreshViewController {
     func refresh() {
-        manager.get(httpUrl, parameters: nil,
-            progress: nil,
-            success: {(operation :URLSessionDataTask, responseObject :Any?) -> Void in
-                print("JSON: " + responseObject.debugDescription)
-                let tmpArr = self.parseJSON(responseObject as! NSArray)
-                self.resultArray = tmpArr as! [CellItem]
+        _ = APIService.GET("api/contacts/refresh", params: nil, success: {
+            if let jsonObj = $0, jsonObj != JSON.null {
+                let tmpArr = self.parseJSON(jsonObj)
+                self.resultArray = tmpArr
                 self.tableView.reloadData()
                 
                 self.endRefreshing(self.tableView)
@@ -85,30 +75,28 @@ extension TableRefreshViewController {
                 } else {
                     self.removeLoadMoreForTableView(self.tableView)
                 }
-            },
-            failure: {(operation :URLSessionDataTask?, err: Error) -> Void in
+            }
+        }, failure: {
             self.endRefreshing(self.tableView)
-            print("Error: " + err.localizedDescription)
-            })
+            print("Error: " + $0)
+        })
     }
         
     func loadMore() {
-        manager.get(httpUrl, parameters: nil,
-                    progress: nil,
-                    success: {(operation :URLSessionDataTask, responseObject :Any?) -> Void in
-                        print("JSON: " + responseObject.debugDescription)
-                        let tmpArr = self.parseJSON(responseObject as! NSArray)
-                        self.resultArray.append(contentsOf: tmpArr as! [CellItem])
-                        self.tableView.reloadData()
-                        
-                        self.endLoadMore(self.tableView)
-                        if tmpArr.count < 20 {
-                            self.removeLoadMoreForTableView(self.tableView)
-                        }
-        },
-                    failure: {(operation :URLSessionDataTask?, err: Error) -> Void in
-                        self.endLoadMore(self.tableView)
-                        print("Error: " + err.localizedDescription)
+        _ = APIService.GET("api/contacts/refresh", params: nil, success: {
+            if let jsonObj = $0, jsonObj != JSON.null {
+                let tmpArr = self.parseJSON(jsonObj)
+                self.resultArray.append(contentsOf: tmpArr)
+                self.tableView.reloadData()
+                
+                self.endLoadMore(self.tableView)
+                if tmpArr.count < 20 {
+                    self.removeLoadMoreForTableView(self.tableView)
+                }
+            }
+        }, failure: {
+            self.endLoadMore(self.tableView)
+            print("Error: " + $0)
         })
     }
 }
