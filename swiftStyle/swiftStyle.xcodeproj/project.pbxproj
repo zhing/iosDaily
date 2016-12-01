@@ -26,6 +26,7 @@
 		F338C7801DEEB28E00F73FE3 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7751DEEB28E00F73FE3 /* 9.png */; };
 		F338C7811DEEB28E00F73FE3 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7761DEEB28E00F73FE3 /* 10.png */; };
 		F338C7831DEEBD1000F73FE3 /* LineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7821DEEBD1000F73FE3 /* LineLayout.swift */; };
+		F338C7851DF058C900F73FE3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7841DF058C900F73FE3 /* PageViewController.swift */; };
 		F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E94721DDF3BB000E556BA /* WkWebViewController.swift */; };
 		F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F34E94771DE09C6C00E556BA /* ExampleApp.html */; };
 		F34E947A1DE0C0FD00E556BA /* injection.js in Resources */ = {isa = PBXBuildFile; fileRef = F34E94791DE0C0FD00E556BA /* injection.js */; };
@@ -118,6 +119,7 @@
 		F338C7751DEEB28E00F73FE3 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		F338C7761DEEB28E00F73FE3 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		F338C7821DEEBD1000F73FE3 /* LineLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineLayout.swift; sourceTree = "<group>"; };
+		F338C7841DF058C900F73FE3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F34E94721DDF3BB000E556BA /* WkWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
 		F34E94771DE09C6C00E556BA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		F34E94791DE0C0FD00E556BA /* injection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injection.js; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				F338C7671DED8B1700F73FE3 /* LoopViewController.swift */,
 				F338C7691DED993A00F73FE3 /* LoopCollectionViewCell.swift */,
 				F338C7821DEEBD1000F73FE3 /* LineLayout.swift */,
+				F338C7841DF058C900F73FE3 /* PageViewController.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				F366B15F1DE73A720079C169 /* FeedCell.swift in Sources */,
 				F338C75C1DE99EF400F73FE3 /* APIService.swift in Sources */,
 				F3D018501DD4AB0C00CB7606 /* RecordViewController.swift in Sources */,
+				F338C7851DF058C900F73FE3 /* PageViewController.swift in Sources */,
 				F3D018301DD33ACA00CB7606 /* MenuController.swift in Sources */,
 				F366B1531DE43A310079C169 /* RefreshHeader.swift in Sources */,
 				F3FCC2301DD0C0BE00C884A9 /* ZHNavigationController.swift in Sources */,

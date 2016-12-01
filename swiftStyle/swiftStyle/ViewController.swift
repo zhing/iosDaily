@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     var button08 : UIButton!
     var button09 : UIButton!
     
+    var button11 : UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -127,6 +129,17 @@ class ViewController: UIViewController {
             make.leading.equalTo(button08)
             make.top.equalTo(button08.snp.bottom).offset(20)
         }
+        
+        button11 = UIButton.init(type: UIButtonType.custom)
+        button11.setTitle("Page", for: UIControlState.normal)
+        button11.backgroundColor = UIColor.lightGray
+        button11.addTarget(self, action: #selector(showPageController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button11)
+        button11.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button01)
+            make.top.equalTo(button01)
+            make.centerX.equalTo(view)
+        }
     }
     
     func showGPUImageController() {
@@ -182,6 +195,11 @@ class ViewController: UIViewController {
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
-
+    
+    func showPageController() {
+        let controller = PageViewController()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 

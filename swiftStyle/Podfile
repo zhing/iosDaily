@@ -11,12 +11,12 @@ target 'swiftStyle' do
     pod 'GPUImage'
     pod 'AMap2DMap', '4.3.0'
     pod 'AMapSearch', '4.2.0'
-#    pod 'ZFPlayer'
     pod 'BMPlayer', :git => 'https://github.com/BrikerMan/BMPlayer.git'
     pod 'TTTAttributedLabel'
     pod 'SwiftyJSON'
     pod ‘UITableView+FDTemplateLayoutCell’
     pod 'Alamofire', '~> 4.0'
+    pod 'SDCycleScrollView'
 end
 
 post_install do |installer|

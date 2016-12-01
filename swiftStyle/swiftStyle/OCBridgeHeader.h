@@ -13,4 +13,5 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AFNetworking/AFNetworking.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
 #endif /* OCBridgeHeader_h */
