@@ -12,6 +12,20 @@
 		F338C7581DE9915E00F73FE3 /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7571DE9915E00F73FE3 /* CoreViewController.swift */; };
 		F338C75A1DE991AF00F73FE3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7591DE991AF00F73FE3 /* HttpClient.swift */; };
 		F338C75C1DE99EF400F73FE3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C75B1DE99EF400F73FE3 /* APIService.swift */; };
+		F338C7681DED8B1700F73FE3 /* LoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7671DED8B1700F73FE3 /* LoopViewController.swift */; };
+		F338C76A1DED993A00F73FE3 /* LoopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7691DED993A00F73FE3 /* LoopCollectionViewCell.swift */; };
+		F338C7771DEEB28E00F73FE3 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C76C1DEEB28E00F73FE3 /* 0.png */; };
+		F338C7781DEEB28E00F73FE3 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C76D1DEEB28E00F73FE3 /* 1.png */; };
+		F338C7791DEEB28E00F73FE3 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C76E1DEEB28E00F73FE3 /* 2.png */; };
+		F338C77A1DEEB28E00F73FE3 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C76F1DEEB28E00F73FE3 /* 3.png */; };
+		F338C77B1DEEB28E00F73FE3 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7701DEEB28E00F73FE3 /* 4.png */; };
+		F338C77C1DEEB28E00F73FE3 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7711DEEB28E00F73FE3 /* 5.png */; };
+		F338C77D1DEEB28E00F73FE3 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7721DEEB28E00F73FE3 /* 6.png */; };
+		F338C77E1DEEB28E00F73FE3 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7731DEEB28E00F73FE3 /* 7.png */; };
+		F338C77F1DEEB28E00F73FE3 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7741DEEB28E00F73FE3 /* 8.png */; };
+		F338C7801DEEB28E00F73FE3 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7751DEEB28E00F73FE3 /* 9.png */; };
+		F338C7811DEEB28E00F73FE3 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C7761DEEB28E00F73FE3 /* 10.png */; };
+		F338C7831DEEBD1000F73FE3 /* LineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C7821DEEBD1000F73FE3 /* LineLayout.swift */; };
 		F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E94721DDF3BB000E556BA /* WkWebViewController.swift */; };
 		F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F34E94771DE09C6C00E556BA /* ExampleApp.html */; };
 		F34E947A1DE0C0FD00E556BA /* injection.js in Resources */ = {isa = PBXBuildFile; fileRef = F34E94791DE0C0FD00E556BA /* injection.js */; };
@@ -90,6 +104,20 @@
 		F338C7571DE9915E00F73FE3 /* CoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreViewController.swift; sourceTree = "<group>"; };
 		F338C7591DE991AF00F73FE3 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		F338C75B1DE99EF400F73FE3 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F338C7671DED8B1700F73FE3 /* LoopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopViewController.swift; sourceTree = "<group>"; };
+		F338C7691DED993A00F73FE3 /* LoopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopCollectionViewCell.swift; sourceTree = "<group>"; };
+		F338C76C1DEEB28E00F73FE3 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		F338C76D1DEEB28E00F73FE3 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F338C76E1DEEB28E00F73FE3 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F338C76F1DEEB28E00F73FE3 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F338C7701DEEB28E00F73FE3 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		F338C7711DEEB28E00F73FE3 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		F338C7721DEEB28E00F73FE3 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		F338C7731DEEB28E00F73FE3 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		F338C7741DEEB28E00F73FE3 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		F338C7751DEEB28E00F73FE3 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		F338C7761DEEB28E00F73FE3 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		F338C7821DEEBD1000F73FE3 /* LineLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineLayout.swift; sourceTree = "<group>"; };
 		F34E94721DDF3BB000E556BA /* WkWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
 		F34E94771DE09C6C00E556BA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		F34E94791DE0C0FD00E556BA /* injection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injection.js; sourceTree = "<group>"; };
@@ -212,6 +240,35 @@
 				F338C7571DE9915E00F73FE3 /* CoreViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		F338C7661DED8AB600F73FE3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F338C76B1DEEB19C00F73FE3 /* images */,
+				F338C7671DED8B1700F73FE3 /* LoopViewController.swift */,
+				F338C7691DED993A00F73FE3 /* LoopCollectionViewCell.swift */,
+				F338C7821DEEBD1000F73FE3 /* LineLayout.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		F338C76B1DEEB19C00F73FE3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F338C76C1DEEB28E00F73FE3 /* 0.png */,
+				F338C76D1DEEB28E00F73FE3 /* 1.png */,
+				F338C76E1DEEB28E00F73FE3 /* 2.png */,
+				F338C76F1DEEB28E00F73FE3 /* 3.png */,
+				F338C7701DEEB28E00F73FE3 /* 4.png */,
+				F338C7711DEEB28E00F73FE3 /* 5.png */,
+				F338C7721DEEB28E00F73FE3 /* 6.png */,
+				F338C7731DEEB28E00F73FE3 /* 7.png */,
+				F338C7741DEEB28E00F73FE3 /* 8.png */,
+				F338C7751DEEB28E00F73FE3 /* 9.png */,
+				F338C7761DEEB28E00F73FE3 /* 10.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		F34E94711DDF3B6400E556BA /* WKWebview */ = {
@@ -376,6 +433,7 @@
 		F3FCC26C1DD1C3FD00C884A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F338C7661DED8AB600F73FE3 /* Collection */,
 				F366B1591DE738DC0079C169 /* Feed */,
 				F34E947D1DE1E7A500E556BA /* Refresh */,
 				F3D845171DC07FF2009F6C91 /* ViewController.swift */,
@@ -472,7 +530,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F338C77F1DEEB28E00F73FE3 /* 8.png in Resources */,
+				F338C77D1DEEB28E00F73FE3 /* 6.png in Resources */,
 				F3D018381DD35BD700CB7606 /* camera.png in Resources */,
+				F338C7801DEEB28E00F73FE3 /* 9.png in Resources */,
+				F338C77E1DEEB28E00F73FE3 /* 7.png in Resources */,
 				F3D018341DD3580900CB7606 /* add.png in Resources */,
 				F39311DC1DDAFD5700D88F48 /* pause.png in Resources */,
 				F3D018321DD355A800CB7606 /* heart.png in Resources */,
@@ -484,21 +546,27 @@
 				F366B16E1DE77D560079C169 /* forkingdog.png in Resources */,
 				F3D0182A1DD2CEF000CB7606 /* timg.jpeg in Resources */,
 				F3D018601DD5735E00CB7606 /* search.png in Resources */,
+				F338C7771DEEB28E00F73FE3 /* 0.png in Resources */,
 				F39311D11DD9EE9D00D88F48 /* musicBackground.jpg in Resources */,
 				F3FCC26A1DD1BFF200C884A9 /* tab3.png in Resources */,
 				F366B1781DE77F060079C169 /* sunnyxx.png in Resources */,
+				F338C7811DEEB28E00F73FE3 /* 10.png in Resources */,
+				F338C7791DEEB28E00F73FE3 /* 2.png in Resources */,
 				F3D018591DD4B0AA00CB7606 /* icon_play.png in Resources */,
 				F3FCC26B1DD1BFF200C884A9 /* tab4.png in Resources */,
 				F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */,
 				F3D0185D1DD4B8DF00CB7606 /* location_no@2x.png in Resources */,
+				F338C77A1DEEB28E00F73FE3 /* 3.png in Resources */,
 				F366B1631DE740730079C169 /* data.json in Resources */,
 				F39311D91DDAFC0700D88F48 /* next.png in Resources */,
 				F3D0183B1DD35BEB00CB7606 /* moon.png in Resources */,
 				F366B1761DE77F060079C169 /* breaddoge.png in Resources */,
 				F366B16C1DE77D560079C169 /* doge.png in Resources */,
 				F3D0185A1DD4B0AA00CB7606 /* icon_stop.png in Resources */,
+				F338C77B1DEEB28E00F73FE3 /* 4.png in Resources */,
 				F3D845201DC07FF2009F6C91 /* LaunchScreen.storyboard in Resources */,
 				F366B17C1DE838530079C169 /* sark.png in Resources */,
+				F338C77C1DEEB28E00F73FE3 /* 5.png in Resources */,
 				F34E947A1DE0C0FD00E556BA /* injection.js in Resources */,
 				F3D8451D1DC07FF2009F6C91 /* Assets.xcassets in Resources */,
 				F3FCC2681DD1BFF200C884A9 /* tab1.png in Resources */,
@@ -507,6 +575,7 @@
 				F3D0183C1DD35BEB00CB7606 /* music.png in Resources */,
 				F3D0185E1DD4B8DF00CB7606 /* location_yes@2x.png in Resources */,
 				F39311D71DDAFBFE00D88F48 /* last.png in Resources */,
+				F338C7781DEEB28E00F73FE3 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +637,7 @@
 				F3D018281DD2CC7400CB7606 /* ImageBlurController.swift in Sources */,
 				F3FCC2321DD0CA6F00C884A9 /* Extensions.swift in Sources */,
 				F338C7581DE9915E00F73FE3 /* CoreViewController.swift in Sources */,
+				F338C76A1DED993A00F73FE3 /* LoopCollectionViewCell.swift in Sources */,
 				F3FCC2731DD1D60000C884A9 /* GPUViewController.swift in Sources */,
 				F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */,
 				F3D018521DD4AB0C00CB7606 /* SearchViewController.swift in Sources */,
@@ -575,6 +645,7 @@
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
 				F338C75A1DE991AF00F73FE3 /* HttpClient.swift in Sources */,
 				F366B15B1DE738ED0079C169 /* FeedViewController.swift in Sources */,
+				F338C7831DEEBD1000F73FE3 /* LineLayout.swift in Sources */,
 				F366B1511DE431BB0079C169 /* DefaultRefreshCtrl.swift in Sources */,
 				F3D018401DD368DA00CB7606 /* MenuContainerView.swift in Sources */,
 				F366B15D1DE7392F0079C169 /* LayoutViewController.swift in Sources */,
@@ -601,6 +672,7 @@
 				F338C7551DE9914800F73FE3 /* NetStoreViewController.swift in Sources */,
 				F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */,
 				F366B1611DE73B180079C169 /* FeedEntity.swift in Sources */,
+				F338C7681DED8B1700F73FE3 /* LoopViewController.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
 				F3D0182C1DD2FF0F00CB7606 /* BeautyController.swift in Sources */,
 				F3D0182E1DD314ED00CB7606 /* GPUImageBlurController.swift in Sources */,

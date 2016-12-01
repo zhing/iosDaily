@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var button06 : UIButton!
     var button07 : UIButton!
     var button08 : UIButton!
+    var button09 : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,17 @@ class ViewController: UIViewController {
             make.leading.equalTo(button07)
             make.top.equalTo(button07.snp.bottom).offset(20)
         }
+        
+        button09 = UIButton.init(type: UIButtonType.custom)
+        button09.setTitle("Loop", for: UIControlState.normal)
+        button09.backgroundColor = UIColor.lightGray
+        button09.addTarget(self, action: #selector(showLoopController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button09)
+        button09.snp.makeConstraints { (make) -> Void in
+            make.size.equalTo(button08)
+            make.leading.equalTo(button08)
+            make.top.equalTo(button08.snp.bottom).offset(20)
+        }
     }
     
     func showGPUImageController() {
@@ -164,5 +176,12 @@ class ViewController: UIViewController {
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func showLoopController() {
+        let controller = LoopViewController()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+
 }
 
