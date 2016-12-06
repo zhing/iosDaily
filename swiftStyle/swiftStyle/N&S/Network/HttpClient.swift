@@ -14,7 +14,7 @@ enum HttpResponseType {
     case data
 }
 
-let httpServer :URL? = URL(string: "http://192.168.1.9:10001/")
+let httpServer :URL? = URL(string: "http://192.168.93.61:10001/")
 
 class HttpClient: AFHTTPSessionManager {
     static let shareInstance = HttpClient(httpServer)

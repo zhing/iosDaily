@@ -26,7 +26,8 @@ class CellItem : NSObject {
 }
 
 class TableRefreshViewController: BaseViewController {
-    var tableView :UITableView!
+    var tableView :IGTableView!
+    var emptyView :EmptyDataView!
     var resultArray :[CellItem] = []
     
     override func viewDidLoad() {
@@ -36,15 +37,20 @@ class TableRefreshViewController: BaseViewController {
     }
 
     func setupViews(){
-        tableView = UITableView(frame: self.view.bounds)
-        tableView.backgroundColor = RGB(242, 242, 242)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        view.addSubview(tableView)
+        tableView = {
+            let tableView = IGTableView(frame: self.view.bounds, style: UITableViewStyle.plain)
+            tableView.backgroundColor = RGB(242, 242, 242)
+            tableView.dataSource = self
+            tableView.delegate = self
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            view.addSubview(tableView)
+            return tableView
+        }()
         
-        addPullToRefreshForScrollView(tableView, refreshSel: #selector(refresh))
-        refresh()
+        emptyView = EmptyDataView(frame: tableView.frame)
+        emptyView.emptyDelegate = self
+        emptyView.setImage("empty.png", text: "没有新数据哟", buttonTitle: "刷新")
+        tableView.setBlankView(emptyView)
     }
     
     func parseJSON(_ responseObj: JSON) -> [CellItem]{
@@ -58,6 +64,13 @@ class TableRefreshViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension TableRefreshViewController:EmptyDataViewActionDelegate {
+    func didClickEmptyButton() {
+        addPullToRefreshForScrollView(tableView, refreshSel: #selector(refresh))
+        refresh()
     }
 }
 
