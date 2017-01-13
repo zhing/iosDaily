@@ -29,6 +29,7 @@
 #import "LNNavigationController.h"
 #import "ZHBarViewController.h"
 #import "ChatViewController.h"
+#import "JSViewController.h"
 
 @interface ViewController ()
 
@@ -50,6 +51,7 @@
 @property (strong, nonatomic) UIButton *button55;
 @property (strong, nonatomic) UIButton *button66;
 @property (strong, nonatomic) UIButton *button77;
+@property (strong, nonatomic) UIButton *button88;
 
 @end
 
@@ -78,6 +80,7 @@
     [self testGraphic];
     [self textBar];
     [self testChat];
+    [self testJS];
     
     [AccessorTest testArrayAccess];
     [self setTitle:@"测试"];
@@ -458,6 +461,26 @@
 
 - (void)showUpChatViewController: (id)sender{
     ChatViewController *controller = [[ChatViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)testJS {
+    _button88 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_button88 setTitle:@"js" forState:UIControlStateNormal];
+    _button88.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_button88 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:_button88];
+    [_button88 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_button8);
+        make.leading.equalTo(_button8.mas_trailing).offset(30);
+        make.width.equalTo(@100);
+    }];
+    [_button88 addTarget:self action:@selector(showUpJSViewController:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)showUpJSViewController: (id)sender{
+    JSViewController *controller = [[JSViewController alloc] init];
     controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }

@@ -171,6 +171,8 @@
 		F3DBED5D1DACD85B007DB573 /* ZHBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5C1DACD85B007DB573 /* ZHBarViewController.m */; };
 		F3DBED601DACDAE5007DB573 /* ZHBarNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */; };
 		F3DBED631DACDF69007DB573 /* UIViewController+AlphaNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */; };
+		F3ED89CC1E0953180073DD22 /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3ED89CB1E0953180073DD22 /* JSViewController.m */; };
+		F3ED89CE1E0956D60073DD22 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = F3ED89CD1E0956D60073DD22 /* JSPatch.js */; };
 		F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF11CBDEBD700D20526 /* JsonTest.m */; };
 		F3FF4D091CBDF86300D20526 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF71CBDF86300D20526 /* AFHTTPRequestOperation.m */; };
 		F3FF4D0A1CBDF86300D20526 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF4CF91CBDF86300D20526 /* AFHTTPRequestOperationManager.m */; };
@@ -651,6 +653,9 @@
 		F3DBED5F1DACDAE5007DB573 /* ZHBarNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBarNextViewController.m; sourceTree = "<group>"; };
 		F3DBED611DACDF69007DB573 /* UIViewController+AlphaNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AlphaNavi.h"; sourceTree = "<group>"; };
 		F3DBED621DACDF69007DB573 /* UIViewController+AlphaNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlphaNavi.m"; sourceTree = "<group>"; };
+		F3ED89CA1E0953180073DD22 /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
+		F3ED89CB1E0953180073DD22 /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		F3ED89CD1E0956D60073DD22 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		F3FF4CF01CBDEBD700D20526 /* JsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTest.h; sourceTree = "<group>"; };
 		F3FF4CF11CBDEBD700D20526 /* JsonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTest.m; sourceTree = "<group>"; };
 		F3FF4CF61CBDF86300D20526 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1417,9 +1422,12 @@
 		F3C0E81C1CCA286000829E90 /* Webview */ = {
 			isa = PBXGroup;
 			children = (
+				F3ED89CD1E0956D60073DD22 /* JSPatch.js */,
 				3FF383AC1CCB8D0100C84BA8 /* ExampleApp.html */,
 				3FF383A91CCB80E800C84BA8 /* WebViewController.h */,
 				3FF383AA1CCB80E800C84BA8 /* WebViewController.m */,
+				F3ED89CA1E0953180073DD22 /* JSViewController.h */,
+				F3ED89CB1E0953180073DD22 /* JSViewController.m */,
 			);
 			name = Webview;
 			sourceTree = "<group>";
@@ -1669,6 +1677,7 @@
 				3F44923D1CBD5A2C006EA652 /* Info.plist in Resources */,
 				3F810D751D57046D00D57A3B /* tab_discovery_highlight.svg in Resources */,
 				3F810D711D57046D00D57A3B /* discovery_top_search.svg in Resources */,
+				F3ED89CE1E0956D60073DD22 /* JSPatch.js in Resources */,
 				3F810D771D57046D00D57A3B /* tab_messages_highlight.svg in Resources */,
 				F3CB024F1D1009110097BE61 /* MBProgressHUD.bundle in Resources */,
 				3F4A417F1C9AC2CA0008BDA7 /* LaunchScreen.xib in Resources */,
@@ -1851,6 +1860,7 @@
 				F3FF4D1F1CC0ACF000D20526 /* KVTest.m in Sources */,
 				3F60BEEE1D438D620094CA8A /* util_mosq.c in Sources */,
 				F3FF4CF21CBDEBD700D20526 /* JsonTest.m in Sources */,
+				F3ED89CC1E0953180073DD22 /* JSViewController.m in Sources */,
 				3F60BEF11D438D620094CA8A /* MQTTKit.m in Sources */,
 				3FF383B41CD103C500C84BA8 /* LNNavigationController.m in Sources */,
 				F3C0E8461CDA0AC700829E90 /* NSNotificationCenter+RNSwizzle.m in Sources */,

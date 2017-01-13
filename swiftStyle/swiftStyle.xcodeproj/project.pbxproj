@@ -37,6 +37,8 @@
 		F338C8F11DF68F6100F73FE3 /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C8F01DF68F6100F73FE3 /* EmptyDataView.swift */; };
 		F338C8F41DF69D1A00F73FE3 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = F338C8F31DF69D1A00F73FE3 /* empty.png */; };
 		F338C8F61DF6A30900F73FE3 /* IGTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C8F51DF6A30900F73FE3 /* IGTableView.swift */; };
+		F338C8F81DFAABCE00F73FE3 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C8F71DFAABCE00F73FE3 /* Core.swift */; };
+		F338C8FA1DFAB62E00F73FE3 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338C8F91DFAB62E00F73FE3 /* CoreExtensions.swift */; };
 		F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E94721DDF3BB000E556BA /* WkWebViewController.swift */; };
 		F34E94781DE09C6C00E556BA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F34E94771DE09C6C00E556BA /* ExampleApp.html */; };
 		F34E947A1DE0C0FD00E556BA /* injection.js in Resources */ = {isa = PBXBuildFile; fileRef = F34E94791DE0C0FD00E556BA /* injection.js */; };
@@ -57,6 +59,12 @@
 		F366B1771DE77F060079C169 /* sinojerk.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1741DE77F060079C169 /* sinojerk.png */; };
 		F366B1781DE77F060079C169 /* sunnyxx.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B1751DE77F060079C169 /* sunnyxx.png */; };
 		F366B17C1DE838530079C169 /* sark.png in Resources */ = {isa = PBXBuildFile; fileRef = F366B17B1DE838530079C169 /* sark.png */; };
+		F37CC0B41E2758B60072B1BF /* IGTableViewSectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0B31E2758B60072B1BF /* IGTableViewSectionObject.swift */; };
+		F37CC0B61E275C550072B1BF /* IGTableViewBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0B51E275C550072B1BF /* IGTableViewBaseItem.swift */; };
+		F37CC0B81E275E3B0072B1BF /* IGTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0B71E275E3B0072B1BF /* IGTableViewDataSource.swift */; };
+		F37CC0BA1E2762770072B1BF /* IGTableViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0B91E2762770072B1BF /* IGTableViewBaseCell.swift */; };
+		F37CC0BC1E2766F00072B1BF /* IGBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0BB1E2766F00072B1BF /* IGBaseTableView.swift */; };
+		F37CC0BE1E28D2980072B1BF /* IGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
 		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
@@ -133,6 +141,8 @@
 		F338C8F01DF68F6100F73FE3 /* EmptyDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		F338C8F31DF69D1A00F73FE3 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		F338C8F51DF6A30900F73FE3 /* IGTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableView.swift; sourceTree = "<group>"; };
+		F338C8F71DFAABCE00F73FE3 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		F338C8F91DFAB62E00F73FE3 /* CoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
 		F34E94721DDF3BB000E556BA /* WkWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WkWebViewController.swift; sourceTree = "<group>"; };
 		F34E94771DE09C6C00E556BA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		F34E94791DE0C0FD00E556BA /* injection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injection.js; sourceTree = "<group>"; };
@@ -153,6 +163,12 @@
 		F366B1741DE77F060079C169 /* sinojerk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinojerk.png; sourceTree = "<group>"; };
 		F366B1751DE77F060079C169 /* sunnyxx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunnyxx.png; sourceTree = "<group>"; };
 		F366B17B1DE838530079C169 /* sark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sark.png; sourceTree = "<group>"; };
+		F37CC0B31E2758B60072B1BF /* IGTableViewSectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewSectionObject.swift; sourceTree = "<group>"; };
+		F37CC0B51E275C550072B1BF /* IGTableViewBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewBaseItem.swift; sourceTree = "<group>"; };
+		F37CC0B71E275E3B0072B1BF /* IGTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewDataSource.swift; sourceTree = "<group>"; };
+		F37CC0B91E2762770072B1BF /* IGTableViewBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewBaseCell.swift; sourceTree = "<group>"; };
+		F37CC0BB1E2766F00072B1BF /* IGBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGBaseTableView.swift; sourceTree = "<group>"; };
+		F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewController.swift; sourceTree = "<group>"; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
 		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				F338C7571DE9915E00F73FE3 /* CoreViewController.swift */,
+				F338C8F71DFAABCE00F73FE3 /* Core.swift */,
+				F338C8F91DFAB62E00F73FE3 /* CoreExtensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -375,6 +393,19 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		F37CC0B21E27583F0072B1BF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F37CC0B31E2758B60072B1BF /* IGTableViewSectionObject.swift */,
+				F37CC0B51E275C550072B1BF /* IGTableViewBaseItem.swift */,
+				F37CC0B71E275E3B0072B1BF /* IGTableViewDataSource.swift */,
+				F37CC0B91E2762770072B1BF /* IGTableViewBaseCell.swift */,
+				F37CC0BB1E2766F00072B1BF /* IGBaseTableView.swift */,
+				F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		F39311C91DD96DE700D88F48 /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +526,7 @@
 		F3FCC26E1DD1C40A00C884A9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F37CC0B21E27583F0072B1BF /* TableView */,
 				F34E94711DDF3B6400E556BA /* WKWebview */,
 				F39311C91DD96DE700D88F48 /* video */,
 				F3D018461DD4AB0C00CB7606 /* AMap */,
@@ -682,11 +714,13 @@
 				F3FCC2321DD0CA6F00C884A9 /* Extensions.swift in Sources */,
 				F338C7581DE9915E00F73FE3 /* CoreViewController.swift in Sources */,
 				F338C76A1DED993A00F73FE3 /* LoopCollectionViewCell.swift in Sources */,
+				F37CC0BA1E2762770072B1BF /* IGTableViewBaseCell.swift in Sources */,
 				F3D845181DC07FF2009F6C91 /* ViewController.swift in Sources */,
 				F338C8F61DF6A30900F73FE3 /* IGTableView.swift in Sources */,
 				F3D018521DD4AB0C00CB7606 /* SearchViewController.swift in Sources */,
 				F366B14D1DE421DF0079C169 /* BaseViewController.swift in Sources */,
 				F3FCC2341DD0CAEA00C884A9 /* ConstDefine.swift in Sources */,
+				F37CC0B41E2758B60072B1BF /* IGTableViewSectionObject.swift in Sources */,
 				F338C75A1DE991AF00F73FE3 /* HttpClient.swift in Sources */,
 				F366B15B1DE738ED0079C169 /* FeedViewController.swift in Sources */,
 				F338C7831DEEBD1000F73FE3 /* LineLayout.swift in Sources */,
@@ -706,22 +740,28 @@
 				F338C8EC1DF68C3400F73FE3 /* BeautyController.swift in Sources */,
 				F338C8E51DF68C2B00F73FE3 /* MenuContainerView.swift in Sources */,
 				F366B1531DE43A310079C169 /* RefreshHeader.swift in Sources */,
+				F37CC0B81E275E3B0072B1BF /* IGTableViewDataSource.swift in Sources */,
 				F3FCC2301DD0C0BE00C884A9 /* ZHNavigationController.swift in Sources */,
 				F3D018541DD4AB0C00CB7606 /* TipView.swift in Sources */,
+				F338C8F81DFAABCE00F73FE3 /* Core.swift in Sources */,
 				F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */,
+				F37CC0BE1E28D2980072B1BF /* IGTableViewController.swift in Sources */,
 				F338C8EE1DF68C3400F73FE3 /* GPUViewController.swift in Sources */,
 				F338C8F11DF68F6100F73FE3 /* EmptyDataView.swift in Sources */,
 				F34E947F1DE1E7A500E556BA /* TableRefreshViewController.swift in Sources */,
+				F338C8FA1DFAB62E00F73FE3 /* CoreExtensions.swift in Sources */,
 				F3D018561DD4AB5E00CB7606 /* FileHelper.swift in Sources */,
 				F3D018531DD4AB0C00CB7606 /* StatusView.swift in Sources */,
 				F3D0184E1DD4AB0C00CB7606 /* DisplayViewController.swift in Sources */,
 				F338C7551DE9914800F73FE3 /* NetStoreViewController.swift in Sources */,
+				F37CC0BC1E2766F00072B1BF /* IGBaseTableView.swift in Sources */,
 				F3D845161DC07FF2009F6C91 /* AppDelegate.swift in Sources */,
 				F366B1611DE73B180079C169 /* FeedEntity.swift in Sources */,
 				F338C8E41DF68C2B00F73FE3 /* LayoutViewController.swift in Sources */,
 				F338C7681DED8B1700F73FE3 /* LoopViewController.swift in Sources */,
 				F338C8ED1DF68C3400F73FE3 /* GPUImageBlurController.swift in Sources */,
 				F338C8E61DF68C2B00F73FE3 /* MenuController.swift in Sources */,
+				F37CC0B61E275C550072B1BF /* IGTableViewBaseItem.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
 				F338C8EF1DF68C3400F73FE3 /* ImageBlurController.swift in Sources */,
 			);
