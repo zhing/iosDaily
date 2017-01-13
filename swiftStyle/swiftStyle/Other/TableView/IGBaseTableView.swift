@@ -17,8 +17,7 @@ class IGBaseTableView: UITableView, UITableViewDelegate {
     var igDataSource : IGTableViewDataSourceProtocol? {
         get { return self.igDataSource }
         set {
-            self.igDataSource = newValue
-            self.dataSource = igDataSource
+            dataSource = newValue
         }
     }
     var igDelegate : IGTableViewDelegate?
@@ -72,6 +71,6 @@ class IGBaseTableView: UITableView, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        self.igDelegate?.tableView!(tableView, willDisplay: cell, forRowAt: indexPath)
+        self.igDelegate?.tableView?(tableView, willDisplay: cell, forRowAt: indexPath)
     }
 }

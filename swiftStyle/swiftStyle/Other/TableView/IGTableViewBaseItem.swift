@@ -16,4 +16,12 @@ class IGTableViewBaseItem: NSObject {
     var itemImage :UIImage?
     var itemTitle :String?
     var itemSubtitle :String?
+    
+    init(title: String?, subTitle: String?, image: UIImage?) {
+        super.init()
+        
+        self.itemTitle = title
+        self.itemSubtitle = subTitle
+        self.itemImage = image
+    }
 }

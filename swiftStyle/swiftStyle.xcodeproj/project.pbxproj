@@ -65,6 +65,9 @@
 		F37CC0BA1E2762770072B1BF /* IGTableViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0B91E2762770072B1BF /* IGTableViewBaseCell.swift */; };
 		F37CC0BC1E2766F00072B1BF /* IGBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0BB1E2766F00072B1BF /* IGBaseTableView.swift */; };
 		F37CC0BE1E28D2980072B1BF /* IGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */; };
+		F37CC0C11E28DA1D0072B1BF /* IGTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0C01E28DA1D0072B1BF /* IGTestViewController.swift */; };
+		F37CC0C31E28DA530072B1BF /* IGTestTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0C21E28DA530072B1BF /* IGTestTableViewDataSource.swift */; };
+		F37CC0C51E28DA870072B1BF /* IGTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CC0C41E28DA870072B1BF /* IGTestTableViewCell.swift */; };
 		F39311CB1DD96E5500D88F48 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */; };
 		F39311CD1DD9B60700D88F48 /* 山耳湾.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */; };
 		F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */; };
@@ -169,6 +172,9 @@
 		F37CC0B91E2762770072B1BF /* IGTableViewBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewBaseCell.swift; sourceTree = "<group>"; };
 		F37CC0BB1E2766F00072B1BF /* IGBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGBaseTableView.swift; sourceTree = "<group>"; };
 		F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTableViewController.swift; sourceTree = "<group>"; };
+		F37CC0C01E28DA1D0072B1BF /* IGTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTestViewController.swift; sourceTree = "<group>"; };
+		F37CC0C21E28DA530072B1BF /* IGTestTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTestTableViewDataSource.swift; sourceTree = "<group>"; };
+		F37CC0C41E28DA870072B1BF /* IGTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGTestTableViewCell.swift; sourceTree = "<group>"; };
 		F39311CA1DD96E5500D88F48 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		F39311CC1DD9B60700D88F48 /* 山耳湾.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "山耳湾.mp3"; sourceTree = "<group>"; };
 		F39311CE1DD9EE4100D88F48 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
@@ -396,6 +402,7 @@
 		F37CC0B21E27583F0072B1BF /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				F37CC0BF1E28D9D50072B1BF /* Example */,
 				F37CC0B31E2758B60072B1BF /* IGTableViewSectionObject.swift */,
 				F37CC0B51E275C550072B1BF /* IGTableViewBaseItem.swift */,
 				F37CC0B71E275E3B0072B1BF /* IGTableViewDataSource.swift */,
@@ -404,6 +411,16 @@
 				F37CC0BD1E28D2980072B1BF /* IGTableViewController.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		F37CC0BF1E28D9D50072B1BF /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				F37CC0C01E28DA1D0072B1BF /* IGTestViewController.swift */,
+				F37CC0C21E28DA530072B1BF /* IGTestTableViewDataSource.swift */,
+				F37CC0C41E28DA870072B1BF /* IGTestTableViewCell.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		F39311C91DD96DE700D88F48 /* video */ = {
@@ -726,7 +743,9 @@
 				F338C7831DEEBD1000F73FE3 /* LineLayout.swift in Sources */,
 				F366B1511DE431BB0079C169 /* DefaultRefreshCtrl.swift in Sources */,
 				F3D018421DD4665D00CB7606 /* OtherViewController.swift in Sources */,
+				F37CC0C31E28DA530072B1BF /* IGTestTableViewDataSource.swift in Sources */,
 				F39311CF1DD9EE4100D88F48 /* AudioPlayerViewController.swift in Sources */,
+				F37CC0C11E28DA1D0072B1BF /* IGTestViewController.swift in Sources */,
 				F34E94731DDF3BB000E556BA /* WkWebViewController.swift in Sources */,
 				F366B14F1DE424770079C169 /* BaseRefreshCtrl.swift in Sources */,
 				F366B1551DE572B70079C169 /* LoadMoreCtrl.swift in Sources */,
@@ -764,6 +783,7 @@
 				F37CC0B61E275C550072B1BF /* IGTableViewBaseItem.swift in Sources */,
 				F3FCC22E1DD0BB3600C884A9 /* ZHTabBarController.swift in Sources */,
 				F338C8EF1DF68C3400F73FE3 /* ImageBlurController.swift in Sources */,
+				F37CC0C51E28DA870072B1BF /* IGTestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class OtherViewController: UIViewController {
     var button02 :UIButton!
     var button03 :UIButton!
     var button04 :UIButton!
+    var button05 :UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,18 @@ class OtherViewController: UIViewController {
             make.leading.equalTo(20)
             make.top.equalTo(button03.snp.bottom).offset(20)
         }
+        
+        button05 = UIButton.init(type: UIButtonType.custom)
+        button05.setTitle("TableView", for: UIControlState.normal)
+        button05.titleLabel?.textAlignment = NSTextAlignment.center
+        button05.backgroundColor = UIColor.lightGray
+        button05.addTarget(self, action: #selector(showTableViewController), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button05)
+        button05.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(100)
+            make.leading.equalTo(20)
+            make.top.equalTo(button04.snp.bottom).offset(20)
+        }
     }
     
     func showAMapViewController(sender : AnyObject?) {
@@ -92,6 +105,12 @@ class OtherViewController: UIViewController {
     
     func showWkWebViewController(sender : AnyObject?) {
         let controller = WkWebViewController.init()
+        controller.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showTableViewController(sender : AnyObject?) {
+        let controller = IGTestViewController(style: UITableViewStyle.plain)
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
