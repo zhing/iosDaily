@@ -13,6 +13,7 @@ class IGTestViewController: IGTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.separatorInset = UIEdgeInsets.zero
         // Do any additional setup after loading the view.
     }
 

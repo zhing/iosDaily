@@ -25,12 +25,13 @@ class IGBaseTableView: UITableView, UITableViewDelegate {
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         
-        self.separatorColor = UIColor.clear
+        self.separatorColor = UIColor.black
         self.showsVerticalScrollIndicator = true
         self.showsHorizontalScrollIndicator = false
         self.sectionHeaderHeight = 0
         self.sectionFooterHeight = 0
         self.delegate = self
+        self.tableFooterView = UIView(frame: CGRect(x:0, y:0, width:0, height:0.1))
     }
     
     required init?(coder aDecoder: NSCoder) {

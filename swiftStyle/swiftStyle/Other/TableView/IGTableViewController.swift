@@ -43,7 +43,6 @@ class IGTableViewController: UIViewController, IGTableViewDelegate, IGTableViewC
         tableView = IGBaseTableView(frame: view.bounds, style: tableViewStyle)
         tableView.igDelegate = self
         tableView.igDataSource = self.dataSource
-            
         view.addSubview(tableView)
     }
     

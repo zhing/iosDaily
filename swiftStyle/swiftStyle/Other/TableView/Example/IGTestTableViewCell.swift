@@ -25,12 +25,13 @@ class IGTestTableViewCell: IGTableViewBaseCell {
         self.titleLabel = {
             let titleLabel = UILabel(frame: self.bounds)
             titleLabel.font = UIFont.systemFont(ofSize: 15)
+            titleLabel.textColor = UIColor.black
+            self.contentView.addSubview(titleLabel)
             return titleLabel
         }()
-        
     }
     
     override func setObject(object: IGTableViewBaseItem) {
-        titleLabel.text = object.itemSubtitle
+        titleLabel.text = object.itemTitle
     }
 }
